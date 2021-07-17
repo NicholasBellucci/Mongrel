@@ -12,12 +12,7 @@ public struct HTMLBuilder {
     }
 
     public static func buildBlock(_ components: HTMLRepresentable...) -> HTMLRepresentable {
-        if let components = components as? [[HTMLRepresentable]] {
-            return components
-                .reduce([], +)
-        }
-
-        return components
+        components.flatten()
     }
 
     public static func buildOptional(_ component: HTMLRepresentable?) -> HTMLRepresentable {
@@ -33,12 +28,6 @@ public struct HTMLBuilder {
     }
 
     static func buildArray(_ components: HTMLRepresentable) -> HTMLRepresentable {
-        if let components = components as? [[HTMLRepresentable]] {
-            return components
-                .reduce([], +)
-        }
-
-        return components
+        components
     }
 }
-
