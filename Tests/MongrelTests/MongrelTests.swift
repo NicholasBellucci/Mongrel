@@ -6,6 +6,19 @@
             // This is an example of a functional test case.
             // Use XCTAssert and related functions to verify your tests produce the correct
             // results.
-            XCTAssertEqual(Mongrel().text, "Hello, World!")
+
+            let html = html {
+                body {
+                    div {
+                        h1 {
+                            (0...10).reversed().map {
+                                "\($0)…"
+                            }
+                        }
+                    }
+                }
+            }
+
+            print(html)
         }
     }
