@@ -1,16 +1,9 @@
-//
-//  HTMLRepresentable.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/17/21.
-//
-
-public protocol HTMLRepresentable: CustomStringConvertible, CustomDebugStringConvertible {
-    func renderHTML() -> String
+public protocol HTML: CustomStringConvertible, CustomDebugStringConvertible {
+    func render() -> String
 }
 
-extension Node: HTMLRepresentable {
-    public func renderHTML() -> String {
+extension Node: HTML {
+    public func render() -> String {
         String(describing: self)
     }
 
@@ -23,14 +16,14 @@ extension Node: HTMLRepresentable {
     }
 }
 
-extension String: HTMLRepresentable {
-    public func renderHTML() -> String {
+extension String: HTML {
+    public func render() -> String {
         String(describing: self)
     }
 }
 
-extension Array: HTMLRepresentable where Element == HTMLRepresentable {
-    public func renderHTML() -> String {
+extension Array: HTML where Element == HTML {
+    public func render() -> String {
         return self
             .enumerated()
             .map { index, element in

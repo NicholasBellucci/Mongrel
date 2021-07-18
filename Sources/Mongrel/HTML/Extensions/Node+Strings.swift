@@ -1,5 +1,5 @@
 //
-//  Node+HTML.swift
+//  Node+Strings.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/17/21.

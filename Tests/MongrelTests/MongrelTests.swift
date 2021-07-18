@@ -7,15 +7,13 @@
             // Use XCTAssert and related functions to verify your tests produce the correct
             // results.
 
-            let html = html {
-                body {
-                    div {
-                        h1 {
-                            (0...10).reversed().map {
-                                "\($0)…"
-                            }
-                        }
-                    }
+            let html = Root {
+                Anchor {
+                    "link"
+                }
+                .attributes {
+                    Attribute.accept(false)
+                    Attribute.action("")
                 }
             }
 

@@ -21,9 +21,9 @@ public struct Node: Tag {
         return self
     }
 
-    public func callAsFunction(@HTMLBuilder _ content: () -> HTMLRepresentable) -> Node {
+    public func callAsFunction(@HTMLBuilder _ content: () -> HTML) -> Node {
         var copy = self
-        copy.innerHTML = content().renderHTML()
+        copy.innerHTML = content().render()
         return copy
     }
 }

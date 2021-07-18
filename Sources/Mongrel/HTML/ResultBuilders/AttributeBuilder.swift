@@ -1,18 +1,18 @@
 @resultBuilder
-public struct HTMLBuilder {
-    public typealias Expression = HTML
+public struct AttributeBuilder {
+    public typealias Expression = Attribute
 
-    public typealias Component = [HTML]
-
-    public static func buildExpression(_ expression: Expression) -> Component {
-        [expression]
-    }
+    public typealias Component = [Attribute]
 
     public static func buildBlock(_ components: Component...) -> Component {
         components
             .flatMap {
                 $0
             }
+    }
+
+    public static func buildExpression(_ expression: Expression) -> Component {
+        [expression]
     }
 
     public static func buildOptional(_ component: Component?) -> Component {

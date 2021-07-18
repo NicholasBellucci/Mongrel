@@ -1,129 +1,214 @@
-//
-//  Builders.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/17/21.
-//
-
-public let a = Node(name: "a")
-public let abbr = Node(name: "abbr")
-public let acronym = Node(name: "acronym")
-public let address = Node(name: "address")
-public let applet = Node(name: "applet")
-public let area = Node(name: "area", isEmpty: true)
-public let article = Node(name: "article")
-public let aside = Node(name: "aside")
-public let audio = Node(name: "audio")
-public let b = Node(name: "b")
-public let base = Node(name: "base", isEmpty: true)
-public let basefront = Node(name: "basefront")
-public let bdi = Node(name: "bdi")
-public let bdo = Node(name: "bdo")
-public let big = Node(name: "big")
-public let blockquote = Node(name: "blockquote")
-public let body = Node(name: "body")
-public let br = Node(name: "br", isEmpty: true)
-public let button = Node(name: "button")
-public let canvas = Node(name: "canvas")
-public let caption = Node(name: "caption")
-public let center = Node(name: "center")
-public let cite = Node(name: "cite")
-public let code = Node(name: "code")
-public let col = Node(name: "col", isEmpty: true)
-public let colgroup = Node(name: "colgroup")
-public let data = Node(name: "data")
-public let datalist = Node(name: "datalist")
-public let dd = Node(name: "dd")
-public let del = Node(name: "del")
-public let details = Node(name: "details")
-public let dfn = Node(name: "dfn")
-public let dialog = Node(name: "dialog")
-public let dir = Node(name: "dir")
-public let div = Node(name: "div")
-public let di = Node(name: "di")
-public let dt = Node(name: "dt")
-public let em = Node(name: "em")
-public let embed = Node(name: "embed", isEmpty: true)
-public let fieldset = Node(name: "fieldset")
-public let figcaption = Node(name: "figcaption")
-public let figure = Node(name: "figure")
-public let font = Node(name: "font")
-public let footer = Node(name: "footer")
-public let form = Node(name: "form")
-public let frame = Node(name: "frame")
-public let frameset = Node(name: "frameset")
-public let h1 = Node(name: "h1")
-public let h2 = Node(name: "h2")
-public let h3 = Node(name: "h3")
-public let h4 = Node(name: "h4")
-public let h5 = Node(name: "h5")
-public let h6 = Node(name: "h6")
-public let head = Node(name: "head")
-public let header = Node(name: "header")
-public let hr = Node(name: "hr", isEmpty: true)
-public let html = Node(name: "html")
-public let i = Node(name: "i")
-public let iframe = Node(name: "iframe")
-public let img = Node(name: "img", isEmpty: true)
-public let input = Node(name: "input", isEmpty: true)
-public let ins = Node(name: "ins")
-public let kbd = Node(name: "kbd")
-public let label = Node(name: "label")
-public let legend = Node(name: "legend")
-public let li = Node(name: "li")
-public let link = Node(name: "link", isEmpty: true)
-public let main = Node(name: "main")
-public let map = Node(name: "map")
-public let mark = Node(name: "mark")
-public let meta = Node(name: "meta", isEmpty: true)
-public let meter = Node(name: "meter")
-public let nav = Node(name: "nav")
-public let noframes = Node(name: "noframes")
-public let noscript = Node(name: "noscript")
-public let object = Node(name: "object")
-public let ol = Node(name: "ol")
-public let optgroup = Node(name: "optgroup")
-public let option = Node(name: "option")
-public let output = Node(name: "output")
-public let p = Node(name: "p")
-public let param = Node(name: "param", isEmpty: true)
-public let picture = Node(name: "picture")
-public let pre = Node(name: "pre")
-public let progress = Node(name: "progress")
-public let q = Node(name: "q")
-public let rp = Node(name: "rp")
-public let rt = Node(name: "rt")
-public let ruby = Node(name: "ruby")
-public let s = Node(name: "s")
-public let samp = Node(name: "samp")
-public let script = Node(name: "script")
-public let section = Node(name: "section")
-public let select = Node(name: "select")
-public let small = Node(name: "small")
-public let source = Node(name: "source", isEmpty: true)
-public let span = Node(name: "span")
-public let strike = Node(name: "strike")
-public let strong = Node(name: "strong")
-public let style = Node(name: "style")
-public let sub = Node(name: "sub")
-public let summary = Node(name: "summary")
-public let sup = Node(name: "sup")
-public let svg = Node(name: "svg")
-public let table = Node(name: "table")
-public let tbody = Node(name: "tbody")
-public let td = Node(name: "td")
-public let template = Node(name: "template")
-public let textarea = Node(name: "textarea")
-public let tfoot = Node(name: "tfoot")
-public let th = Node(name: "th")
-public let thread = Node(name: "thread")
-public let time = Node(name: "time")
-public let title = Node(name: "title")
-public let tr = Node(name: "tr")
-public let track = Node(name: "track", isEmpty: true)
-public let tt = Node(name: "tt")
-public let u = Node(name: "u")
-public let ul = Node(name: "ul")
-public let `var` = Node(name: "var")
-public let video = Node(name: "video")
-public let wbr = Node(name: "wbr", isEmpty: true)
+/// Represents the HTML ``<abbr>`` tag.
+public let Abbreviation = Node(name: "abbr")
+/// Represents the HTML ``<address>`` tag.
+public let Address = Node(name: "address")
+/// Represents the HTML ``<a>`` tag.
+public let Anchor = Node(name: "a")
+/// Represents the HTML ``<area>`` tag.
+public let Area = Node(name: "area", isEmpty: true)
+/// Represents the HTML ``<article>`` tag.
+public let Article = Node(name: "article")
+/// Represents the HTML ``<aside>`` tag.
+public let Aside = Node(name: "aside")
+/// Represents the HTML ``<audio>`` tag.
+public let Audio = Node(name: "audio")
+/// Represents the HTML ``<base>`` tag.
+public let Base = Node(name: "base", isEmpty: true)
+/// Represents the HTML ``<bdi>`` tag.
+public let BidirectionalIsolate = Node(name: "bdi")
+/// Represents the HTML ``<bdo>`` tag.
+public let BidirectionalTextOverride  = Node(name: "bdo")
+/// Represents the HTML ``<blockquote>`` tag.
+public let BlockQuotation = Node(name: "blockquote")
+/// Represents the HTML ``<body>`` tag.
+public let Body = Node(name: "body")
+/// Represents the HTML ``<br>`` tag.
+public let Break = Node(name: "br", isEmpty: true)
+/// Represents the HTML ``<b>`` tag.
+public let BringAttentionTo = Node(name: "b")
+/// Represents the HTML ``<button>`` tag.
+public let Button = Node(name: "button")
+/// Represents the HTML ``<canvas>`` tag.
+public let Canvas = Node(name: "canvas")
+/// Represents the HTML ``<caption>`` tag.
+public let Caption = Node(name: "caption")
+/// Represents the HTML ``<cite>`` tag.
+public let Citation = Node(name: "cite")
+/// Represents the HTML ``<col>`` tag.
+public let Column = Node(name: "col", isEmpty: true)
+/// Represents the HTML ``<colgroup>`` tag.
+public let ColumnGroup = Node(name: "colgroup")
+/// Represents the HTML ``<data>`` tag.
+public let Data = Node(name: "data")
+/// Represents the HTML ``<datalist>`` tag.
+public let DataList = Node(name: "datalist")
+/// Represents the HTML ``<dfn>`` tag.
+public let Definition = Node(name: "dfn")
+/// Represents the HTML ``<del>`` tag.
+public let DeletedText = Node(name: "del")
+/// Represents the HTML ``<dd>`` tag.
+public let DescriptionDetails = Node(name: "dd")
+/// Represents the HTML ``<dl>`` tag.
+public let DescriptionList = Node(name: "dl")
+/// Represents the HTML ``<dt>`` tag.
+public let DescriptionTerm = Node(name: "dt")
+/// Represents the HTML ``<details>`` tag.
+public let Details = Node(name: "details")
+/// Represents the HTML ``<dialog>`` tag.
+public let Dialog = Node(name: "dialog")
+/// Represents the HTML ``<div>`` tag.
+public let Division = Node(name: "div")
+/// Represents the HTML ``<embed>`` tag.
+public let Embed = Node(name: "embed", isEmpty: true)
+/// Represents the HTML ``<em>`` tag.
+public let Emphasis = Node(name: "em")
+/// Represents the HTML ``<fieldset>`` tag.
+public let FieldSet = Node(name: "fieldset")
+/// Represents the HTML ``<figure>`` tag.
+public let Figure = Node(name: "figure")
+/// Represents the HTML ``<figcaption>`` tag.
+public let FigureCaption = Node(name: "figcaption")
+/// Represents the HTML ``<footer>`` tag.
+public let Footer = Node(name: "footer")
+/// Represents the HTML ``<form>`` tag.
+public let Form = Node(name: "form")
+/// Represents the HTML ``<html>`` tag.
+public let Root = Node(name: "html")
+/// Represents the HTML ``<head>`` tag.
+public let Head = Node(name: "head")
+/// Represents the HTML ``<header>`` tag.
+public let Header = Node(name: "header")
+/// Represents the HTML ``<h1>`` tag.
+public let Heading1 = Node(name: "h1")
+/// Represents the HTML ``<h2>`` tag.
+public let Heading2 = Node(name: "h2")
+/// Represents the HTML ``<h3>`` tag.
+public let Heading3 = Node(name: "h3")
+/// Represents the HTML ``<h4>`` tag.
+public let Heading4 = Node(name: "h4")
+/// Represents the HTML ``<h5>`` tag.
+public let Heading5 = Node(name: "h5")
+/// Represents the HTML ``<h6>`` tag.
+public let Heading6 = Node(name: "h6")
+/// Represents the HTML ``<hr>`` tag.
+public let HorizontalRule = Node(name: "hr", isEmpty: true)
+/// Represents the HTML ``<iframe>`` tag.
+public let IFrame = Node(name: "iframe")
+/// Represents the HTML ``<i>`` tag.
+public let IdiomaticText = Node(name: "i")
+/// Represents the HTML ``<img>`` tag.
+public let Image = Node(name: "img", isEmpty: true)
+/// Represents the HTML ``<code>`` tag.
+public let InlineCode = Node(name: "code")
+/// Represents the HTML ``<input>`` tag.
+public let Input = Node(name: "input", isEmpty: true)
+/// Represents the HTML ``<ins>`` tag.
+public let Ins = Node(name: "ins")
+/// Represents the HTML ``<kbd>`` tag.
+public let KeyboardIput = Node(name: "kbd")
+/// Represents the HTML ``<label>`` tag.
+public let Label = Node(name: "label")
+/// Represents the HTML ``<legend>`` tag.
+public let Legend = Node(name: "legend")
+/// Represents the HTML ``<link>`` tag.
+public let Link = Node(name: "link", isEmpty: true)
+/// Represents the HTML ``<li>`` tag.
+public let ListItem = Node(name: "li")
+/// Represents the HTML ``<main>`` tag.
+public let Main = Node(name: "main")
+/// Represents the HTML ``<map>`` tag.
+public let Map = Node(name: "map")
+/// Represents the HTML ``<mark>`` tag.
+public let Mark = Node(name: "mark")
+/// Represents the HTML ``<meta>`` tag.
+public let Metadata = Node(name: "meta", isEmpty: true)
+/// Represents the HTML ``<meter>`` tag.
+public let Meter = Node(name: "meter")
+/// Represents the HTML ``<nav>`` tag.
+public let Navigation = Node(name: "nav")
+/// Represents the HTML ``<noscript>`` tag.
+public let NoScript = Node(name: "noscript")
+/// Represents the HTML ``<object>`` tag.
+public let Object = Node(name: "object")
+/// Represents the HTML ``<option>`` tag.
+public let Option = Node(name: "option")
+/// Represents the HTML ``<optgroup>`` tag.
+public let OptionGroup = Node(name: "optgroup")
+/// Represents the HTML ``<ol>`` tag.
+public let OrderedList = Node(name: "ol")
+/// Represents the HTML ``<output>`` tag.
+public let Output = Node(name: "output")
+/// Represents the HTML ``<p>`` tag.
+public let Paragraph = Node(name: "p")
+/// Represents the HTML ``<param>`` tag.
+public let Parameter = Node(name: "param", isEmpty: true)
+/// Represents the HTML ``<picture>`` tag.
+public let Picture = Node(name: "picture")
+/// Represents the HTML ``<pre>`` tag.
+public let PreformattedText = Node(name: "pre")
+/// Represents the HTML ``<progress>`` tag.
+public let Progress = Node(name: "progress")
+/// Represents the HTML ``<q>`` tag.
+public let Quotation = Node(name: "q")
+/// Represents the HTML ``<ruby>`` tag.
+public let Ruby = Node(name: "ruby")
+/// Represents the HTML ``<rp>`` tag.
+public let RubyParenthesis = Node(name: "rp")
+/// Represents the HTML ``<rt>`` tag.
+public let RubyText = Node(name: "rt")
+/// Represents the HTML ``<samp>`` tag.
+public let SampleOutput = Node(name: "samp")
+/// Represents the HTML ``<script>`` tag.
+public let Script = Node(name: "script")
+/// Represents the HTML ``<section>`` tag.
+public let Section = Node(name: "section")
+/// Represents the HTML ``<select>`` tag.
+public let Select = Node(name: "select")
+/// Represents the HTML ``<small>`` tag.
+public let Small = Node(name: "small")
+/// Represents the HTML ``<source>`` tag.
+public let Source = Node(name: "source", isEmpty: true)
+/// Represents the HTML ``<span>`` tag.
+public let Span = Node(name: "span")
+/// Represents the HTML ``<strong>`` tag.
+public let Strong = Node(name: "strong")
+/// Represents the HTML ``<style>`` tag.
+public let Style = Node(name: "style")
+/// Represents the HTML ``<sub>`` tag.
+public let Subscript = Node(name: "sub")
+/// Represents the HTML ``<summary>`` tag.
+public let Summary = Node(name: "summary")
+/// Represents the HTML ``<sup>`` tag.
+public let Superscript = Node(name: "sup")
+/// Represents the HTML ``<table>`` tag.
+public let Table = Node(name: "table")
+/// Represents the HTML ``<tbody>`` tag.
+public let TableBody = Node(name: "tbody")
+/// Represents the HTML ``<th>`` tag.
+public let TableCellHeader = Node(name: "th")
+/// Represents the HTML ``<td>`` tag.
+public let TableData = Node(name: "td")
+/// Represents the HTML ``<tfoot>`` tag.
+public let TableFooter = Node(name: "tfoot")
+/// Represents the HTML ``<thead>`` tag.
+public let TableHeader = Node(name: "thead")
+/// Represents the HTML ``<tr>`` tag.
+public let TableRow = Node(name: "tr")
+/// Represents the HTML ``<template>`` tag.
+public let Template = Node(name: "template")
+/// Represents the HTML ``<textarea>`` tag.
+public let TextArea = Node(name: "textarea")
+/// Represents the HTML ``<time>`` tag.
+public let Time = Node(name: "time")
+/// Represents the HTML ``<title>`` tag.
+public let Title = Node(name: "title")
+/// Represents the HTML ``<track>`` tag.
+public let Track = Node(name: "track", isEmpty: true)
+/// Represents the HTML ``<ul>`` tag.
+public let UnorderedList = Node(name: "ul")
+/// Represents the HTML ``<var>`` tag.
+public let Variable = Node(name: "var")
+/// Represents the HTML ``<video>`` tag.
+public let Video = Node(name: "video")
+/// Represents the HTML ``<wbr>`` tag.
+public let WordBreak = Node(name: "wbr", isEmpty: true)

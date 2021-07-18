@@ -17,24 +17,4 @@ extension Array {
     func element(before index: Int) -> Iterator.Element? {
         return self[safe: index - 1]
     }
-
-    func flatten() -> [Element] {
-        return Array.flatten(0, to: self)
-    }
-}
-
-private extension Array {
-    static func flatten<Element>(_ index: Int, to array: [Element]) -> [Element] {
-        guard index < array.count else { return [] }
-
-        var flatten: [Element] = []
-
-        if let itemArr = array[index] as? [Element] {
-            flatten = flatten + itemArr.flatten()
-        } else {
-            flatten.append(array[index])
-        }
-
-        return flatten + Array.flatten(index + 1, to: array)
-    }
 }
