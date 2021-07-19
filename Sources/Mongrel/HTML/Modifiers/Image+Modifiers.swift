@@ -28,7 +28,7 @@ public extension Image {
         return copy
     }
 
-    func loadType(_ type: ImageLoadType) -> Image {
+    func loadType(_ type: LoadType) -> Image {
         var copy = self
         copy.attributes["loading"] = type.rawValue
         return copy
