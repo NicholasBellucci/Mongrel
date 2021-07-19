@@ -8,7 +8,11 @@
 public struct Meter: Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
-    var innerHTML: String
+    var innerHTML: String = ""
+
+    public init(value: Double) {
+        attributes["value"] = "\(value)"
+    }
 
     public init(value: Double, @HTMLBuilder _ content: () -> HTML) {
         attributes["value"] = "\(value)"

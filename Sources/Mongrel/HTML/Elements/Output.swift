@@ -8,7 +8,9 @@
 public struct Output: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    var innerHTML: String
+    var innerHTML: String = ""
+
+    public init() { }
 
     public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().stringValue

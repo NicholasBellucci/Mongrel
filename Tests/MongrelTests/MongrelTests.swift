@@ -25,7 +25,9 @@ struct HomePage: HTMLPage {
             }
 
             Body {
-                Text("The content of the document.....")
+                Meter(value: 2)
+                    .min(0)
+                    .max(10)
             }
         }
     }

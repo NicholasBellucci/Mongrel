@@ -8,7 +8,11 @@
 public struct iFrame: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
-    var innerHTML: String
+    var innerHTML: String = ""
+
+    public init(title: String) {
+        attributes["title"] = title
+    }
 
     public init(title: String, @HTMLBuilder _ content: () -> HTML) {
         attributes["title"] = title
