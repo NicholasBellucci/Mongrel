@@ -37,10 +37,6 @@ extension GenericElement: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<\(tag)>\(innerHTML)</\(tag)>"
-        } else {
-            return "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

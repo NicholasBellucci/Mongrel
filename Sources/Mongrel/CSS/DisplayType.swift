@@ -6,7 +6,7 @@
 //
 
 public enum DisplayType: String {
-    case inline, contents, grid, block, flex,
+    case inline, contents, grid, block, flex
     case table, none, hidden, inherit
 
     case inlineBlock = "inline-block"

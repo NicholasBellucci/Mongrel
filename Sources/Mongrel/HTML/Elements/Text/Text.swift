@@ -131,6 +131,12 @@ public extension Text {
         return copy
     }
 
+    func paragraph() -> Text {
+        var copy = self
+        copy.tags.append("p")
+        return copy
+    }
+
     func small() -> Text {
         var copy = self
         copy.tags.append("small")

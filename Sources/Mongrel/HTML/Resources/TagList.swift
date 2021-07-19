@@ -25,7 +25,7 @@ public let DescriptionDetails = GenericElement(tag: "dd")
 /// Represents the HTML ``<dt>`` tag.
 public let DescriptionTerm = GenericElement(tag: "dt")
 /// Represents the HTML ``<div>`` tag.
-public let Division = GenericElement(tag: "div")
+public let Div = GenericElement(tag: "div")
 /// Represents the HTML ``<fieldset>`` tag.
 public let FieldSet = GenericElement(tag: "fieldset")
 /// Represents the HTML ``<figure>`` tag.
