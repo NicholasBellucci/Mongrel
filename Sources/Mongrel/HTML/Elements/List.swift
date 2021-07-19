@@ -8,10 +8,10 @@
 public struct List: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    var type: ListType
+    var type: GenericListType
     var innerHTML: String
 
-    public init(_ type: ListType, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTML) {
         self.type = type
         innerHTML = content().render()
     }
