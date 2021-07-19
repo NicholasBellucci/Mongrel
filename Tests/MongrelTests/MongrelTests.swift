@@ -8,8 +8,10 @@
             // results.
 
             let html = Root {
-                Progress(max: 100)
-                    .value(40)
+                Option {
+                    Text("Hello")
+                }
+                .value("hello")
             }
 
             print(html)

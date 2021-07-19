@@ -26,8 +26,6 @@ public let Canvas = GenericElement(tag: "canvas")
 public let Caption = GenericElement(tag: "caption")
 /// Represents the HTML ``<cite>`` tag.
 public let Citation = GenericElement(tag: "cite")
-/// Represents the HTML ``<colgroup>`` tag.
-public let ColumnGroup = GenericElement(tag: "colgroup")
 /// Represents the HTML ``<data>`` tag.
 public let Data = GenericElement(tag: "data")
 /// Represents the HTML ``<dfn>`` tag.
@@ -58,18 +56,6 @@ public let Root = GenericElement(tag: "html")
 public let Head = GenericElement(tag: "head")
 /// Represents the HTML ``<header>`` tag.
 public let Header = GenericElement(tag: "header")
-/// Represents the HTML ``<h1>`` tag.
-public let Heading1 = GenericElement(tag: "h1")
-/// Represents the HTML ``<h2>`` tag.
-public let Heading2 = GenericElement(tag: "h2")
-/// Represents the HTML ``<h3>`` tag.
-public let Heading3 = GenericElement(tag: "h3")
-/// Represents the HTML ``<h4>`` tag.
-public let Heading4 = GenericElement(tag: "h4")
-/// Represents the HTML ``<h5>`` tag.
-public let Heading5 = GenericElement(tag: "h5")
-/// Represents the HTML ``<h6>`` tag.
-public let Heading6 = GenericElement(tag: "h6")
 /// Represents the HTML ``<iframe>`` tag.
 public let iFrame = GenericElement(tag: "iframe")
 /// Represents the HTML ``<code>`` tag.
@@ -90,8 +76,6 @@ public let Navigation = GenericElement(tag: "nav")
 public let NoScript = GenericElement(tag: "noscript")
 /// Represents the HTML ``<object>`` tag.
 public let Object = GenericElement(tag: "object")
-/// Represents the HTML ``<option>`` tag.
-public let Option = GenericElement(tag: "option")
 /// Represents the HTML ``<optgroup>`` tag.
 public let OptionGroup = GenericElement(tag: "optgroup")
 /// Represents the HTML ``<output>`` tag.
