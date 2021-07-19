@@ -142,8 +142,6 @@ public let TableRow = GenericElement(tag: "tr")
 public let Template = GenericElement(tag: "template")
 /// Represents the HTML ``<textarea>`` tag.
 public let TextArea = GenericElement(tag: "textarea")
-/// Represents the HTML ``<time>`` tag.
-public let Time = GenericElement(tag: "time")
 /// Represents the HTML ``<title>`` tag.
 public let Title = GenericElement(tag: "title")
 /// Represents the HTML ``<var>`` tag.

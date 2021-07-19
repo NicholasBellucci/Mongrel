@@ -8,15 +8,6 @@
             // results.
 
             let html = Root {
-                Head {
-                    Script {
-                        """
-                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
-                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
-                        """
-                    }
-                }
-
                 Body {
                     Text("Header")
                         .heading(.h3)
@@ -24,7 +15,7 @@
                     Paragraph {
                         Text("testing")
                     }
-                    .classes("test")
+                    .classes("test", "other")
                 }
             }
 
