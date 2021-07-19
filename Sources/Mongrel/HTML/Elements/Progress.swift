@@ -33,3 +33,12 @@ extension Progress: HTML {
         "<progress \(attributesString)>\(innerHTML)</progress>"
     }
 }
+
+public extension Progress {
+    func value(_ value: Double) -> Progress {
+        var copy = self
+        copy.attributes["value"] = "\(value)"
+        return copy
+    }
+}
+

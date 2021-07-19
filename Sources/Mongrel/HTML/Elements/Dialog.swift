@@ -32,3 +32,15 @@ extension Dialog: HTML {
         }
     }
 }
+
+public extension Dialog {
+    func open(if value: Bool = true) -> Dialog {
+        var copy = self
+
+        if value {
+            copy.attributes["open"] = ""
+        }
+
+        return copy
+    }
+}

@@ -32,3 +32,15 @@ extension Details: HTML {
         }
     }
 }
+
+public extension Details {
+    func open(if value: Bool = true) -> Details {
+        var copy = self
+
+        if value {
+            copy.attributes["open"] = ""
+        }
+
+        return copy
+    }
+}
