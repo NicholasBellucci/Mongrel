@@ -1,20 +1,17 @@
 //
-//  Link.swift
+//  Break.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Link: HTMLElement, Attributable {
+public struct Break: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(href: String, rel: String) {
-        attributes["href"] = href
-        attributes["rel"] = rel
-    }
+    public init() { }
 }
 
-extension Link: HTML {
+extension Break: HTML {
     public var description: String {
         html
     }
@@ -24,6 +21,11 @@ extension Link: HTML {
     }
 
     private var html: String {
-        "<link \(attributesString)>"
+        if attributesString == "" {
+            return "<br>"
+        } else {
+            return "<br \(attributesString)>"
+        }
     }
 }
+

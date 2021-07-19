@@ -5,16 +5,14 @@
 //  Created by Nicholas Bellucci on 7/17/21.
 //
 
-public struct GenericElement: HTMLElement, Attributable {
+public struct GenericElement: Element, Attributable {
     public var attributes: [String: String] = [:]
 
     var tag: String
-    var isEmpty: Bool
     var innerHTML: String = ""
 
-    init(tag: String, isEmpty: Bool = false) {
+    init(tag: String) {
         self.tag = tag
-        self.isEmpty = isEmpty
     }
 
     public func callAsFunction() -> GenericElement {
@@ -39,13 +37,9 @@ extension GenericElement: HTML {
 
     private var html: String {
         if attributes.isEmpty {
-            return isEmpty ?
-                "<\(tag) />":
-                "<\(tag)>\(innerHTML)</\(tag)>"
+            return "<\(tag)>\(innerHTML)</\(tag)>"
         } else {
-            return isEmpty ?
-                "<\(tag) \(attributesString)>" :
-                "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
+            return "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
         }
     }
 }

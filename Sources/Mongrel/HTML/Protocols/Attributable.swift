@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public protocol Attributable: HTMLElement { }
+public protocol Attributable: Element { }
 
 public extension Attributable {
     func accessKey(_ key: String) -> Attributable {

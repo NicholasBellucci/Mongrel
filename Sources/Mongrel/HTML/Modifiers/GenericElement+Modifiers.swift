@@ -4,19 +4,25 @@
 /// attribute to an HTML element.
 ///
 public extension GenericElement {
-    func addAttribute(_ attribute: Attribute, value: Any) -> GenericElement {
+    func attributes(_ attributes: Attribute...) -> GenericElement {
         var copy = self
-        copy.attributes[attribute.rawValue] = "\(value)"
+
+        attributes
+            .reversed()
+            .forEach {
+                if let value: String = $0.associatedValue() {
+                    copy.attributes[$0.rawValue] = value
+                } else {
+                    copy.attributes[$0.rawValue] = ""
+                }
+            }
+
         return copy
     }
 
-    func addBooleanAttribute(_ attribute: BooleanAttribute, if value: Bool = true) -> GenericElement {
+    func addCustomAttribute(_ attribute: String, value: String) -> GenericElement {
         var copy = self
-
-        if value {
-            copy.attributes[attribute.rawValue] = ""
-        }
-
+        copy.attributes[attribute] = value
         return copy
     }
 }

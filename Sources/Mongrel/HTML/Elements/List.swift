@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct List: HTMLElement, Attributable {
+public struct List: Element, Attributable {
     public var attributes: [String: String] = [:]
 
     var type: ListType

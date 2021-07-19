@@ -1,17 +1,20 @@
 //
-//  Source.swift
+//  Link.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Source: HTMLElement, Attributable {
+public struct Link: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init() { }
+    public init(href: String, rel: String) {
+        attributes["href"] = href
+        attributes["rel"] = rel
+    }
 }
 
-extension Source: HTML {
+extension Link: HTML {
     public var description: String {
         html
     }
@@ -21,6 +24,6 @@ extension Source: HTML {
     }
 
     private var html: String {
-        "<source \(attributesString)>"
+        "<link \(attributesString)>"
     }
 }

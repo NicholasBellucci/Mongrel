@@ -1,24 +1,23 @@
 //
-//  Track.swift
+//  Image.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Track: HTMLElement, Attributable {
+public struct Image: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(src: String, kind: TrackKind) {
+    public init(src: String, alt: String? = nil) {
         attributes["src"] = src
-        attributes["kind"] = kind.rawValue
 
-        if let language = kind.language {
-            attributes["srclang"] = language
+        if let alt = alt {
+            attributes["alt"] = alt
         }
     }
 }
 
-extension Track: HTML {
+extension Image: HTML {
     public var description: String {
         html
     }
@@ -28,6 +27,6 @@ extension Track: HTML {
     }
 
     private var html: String {
-        "<track \(attributesString)>"
+        "<img \(attributesString)>"
     }
 }

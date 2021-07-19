@@ -1,181 +1,188 @@
-public enum Attribute: String {
-    case accept
-    case acceptcharset = "accept-charset"
-    case accesskey
-    case action
-    case align
-    case alt
-    case autocomplete
-    case bgcolor
-    case border
-    case charset
-    case cite
-    case `class`
-    case color
-    case cols
-    case colspan
-    case contenteditable
-    case coords
-    case crossorigin
-    case data
-    case datetime
-    case `defer`
-    case dir
-    case dirname
-    case download
-    case draggable
-    case enctype
-    case `for`
-    case form
-    case formaction
-    case headers
-    case height
-    case high
-    case href
-    case hreflang
-    case httpequiv = "http-equiv"
-    case id
-    case integrity
-    case kind
-    case label
-    case lang
-    case list
-    case low
-    case max
-    case maxlength
-    case media
-    case method
-    case min
-    case name
-    case onabort
-    case onafterprint
-    case onbeforeprint
-    case onbeforeunload
-    case onblur
-    case oncanplay
-    case oncanplaythrough
-    case onchange
-    case onclick
-    case oncontextmenu
-    case oncopy
-    case oncuechange
-    case oncut
-    case ondblclick
-    case ondrag
-    case ondragend
-    case ondragenter
-    case ondragleave
-    case ondragover
-    case ondragstart
-    case ondrop
-    case ondurationchange
-    case onemptied
-    case onended
-    case onerror
-    case onfocus
-    case onhashchange
-    case oninput
-    case oninvalid
-    case onkeydown
-    case onkeypress
-    case onkeyup
-    case onload
-    case onloadeddata
-    case onloadedmetadata
-    case onloadstart
-    case onmousedown
-    case onmousemove
-    case onmouseout
-    case onmouseover
-    case onmouseup
-    case onmousewheel
-    case onoffline
-    case ononline
-    case onpagehide
-    case onpageshow
-    case onpaste
-    case onpause
-    case onplay
-    case onplaying
-    case onpopstate
-    case onprogress
-    case onratechange
-    case onreset
-    case onresize
-    case onscroll
-    case onsearch
-    case onseeked
-    case onseeking
-    case onselect
-    case onstalled
-    case onstorage
-    case onsubmit
-    case onsuspend
-    case ontimeupdate
-    case ontoggle
-    case onunload
-    case onvolumechange
-    case onwaiting
-    case onwheel
-    case optimum
-    case pattern
-    case placeholder
-    case poster
-    case preload
-    case referrerpolicy
-    case rel
-    case rows
-    case rowspan
-    case sandbox
-    case scope
-    case shape
-    case size
-    case sizes
-    case span
-    case spellcheck
-    case src
-    case srcdoc
-    case srclang
-    case srcset
-    case start
-    case step
-    case style
-    case tabindex
-    case target
-    case title
-    case translate
-    case type
-    case usemap
-    case value
-    case width
-    case wrap
-    case empty
-}
-
-public enum BooleanAttribute: String {
+public enum Attribute: CaseAccessible {
+    case accept(String)
+    case acceptcharset(String)
+    case accesskey(String)
+    case action(String)
+    case align(String)
     case allowfullscreen
     case allowpaymentrequest
+    case alt(String)
     case `async`
+    case autocomplete(String)
     case autofocus
     case autoplay
+    case bgcolor(String)
+    case border(String)
+    case charset(String)
     case checked
+    case cite(String)
+    case `class`(String)
+    case color(String)
+    case cols(String)
+    case colspan(String)
+    case contenteditable(String)
     case controls
+    case coords(String)
+    case crossorigin(String)
+    case data(String)
+    case datetime(String)
     case `default`
+    case `defer`(String)
+    case dir(String)
+    case dirname(String)
     case disabled
+    case download(String)
+    case draggable(String)
+    case enctype(String)
+    case `for`(String)
+    case form(String)
+    case formaction(String)
     case formnovalidate
+    case headers(String)
+    case height(String)
     case hidden
+    case high(String)
+    case href(String)
+    case hreflang(String)
+    case httpequiv(String)
+    case id(String)
+    case integrity(String)
     case ismap
     case itemscope
+    case kind(String)
+    case label(String)
+    case lang(String)
+    case list(String)
     case loop
+    case low(String)
+    case max(String)
+    case maxlength(String)
+    case media(String)
+    case method(String)
+    case min(String)
     case multiple
     case muted
-    case nomudule
+    case name(String)
+    case nomodule
     case novalidate
+    case onabort(String)
+    case onafterprint(String)
+    case onbeforeprint(String)
+    case onbeforeunload(String)
+    case onblur(String)
+    case oncanplay(String)
+    case oncanplaythrough(String)
+    case onchange(String)
+    case onclick(String)
+    case oncontextmenu(String)
+    case oncopy(String)
+    case oncuechange(String)
+    case oncut(String)
+    case ondblclick(String)
+    case ondrag(String)
+    case ondragend(String)
+    case ondragenter(String)
+    case ondragleave(String)
+    case ondragover(String)
+    case ondragstart(String)
+    case ondrop(String)
+    case ondurationchange(String)
+    case onemptied(String)
+    case onended(String)
+    case onerror(String)
+    case onfocus(String)
+    case onhashchange(String)
+    case oninput(String)
+    case oninvalid(String)
+    case onkeydown(String)
+    case onkeypress(String)
+    case onkeyup(String)
+    case onload(String)
+    case onloadeddata(String)
+    case onloadedmetadata(String)
+    case onloadstart(String)
+    case onmousedown(String)
+    case onmousemove(String)
+    case onmouseout(String)
+    case onmouseover(String)
+    case onmouseup(String)
+    case onmousewheel(String)
+    case onoffline(String)
+    case ononline(String)
+    case onpagehide(String)
+    case onpageshow(String)
+    case onpaste(String)
+    case onpause(String)
+    case onplay(String)
+    case onplaying(String)
+    case onpopstate(String)
+    case onprogress(String)
+    case onratechange(String)
+    case onreset(String)
+    case onresize(String)
+    case onscroll(String)
+    case onsearch(String)
+    case onseeked(String)
+    case onseeking(String)
+    case onselect(String)
+    case onstalled(String)
+    case onstorage(String)
+    case onsubmit(String)
+    case onsuspend(String)
+    case ontimeupdate(String)
+    case ontoggle(String)
+    case onunload(String)
+    case onvolumechange(String)
+    case onwaiting(String)
+    case onwheel(String)
     case open
+    case optimum(String)
+    case pattern(String)
+    case placeholder(String)
     case playsinline
+    case poster(String)
+    case preload(String)
     case readonly
+    case referrerpolicy(String)
+    case rel(String)
     case required
     case reversed
+    case rows(String)
+    case rowspan(String)
+    case sandbox(String)
+    case scope(String)
     case selected
+    case shape(String)
+    case size(String)
+    case sizes(String)
+    case span(String)
+    case spellcheck(String)
+    case src(String)
+    case srcdoc(String)
+    case srclang(String)
+    case srcset(String)
+    case start(String)
+    case step(String)
+    case style(String)
+    case tabindex(String)
+    case target(String)
+    case title(String)
+    case translate(String)
     case truespeed
+    case type(String)
+    case usemap(String)
+    case value(String)
+    case width(String)
+    case wrap(String)
+    
+    var rawValue: String {
+        switch self {
+        case .acceptcharset:
+            return "accept-charset"
+        case .httpequiv:
+            return "http-equiv"
+        default:
+            return label
+        }
+    }
 }

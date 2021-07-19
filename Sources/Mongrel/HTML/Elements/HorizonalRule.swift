@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct HorizonalRule: HTMLElement, Attributable {
+public struct HorizonalRule: Element, Attributable {
     public var attributes: [String: String] = [:]
 
     public init() { }
@@ -21,6 +21,10 @@ extension HorizonalRule: HTML {
     }
 
     private var html: String {
-        "<hr \(attributesString)>"
+        if attributesString == "" {
+            return "<hr>"
+        } else {
+            return "<hr \(attributesString)>"
+        }
     }
 }

@@ -1,19 +1,17 @@
 //
-//  Input.swift
+//  File.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Input: HTMLElement, Attributable {
+public struct WordBreak: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(type: InputType = .text) {
-        attributes["type"] = type.rawValue
-    }
+    public init() { }
 }
 
-extension Input: HTML {
+extension WordBreak: HTML {
     public var description: String {
         html
     }
@@ -23,6 +21,10 @@ extension Input: HTML {
     }
 
     private var html: String {
-        "<input \(attributesString)>"
+        if attributesString == "" {
+            return "<wbr>"
+        } else {
+            return "<wbr \(attributesString)>"
+        }
     }
 }

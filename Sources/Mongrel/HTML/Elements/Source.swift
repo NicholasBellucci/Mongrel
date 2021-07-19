@@ -1,20 +1,17 @@
 //
-//  Parameter.swift
+//  Source.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Parameter: HTMLElement, Attributable {
+public struct Source: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(name: String, value: String) {
-        attributes["name"] = name
-        attributes["value"] = value
-    }
+    public init() { }
 }
 
-extension Parameter: HTML {
+extension Source: HTML {
     public var description: String {
         html
     }
@@ -24,6 +21,10 @@ extension Parameter: HTML {
     }
 
     private var html: String {
-        "<param \(attributesString)>"
+        if attributesString == "" {
+            return "<source>"
+        } else {
+            return "<source \(attributesString)>"
+        }
     }
 }

@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Embed: HTMLElement, Attributable {
+public struct Embed: Element, Attributable {
     public var attributes: [String: String] = [:]
 
     public init(src: String, type: String, height: Double, width: Double) {

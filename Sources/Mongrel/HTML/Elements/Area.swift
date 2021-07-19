@@ -1,21 +1,20 @@
 //
-//  Column.swift
+//  Area.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Column: HTMLElement, Attributable {
+public struct Area: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(span: Int? = nil) {
-        if let span = span {
-            attributes["span"] = "\(span)"
-        }
+    public init(shape: Shape, coordinates: String) {
+        attributes["shape"] = shape.rawValue
+        attributes["coords"] = coordinates
     }
 }
 
-extension Column: HTML {
+extension Area: HTML {
     public var description: String {
         html
     }
@@ -25,6 +24,6 @@ extension Column: HTML {
     }
 
     private var html: String {
-        "<col \(attributesString)>"
+        "<area \(attributesString)>"
     }
 }

@@ -1,20 +1,19 @@
 //
-//  Base.swift
+//  Input.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Base: HTMLElement, Attributable {
+public struct Input: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(href: String, target: Target = .`self`) {
-        attributes["href"] = href
-        attributes["target"] = target.rawValue
+    public init(type: InputType = .text) {
+        attributes["type"] = type.rawValue
     }
 }
 
-extension Base: HTML {
+extension Input: HTML {
     public var description: String {
         html
     }
@@ -24,6 +23,6 @@ extension Base: HTML {
     }
 
     private var html: String {
-        "<base \(attributesString)>"
+        "<input \(attributesString)>"
     }
 }

@@ -26,7 +26,6 @@
                             .hidden(true)
                     }
                 }
-                .addBooleanAttribute(.hidden)
             }
 
             print(html)

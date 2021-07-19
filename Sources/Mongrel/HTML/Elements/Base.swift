@@ -1,20 +1,20 @@
 //
-//  Area.swift
+//  Base.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Area: HTMLElement, Attributable {
+public struct Base: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init(shape: Shape, coordinates: String) {
-        attributes["shape"] = shape.rawValue
-        attributes["coords"] = coordinates
+    public init(href: String, target: Target = .`self`) {
+        attributes["href"] = href
+        attributes["target"] = target.rawValue
     }
 }
 
-extension Area: HTML {
+extension Base: HTML {
     public var description: String {
         html
     }
@@ -24,6 +24,6 @@ extension Area: HTML {
     }
 
     private var html: String {
-        "<area \(attributesString)>"
+        "<base \(attributesString)>"
     }
 }

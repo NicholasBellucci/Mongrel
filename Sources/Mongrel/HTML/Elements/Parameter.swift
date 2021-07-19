@@ -1,17 +1,20 @@
 //
-//  Break.swift
+//  Parameter.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Break: HTMLElement, Attributable {
+public struct Parameter: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init() { }
+    public init(name: String, value: String) {
+        attributes["name"] = name
+        attributes["value"] = value
+    }
 }
 
-extension Break: HTML {
+extension Parameter: HTML {
     public var description: String {
         html
     }
@@ -21,7 +24,6 @@ extension Break: HTML {
     }
 
     private var html: String {
-        "<br \(attributesString)>"
+        "<param \(attributesString)>"
     }
 }
-

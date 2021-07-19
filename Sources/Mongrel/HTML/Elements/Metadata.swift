@@ -1,17 +1,19 @@
 //
-//  File.swift
+//  Metadata.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct WordBreak: HTMLElement, Attributable {
+public struct Metadata: Element, Attributable {
     public var attributes: [String: String] = [:]
 
-    public init() { }
+    public init(content: String) {
+        attributes["content"] = content
+    }
 }
 
-extension WordBreak: HTML {
+extension Metadata: HTML {
     public var description: String {
         html
     }
@@ -21,6 +23,6 @@ extension WordBreak: HTML {
     }
 
     private var html: String {
-        "<wbr \(attributesString)>"
+        "<meta \(attributesString)>"
     }
 }

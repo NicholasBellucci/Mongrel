@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Text: HTMLElement, Attributable {
+public struct Text: Element, Attributable {
     var tags: [String] = []
     var attributesCollection: [String: [String: String]] = [:]
 

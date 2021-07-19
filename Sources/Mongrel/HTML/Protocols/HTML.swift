@@ -16,7 +16,7 @@ extension Array: HTML where Element == HTML {
                 if let text = element as? Text {
                     return self.element(before: index) is Text ?
                         " \(text)" :
-                        text.description
+                        String(describing: text)
                 }
 
                 return String(describing: element)
