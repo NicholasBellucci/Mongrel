@@ -55,6 +55,12 @@ public extension Link {
         return copy
     }
 
+    func integrity(_ integrity: String) -> Link {
+        var copy = self
+        copy.attributes["integrity"] = integrity
+        return copy
+    }
+
     func media(_ query: String) -> Link {
         var copy = self
         copy.attributes["media"] = query
