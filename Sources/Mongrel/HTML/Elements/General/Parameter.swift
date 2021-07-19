@@ -8,7 +8,7 @@
 public struct Parameter: Attributable, EventListener {
     public var tag: String = "param"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(name: String, value: String) {
         attributes["name"] = name

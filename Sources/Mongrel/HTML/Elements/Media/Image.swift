@@ -8,7 +8,7 @@
 public struct Image: Attributable, EventListener {
     public var tag: String = "img"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(src: String, alt: String? = nil) {
         attributes["src"] = src

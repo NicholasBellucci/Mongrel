@@ -1,5 +1,5 @@
 //
-//  VStack.swift
+//  HStack.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/19/21.
@@ -7,24 +7,24 @@
 
 import Foundation
 
-public struct VStack: Attributable, EventListener {
+public struct HStack: Attributable, EventListener {
     public var tag: String = "div"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
     var innerHTML: String
-    
-    public init(alignment: HorizontalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTML) {
+
+    public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTML) {
         styles["align-items"] = alignment.rawValue
         styles["justify-content"] = Justification.center.rawValue
         styles["display"] = DisplayType.flex.rawValue
-        styles["flex-direction"] = FlexDirection.column.rawValue
+        styles["flex-direction"] = FlexDirection.row.rawValue
 
         innerHTML = content().stringValue
     }
 }
 
-extension VStack: HTML {
+extension HStack: HTML {
     public var description: String {
         html
     }
@@ -38,8 +38,8 @@ extension VStack: HTML {
     }
 }
 
-public extension VStack {
-    func frame(width: CGFloat? = nil, height: CGFloat? = nil, justification: Justification = .center) -> VStack {
+public extension HStack {
+    func frame(width: CGFloat? = nil, height: CGFloat? = nil, justification: Justification = .center) -> HStack {
         var copy = self
 
         if let width = width {
@@ -51,7 +51,7 @@ public extension VStack {
         }
 
         copy.styles["justify-content"] = justification.rawValue
-
+        
         return copy
     }
 }

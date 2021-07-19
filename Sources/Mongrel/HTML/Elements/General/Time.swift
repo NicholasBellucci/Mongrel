@@ -8,7 +8,7 @@
 public struct Time: Attributable, EventListener {
     public var tag: String = "time"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(format: String? = nil) {
         if let format = format {

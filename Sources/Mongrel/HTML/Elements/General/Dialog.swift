@@ -8,7 +8,7 @@
 public struct Dialog: Attributable, EventListener {
     public var tag: String = "dialog"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerHTML: String
 

@@ -8,7 +8,7 @@
 public struct Embed: Attributable, EventListener {
     public var tag: String = "embed"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(src: String, type: String, height: Double, width: Double) {
         attributes["src"] = src

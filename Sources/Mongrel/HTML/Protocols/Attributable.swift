@@ -76,7 +76,9 @@ public extension Attributable {
 
         copy.attributes["style"] = styles
             .sorted()
-            .map { String(describing: $0) }
+            .map {
+                "\($0.name): \($0.value)"
+            }
             .joined(separator: "; ")
 
         return copy

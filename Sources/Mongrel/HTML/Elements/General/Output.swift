@@ -8,7 +8,7 @@
 public struct Output: Attributable {
     public var tag: String = "output"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerHTML: String = ""
 

@@ -8,7 +8,7 @@
 public struct Meter: Attributable, EventListener {
     public var tag: String = "meter"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerHTML: String = ""
 

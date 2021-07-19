@@ -8,7 +8,7 @@
 public struct Style: Attributable, EventListener {
     public var tag: String = "style"
     public var attributes: [String : String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerCSS: String
 

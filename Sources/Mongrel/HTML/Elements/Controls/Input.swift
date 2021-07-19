@@ -8,7 +8,7 @@
 public struct Input: Attributable, EventListener {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(type: InputType = .text) {
         attributes["type"] = type.rawValue

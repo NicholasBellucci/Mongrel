@@ -8,7 +8,7 @@
 public struct ColumnGroup: Attributable, EventListener {
     public var tag: String = "colgroup"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var span: Int? = nil
     var innerHTML: String

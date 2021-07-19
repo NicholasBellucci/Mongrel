@@ -17,7 +17,7 @@ struct HomePage: HTMLView {
     var title: String
 
     var body: some HTML {
-        VStack(alignment: .center) {
+        HStack(alignment: .top) {
             Division {
                 Text("1")
             }
@@ -33,7 +33,7 @@ struct HomePage: HTMLView {
             }
             .styles(InlineStyle(name: "background-color", value: "pink"))
         }
-        .frame(width: 400, height: 700, justification: .top)
+        .frame(width: 400, height: 700, justification: .start)
         .id("main")
     }
 }

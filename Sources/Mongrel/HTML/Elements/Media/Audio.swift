@@ -8,7 +8,7 @@
 public struct Audio: Attributable, EventListener {
     public var tag: String = "audio"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerHTML: String
 

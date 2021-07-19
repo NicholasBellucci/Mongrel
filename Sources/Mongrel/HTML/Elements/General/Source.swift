@@ -8,7 +8,7 @@
 public struct Source: Attributable, EventListener {
     public var tag: String = "source"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init() { }
 

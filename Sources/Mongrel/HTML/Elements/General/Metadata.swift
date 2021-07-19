@@ -8,7 +8,7 @@
 public struct Metadata: Attributable, EventListener {
     public var tag: String = "meta"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(content: String) {
         attributes["content"] = content

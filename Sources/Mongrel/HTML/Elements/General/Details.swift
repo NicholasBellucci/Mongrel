@@ -8,7 +8,7 @@
 public struct Details: Attributable, EventListener {
     public var tag: String = "details"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     var innerHTML: String
 

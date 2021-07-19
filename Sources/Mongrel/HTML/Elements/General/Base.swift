@@ -8,7 +8,7 @@
 public struct Base: Attributable, EventListener {
     public var tag: String = "base"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(href: String, target: Target = .`self`) {
         attributes["href"] = href

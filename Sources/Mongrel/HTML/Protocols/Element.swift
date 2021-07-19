@@ -1,11 +1,25 @@
 public protocol Element: HTML {
     var attributes: [String: String] { get set }
-    var styles: [InlineStyle] { get set }
+    var styles: [String: String] { get set }
 }
 
 extension Element {
     var attributesString: String {
-        let attributesString = attributes
+        let stylesString = "style=\"\(allStyles)\""
+
+        if styles.isEmpty {
+            return " " + allAttributes
+        } else if attributes.isEmpty {
+            return " " + stylesString
+        } else {
+            return " \(stylesString) \(allAttributes)"
+        }
+    }
+}
+
+private extension Element {
+    var allAttributes: String {
+        attributes
             .keys
             .sorted()
             .map { key in
@@ -18,21 +32,17 @@ extension Element {
                 }
             }
             .joined(separator: " ")
+    }
 
-        let stylesString = "style=\"" + styles
-            .unique(by: \.name)
+    var allStyles: String {
+         styles
+            .keys
             .sorted()
-            .map {
-                String(describing: $0)
-            }
-            .joined(separator: "; ") + "\""
+            .map { key in
+                guard let value = styles[key] else { return "" }
 
-        if styles.isEmpty {
-            return " " + attributesString
-        } else if attributes.isEmpty {
-            return " " + stylesString
-        } else {
-            return " \(stylesString) \(attributesString)"
-        }
+                return "\(key): \(value)"
+            }
+            .joined(separator: "; ")
     }
 }

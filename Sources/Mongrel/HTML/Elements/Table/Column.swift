@@ -8,7 +8,7 @@
 public struct Column: Attributable, EventListener {
     public var tag: String = "col"
     public var attributes: [String: String] = [:]
-    public var styles: [InlineStyle] = []
+    public var styles: [String: String] = [:]
 
     public init(span: Int? = nil) {
         if let span = span {
