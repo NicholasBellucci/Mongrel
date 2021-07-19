@@ -5,10 +5,11 @@
 //  Created by Nicholas Bellucci on 7/17/21.
 //
 
-public struct GenericElement: Element, Attributable,  EventListener {
+public struct GenericElement: Attributable, EventListener {
+    public var tag: String
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
-    var tag: String
     var innerHTML: String = ""
 
     init(tag: String) {

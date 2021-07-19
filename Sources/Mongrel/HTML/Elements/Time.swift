@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Time: Element, Attributable,  EventListener {
+public struct Time: Attributable, EventListener {
+    public var tag: String = "time"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(format: String? = nil) {
         if let format = format {
@@ -25,6 +27,6 @@ extension Time: HTML {
     }
 
     private var html: String {
-        "<time \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }

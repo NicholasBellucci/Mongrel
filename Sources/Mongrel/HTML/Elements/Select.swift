@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Select: Attributable,  EventListener {
+public struct Select: Attributable, EventListener {
+    public var tag: String = "select"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Select: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<select>\(innerHTML)</select>"
-        } else {
-            return "<select \(attributesString)>\(innerHTML)</select>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

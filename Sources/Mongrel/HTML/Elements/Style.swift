@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Style: Element, Attributable,  EventListener {
+public struct Style: Attributable, EventListener {
+    public var tag: String = "style"
     public var attributes: [String : String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerCSS: String
 
@@ -28,6 +30,6 @@ extension Style: HTML {
     }
 
     private var html: String {
-        "<style \(attributesString)>\(innerCSS)</style>"
+        "<\(tag)\(attributesString)>\(innerCSS)</\(tag)>"
     }
 }

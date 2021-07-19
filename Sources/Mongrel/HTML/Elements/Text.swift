@@ -5,11 +5,13 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Text: Element, Attributable,  EventListener {
+public struct Text: Attributable, EventListener {
+    public var tag: String = ""
+    public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
+
     var tags: [String] = []
     var attributesCollection: [String: [String: String]] = [:]
-
-    public var attributes: [String: String] = [:]
 
     var value: String
 

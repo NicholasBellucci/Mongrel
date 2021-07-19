@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Image: Element, Attributable,  EventListener {
+public struct Image: Attributable, EventListener {
+    public var tag: String = "img"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(src: String, alt: String? = nil) {
         attributes["src"] = src
@@ -27,7 +29,7 @@ extension Image: HTML {
     }
 
     private var html: String {
-        "<img \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 

@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Embed: Element, Attributable,  EventListener {
+public struct Embed: Attributable, EventListener {
+    public var tag: String = "embed"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(src: String, type: String, height: Double, width: Double) {
         attributes["src"] = src
@@ -26,6 +28,6 @@ extension Embed: HTML {
     }
 
     private var html: String {
-        "<embed \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }

@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Base: Element, Attributable,  EventListener {
+public struct Base: Attributable, EventListener {
+    public var tag: String = "base"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(href: String, target: Target = .`self`) {
         attributes["href"] = href
@@ -24,6 +26,6 @@ extension Base: HTML {
     }
 
     private var html: String {
-        "<base \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }

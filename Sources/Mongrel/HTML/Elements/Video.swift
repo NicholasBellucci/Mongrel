@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Video: Attributable,  EventListener {
+public struct Video: Attributable, EventListener {
+    public var tag: String = "video"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Video: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<video>\(innerHTML)</video>"
-        } else {
-            return "<video \(attributesString)>\(innerHTML)</video>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

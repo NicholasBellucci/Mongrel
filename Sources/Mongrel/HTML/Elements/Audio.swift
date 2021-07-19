@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Audio: Attributable,  EventListener {
+public struct Audio: Attributable, EventListener {
+    public var tag: String = "audio"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Audio: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<audio>\(innerHTML)</audio>"
-        } else {
-            return "<audio \(attributesString)>\(innerHTML)</audio>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

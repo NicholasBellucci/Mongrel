@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Anchor: Attributable,  EventListener {
+public struct Anchor: Attributable, EventListener {
+    public var tag: String = "a"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Anchor: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<a>\(innerHTML)</a>"
-        } else {
-            return "<a \(attributesString)>\(innerHTML)</a>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Details: Attributable,  EventListener {
+public struct Details: Attributable, EventListener {
+    public var tag: String = "details"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Details: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<details>\(innerHTML)</details>"
-        } else {
-            return "<details \(attributesString)>\(innerHTML)</details>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

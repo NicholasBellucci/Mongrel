@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Dialog: Attributable,  EventListener {
+public struct Dialog: Attributable, EventListener {
+    public var tag: String = "dialog"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Dialog: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<dialog>\(innerHTML)</dialog>"
-        } else {
-            return "<dialog \(attributesString)>\(innerHTML)</dialog>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

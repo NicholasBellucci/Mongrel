@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Label: Element, Attributable,  EventListener {
+public struct Label: Attributable, EventListener {
+    public var tag: String = "label"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -26,6 +28,6 @@ extension Label: HTML {
     }
 
     private var html: String {
-        "<label \(attributesString)>\(innerHTML)</label>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

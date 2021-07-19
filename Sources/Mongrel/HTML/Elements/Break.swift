@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Break: Element, Attributable,  EventListener {
+public struct Break: Attributable, EventListener {
+    public var tag: String = "br"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init() { }
 }
@@ -21,11 +23,7 @@ extension Break: HTML {
     }
 
     private var html: String {
-        if attributesString == "" {
-            return "<br>"
-        } else {
-            return "<br \(attributesString)>"
-        }
+        "<\(tag)\(attributesString)>"
     }
 }
 

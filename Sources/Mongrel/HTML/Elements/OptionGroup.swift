@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct OptionGroup: Element, Attributable,  EventListener {
+public struct OptionGroup: Attributable, EventListener {
+    public var tag: String = "optgroup"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension OptionGroup: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<optgroup>\(innerHTML)</optgroup>"
-        } else {
-            return "<optgroup \(attributesString)>\(innerHTML)</optgroup>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

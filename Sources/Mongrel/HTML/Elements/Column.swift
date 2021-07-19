@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Column: Element, Attributable,  EventListener {
+public struct Column: Attributable, EventListener {
+    public var tag: String = "col"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(span: Int? = nil) {
         if let span = span {
@@ -25,10 +27,6 @@ extension Column: HTML {
     }
 
     private var html: String {
-        if attributesString == "" {
-            return "<col>"
-        } else {
-            return "<col \(attributesString)>"
-        }
+        "<\(tag)\(attributesString)>"
     }
 }

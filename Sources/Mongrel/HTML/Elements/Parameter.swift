@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Parameter: Element, Attributable,  EventListener {
+public struct Parameter: Attributable, EventListener {
+    public var tag: String = "param"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(name: String, value: String) {
         attributes["name"] = name
@@ -24,6 +26,6 @@ extension Parameter: HTML {
     }
 
     private var html: String {
-        "<param \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }

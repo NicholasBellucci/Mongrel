@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct OrderedList: Element, Attributable,  EventListener {
+public struct OrderedList: Attributable, EventListener {
+    public var tag: String = "ol"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension OrderedList: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<ol>\(innerHTML)</ol>"
-        } else {
-            return "<ol \(attributesString)>\(innerHTML)</ol>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

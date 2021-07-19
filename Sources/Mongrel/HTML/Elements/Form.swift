@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Form: Attributable,  EventListener {
+public struct Form: Attributable, EventListener {
+    public var tag: String = "form"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Form: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<form>\(innerHTML)</form>"
-        } else {
-            return "<form \(attributesString)>\(innerHTML)</form>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

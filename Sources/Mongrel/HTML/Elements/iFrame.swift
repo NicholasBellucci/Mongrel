@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct iFrame: Element, Attributable,  EventListener {
+public struct iFrame: Attributable, EventListener {
+    public var tag: String = "iframe"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String = ""
 
@@ -30,7 +32,7 @@ extension iFrame: HTML {
     }
 
     private var html: String {
-        "<iframe \(attributesString)>\(innerHTML)</iframe>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

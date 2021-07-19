@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Meter: Attributable,  EventListener {
+public struct Meter: Attributable, EventListener {
+    public var tag: String = "meter"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String = ""
 
@@ -30,7 +32,7 @@ extension Meter: HTML {
     }
 
     private var html: String {
-        "<meter \(attributesString)>\(innerHTML)</meter>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

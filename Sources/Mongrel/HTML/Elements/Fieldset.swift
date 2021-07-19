@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Fieldset: Element, Attributable,  EventListener {
+public struct Fieldset: Attributable, EventListener {
+    public var tag: String = "fieldset"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension Fieldset: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<fieldset>\(innerHTML)</fieldset>"
-        } else {
-            return "<fieldset \(attributesString)>\(innerHTML)</fieldset>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

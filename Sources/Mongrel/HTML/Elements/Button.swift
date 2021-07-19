@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Button: Attributable,  EventListener {
+public struct Button: Attributable, EventListener {
+    public var tag: String = "button"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String = ""
 
@@ -30,7 +32,7 @@ extension Button: HTML {
     }
 
     private var html: String {
-        "<button \(attributesString)>\(innerHTML)</button>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

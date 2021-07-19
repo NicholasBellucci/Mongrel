@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct ColumnGroup: Element, Attributable,  EventListener {
+public struct ColumnGroup: Attributable, EventListener {
+    public var tag: String = "colgroup"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var span: Int? = nil
     var innerHTML: String
@@ -30,10 +32,6 @@ extension ColumnGroup: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<colgroup>\(innerHTML)</colgroup>"
-        } else {
-            return "<colgroup \(attributesString)>\(innerHTML)</colgroup>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

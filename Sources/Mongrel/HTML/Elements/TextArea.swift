@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct TextArea: Attributable,  EventListener {
+public struct TextArea: Attributable, EventListener {
+    public var tag: String = "textarea"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -25,11 +27,7 @@ extension TextArea: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<textarea>\(innerHTML)</textarea>"
-        } else {
-            return "<textarea \(attributesString)>\(innerHTML)</textarea>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

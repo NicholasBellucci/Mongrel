@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct HorizonalRule: Element, Attributable,  EventListener {
+public struct HorizonalRule: Attributable, EventListener {
+    public var tag: String = "hr"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init() { }
 }
@@ -21,10 +23,6 @@ extension HorizonalRule: HTML {
     }
 
     private var html: String {
-        if attributesString == "" {
-            return "<hr>"
-        } else {
-            return "<hr \(attributesString)>"
-        }
+        "<\(tag)\(attributesString)>"
     }
 }

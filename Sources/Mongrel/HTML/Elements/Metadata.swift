@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Metadata: Element, Attributable,  EventListener {
+public struct Metadata: Attributable, EventListener {
+    public var tag: String = "meta"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(content: String) {
         attributes["content"] = content
@@ -23,7 +25,7 @@ extension Metadata: HTML {
     }
 
     private var html: String {
-        "<meta \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 

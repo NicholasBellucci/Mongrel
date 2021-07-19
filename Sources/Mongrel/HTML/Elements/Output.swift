@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Output: Element, Attributable {
+public struct Output: Attributable {
+    public var tag: String = "output"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String = ""
 
@@ -27,11 +29,7 @@ extension Output: HTML {
     }
 
     private var html: String {
-        if attributes.isEmpty {
-            return "<output>\(innerHTML)</output>"
-        } else {
-            return "<output \(attributesString)>\(innerHTML)</output>"
-        }
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

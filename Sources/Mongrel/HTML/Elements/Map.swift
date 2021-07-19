@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Map: Element, Attributable,  EventListener {
+public struct Map: Attributable, EventListener {
+    public var tag: String = "map"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -26,6 +28,6 @@ extension Map: HTML {
     }
 
     private var html: String {
-        "<map \(attributesString)>\(innerHTML)</map>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

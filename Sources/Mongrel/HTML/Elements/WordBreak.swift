@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct WordBreak: Element, Attributable,  EventListener {
+public struct WordBreak: Attributable, EventListener {
+    public var tag: String = "wbr"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init() { }
 }
@@ -21,10 +23,6 @@ extension WordBreak: HTML {
     }
 
     private var html: String {
-        if attributesString == "" {
-            return "<wbr>"
-        } else {
-            return "<wbr \(attributesString)>"
-        }
+        "<\(tag)\(attributesString)>"
     }
 }

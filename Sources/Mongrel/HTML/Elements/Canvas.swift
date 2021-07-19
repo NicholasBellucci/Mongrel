@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Canvas: Attributable,  EventListener {
+public struct Canvas: Attributable, EventListener {
+    public var tag: String = "canvas"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -27,6 +29,6 @@ extension Canvas: HTML {
     }
 
     private var html: String {
-        "<canvas \(attributesString)>\(innerHTML)</canvas>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

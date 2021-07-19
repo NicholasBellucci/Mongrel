@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Root: Element, Attributable,  EventListener {
+public struct Root: Attributable, EventListener {
+    public var tag: String = "html"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     var innerHTML: String
 
@@ -31,6 +33,6 @@ extension Root: HTML {
     }
 
     private var html: String {
-        "<!DOCTYPE html><html \(attributesString)>\(innerHTML)</html>"
+        "<!DOCTYPE html><\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

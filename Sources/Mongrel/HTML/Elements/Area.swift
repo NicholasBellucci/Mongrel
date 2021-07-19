@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Area: Element, Attributable,  EventListener {
+public struct Area: Attributable, EventListener {
+    public var tag: String = "area"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(shape: Shape, coordinates: String) {
         attributes["shape"] = shape.rawValue
@@ -24,7 +26,7 @@ extension Area: HTML {
     }
 
     private var html: String {
-        "<area \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 

@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Link: Element, Attributable,  EventListener {
+public struct Link: Attributable, EventListener {
+    public var tag: String = "link"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(href: String, rel: String) {
         attributes["href"] = href
@@ -24,7 +26,7 @@ extension Link: HTML {
     }
 
     private var html: String {
-        "<link \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 

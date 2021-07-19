@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Input: Element, Attributable,  EventListener {
+public struct Input: Attributable, EventListener {
+    public var tag: String = "input"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(type: InputType = .text) {
         attributes["type"] = type.rawValue
@@ -23,7 +25,7 @@ extension Input: HTML {
     }
 
     private var html: String {
-        "<input \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 

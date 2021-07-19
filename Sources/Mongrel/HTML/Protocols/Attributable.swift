@@ -1,4 +1,6 @@
-public protocol Attributable: Element { }
+public protocol Attributable: Element {
+    var tag: String { get }
+}
 
 public extension Attributable {
     func accessKey(_ key: String) -> Attributable {

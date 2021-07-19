@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Source: Element, Attributable,  EventListener {
+public struct Source: Attributable, EventListener {
+    public var tag: String = "source"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init() { }
 
@@ -25,11 +27,7 @@ extension Source: HTML {
     }
 
     private var html: String {
-        if attributesString == "" {
-            return "<source>"
-        } else {
-            return "<source \(attributesString)>"
-        }
+        "<\(tag)\(attributesString)>"
     }
 }
 

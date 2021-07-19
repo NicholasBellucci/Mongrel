@@ -5,8 +5,10 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Track: Element, Attributable,  EventListener {
+public struct Track: Attributable, EventListener {
+    public var tag: String = "track"
     public var attributes: [String: String] = [:]
+    public var styles: [InlineStyle] = []
 
     public init(src: String, kind: TrackKind) {
         attributes["src"] = src
@@ -28,7 +30,7 @@ extension Track: HTML {
     }
 
     private var html: String {
-        "<track \(attributesString)>"
+        "<\(tag)\(attributesString)>"
     }
 }
 
