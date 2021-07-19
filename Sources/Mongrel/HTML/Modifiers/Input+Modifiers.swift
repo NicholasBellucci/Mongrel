@@ -24,7 +24,7 @@ public extension Input {
         return copy
     }
 
-    func autofocus(_ value: Bool = true) -> Input {
+    func autofocus(if value: Bool = true) -> Input {
         var copy = self
 
         if value {
@@ -34,7 +34,7 @@ public extension Input {
         return copy
     }
 
-    func checked(_ value: Bool = true) -> Input {
+    func checked(if value: Bool = true) -> Input {
         var copy = self
 
         if value {
@@ -50,7 +50,7 @@ public extension Input {
         return copy
     }
 
-    func disabled(_ value: Bool = true) -> Input {
+    func disabled(if value: Bool = true) -> Input {
         var copy = self
 
         if value {

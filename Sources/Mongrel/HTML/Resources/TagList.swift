@@ -116,8 +116,6 @@ public let RubyParenthesis = GenericElement(tag: "rp")
 public let RubyText = GenericElement(tag: "rt")
 /// Represents the HTML ``<samp>`` tag.
 public let SampleOutput = GenericElement(tag: "samp")
-/// Represents the HTML ``<script>`` tag.
-public let Script = GenericElement(tag: "script")
 /// Represents the HTML ``<section>`` tag.
 public let Section = GenericElement(tag: "section")
 /// Represents the HTML ``<select>`` tag.

@@ -13,7 +13,7 @@ public struct List: Element, Attributable {
 
     public init(_ type: ListType, @HTMLBuilder _ content: () -> HTML) {
         self.type = type
-        self.innerHTML = content().render()
+        innerHTML = content().render()
     }
 }
 

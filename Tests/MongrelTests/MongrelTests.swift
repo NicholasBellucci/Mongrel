@@ -9,13 +9,11 @@
 
             let html = Root {
                 Head {
-                    Style {
-                        InternalStyle(
-                            selector: "p.test",
-                            styles: [
-                                InlineStyle(name: "color", value: "blue"),
-                            ]
-                        )
+                    Script {
+                        """
+                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+                        """
                     }
                 }
 
