@@ -8,14 +8,17 @@
             // results.
 
             let html = Root {
-                Anchor {
-                    "link"
-                }
-                .attributes {
-                    Attribute.accept(false)
-                    Attribute.action("")
+                List(.description) {
+                    DescriptionTerm {
+                        Text("Coffee")
+                    }
+
+                    DescriptionDetails {
+                        Text("- black hot drink")
+                    }
                 }
             }
+
 
             print(html)
         }

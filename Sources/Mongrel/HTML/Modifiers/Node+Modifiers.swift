@@ -4,14 +4,9 @@
 /// attribute to an HTML element.
 ///
 public extension Node {
-    func attributes(@AttributeBuilder _ content: () -> [Attribute]) -> Node {
+    func addAttribute(_ attribute: Attribute, value: Any) -> Node {
         var copy = self
-        content()
-            .forEach {
-                if let value: Any = $0.associatedValue() {
-                    copy.attributes.append((name: $0.stringValue, value: "\(value)"))
-                }
-            }
+        copy.attributes[attribute.rawValue] = "\(value)"
         return copy
     }
 }

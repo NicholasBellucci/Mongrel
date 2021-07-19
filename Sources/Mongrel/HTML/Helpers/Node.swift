@@ -5,15 +5,15 @@
 //  Created by Nicholas Bellucci on 7/17/21.
 //
 
-public struct Node: Tag {
-    public var name: String
-    public var isEmpty: Bool
-    public var attributes: [(name: String, value: String)] = []
+public struct Node {
+    var tag: String
+    var isEmpty: Bool
+    var attributes: [String: String] = [:]
 
     var innerHTML: String = ""
 
-    public init(name: String, isEmpty: Bool = false) {
-        self.name = name
+    init(tag: String, isEmpty: Bool = false) {
+        self.tag = tag
         self.isEmpty = isEmpty
     }
 
@@ -25,5 +25,33 @@ public struct Node: Tag {
         var copy = self
         copy.innerHTML = content().render()
         return copy
+    }
+}
+
+extension Node: HTML {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        if attributes.isEmpty {
+            return isEmpty ?
+                "<\(tag) />":
+                "<\(tag)>\(innerHTML)</\(tag)>"
+        } else {
+            return isEmpty ?
+                "<\(tag) \(attributesString)>" :
+                "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
+        }
+    }
+
+    private var attributesString: String {
+        attributes
+            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
+            .joined(separator: " ")
     }
 }
