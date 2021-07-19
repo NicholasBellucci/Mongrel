@@ -2,14 +2,10 @@
 public let Abbreviation = GenericElement(tag: "abbr")
 /// Represents the HTML ``<address>`` tag.
 public let Address = GenericElement(tag: "address")
-/// Represents the HTML ``<a>`` tag.
-public let Anchor = GenericElement(tag: "a")
 /// Represents the HTML ``<article>`` tag.
 public let Article = GenericElement(tag: "article")
 /// Represents the HTML ``<aside>`` tag.
 public let Aside = GenericElement(tag: "aside")
-/// Represents the HTML ``<audio>`` tag.
-public let Audio = GenericElement(tag: "audio")
 /// Represents the HTML ``<bdi>`` tag.
 public let BidirectionalIsolate = GenericElement(tag: "bdi")
 /// Represents the HTML ``<bdo>`` tag.
@@ -18,8 +14,6 @@ public let BidirectionalTextOverride  = GenericElement(tag: "bdo")
 public let BlockQuotation = GenericElement(tag: "blockquote")
 /// Represents the HTML ``<body>`` tag.
 public let Body = GenericElement(tag: "body")
-/// Represents the HTML ``<button>`` tag.
-public let Button = GenericElement(tag: "button")
 /// Represents the HTML ``<canvas>`` tag.
 public let Canvas = GenericElement(tag: "canvas")
 /// Represents the HTML ``<caption>`` tag.
@@ -48,8 +42,6 @@ public let Figure = GenericElement(tag: "figure")
 public let FigureCaption = GenericElement(tag: "figcaption")
 /// Represents the HTML ``<footer>`` tag.
 public let Footer = GenericElement(tag: "footer")
-/// Represents the HTML ``<form>`` tag.
-public let Form = GenericElement(tag: "form")
 /// Represents the HTML ``<html>`` tag.
 public let Root = GenericElement(tag: "html")
 /// Represents the HTML ``<head>`` tag.
@@ -68,8 +60,6 @@ public let Legend = GenericElement(tag: "legend")
 public let ListItem = GenericElement(tag: "li")
 /// Represents the HTML ``<main>`` tag.
 public let Main = GenericElement(tag: "main")
-/// Represents the HTML ``<meter>`` tag.
-public let Meter = GenericElement(tag: "meter")
 /// Represents the HTML ``<nav>`` tag.
 public let Navigation = GenericElement(tag: "nav")
 /// Represents the HTML ``<noscript>`` tag.
@@ -126,5 +116,3 @@ public let TextArea = GenericElement(tag: "textarea")
 public let Title = GenericElement(tag: "title")
 /// Represents the HTML ``<var>`` tag.
 public let Variable = GenericElement(tag: "var")
-/// Represents the HTML ``<video>`` tag.
-public let Video = GenericElement(tag: "video")

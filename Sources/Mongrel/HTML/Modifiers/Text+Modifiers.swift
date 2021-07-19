@@ -20,7 +20,7 @@ public extension Text {
         return copy
     }
 
-    func textDirection(_ direction: Direction) -> Text {
+    func direction(_ direction: Direction) -> Text {
         var copy = self
         copy.tags.append("bdo")
         copy.attributesCollection["bdo"] = ["dir": direction.rawValue]
@@ -54,29 +54,6 @@ public extension Text {
     func italic() -> Text {
         var copy = self
         copy.tags.append("i")
-        return copy
-    }
-
-    func linkTo(_ link: String, title: String? = nil, target: Target = .`self`) -> Text {
-        var copy = self
-        copy.tags.append("a")
-
-        copy.attributesCollection["a"] = [
-            "href": link,
-            "target": target.rawValue
-        ]
-
-        if let title = title {
-            copy.attributesCollection["a"]?["title"] = title
-        }
-
-        return copy
-    }
-
-    func mailTo(_ email: String) -> Text {
-        var copy = self
-        copy.tags.append("a")
-        copy.attributesCollection["a"] = ["href": "mailto:\(email)"]
         return copy
     }
 
