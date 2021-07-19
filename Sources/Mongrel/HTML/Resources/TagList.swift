@@ -4,8 +4,6 @@ public let Abbreviation = Node(tag: "abbr")
 public let Address = Node(tag: "address")
 /// Represents the HTML ``<a>`` tag.
 public let Anchor = Node(tag: "a")
-/// Represents the HTML ``<area>`` tag.
-public let Area = Node(tag: "area", isEmpty: true)
 /// Represents the HTML ``<article>`` tag.
 public let Article = Node(tag: "article")
 /// Represents the HTML ``<aside>`` tag.
@@ -22,8 +20,6 @@ public let BidirectionalTextOverride  = Node(tag: "bdo")
 public let BlockQuotation = Node(tag: "blockquote")
 /// Represents the HTML ``<body>`` tag.
 public let Body = Node(tag: "body")
-/// Represents the HTML ``<br>`` tag.
-public let Break = Node(tag: "br", isEmpty: true)
 /// Represents the HTML ``<button>`` tag.
 public let Button = Node(tag: "button")
 /// Represents the HTML ``<canvas>`` tag.
