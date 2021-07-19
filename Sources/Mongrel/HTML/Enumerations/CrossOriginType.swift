@@ -1,5 +1,5 @@
 //
-//  CrossOrigin.swift
+//  CrossOriginType.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.

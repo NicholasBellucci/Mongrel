@@ -84,8 +84,6 @@ public let ListItem = Node(tag: "li")
 public let Main = Node(tag: "main")
 /// Represents the HTML ``<map>`` tag.
 public let Map = Node(tag: "map")
-/// Represents the HTML ``<meta>`` tag.
-public let Metadata = Node(tag: "meta", isEmpty: true)
 /// Represents the HTML ``<meter>`` tag.
 public let Meter = Node(tag: "meter")
 /// Represents the HTML ``<nav>`` tag.
@@ -102,8 +100,6 @@ public let OptionGroup = Node(tag: "optgroup")
 public let Output = Node(tag: "output")
 /// Represents the HTML ``<p>`` tag.
 public let Paragraph = Node(tag: "p")
-/// Represents the HTML ``<param>`` tag.
-public let Parameter = Node(tag: "param", isEmpty: true)
 /// Represents the HTML ``<picture>`` tag.
 public let Picture = Node(tag: "picture")
 /// Represents the HTML ``<pre>`` tag.
@@ -154,11 +150,7 @@ public let TextArea = Node(tag: "textarea")
 public let Time = Node(tag: "time")
 /// Represents the HTML ``<title>`` tag.
 public let Title = Node(tag: "title")
-/// Represents the HTML ``<track>`` tag.
-public let Track = Node(tag: "track", isEmpty: true)
 /// Represents the HTML ``<var>`` tag.
 public let Variable = Node(tag: "var")
 /// Represents the HTML ``<video>`` tag.
 public let Video = Node(tag: "video")
-/// Represents the HTML ``<wbr>`` tag.
-public let WordBreak = Node(tag: "wbr", isEmpty: true)
