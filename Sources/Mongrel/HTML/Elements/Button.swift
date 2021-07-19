@@ -12,7 +12,7 @@ public struct Button: Attributable,  EventListener {
 
     public init(@HTMLBuilder _ content: () -> HTML) {
         attributes["type"] = "button"
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

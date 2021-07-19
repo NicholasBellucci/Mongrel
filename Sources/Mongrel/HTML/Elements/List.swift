@@ -13,7 +13,7 @@ public struct List: Element, Attributable,  EventListener {
 
     public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTML) {
         self.type = type
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

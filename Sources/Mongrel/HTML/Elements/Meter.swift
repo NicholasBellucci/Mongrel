@@ -12,7 +12,7 @@ public struct Meter: Attributable,  EventListener {
 
     public init(value: Double, @HTMLBuilder _ content: () -> HTML) {
         attributes["value"] = "\(value)"
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

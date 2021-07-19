@@ -1,16 +1,16 @@
 public protocol HTML: CustomStringConvertible, CustomDebugStringConvertible {
-    func render() -> String
+    var stringValue: String { get }
 }
 
 public extension HTML {
-    func render() -> String {
+    var stringValue: String {
         String(describing: self)
     }
 }
 
 extension Array: HTML where Element == HTML {
-    public func render() -> String {
-        return self
+    public var stringValue: String {
+        self
             .enumerated()
             .map { index, element in
                 if let text = element as? Text {

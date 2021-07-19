@@ -11,7 +11,7 @@ public struct Fieldset: Element, Attributable,  EventListener {
     var innerHTML: String
 
     public init(@HTMLBuilder _ content: () -> HTML) {
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

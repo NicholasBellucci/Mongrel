@@ -7,17 +7,26 @@ final class MongrelTests: XCTestCase {
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
 
-        let page = HomePage()
+        let page = HomePage(title: "New Page")
 
         print(page)
     }
 }
 
 struct HomePage: HTMLPage {
+    var title: String
+
     var body: some HTML {
-        Option {
-            Text("Hello")
+        Root(language: .en) {
+            Head {
+                Title {
+                    Text("Title of the document")
+                }
+            }
+
+            Body {
+                Text("The content of the document.....")
+            }
         }
-        .value("hello")
     }
 }

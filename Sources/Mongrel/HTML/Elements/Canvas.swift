@@ -13,7 +13,7 @@ public struct Canvas: Attributable,  EventListener {
     public init(height: Int = 150, width: Int = 150, @HTMLBuilder _ content: () -> HTML) {
         attributes["height"] = "\(height)"
         attributes["width"] = "\(width)"
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

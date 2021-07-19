@@ -16,7 +16,7 @@ public struct Progress: Element, Attributable,  EventListener {
 
     public init(max: Double = 1, @HTMLBuilder _ content: () -> HTML) {
         attributes["max"] = "\(max)"
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

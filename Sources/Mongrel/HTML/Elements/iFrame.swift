@@ -12,7 +12,7 @@ public struct iFrame: Element, Attributable,  EventListener {
 
     public init(title: String, @HTMLBuilder _ content: () -> HTML) {
         attributes["title"] = title
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 
@@ -91,7 +91,7 @@ public extension iFrame {
 
     func srcdoc(@HTMLBuilder _ content: () -> HTML) -> iFrame {
         var copy = self
-        copy.attributes["srcdoc"] = content().render()
+        copy.attributes["srcdoc"] = String(describing: content())
         return copy
     }
 

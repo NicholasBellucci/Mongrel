@@ -12,7 +12,7 @@ public struct Label: Element, Attributable,  EventListener {
 
     public init(for: String, @HTMLBuilder _ content: () -> HTML) {
         attributes["for"] = `for`
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

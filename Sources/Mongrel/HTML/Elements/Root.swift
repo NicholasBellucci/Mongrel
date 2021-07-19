@@ -17,7 +17,7 @@ public struct Root: Element, Attributable,  EventListener {
             attributes["lang"] = "\(language.rawValue)"
         }
 
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

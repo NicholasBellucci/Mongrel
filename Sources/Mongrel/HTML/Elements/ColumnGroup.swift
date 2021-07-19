@@ -16,7 +16,7 @@ public struct ColumnGroup: Element, Attributable,  EventListener {
             attributes["span"] = "\(span)"
         }
 
-        innerHTML = content().render()
+        innerHTML = content().stringValue
     }
 }
 

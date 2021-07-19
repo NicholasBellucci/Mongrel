@@ -21,7 +21,7 @@ public struct GenericElement: Element, Attributable,  EventListener {
 
     public func callAsFunction(@HTMLBuilder _ content: () -> HTML) -> GenericElement {
         var copy = self
-        copy.innerHTML = content().render()
+        copy.innerHTML = content().stringValue
         return copy
     }
 }
