@@ -26,7 +26,7 @@ extension Button: HTML {
     }
 
     private var html: String {
-        return "<button \(attributesString)>\(innerHTML)</button>"
+        "<button \(attributesString)>\(innerHTML)</button>"
     }
 }
 

@@ -26,6 +26,6 @@ extension Map: HTML {
     }
 
     private var html: String {
-        return "<map \(attributesString)>\(innerHTML)</map>"
+        "<map \(attributesString)>\(innerHTML)</map>"
     }
 }
