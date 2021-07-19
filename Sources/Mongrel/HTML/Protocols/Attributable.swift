@@ -14,16 +14,13 @@ public extension Attributable {
         return copy
     }
 
-    func `class`(_ class: String) -> Attributable {
+    func classes(_ classes: String...) -> Attributable {
         var copy = self
-        let currentValue: String? = copy.attributes["class"] ?? nil
 
-        if let currentValue = currentValue {
-            copy.attributes["class"] = "\(currentValue) \(`class`)"
-        } else {
-            copy.attributes["class"] = `class`
-        }
-
+        copy.attributes["class"] = classes
+            .sorted()
+            .map { $0 }.joined(separator: " ")
+        
         return copy
     }
 
@@ -67,15 +64,13 @@ public extension Attributable {
         return copy
     }
 
-    func style(_ style: String) -> Attributable {
+    func styles(_ styles: InlineStyle...) -> Attributable {
         var copy = self
-        let currentValue: String? = copy.attributes["style"] ?? nil
 
-        if let currentValue = currentValue {
-            copy.attributes["style"] = "\(currentValue) \(style)"
-        } else {
-            copy.attributes["style"] = style
-        }
+        copy.attributes["style"] = styles
+            .sorted()
+            .map { String(describing: $0) }
+            .joined(separator: "; ")
 
         return copy
     }

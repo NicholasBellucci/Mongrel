@@ -124,8 +124,6 @@ public let Section = GenericElement(tag: "section")
 public let Select = GenericElement(tag: "select")
 /// Represents the HTML ``<span>`` tag.
 public let Span = GenericElement(tag: "span")
-/// Represents the HTML ``<style>`` tag.
-public let Style = GenericElement(tag: "style")
 /// Represents the HTML ``<summary>`` tag.
 public let Summary = GenericElement(tag: "summary")
 /// Represents the HTML ``<table>`` tag.

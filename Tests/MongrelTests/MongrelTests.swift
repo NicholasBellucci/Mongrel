@@ -8,23 +8,25 @@
             // results.
 
             let html = Root {
-                Body {
-                    Form {
-                        Label(for: "fname") {
-                            Text("First name:")
-                        }
-
-                        Input(type: .email)
-                            .name("fname")
-                            .id("fname")
-
-                        Break()
-                        Break()
-
-                        Input(type: .submit)
-                            .value("Submit")
-                            .hidden(true)
+                Head {
+                    Style {
+                        InternalStyle(
+                            selector: "p.test",
+                            styles: [
+                                InlineStyle(name: "color", value: "blue"),
+                            ]
+                        )
                     }
+                }
+
+                Body {
+                    Text("Header")
+                        .heading(.h3)
+
+                    Paragraph {
+                        Text("testing")
+                    }
+                    .classes("test")
                 }
             }
 
