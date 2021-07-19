@@ -1,10 +1,3 @@
-//
-//  Attributable.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
 public protocol Attributable: Element { }
 
 public extension Attributable {
@@ -27,6 +20,12 @@ public extension Attributable {
     func contentEditable(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["contenteditable"] = "\(value)"
+        return copy
+    }
+
+    func customAttribute(name: String, value: Any) -> Attributable {
+        var copy = self
+        copy.attributes[name] = "\(value)"
         return copy
     }
 

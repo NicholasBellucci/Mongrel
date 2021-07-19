@@ -1,10 +1,3 @@
-//
-//  InternalStyle.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
 public struct InternalStyle {
     private var selector: String
     private var styles: [InlineStyle]

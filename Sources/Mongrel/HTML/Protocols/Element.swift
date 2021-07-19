@@ -1,10 +1,3 @@
-//
-//  Element.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
 public protocol Element: HTML {
     var attributes: [String: String] { get set }
 }

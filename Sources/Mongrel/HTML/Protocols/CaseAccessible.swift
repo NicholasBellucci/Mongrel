@@ -1,10 +1,3 @@
-//
-//  CaseAccessible.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
 public protocol CaseAccessible { }
 
 public extension CaseAccessible {

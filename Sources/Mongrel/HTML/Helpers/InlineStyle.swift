@@ -1,10 +1,3 @@
-//
-//  InlineStyle.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
 public struct InlineStyle {
     private var name: String
     private var value: Any
