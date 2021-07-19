@@ -1,6 +1,6 @@
 public struct InternalStyle {
-    private var selector: String
-    private var styles: [InlineStyle]
+    var selector: String
+    var styles: [InlineStyle]
 
     public init(selector: String, styles: [InlineStyle]) {
         self.selector = selector

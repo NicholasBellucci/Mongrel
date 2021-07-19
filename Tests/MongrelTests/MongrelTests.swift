@@ -17,22 +17,23 @@ struct HomePage: HTMLView {
     var title: String
 
     var body: some HTML {
-        Root(language: .en) {
-            Body {
-                Text("The video element")
-                    .heading(.h1)
-
-                Video {
-                    Source(url: "movie.mp4")
-                        .type("video/mp4")
-
-                    Source(url: "movie.ogg")
-                        .type("video/ogg")
-                }
-                .width(320)
-                .height(240)
-                .controls()
+        VStack(alignment: .center) {
+            Division {
+                Text("1")
             }
+            .styles(InlineStyle(name: "background-color", value: "coral"))
+
+            Division {
+                Text("2")
+            }
+            .styles(InlineStyle(name: "background-color", value: "lightblue"))
+
+            Division {
+                Text("3")
+            }
+            .styles(InlineStyle(name: "background-color", value: "pink"))
         }
+        .frame(width: 400, height: 700, justification: .top)
+        .id("main")
     }
 }

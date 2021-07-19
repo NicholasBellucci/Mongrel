@@ -12,27 +12,27 @@ extension Element {
                 guard let value = attributes[key] else { return "" }
 
                 if value == "" {
-                    return "\(key)"
+                    return key
                 } else {
                     return "\(key)=\"\(value)\""
                 }
             }
             .joined(separator: " ")
 
-        let stylesString = attributes
-            .keys
+        let stylesString = "style=\"" + styles
+            .unique(by: \.name)
             .sorted()
-            .map { key in
-                guard let value = attributes[key] else { return "" }
-
-                if value == "" {
-                    return "\(key)"
-                } else {
-                    return "\(key)=\"\(value)\""
-                }
+            .map {
+                String(describing: $0)
             }
-            .joined(separator: " ")
+            .joined(separator: "; ") + "\""
 
-        return " \(stylesString) \(attributesString)"
+        if styles.isEmpty {
+            return " " + attributesString
+        } else if attributes.isEmpty {
+            return " " + stylesString
+        } else {
+            return " \(stylesString) \(attributesString)"
+        }
     }
 }

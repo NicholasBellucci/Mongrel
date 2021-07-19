@@ -1,6 +1,6 @@
 public struct InlineStyle {
-    private var name: String
-    private var value: Any
+    var name: String
+    var value: Any
 
     public init(name: String, value: Any) {
         self.name = name
