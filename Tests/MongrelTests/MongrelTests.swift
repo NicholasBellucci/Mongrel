@@ -13,21 +13,25 @@ final class MongrelTests: XCTestCase {
     }
 }
 
-struct HomePage: HTMLPage {
+struct HomePage: HTMLView {
     var title: String
 
     var body: some HTML {
         Root(language: .en) {
-            Head {
-                Title {
-                    Text("Title of the document")
-                }
-            }
-
             Body {
-                Meter(value: 2)
-                    .min(0)
-                    .max(10)
+                Text("The video element")
+                    .heading(.h1)
+
+                Video {
+                    Source(url: "movie.mp4")
+                        .type("video/mp4")
+
+                    Source(url: "movie.ogg")
+                        .type("video/ogg")
+                }
+                .width(320)
+                .height(240)
+                .controls()
             }
         }
     }

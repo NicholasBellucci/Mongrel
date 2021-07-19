@@ -1,10 +1,10 @@
-public protocol HTMLPage: HTML {
-    associatedtype HTMLBody: HTML
+public protocol HTMLView: HTML {
+    associatedtype ContentBody: HTML
 
-    @HTMLBuilder var body: Self.HTMLBody { get }
+    @HTMLBuilder var body: Self.ContentBody { get }
 }
 
-extension HTMLPage {
+extension HTMLView {
     public var description: String {
         body.stringValue
     }

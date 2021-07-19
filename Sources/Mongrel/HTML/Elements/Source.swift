@@ -9,6 +9,10 @@ public struct Source: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init() { }
+
+    public init(url: String) {
+        attributes["src"] = url
+    }
 }
 
 extension Source: HTML {
