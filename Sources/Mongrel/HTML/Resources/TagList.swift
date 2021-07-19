@@ -82,8 +82,6 @@ public let Legend = GenericElement(tag: "legend")
 public let ListItem = GenericElement(tag: "li")
 /// Represents the HTML ``<main>`` tag.
 public let Main = GenericElement(tag: "main")
-/// Represents the HTML ``<map>`` tag.
-public let Map = GenericElement(tag: "map")
 /// Represents the HTML ``<meter>`` tag.
 public let Meter = GenericElement(tag: "meter")
 /// Represents the HTML ``<nav>`` tag.
@@ -104,8 +102,6 @@ public let Paragraph = GenericElement(tag: "p")
 public let Picture = GenericElement(tag: "picture")
 /// Represents the HTML ``<pre>`` tag.
 public let PreformattedText = GenericElement(tag: "pre")
-/// Represents the HTML ``<progress>`` tag.
-public let Progress = GenericElement(tag: "progress")
 /// Represents the HTML ``<q>`` tag.
 public let Quotation = GenericElement(tag: "q")
 /// Represents the HTML ``<ruby>`` tag.

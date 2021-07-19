@@ -8,15 +8,8 @@
             // results.
 
             let html = Root {
-                Body {
-                    Text("Header")
-                        .heading(.h3)
-
-                    Paragraph {
-                        Text("testing")
-                    }
-                    .classes("test", "other")
-                }
+                Progress(max: 100)
+                    .value(40)
             }
 
             print(html)
