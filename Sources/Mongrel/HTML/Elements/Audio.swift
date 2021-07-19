@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Audio: Attributable {
+public struct Audio: Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var innerHTML: String

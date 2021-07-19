@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Link: Element, Attributable {
+public struct Link: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(href: String, rel: String) {

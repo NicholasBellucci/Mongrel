@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Metadata: Element, Attributable {
+public struct Metadata: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(content: String) {

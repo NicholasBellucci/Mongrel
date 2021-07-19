@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Time: Element, Attributable {
+public struct Time: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(format: String? = nil) {

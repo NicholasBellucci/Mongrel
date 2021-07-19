@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct OptionGroup: Element, Attributable {
+public struct OptionGroup: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var innerHTML: String

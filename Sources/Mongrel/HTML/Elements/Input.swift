@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Input: Element, Attributable {
+public struct Input: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(type: InputType = .text) {

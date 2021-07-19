@@ -13,6 +13,7 @@
                 }
                 .value("hello")
             }
+            .on(.abort, "script")
 
             print(html)
         }

@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct List: Element, Attributable {
+public struct List: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var type: GenericListType

@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct ColumnGroup: Element, Attributable {
+public struct ColumnGroup: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var span: Int? = nil

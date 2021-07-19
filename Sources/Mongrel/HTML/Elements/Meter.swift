@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/19/21.
 //
 
-public struct Meter: Attributable {
+public struct Meter: Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var innerHTML: String

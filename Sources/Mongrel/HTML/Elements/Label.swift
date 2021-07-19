@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Label: Element, Attributable {
+public struct Label: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     var innerHTML: String

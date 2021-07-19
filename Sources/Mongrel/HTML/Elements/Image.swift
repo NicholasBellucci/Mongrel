@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Image: Element, Attributable {
+public struct Image: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(src: String, alt: String? = nil) {

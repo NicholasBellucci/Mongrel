@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Base: Element, Attributable {
+public struct Base: Element, Attributable,  EventListener {
     public var attributes: [String: String] = [:]
 
     public init(href: String, target: Target = .`self`) {
