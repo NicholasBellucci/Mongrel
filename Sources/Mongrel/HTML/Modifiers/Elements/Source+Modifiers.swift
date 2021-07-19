@@ -6,9 +6,9 @@
 //
 
 public extension Source {
-    func media(_ media: String) -> Source {
+    func media(_ query: String) -> Source {
         var copy = self
-        copy.attributes["media"] = media
+        copy.attributes["media"] = query
         return copy
     }
 

@@ -10,8 +10,6 @@ public let Article = Node(tag: "article")
 public let Aside = Node(tag: "aside")
 /// Represents the HTML ``<audio>`` tag.
 public let Audio = Node(tag: "audio")
-/// Represents the HTML ``<base>`` tag.
-public let Base = Node(tag: "base", isEmpty: true)
 /// Represents the HTML ``<bdi>`` tag.
 public let BidirectionalIsolate = Node(tag: "bdi")
 /// Represents the HTML ``<bdo>`` tag.
@@ -28,8 +26,6 @@ public let Canvas = Node(tag: "canvas")
 public let Caption = Node(tag: "caption")
 /// Represents the HTML ``<cite>`` tag.
 public let Citation = Node(tag: "cite")
-/// Represents the HTML ``<col>`` tag.
-public let Column = Node(tag: "col", isEmpty: true)
 /// Represents the HTML ``<colgroup>`` tag.
 public let ColumnGroup = Node(tag: "colgroup")
 /// Represents the HTML ``<data>`` tag.
@@ -46,8 +42,6 @@ public let Details = Node(tag: "details")
 public let Dialog = Node(tag: "dialog")
 /// Represents the HTML ``<div>`` tag.
 public let Division = Node(tag: "div")
-/// Represents the HTML ``<embed>`` tag.
-public let Embed = Node(tag: "embed", isEmpty: true)
 /// Represents the HTML ``<fieldset>`` tag.
 public let FieldSet = Node(tag: "fieldset")
 /// Represents the HTML ``<figure>`` tag.
@@ -76,22 +70,14 @@ public let Heading4 = Node(tag: "h4")
 public let Heading5 = Node(tag: "h5")
 /// Represents the HTML ``<h6>`` tag.
 public let Heading6 = Node(tag: "h6")
-/// Represents the HTML ``<hr>`` tag.
-public let HorizontalRule = Node(tag: "hr", isEmpty: true)
 /// Represents the HTML ``<iframe>`` tag.
-public let IFrame = Node(tag: "iframe")
+public let iFrame = Node(tag: "iframe")
 /// Represents the HTML ``<code>`` tag.
 public let InlineCode = Node(tag: "code")
-/// Represents the HTML ``<input>`` tag.
-public let Input = Node(tag: "input", isEmpty: true)
 /// Represents the HTML ``<kbd>`` tag.
 public let KeyboardIput = Node(tag: "kbd")
-/// Represents the HTML ``<label>`` tag.
-public let Label = Node(tag: "label")
 /// Represents the HTML ``<legend>`` tag.
 public let Legend = Node(tag: "legend")
-/// Represents the HTML ``<link>`` tag.
-public let Link = Node(tag: "link", isEmpty: true)
 /// Represents the HTML ``<li>`` tag.
 public let ListItem = Node(tag: "li")
 /// Represents the HTML ``<main>`` tag.

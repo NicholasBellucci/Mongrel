@@ -8,13 +8,21 @@
             // results.
 
             let html = Root {
-                List(.description) {
-                    DescriptionTerm {
-                        Text("Coffee")
-                    }
+                Body {
+                    Form {
+                        Label(for: "fname") {
+                            Text("First name:")
+                        }
 
-                    DescriptionDetails {
-                        Text("- black hot drink")
+                        Input(type: .email)
+                            .name("fname")
+                            .id("fname")
+
+                        Break()
+                        Break()
+
+                        Input(type: .submit)
+                            .value("Submit")
                     }
                 }
             }
