@@ -20,7 +20,7 @@ public struct Script: Element, Attributable,  EventListener {
     }
 }
 
-extension Script: HTMLRepresentable {
+extension Script: HTML {
     public var description: String {
         html
     }

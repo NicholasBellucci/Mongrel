@@ -1,14 +1,14 @@
-public protocol HTMLRepresentable: CustomStringConvertible, CustomDebugStringConvertible {
+public protocol HTML: CustomStringConvertible, CustomDebugStringConvertible {
     func render() -> String
 }
 
-public extension HTMLRepresentable {
+public extension HTML {
     func render() -> String {
         String(describing: self)
     }
 }
 
-extension Array: HTMLRepresentable where Element == HTMLRepresentable {
+extension Array: HTML where Element == HTML {
     public func render() -> String {
         return self
             .enumerated()

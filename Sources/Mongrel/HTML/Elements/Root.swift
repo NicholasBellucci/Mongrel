@@ -10,7 +10,7 @@ public struct Root: Element, Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(language: LanguageCode, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(language: LanguageCode, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTML) {
         if let country = country {
             attributes["lang"] = "\(language.rawValue)-\(country.rawValue)"
         } else {
@@ -21,7 +21,7 @@ public struct Root: Element, Attributable,  EventListener {
     }
 }
 
-extension Root: HTMLRepresentable {
+extension Root: HTML {
     public var description: String {
         html
     }
@@ -31,6 +31,6 @@ extension Root: HTMLRepresentable {
     }
 
     private var html: String {
-        "<area \(attributesString)>"
+        "<!DOCTYPE html><html \(attributesString)>\(innerHTML)</html>"
     }
 }

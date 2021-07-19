@@ -11,7 +11,7 @@ public struct HorizonalRule: Element, Attributable,  EventListener {
     public init() { }
 }
 
-extension HorizonalRule: HTMLRepresentable {
+extension HorizonalRule: HTML {
     public var description: String {
         html
     }

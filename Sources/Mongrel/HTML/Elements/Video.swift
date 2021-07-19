@@ -10,12 +10,12 @@ public struct Video: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().render()
     }
 }
 
-extension Video: HTMLRepresentable {
+extension Video: HTML {
     public var description: String {
         html
     }

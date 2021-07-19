@@ -10,12 +10,12 @@ public struct Output: Element, Attributable {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().render()
     }
 }
 
-extension Output: HTMLRepresentable {
+extension Output: HTML {
     public var description: String {
         html
     }

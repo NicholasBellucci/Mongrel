@@ -13,7 +13,7 @@ public struct Comment {
     }
 }
 
-extension Comment: HTMLRepresentable {
+extension Comment: HTML {
     public func render() -> String {
         String(describing: self)
     }

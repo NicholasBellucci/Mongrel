@@ -10,12 +10,12 @@ public struct Anchor: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().render()
     }
 }
 
-extension Anchor: HTMLRepresentable {
+extension Anchor: HTML {
     public var description: String {
         html
     }

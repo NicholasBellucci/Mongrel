@@ -18,7 +18,7 @@ public struct Track: Element, Attributable,  EventListener {
     }
 }
 
-extension Track: HTMLRepresentable {
+extension Track: HTML {
     public var description: String {
         html
     }

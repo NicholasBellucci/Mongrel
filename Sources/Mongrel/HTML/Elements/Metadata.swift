@@ -13,7 +13,7 @@ public struct Metadata: Element, Attributable,  EventListener {
     }
 }
 
-extension Metadata: HTMLRepresentable {
+extension Metadata: HTML {
     public var description: String {
         html
     }

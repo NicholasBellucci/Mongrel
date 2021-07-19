@@ -11,7 +11,7 @@ public struct ColumnGroup: Element, Attributable,  EventListener {
     var span: Int? = nil
     var innerHTML: String
 
-    public init(_ span: Int? = nil, @HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(_ span: Int? = nil, @HTMLBuilder _ content: () -> HTML) {
         if let span = span {
             attributes["span"] = "\(span)"
         }
@@ -20,7 +20,7 @@ public struct ColumnGroup: Element, Attributable,  EventListener {
     }
 }
 
-extension ColumnGroup: HTMLRepresentable {
+extension ColumnGroup: HTML {
     public var description: String {
         html
     }

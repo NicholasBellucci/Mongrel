@@ -1,8 +1,8 @@
 @resultBuilder
 public struct HTMLBuilder {
-    public typealias Expression = HTMLRepresentable
+    public typealias Expression = HTML
 
-    public typealias Component = [HTMLRepresentable]
+    public typealias Component = [HTML]
 
     public static func buildExpression(_ expression: Expression) -> Component {
         [expression]

@@ -10,12 +10,12 @@ public struct Dialog: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().render()
     }
 }
 
-extension Dialog: HTMLRepresentable {
+extension Dialog: HTML {
     public var description: String {
         html
     }

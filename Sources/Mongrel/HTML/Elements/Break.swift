@@ -11,7 +11,7 @@ public struct Break: Element, Attributable,  EventListener {
     public init() { }
 }
 
-extension Break: HTMLRepresentable {
+extension Break: HTML {
     public var description: String {
         html
     }

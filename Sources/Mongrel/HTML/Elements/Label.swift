@@ -10,13 +10,13 @@ public struct Label: Element, Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(for: String, @HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(for: String, @HTMLBuilder _ content: () -> HTML) {
         attributes["for"] = `for`
         innerHTML = content().render()
     }
 }
 
-extension Label: HTMLRepresentable {
+extension Label: HTML {
     public var description: String {
         html
     }

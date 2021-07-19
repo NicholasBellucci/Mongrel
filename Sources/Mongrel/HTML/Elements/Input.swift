@@ -13,7 +13,7 @@ public struct Input: Element, Attributable,  EventListener {
     }
 }
 
-extension Input: HTMLRepresentable {
+extension Input: HTML {
     public var description: String {
         html
     }

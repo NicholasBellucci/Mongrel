@@ -14,7 +14,7 @@ public struct Parameter: Element, Attributable,  EventListener {
     }
 }
 
-extension Parameter: HTMLRepresentable {
+extension Parameter: HTML {
     public var description: String {
         html
     }

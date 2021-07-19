@@ -17,7 +17,7 @@ public struct Image: Element, Attributable,  EventListener {
     }
 }
 
-extension Image: HTMLRepresentable {
+extension Image: HTML {
     public var description: String {
         html
     }

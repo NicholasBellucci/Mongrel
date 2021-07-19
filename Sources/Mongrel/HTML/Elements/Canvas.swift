@@ -10,14 +10,14 @@ public struct Canvas: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(height: Int = 150, width: Int = 150, @HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(height: Int = 150, width: Int = 150, @HTMLBuilder _ content: () -> HTML) {
         attributes["height"] = "\(height)"
         attributes["width"] = "\(width)"
         innerHTML = content().render()
     }
 }
 
-extension Canvas: HTMLRepresentable {
+extension Canvas: HTML {
     public var description: String {
         html
     }

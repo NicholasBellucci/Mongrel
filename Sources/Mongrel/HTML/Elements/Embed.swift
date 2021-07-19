@@ -16,7 +16,7 @@ public struct Embed: Element, Attributable,  EventListener {
     }
 }
 
-extension Embed: HTMLRepresentable {
+extension Embed: HTML {
     public var description: String {
         html
     }

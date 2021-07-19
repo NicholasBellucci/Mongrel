@@ -10,12 +10,12 @@ public struct OrderedList: Element, Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
+    public init(@HTMLBuilder _ content: () -> HTML) {
         innerHTML = content().render()
     }
 }
 
-extension OrderedList: HTMLRepresentable {
+extension OrderedList: HTML {
     public var description: String {
         html
     }
