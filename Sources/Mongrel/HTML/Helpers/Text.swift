@@ -9,7 +9,7 @@ public struct Text: HTMLElement {
     var tags: [String] = []
     var attributesCollection: [String: [String: String]] = [:]
 
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     var value: String
 

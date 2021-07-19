@@ -6,7 +6,7 @@
 //
 
 public struct Embed: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(src: String, type: String, height: Double, width: Double) {
         attributes["src"] = src

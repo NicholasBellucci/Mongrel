@@ -6,7 +6,7 @@
 //
 
 public struct Image: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(src: String, alt: String? = nil) {
         attributes["src"] = src

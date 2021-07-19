@@ -6,7 +6,7 @@
 //
 
 public struct Base: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(href: String, target: Target = .`self`) {
         attributes["href"] = href

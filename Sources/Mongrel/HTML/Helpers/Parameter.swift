@@ -6,7 +6,7 @@
 //
 
 public struct Parameter: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(name: String, value: String) {
         attributes["name"] = name

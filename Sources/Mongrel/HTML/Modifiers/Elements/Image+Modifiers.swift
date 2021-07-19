@@ -22,7 +22,7 @@ public extension Image {
         var copy = self
 
         if value {
-            copy.attributes["ismap"] = nil
+            copy.attributes["ismap"] = ""
         }
 
         return copy

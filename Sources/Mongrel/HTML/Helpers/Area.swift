@@ -6,7 +6,7 @@
 //
 
 public struct Area: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(shape: Shape, coordinates: String) {
         attributes["shape"] = shape.rawValue

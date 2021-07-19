@@ -6,7 +6,7 @@
 //
 
 public struct List: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     var type: ListType
     var innerHTML: String

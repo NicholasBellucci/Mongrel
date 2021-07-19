@@ -23,10 +23,12 @@
 
                         Input(type: .submit)
                             .value("Submit")
+                            .hidden(true)
                     }
                 }
+                .addBooleanAttribute(.hidden)
             }
-            .addAttribute(.hidden, value: true)
+
 
 
             print(html)

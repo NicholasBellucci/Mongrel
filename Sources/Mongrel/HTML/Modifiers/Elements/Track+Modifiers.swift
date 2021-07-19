@@ -16,7 +16,7 @@ public extension Track {
         var copy = self
 
         if value {
-            copy.attributes["default"] = nil
+            copy.attributes["default"] = ""
         }
 
         return copy

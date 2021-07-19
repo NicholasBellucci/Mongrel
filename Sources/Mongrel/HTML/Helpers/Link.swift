@@ -6,7 +6,7 @@
 //
 
 public struct Link: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(href: String, rel: String) {
         attributes["href"] = href

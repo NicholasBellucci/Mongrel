@@ -6,7 +6,7 @@
 //
 
 public struct Label: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     var innerHTML: String
 

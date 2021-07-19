@@ -6,7 +6,7 @@
 //
 
 public struct Input: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(type: InputType = .text) {
         attributes["type"] = type.rawValue

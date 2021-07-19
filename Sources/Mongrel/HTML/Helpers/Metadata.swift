@@ -6,7 +6,7 @@
 //
 
 public struct Metadata: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(content: String) {
         attributes["content"] = content

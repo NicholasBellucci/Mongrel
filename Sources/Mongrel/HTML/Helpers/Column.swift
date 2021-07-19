@@ -6,7 +6,7 @@
 //
 
 public struct Column: HTMLElement {
-    public var attributes: [String: String?] = [:]
+    public var attributes: [String: String] = [:]
 
     public init(span: Int? = nil) {
         if let span = span {

@@ -39,7 +39,11 @@ public extension HTMLElement {
 
     func hidden(_ value: Bool) -> HTMLElement {
         var copy = self
-        copy.attributes["hidden"] = nil
+
+        if value {
+            copy.attributes["hidden"] = ""
+        }
+
         return copy
     }
 

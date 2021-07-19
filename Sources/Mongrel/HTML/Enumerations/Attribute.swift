@@ -5,30 +5,23 @@ public enum Attribute: String {
     case action
     case align
     case alt
-    case `async`
     case autocomplete
-    case autofocus
-    case autoplay
     case bgcolor
     case border
     case charset
-    case checked
     case cite
     case `class`
     case color
     case cols
     case colspan
     case contenteditable
-    case controls
     case coords
     case crossorigin
     case data
     case datetime
-    case `default`
     case `defer`
     case dir
     case dirname
-    case disabled
     case download
     case draggable
     case enctype
@@ -37,30 +30,23 @@ public enum Attribute: String {
     case formaction
     case headers
     case height
-    case hidden
     case high
     case href
     case hreflang
     case httpequiv = "http-equiv"
     case id
     case integrity
-    case ismap
     case kind
     case label
     case lang
     case list
-    case loop
     case low
     case max
     case maxlength
     case media
     case method
     case min
-    case multiple
-    case muted
     case name
-    case nomodule
-    case novalidate
     case onabort
     case onafterprint
     case onbeforeprint
@@ -131,22 +117,17 @@ public enum Attribute: String {
     case onvolumechange
     case onwaiting
     case onwheel
-    case open
     case optimum
     case pattern
     case placeholder
     case poster
     case preload
-    case readonly
     case referrerpolicy
     case rel
-    case required
-    case reversed
     case rows
     case rowspan
     case sandbox
     case scope
-    case selected
     case shape
     case size
     case sizes
@@ -169,4 +150,32 @@ public enum Attribute: String {
     case width
     case wrap
     case empty
+}
+
+public enum BooleanAttribute: String {
+    case allowfullscreen
+    case allowpaymentrequest
+    case `async`
+    case autofocus
+    case autoplay
+    case checked
+    case controls
+    case `default`
+    case disabled
+    case formnovalidate
+    case hidden
+    case ismap
+    case itemscope
+    case loop
+    case multiple
+    case muted
+    case nomudule
+    case novalidate
+    case open
+    case playsinline
+    case readonly
+    case required
+    case reversed
+    case selected
+    case truespeed
 }

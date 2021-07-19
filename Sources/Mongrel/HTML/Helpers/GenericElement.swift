@@ -1,15 +1,15 @@
 //
-//  Node.swift
+//  GenericElement.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/17/21.
 //
 
-public struct Node {
+public struct GenericElement: HTMLElement {
+    public var attributes: [String: String] = [:]
+
     var tag: String
     var isEmpty: Bool
-    var attributes: [String: String?] = [:]
-
     var innerHTML: String = ""
 
     init(tag: String, isEmpty: Bool = false) {
@@ -17,18 +17,18 @@ public struct Node {
         self.isEmpty = isEmpty
     }
 
-    public func callAsFunction() -> Node {
+    public func callAsFunction() -> GenericElement {
         return self
     }
 
-    public func callAsFunction(@HTMLBuilder _ content: () -> HTML) -> Node {
+    public func callAsFunction(@HTMLBuilder _ content: () -> HTML) -> GenericElement {
         var copy = self
         copy.innerHTML = content().render()
         return copy
     }
 }
 
-extension Node: HTML {
+extension GenericElement: HTML {
     public var description: String {
         html
     }
@@ -47,17 +47,5 @@ extension Node: HTML {
                 "<\(tag) \(attributesString)>" :
                 "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
         }
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in
-                if let value = attribute.value {
-                    return "\(attribute.key)=\"\(value)\""
-                } else {
-                    return "\(attribute.key)"
-                }
-            }
-            .joined(separator: " ")
     }
 }
