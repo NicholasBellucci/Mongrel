@@ -41,9 +41,15 @@ public extension Link {
         return copy
     }
 
-    func hrefLanguage(_ language: String) -> Link {
+    func hrefLanguage(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Link {
         var copy = self
-        copy.attributes["hreflang"] = language
+
+        if let countryCode = countryCode {
+            copy.attributes["hreflang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        } else {
+            copy.attributes["hreflang"] = "\(code.rawValue)"
+        }
+
         return copy
     }
 

@@ -49,9 +49,15 @@ public extension Track {
         return copy
     }
 
-    func srcLanguage(_ language: String) -> Track {
+    func srcLanguage(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Track {
         var copy = self
-        copy.attributes["srclang"] = language
+
+        if let countryCode = countryCode {
+            copy.attributes["srclang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        } else {
+            copy.attributes["srclang"] = "\(code.rawValue)"
+        }
+
         return copy
     }
 }
