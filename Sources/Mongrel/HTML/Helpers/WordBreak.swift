@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct WordBreak: HTMLElement {
+public struct WordBreak: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init() { }

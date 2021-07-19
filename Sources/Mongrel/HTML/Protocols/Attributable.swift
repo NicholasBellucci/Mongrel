@@ -1,18 +1,20 @@
 //
-//  HTMLElement+Modifiers.swift
+//  Attributable.swift
 //  
 //
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public extension HTMLElement {
-    func accessKey(_ key: String) -> HTMLElement {
+public protocol Attributable: HTMLElement { }
+
+public extension Attributable {
+    func accessKey(_ key: String) -> Attributable {
         var copy = self
         copy.attributes["accesskey"] = key
         return copy
     }
 
-    func `class`(_ class: String) -> HTMLElement {
+    func `class`(_ class: String) -> Attributable {
         var copy = self
         let currentValue: String? = copy.attributes["class"] ?? nil
 
@@ -25,19 +27,19 @@ public extension HTMLElement {
         return copy
     }
 
-    func contentEditable(_ value: Bool) -> HTMLElement {
+    func contentEditable(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["contenteditable"] = "\(value)"
         return copy
     }
 
-    func draggable(_ value: Bool) -> HTMLElement {
+    func draggable(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["draggable"] = "\(value)"
         return copy
     }
 
-    func hidden(_ value: Bool) -> HTMLElement {
+    func hidden(_ value: Bool) -> Attributable {
         var copy = self
 
         if value {
@@ -47,25 +49,25 @@ public extension HTMLElement {
         return copy
     }
 
-    func id(_ id: String) -> HTMLElement {
+    func id(_ id: String) -> Attributable {
         var copy = self
         copy.attributes["id"] = id
         return copy
     }
 
-    func language(_ language: String) -> HTMLElement {
+    func language(_ language: String) -> Attributable {
         var copy = self
         copy.attributes["language"] = language
         return copy
     }
 
-    func spellcheck(_ value: Bool) -> HTMLElement {
+    func spellcheck(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["spellcheck"] = "\(value)"
         return copy
     }
 
-    func style(_ style: String) -> HTMLElement {
+    func style(_ style: String) -> Attributable {
         var copy = self
         let currentValue: String? = copy.attributes["style"] ?? nil
 
@@ -78,19 +80,19 @@ public extension HTMLElement {
         return copy
     }
 
-    func tabIndex(_ index: Int) -> HTMLElement {
+    func tabIndex(_ index: Int) -> Attributable {
         var copy = self
         copy.attributes["tabindex"] = "\(index)"
         return copy
     }
 
-    func title(_ title: String) -> HTMLElement {
+    func title(_ title: String) -> Attributable {
         var copy = self
         copy.attributes["title"] = title
         return copy
     }
 
-    func translate(_ value: Bool) -> HTMLElement {
+    func translate(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["translate"] = value ? "yes" : "no"
         return copy

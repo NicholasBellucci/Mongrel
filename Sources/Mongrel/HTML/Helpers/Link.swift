@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Link: HTMLElement {
+public struct Link: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init(href: String, rel: String) {

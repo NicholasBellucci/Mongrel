@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Input: HTMLElement {
+public struct Input: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init(type: InputType = .text) {

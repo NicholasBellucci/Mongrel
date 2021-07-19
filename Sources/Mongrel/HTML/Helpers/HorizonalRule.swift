@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct HorizonalRule: HTMLElement {
+public struct HorizonalRule: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init() { }

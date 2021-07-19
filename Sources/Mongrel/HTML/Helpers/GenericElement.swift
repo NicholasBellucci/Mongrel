@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/17/21.
 //
 
-public struct GenericElement: HTMLElement {
+public struct GenericElement: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     var tag: String

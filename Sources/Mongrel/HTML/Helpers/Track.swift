@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Track: HTMLElement {
+public struct Track: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init(src: String, kind: TrackKind) {

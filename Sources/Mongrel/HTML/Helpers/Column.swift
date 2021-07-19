@@ -5,7 +5,7 @@
 //  Created by Nicholas Bellucci on 7/18/21.
 //
 
-public struct Column: HTMLElement {
+public struct Column: HTMLElement, Attributable {
     public var attributes: [String: String] = [:]
 
     public init(span: Int? = nil) {
