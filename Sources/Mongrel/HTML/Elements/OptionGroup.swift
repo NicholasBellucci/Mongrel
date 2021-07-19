@@ -10,12 +10,12 @@ public struct OptionGroup: Element, Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         innerHTML = content().render()
     }
 }
 
-extension OptionGroup: HTML {
+extension OptionGroup: HTMLRepresentable {
     public var description: String {
         html
     }

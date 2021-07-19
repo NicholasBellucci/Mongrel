@@ -10,13 +10,13 @@ public struct Map: Element, Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(_ name: String, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ name: String, @HTMLBuilder _ content: () -> HTMLRepresentable) {
         attributes["name"] = name
         innerHTML = content().render()
     }
 }
 
-extension Map: HTML {
+extension Map: HTMLRepresentable {
     public var description: String {
         html
     }

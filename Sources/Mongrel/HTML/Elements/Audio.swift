@@ -10,12 +10,12 @@ public struct Audio: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         innerHTML = content().render()
     }
 }
 
-extension Audio: HTML {
+extension Audio: HTMLRepresentable {
     public var description: String {
         html
     }

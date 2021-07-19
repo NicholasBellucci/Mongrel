@@ -10,12 +10,12 @@ public struct Anchor: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         innerHTML = content().render()
     }
 }
 
-extension Anchor: HTML {
+extension Anchor: HTMLRepresentable {
     public var description: String {
         html
     }
@@ -52,11 +52,11 @@ public extension Anchor {
         return copy
     }
 
-    func hrefLanguage(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Anchor {
+    func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Anchor {
         var copy = self
 
-        if let countryCode = countryCode {
-            copy.attributes["hreflang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        if let country = country {
+            copy.attributes["hreflang"] = "\(code.rawValue)-\(country.rawValue)"
         } else {
             copy.attributes["hreflang"] = "\(code.rawValue)"
         }

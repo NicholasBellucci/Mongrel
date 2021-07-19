@@ -11,13 +11,13 @@ public struct List: Element, Attributable,  EventListener {
     var type: GenericListType
     var innerHTML: String
 
-    public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTMLRepresentable) {
         self.type = type
         innerHTML = content().render()
     }
 }
 
-extension List: HTML {
+extension List: HTMLRepresentable {
     public var description: String {
         html
     }

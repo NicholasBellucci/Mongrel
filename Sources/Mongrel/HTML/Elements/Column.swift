@@ -15,7 +15,7 @@ public struct Column: Element, Attributable,  EventListener {
     }
 }
 
-extension Column: HTML {
+extension Column: HTMLRepresentable {
     public var description: String {
         html
     }

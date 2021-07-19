@@ -10,13 +10,13 @@ public struct Button: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         attributes["type"] = "button"
         innerHTML = content().render()
     }
 }
 
-extension Button: HTML {
+extension Button: HTMLRepresentable {
     public var description: String {
         html
     }

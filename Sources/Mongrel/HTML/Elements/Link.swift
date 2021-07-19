@@ -14,7 +14,7 @@ public struct Link: Element, Attributable,  EventListener {
     }
 }
 
-extension Link: HTML {
+extension Link: HTMLRepresentable {
     public var description: String {
         html
     }
@@ -41,11 +41,11 @@ public extension Link {
         return copy
     }
 
-    func hrefLanguage(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Link {
+    func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Link {
         var copy = self
 
-        if let countryCode = countryCode {
-            copy.attributes["hreflang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        if let country = country {
+            copy.attributes["hreflang"] = "\(code.rawValue)-\(country.rawValue)"
         } else {
             copy.attributes["hreflang"] = "\(code.rawValue)"
         }

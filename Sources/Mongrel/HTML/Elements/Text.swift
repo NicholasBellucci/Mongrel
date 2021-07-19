@@ -18,7 +18,7 @@ public struct Text: Element, Attributable,  EventListener {
     }
 }
 
-extension Text: HTML {
+extension Text: HTMLRepresentable {
     public var description: String {
         html
     }

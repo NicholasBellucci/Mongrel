@@ -10,12 +10,12 @@ public struct Form: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         innerHTML = content().render()
     }
 }
 
-extension Form: HTML {
+extension Form: HTMLRepresentable {
     public var description: String {
         html
     }

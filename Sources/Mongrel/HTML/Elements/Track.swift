@@ -18,7 +18,7 @@ public struct Track: Element, Attributable,  EventListener {
     }
 }
 
-extension Track: HTML {
+extension Track: HTMLRepresentable {
     public var description: String {
         html
     }
@@ -49,11 +49,11 @@ public extension Track {
         return copy
     }
 
-    func srcLanguage(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Track {
+    func srcLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Track {
         var copy = self
 
-        if let countryCode = countryCode {
-            copy.attributes["srclang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        if let country = country {
+            copy.attributes["srclang"] = "\(code.rawValue)-\(country.rawValue)"
         } else {
             copy.attributes["srclang"] = "\(code.rawValue)"
         }

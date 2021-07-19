@@ -10,13 +10,13 @@ public struct Meter: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(value: Double, @HTMLBuilder _ content: () -> HTML) {
+    public init(value: Double, @HTMLBuilder _ content: () -> HTMLRepresentable) {
         attributes["value"] = "\(value)"
         innerHTML = content().render()
     }
 }
 
-extension Meter: HTML {
+extension Meter: HTMLRepresentable {
     public var description: String {
         html
     }

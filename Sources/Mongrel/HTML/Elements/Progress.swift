@@ -14,13 +14,13 @@ public struct Progress: Element, Attributable,  EventListener {
         attributes["max"] = "\(max)"
     }
 
-    public init(max: Double = 1, @HTMLBuilder _ content: () -> HTML) {
+    public init(max: Double = 1, @HTMLBuilder _ content: () -> HTMLRepresentable) {
         attributes["max"] = "\(max)"
         innerHTML = content().render()
     }
 }
 
-extension Progress: HTML {
+extension Progress: HTMLRepresentable {
     public var description: String {
         html
     }

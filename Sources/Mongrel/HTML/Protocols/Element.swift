@@ -1,4 +1,4 @@
-public protocol Element: HTML {
+public protocol Element: HTMLRepresentable {
     var attributes: [String: String] { get set }
 }
 

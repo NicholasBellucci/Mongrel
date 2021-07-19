@@ -11,7 +11,7 @@ public struct WordBreak: Element, Attributable,  EventListener {
     public init() { }
 }
 
-extension WordBreak: HTML {
+extension WordBreak: HTMLRepresentable {
     public var description: String {
         html
     }

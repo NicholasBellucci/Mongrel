@@ -34,8 +34,6 @@ public let Figure = GenericElement(tag: "figure")
 public let FigureCaption = GenericElement(tag: "figcaption")
 /// Represents the HTML ``<footer>`` tag.
 public let Footer = GenericElement(tag: "footer")
-/// Represents the HTML ``<html>`` tag.
-public let Root = GenericElement(tag: "html")
 /// Represents the HTML ``<head>`` tag.
 public let Head = GenericElement(tag: "head")
 /// Represents the HTML ``<header>`` tag.

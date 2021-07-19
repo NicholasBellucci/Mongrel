@@ -15,7 +15,7 @@ public struct Time: Element, Attributable,  EventListener {
     }
 }
 
-extension Time: HTML {
+extension Time: HTMLRepresentable {
     public var description: String {
         html
     }

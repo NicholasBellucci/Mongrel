@@ -51,11 +51,11 @@ public extension Attributable {
         return copy
     }
 
-    func language(_ code: LanguageCode, countryCode: CountryCode? = nil) -> Attributable {
+    func language(_ code: LanguageCode, country: CountryCode? = nil) -> Attributable {
         var copy = self
 
-        if let countryCode = countryCode {
-            copy.attributes["lang"] = "\(code.rawValue)-\(countryCode.rawValue)"
+        if let country = country {
+            copy.attributes["lang"] = "\(code.rawValue)-\(country.rawValue)"
         } else {
             copy.attributes["lang"] = "\(code.rawValue)"
         }

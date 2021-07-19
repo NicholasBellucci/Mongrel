@@ -11,7 +11,7 @@ public struct Source: Element, Attributable,  EventListener {
     public init() { }
 }
 
-extension Source: HTML {
+extension Source: HTMLRepresentable {
     public var description: String {
         html
     }

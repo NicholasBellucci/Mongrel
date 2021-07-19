@@ -10,12 +10,12 @@ public struct Select: Attributable,  EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLRepresentable) {
         innerHTML = content().render()
     }
 }
 
-extension Select: HTML {
+extension Select: HTMLRepresentable {
     public var description: String {
         html
     }
