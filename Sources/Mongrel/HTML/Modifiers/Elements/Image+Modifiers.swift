@@ -6,6 +6,12 @@
 //
 
 public extension Image {
+    func crossorigin(_ type: CrossOriginType) -> Image {
+        var copy = self
+        copy.attributes["type"] = type.rawValue
+        return copy
+    }
+    
     func height(_ height: Double) -> Image {
         var copy = self
         copy.attributes["height"] = "\(height)"
@@ -14,25 +20,29 @@ public extension Image {
 
     func isMap(_ value: Bool) -> Image {
         var copy = self
-        copy.attributes["ismap"] = "\(value)"
+
+        if value {
+            copy.attributes["ismap"] = nil
+        }
+
         return copy
     }
 
-    func onAbort(_ script: String) -> Image {
+    func loadType(_ type: ImageLoadType) -> Image {
         var copy = self
-        copy.attributes["onabort"] = script
+        copy.attributes["loading"] = type.rawValue
         return copy
     }
 
-    func onError(_ script: String) -> Image {
+    func longDescriptionURL(_ url: String) -> Image {
         var copy = self
-        copy.attributes["onerror"] = script
+        copy.attributes["longdesc"] = url
         return copy
     }
 
-    func onLoad(_ script: String) -> Image {
+    func referrerPolicy(_ policy: ReferrerPolicy) -> Image {
         var copy = self
-        copy.attributes["onload"] = script
+        copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
@@ -42,9 +52,15 @@ public extension Image {
         return copy
     }
 
-    func useMap(_ value: Bool) -> Image {
+    func scrset(_ srcset: String) -> Image {
         var copy = self
-        copy.attributes["usemap"] = "\(value)"
+        copy.attributes["srcset"] = srcset
+        return copy
+    }
+
+    func useMap(_ map: String) -> Image {
+        var copy = self
+        copy.attributes["usemap"] = map
         return copy
     }
 

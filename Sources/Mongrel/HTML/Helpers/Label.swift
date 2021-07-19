@@ -6,7 +6,7 @@
 //
 
 public struct Label: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     var innerHTML: String
 
@@ -27,11 +27,5 @@ extension Label: HTML {
 
     private var html: String {
         "<label \(attributesString)>\(innerHTML)</label>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

@@ -6,7 +6,7 @@
 //
 
 public struct Source: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init() { }
 }
@@ -22,11 +22,5 @@ extension Source: HTML {
 
     private var html: String {
         "<source \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

@@ -6,17 +6,21 @@
 //
 
 public struct WordBreak: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init() { }
 }
 
 extension WordBreak: HTML {
     public var description: String {
-        "<wbr>"
+        html
     }
 
     public var debugDescription: String {
-        "<wbr>"
+        html
+    }
+
+    private var html: String {
+        "<wbr \(attributesString)>"
     }
 }

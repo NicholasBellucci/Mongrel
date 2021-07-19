@@ -88,7 +88,7 @@ public extension Input {
         var copy = self
 
         if value {
-            copy.attributes["formnovalidate"] = ""
+            copy.attributes["formnovalidate"] = nil
         }
 
         return copy
@@ -140,7 +140,7 @@ public extension Input {
         var copy = self
 
         if value {
-            copy.attributes["multiple"] = ""
+            copy.attributes["multiple"] = nil
         }
 
         return copy
@@ -168,7 +168,7 @@ public extension Input {
         var copy = self
 
         if value {
-            copy.attributes["readonly"] = ""
+            copy.attributes["readonly"] = nil
         }
 
         return copy
@@ -178,7 +178,7 @@ public extension Input {
         var copy = self
 
         if value {
-            copy.attributes["required"] = ""
+            copy.attributes["required"] = nil
         }
 
         return copy

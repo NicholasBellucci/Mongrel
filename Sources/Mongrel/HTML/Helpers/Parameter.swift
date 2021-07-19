@@ -6,7 +6,7 @@
 //
 
 public struct Parameter: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(name: String, value: String) {
         attributes["name"] = name
@@ -25,11 +25,5 @@ extension Parameter: HTML {
 
     private var html: String {
         "<param \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

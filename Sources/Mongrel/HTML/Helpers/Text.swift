@@ -9,7 +9,7 @@ public struct Text: HTMLElement {
     var tags: [String] = []
     var attributesCollection: [String: [String: String]] = [:]
 
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     var value: String
 
@@ -41,9 +41,9 @@ extension Text: HTML {
             .forEach { index, tag in
                 if index == tags.count - 1, !attributes.isEmpty {
                     if attributesCollection[tag] == nil {
-                        html = "<\(tag) \(globalAttributesString)>\(html)</\(tag)>"
+                        html = "<\(tag) \(attributesString)>\(html)</\(tag)>"
                     } else {
-                        html = "<\(tag) \(globalAttributesString) \(attributes(for: tag))>\(html)</\(tag)>"
+                        html = "<\(tag) \(attributesString) \(attributes(for: tag))>\(html)</\(tag)>"
                     }
                 } else {
                     if attributesCollection[tag] == nil {
@@ -61,12 +61,6 @@ extension Text: HTML {
         guard let array = attributesCollection[tag] else { return "" }
 
         return array
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
-    }
-
-    private var globalAttributesString: String {
-        attributes
             .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
             .joined(separator: " ")
     }

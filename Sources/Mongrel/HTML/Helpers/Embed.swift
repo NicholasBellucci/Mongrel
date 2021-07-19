@@ -6,7 +6,7 @@
 //
 
 public struct Embed: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(src: String, type: String, height: Double, width: Double) {
         attributes["src"] = src
@@ -27,11 +27,5 @@ extension Embed: HTML {
 
     private var html: String {
         "<embed \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

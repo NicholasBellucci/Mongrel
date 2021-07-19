@@ -6,7 +6,7 @@
 //
 
 public struct Area: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(shape: Shape, coordinates: String) {
         attributes["shape"] = shape.rawValue
@@ -25,11 +25,5 @@ extension Area: HTML {
 
     private var html: String {
         "<area \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

@@ -6,7 +6,7 @@
 //
 
 public struct Metadata: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(content: String) {
         attributes["content"] = content
@@ -24,11 +24,5 @@ extension Metadata: HTML {
 
     private var html: String {
         "<meta \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

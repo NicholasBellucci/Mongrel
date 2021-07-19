@@ -6,7 +6,7 @@
 //
 
 public struct Link: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(href: String, rel: String) {
         attributes["href"] = href
@@ -25,11 +25,5 @@ extension Link: HTML {
 
     private var html: String {
         "<link \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

@@ -14,7 +14,7 @@ public extension HTMLElement {
 
     func `class`(_ class: String) -> HTMLElement {
         var copy = self
-        let currentValue: String? = copy.attributes["class"]
+        let currentValue: String? = copy.attributes["class"] ?? nil
 
         if let currentValue = currentValue {
             copy.attributes["class"] = "\(currentValue) \(`class`)"
@@ -39,7 +39,7 @@ public extension HTMLElement {
 
     func hidden(_ value: Bool) -> HTMLElement {
         var copy = self
-        copy.attributes["hidden"] = "\(value)"
+        copy.attributes["hidden"] = nil
         return copy
     }
 
@@ -63,7 +63,7 @@ public extension HTMLElement {
 
     func style(_ style: String) -> HTMLElement {
         var copy = self
-        let currentValue: String? = copy.attributes["style"]
+        let currentValue: String? = copy.attributes["style"] ?? nil
 
         if let currentValue = currentValue {
             copy.attributes["style"] = "\(currentValue) \(style)"
@@ -88,7 +88,7 @@ public extension HTMLElement {
 
     func translate(_ value: Bool) -> HTMLElement {
         var copy = self
-        copy.attributes["translate"] = "\(value)"
+        copy.attributes["translate"] = value ? "yes" : "no"
         return copy
     }
 }

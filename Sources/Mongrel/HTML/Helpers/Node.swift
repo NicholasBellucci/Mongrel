@@ -8,7 +8,7 @@
 public struct Node {
     var tag: String
     var isEmpty: Bool
-    var attributes: [String: String] = [:]
+    var attributes: [String: String?] = [:]
 
     var innerHTML: String = ""
 
@@ -51,7 +51,13 @@ extension Node: HTML {
 
     private var attributesString: String {
         attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
+            .map { attribute in
+                if let value = attribute.value {
+                    return "\(attribute.key)=\"\(value)\""
+                } else {
+                    return "\(attribute.key)"
+                }
+            }
             .joined(separator: " ")
     }
 }

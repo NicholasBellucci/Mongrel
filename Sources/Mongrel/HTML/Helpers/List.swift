@@ -6,7 +6,7 @@
 //
 
 public struct List: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     var type: ListType
     var innerHTML: String
@@ -34,11 +34,5 @@ extension List: HTML {
         } else {
             return "<\(tag) \(attributesString)>\(innerHTML)</\(tag)>"
         }
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

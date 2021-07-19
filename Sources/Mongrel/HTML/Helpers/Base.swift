@@ -6,7 +6,7 @@
 //
 
 public struct Base: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(href: String, target: Target = .`self`) {
         attributes["href"] = href
@@ -25,11 +25,5 @@ extension Base: HTML {
 
     private var html: String {
         "<base \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

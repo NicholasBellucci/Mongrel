@@ -6,7 +6,7 @@
 //
 
 public struct Track: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(src: String, kind: TrackKind) {
         attributes["src"] = src
@@ -29,17 +29,5 @@ extension Track: HTML {
 
     private var html: String {
         "<track \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in
-                if attribute.value == "" {
-                    return "\(attribute.key)"
-                } else {
-                    return "\(attribute.key)=\"\(attribute.value)\""
-                }
-            }
-            .joined(separator: " ")
     }
 }

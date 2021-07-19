@@ -6,7 +6,7 @@
 //
 
 public struct Column: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init(span: Int? = nil) {
         if let span = span {
@@ -26,11 +26,5 @@ extension Column: HTML {
 
     private var html: String {
         "<col \(attributesString)>"
-    }
-
-    private var attributesString: String {
-        attributes
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
     }
 }

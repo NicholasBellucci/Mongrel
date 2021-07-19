@@ -6,17 +6,21 @@
 //
 
 public struct HorizonalRule: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init() { }
 }
 
 extension HorizonalRule: HTML {
     public var description: String {
-        "<hr>"
+        html
     }
 
     public var debugDescription: String {
-        "<hr>"
+        html
+    }
+
+    private var html: String {
+        "<hr \(attributesString)>"
     }
 }

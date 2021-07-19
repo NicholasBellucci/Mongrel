@@ -6,18 +6,22 @@
 //
 
 public struct Break: HTMLElement {
-    public var attributes: [String: String] = [:]
+    public var attributes: [String: String?] = [:]
 
     public init() { }
 }
 
 extension Break: HTML {
     public var description: String {
-        "<br>"
+        html
     }
 
     public var debugDescription: String {
-        "<br>"
+        html
+    }
+
+    private var html: String {
+        "<br \(attributesString)>"
     }
 }
 
