@@ -51,7 +51,7 @@ public struct Anchor: Attributable, EventListener {
 /// and will return an ``Anchor`` element for continued use/updates.
 ///
 public extension Anchor {
-    /// Sets the anchor attribute: `download`.
+    /// Sets the anchor's attribute: `download`.
     ///
     /// - Parameters:
     ///   - file: The filename of the downloadable content.
@@ -62,7 +62,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `hreflang`.
+    /// Sets the anchor's attribute: `hreflang`.
     ///
     /// - Parameters:
     ///   - code: The language code of the linked document.
@@ -80,7 +80,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `media`.
+    /// Sets the anchor's attribute: `media`.
     ///
     /// - Parameters:
     ///   - query: The media/device the linked document if optimized for.
@@ -91,7 +91,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `ping`.
+    /// Sets the anchor's attribute: `ping`.
     ///
     /// - Parameters:
     ///   - list: A space-separated list of URLs to which, when the link is followed,
@@ -103,7 +103,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `referrerpolicy`.
+    /// Sets the anchor's attribute: `referrerpolicy`.
     ///
     /// - Parameters:
     ///   - policy: The referrer information to send with the link.
@@ -114,7 +114,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `rel`.
+    /// Sets the anchor's attribute: `rel`.
     ///
     /// - Parameters:
     ///   - relationship: The relationship between the current document and the linked document.
@@ -125,7 +125,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `target`.
+    /// Sets the anchor's attribute: `target`.
     ///
     /// - Parameters:
     ///   - target: Where to open the linked document.
@@ -136,7 +136,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor attribute: `type`.
+    /// Sets the anchor's attribute: `type`.
     ///
     /// - Parameters:
     ///   - type: The media type of the linked document.

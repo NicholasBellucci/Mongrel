@@ -48,7 +48,7 @@ public struct Button: Attributable, EventListener {
 /// and will return an ``Button`` element for continued use/updates.
 ///
 public extension Button {
-    /// Sets the button attribute: `autofocus`.
+    /// Sets the button's attribute: `autofocus`.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
@@ -64,7 +64,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `disabled`.
+    /// Sets the button's attribute: `disabled`.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
@@ -80,7 +80,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `form`.
+    /// Sets the button's attribute: `form`.
     ///
     /// - Parameters:
     ///   - id: Id of the form in which the button belongs.
@@ -91,9 +91,9 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `formaction`.
+    /// Sets the button's attribute: `formaction`.
     ///
-    /// Only available for button type ``submit``
+    /// Only available for button type ``submit``.
     ///
     /// - Parameters:
     ///   - url: URL to send the form data when submitted.
@@ -104,9 +104,9 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `formenctype`.
+    /// Sets the button's attribute: `formenctype`.
     ///
-    /// Only available for button type ``submit``
+    /// Only available for button type ``submit``.
     ///
     /// - Parameters:
     ///   - type: Encoding type for the form data.
@@ -117,9 +117,9 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `formmethod`.
+    /// Sets the button's attribute: `formmethod`.
     ///
-    /// Only available for button type ``submit``
+    /// Only available for button type ``submit``.
     ///
     /// - Parameters:
     ///   - method: Method in which to send the form data.
@@ -130,26 +130,27 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `formnovalidate`.
+    /// Sets the button's attribute: `formnovalidate`.
     ///
-    /// Only available for button type ``submit``
+    /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - value: Specifies if the form should be validated.
+    ///   - value: Allows user to determine if ``formnovalidate`` should be added
+    ///   based on another boolean.
     ///
-    func formNoValidate(_ value: Bool) -> Button {
+    func formNoValidate(if value: Bool = true) -> Button {
         var copy = self
 
         if value {
-            copy.attributes["formnovalidate"] = ""
+            copy.attributes["formnovalidate"] = "formnovalidate"
         }
 
         return copy
     }
 
-    /// Sets the button attribute: `formtarget`.
+    /// Sets the button's attribute: `formtarget`.
     ///
-    /// Only available for button type ``submit``
+    /// Only available for button type ``submit``.
     ///
     /// - Parameters:
     ///   - target: Target to display the response after submitting.
@@ -160,7 +161,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `name`.
+    /// Sets the button's attribute: `name`.
     ///
     /// - Parameters:
     ///   - name: Name of the button.
@@ -171,7 +172,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `type`.
+    /// Sets the button's attribute: `type`.
     ///
     /// - Parameters:
     ///   - type: Type of the button.
@@ -182,7 +183,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button attribute: `value`.
+    /// Sets the button's attribute: `value`.
     ///
     /// - Parameters:
     ///   - value: Initial value of the button.

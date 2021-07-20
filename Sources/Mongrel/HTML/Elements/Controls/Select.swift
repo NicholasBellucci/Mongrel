@@ -58,7 +58,13 @@ public extension Select {
         return copy
     }
 
-    func multiple(_ value: Bool) -> Select {
+    /// Sets the select's attribute: `multiple`.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``multiple`` should be added
+    ///   based on another boolean.
+    ///
+    func allowsMultipleValues(if value: Bool = true) -> Select {
         var copy = self
 
         if value {
