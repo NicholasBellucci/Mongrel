@@ -1,6 +1,9 @@
 /// A ``Select`` element is used to create a drop-down list.
 ///
 /// This element is most often used in a form to collect user input.
+///
+/// For more information about the ``<select>`` tag,
+/// visit https://www.w3schools.com/tags/tag_select.asp
 public struct Select: Attributable, EventListener {
     public var tag: String = "select"
     public var attributes: [String: String] = [:]
@@ -84,8 +87,6 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - name: The name of the select.
-    ///
-    /// For more information, visit https://www.w3schools.com/tags/tag_select.asp
     func name(_ name: String) -> Select {
         var copy = self
         copy.attributes["name"] = name

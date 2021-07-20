@@ -3,7 +3,8 @@
 ///
 /// If this element is created without a link, it is only a placeholder for a hyperlink.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_a.asp
+/// For more information about the ``<anchor>`` tag,
+/// visit https://www.w3schools.com/tags/tag_a.asp
 public struct Anchor: Attributable, EventListener {
     public var tag: String = "a"
     public var attributes: [String: String] = [:]

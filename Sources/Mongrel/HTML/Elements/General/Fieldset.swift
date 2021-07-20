@@ -3,7 +3,8 @@
 ///
 /// This element draws a box around it's content.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_fieldset.asp
+/// For more information about the ``<fieldset>`` tag,
+/// visit https://www.w3schools.com/tags/tag_fieldset.asp
 public struct Fieldset: Attributable, EventListener {
     public var tag: String = "fieldset"
     public var attributes: [String: String] = [:]

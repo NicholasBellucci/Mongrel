@@ -2,7 +2,8 @@
 ///
 /// This element allows any sort of content.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_details.asp
+/// For more information about the ``<details>`` tag,
+/// visit https://www.w3schools.com/tags/tag_details.asp
 public struct Details: Attributable, EventListener {
     public var tag: String = "details"
     public var attributes: [String: String] = [:]

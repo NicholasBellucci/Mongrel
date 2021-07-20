@@ -2,7 +2,8 @@
 ///
 /// This element has several different types.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_input.asp
+/// For more information about the ``<input>`` tag,
+/// visit https://www.w3schools.com/tags/tag_input.asp
 public struct Input: Attributable, EventListener {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]

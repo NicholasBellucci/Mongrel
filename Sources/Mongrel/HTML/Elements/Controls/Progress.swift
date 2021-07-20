@@ -2,7 +2,8 @@
 ///
 /// This element is often used in conjunction with ``Javascript`` to display current values.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_progress.asp
+/// For more information about the ``<progress>`` tag,
+/// visit https://www.w3schools.com/tags/tag_progress.asp
 public struct Progress: Attributable, EventListener {
     public var tag: String = "progress"
     public var attributes: [String: String] = [:]

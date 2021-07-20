@@ -3,7 +3,8 @@
 /// Any text inside this element will be displayed in browsers with
 /// ``JavaScript`` disabled and/or browsers that don't support ``<canvas>``.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_canvas.asp
+/// For more information about the ``<canvas>`` tag,
+/// visit https://www.w3schools.com/tags/tag_canvas.asp
 public struct Canvas: Attributable, EventListener {
     public var tag: String = "canvas"
     public var attributes: [String: String] = [:]

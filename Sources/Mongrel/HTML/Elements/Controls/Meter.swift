@@ -8,7 +8,8 @@
 /// This element should not be used to indicate progress.
 /// For progress bars, use the ``Progress`` element.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_meter.asp
+/// For more information about the ``<meter>`` tag,
+/// visit https://www.w3schools.com/tags/tag_meter.asp
 public struct Meter: Attributable, EventListener {
     public var tag: String = "meter"
     public var attributes: [String: String] = [:]

@@ -4,7 +4,8 @@
 /// This element provides both a machine-readable value for
 /// data processors and a human-readable value for rendering in a browser.
 ///
-/// For more information, visit https://www.w3schools.com/tags/tag_data.asp
+/// For more information about the ``<data>`` tag,
+/// visit https://www.w3schools.com/tags/tag_data.asp
 public struct Data: Attributable, EventListener {
     public var tag: String = "data"
     public var attributes: [String: String] = [:]

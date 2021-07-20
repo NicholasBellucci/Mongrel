@@ -1,6 +1,9 @@
 /// An ``Button`` element defines a clickable button.
 ///
 /// This element can contain text and other elements.
+///
+/// For more information about the ``<button>`` tag,
+/// visit https://www.w3schools.com/tags/tag_button.asp
 public struct Button: Attributable, EventListener {
     public var tag: String = "button"
     public var attributes: [String: String] = [:]
@@ -154,8 +157,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - name: The name of the button.
-    ///
-    /// For more information, visit https://www.w3schools.com/tags/tag_button.asp
     func name(_ name: String) -> Button {
         var copy = self
         copy.attributes["name"] = name
