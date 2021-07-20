@@ -20,7 +20,7 @@ public struct Script: Attributable, EventListener {
         innerHTML = ""
     }
 
-    /// Creates an empty script element.
+    /// Creates a script element.
     ///
     /// - Parameters:
     ///   - content: The ``HTMLConvertible`` elements that will make up

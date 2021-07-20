@@ -22,24 +22,13 @@ public struct Button: Attributable, EventListener {
         innerHTML = String(describing: title)
     }
 
-    /// Creates an empty button with an ``onclick`` action.
+    /// Creates a button with an optional ``onclick`` action.
     ///
     /// - Parameters:
     ///   - action: The action script represented as a string.
     ///   - content: The ``HTMLConvertible`` elements that will make up
     ///   the HTML inside of the `<button></button>` tags.
-    public init(action: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
-        attributes["type"] = ButtonType.button.rawValue
-        attributes["onclick"] = action
-        innerHTML = content().stringValue
-    }
-
-    /// Creates an empty button.
-    ///
-    /// - Parameters:
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<button></button>` tags.
-    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
+    public init(action: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         innerHTML = content().stringValue
     }

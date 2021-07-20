@@ -1,17 +1,19 @@
-//
-//  Style.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``Source`` element is used to define CSS styles for a document.
+///
+/// For more information about the ``<style>`` tag,
+/// visit https://www.w3schools.com/tags/tag_style.asp
 public struct Style: Attributable, EventListener {
     public var tag: String = "style"
     public var attributes: [String : String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerCSS: String
+    private var innerCSS: String
 
+    /// Creates a style element.
+    ///
+    /// - Parameters:
+    ///   - content: The ``InternalStyle`` elements that will make up
+    ///   the CSS inside of the `<style></style>` tags.
     public init(@StyleBuilder _ content: () -> [InternalStyle]) {
         attributes["type"] = "text/css"
         innerCSS = content()
