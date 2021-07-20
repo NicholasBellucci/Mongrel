@@ -1,20 +1,41 @@
-//
-//  Embed.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
+/// The ``Embed`` element defines a container for an external source.
 public struct Embed: Attributable, EventListener {
     public var tag: String = "embed"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    public init(src: String, type: String, height: Double, width: Double) {
+    /// Creates a embed element with a source and type.
+    ///
+    /// - Parameters:
+    ///   - src: The address of the external file.
+    ///   - type: The media type of the embeded content.
+    public init(src: String, type: String) {
         attributes["src"] = src
         attributes["type"] = type
-        attributes["height"] = "\(height)"
-        attributes["width"] = "\(width)"
+    }
+}
+
+/// These extensions are modifiers for an ``Embed`` element
+/// and will return an ``Embed`` element for continued use/updates.
+public extension Embed {
+    /// Sets the embed's attribute: `height`.
+    ///
+    /// - Parameters:
+    ///   - height: The height of the element, in pixels.
+    func height(_ height: Double) -> Embed {
+        var copy = self
+        copy.attributes["height"] = "\(height)"
+        return copy
+    }
+    
+    /// Sets the embed's attribute: `width`.
+    ///
+    /// - Parameters:
+    ///   - width: The width of the element, in pixels.
+    func width(_ width: Double) -> Embed {
+        var copy = self
+        copy.attributes["width"] = "\(width)"
+        return copy
     }
 }
 

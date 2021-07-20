@@ -1,7 +1,7 @@
 /// An ``Anchor`` element defines a hyperlink, which is used to link from one
 /// page to another.
 ///
-/// If an `Anchor` element is created without a link, it is only a placeholder for a hyperlink.
+/// If this element is created without a link, it is only a placeholder for a hyperlink.
 public struct Anchor: Attributable, EventListener {
     public var tag: String = "a"
     public var attributes: [String: String] = [:]

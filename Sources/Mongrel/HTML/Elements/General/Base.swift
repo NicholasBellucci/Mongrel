@@ -1,7 +1,7 @@
 /// A ``Base`` element is used to specify the base URL
 /// and/or target for all relative URLs in a document.
 ///
-/// Most often used in a form to collect user input.
+/// This element is most often used in a form to collect user input.
 public struct Base: Attributable, EventListener {
     public var tag: String = "base"
     public var attributes: [String: String] = [:]

@@ -1,6 +1,6 @@
 /// A ``Select`` element is used to create a drop-down list.
 ///
-/// Most often used in a form to collect user input.
+/// This element is most often used in a form to collect user input.
 public struct Select: Attributable, EventListener {
     public var tag: String = "select"
     public var attributes: [String: String] = [:]

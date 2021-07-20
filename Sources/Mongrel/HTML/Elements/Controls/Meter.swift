@@ -5,7 +5,7 @@
 /// - Disk usage
 /// - The relevance of a query result
 ///
-/// The ``Meter``element should not be used to indicate progress.
+/// This element should not be used to indicate progress.
 /// For progress bars, use the ``Progress`` element.
 public struct Meter: Attributable, EventListener {
     public var tag: String = "meter"

@@ -1,6 +1,6 @@
 /// An ``Button`` element defines a clickable button.
 ///
-/// A ``Button`` can contain text and other elements.
+/// This element can contain text and other elements.
 public struct Button: Attributable, EventListener {
     public var tag: String = "button"
     public var attributes: [String: String] = [:]

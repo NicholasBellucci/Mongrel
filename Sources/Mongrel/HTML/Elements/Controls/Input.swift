@@ -1,6 +1,6 @@
 /// An ``Input`` element allows a user to enter data.
 ///
-/// An ``Input``element has several different types.
+/// This element has several different types.
 public struct Input: Attributable, EventListener {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]
@@ -208,7 +208,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the ininput'sput attribute: `list`.
+    /// Sets the input's attribute: `list`.
     ///
     /// - Parameters:
     ///   - id: The id of a ``datalist`` element that contains pre-defined options for the input.
@@ -360,7 +360,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input attribute: `width`.
+    /// Sets the input's attribute: `width`.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.

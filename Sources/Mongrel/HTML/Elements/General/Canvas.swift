@@ -1,7 +1,7 @@
 /// A ``Canvas`` element is used to draw graphics, on the fly, via scripting.
 ///
-/// Any text inside the ``Canvas`` element will be displayed in browsers
-/// with ``JavaScript`` disabled and/or browsers that don't support ``<canvas>``.
+/// Any text inside this element will be displayed in browsers with
+/// ``JavaScript`` disabled and/or browsers that don't support ``<canvas>``.
 public struct Canvas: Attributable, EventListener {
     public var tag: String = "canvas"
     public var attributes: [String: String] = [:]

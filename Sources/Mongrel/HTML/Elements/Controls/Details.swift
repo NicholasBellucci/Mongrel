@@ -1,6 +1,6 @@
 /// A ``Details``specifies additional details that can be open and closed.
 ///
-/// The ``Details`` element allows any sort of content.
+/// This element allows any sort of content.
 public struct Details: Attributable, EventListener {
     public var tag: String = "details"
     public var attributes: [String: String] = [:]

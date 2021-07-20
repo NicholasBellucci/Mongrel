@@ -1,10 +1,6 @@
-//
-//  Dialog.swift
-//
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``Dialog`` element defines a dialog box or subwindow.
+///
+/// This element helps to create popup dialogs and modals.
 public struct Dialog: Attributable, EventListener {
     public var tag: String = "dialog"
     public var attributes: [String: String] = [:]
@@ -14,6 +10,23 @@ public struct Dialog: Attributable, EventListener {
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
+    }
+}
+
+public extension Dialog {
+    /// Sets the dialog's attribute: `open`.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``open`` should be added
+    ///   based on another boolean.
+    func open(if value: Bool = true) -> Dialog {
+        var copy = self
+
+        if value {
+            copy.attributes["open"] = ""
+        }
+
+        return copy
     }
 }
 
@@ -28,17 +41,5 @@ extension Dialog: HTMLConvertible {
 
     private var html: String {
         "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
-public extension Dialog {
-    func open(if value: Bool = true) -> Dialog {
-        var copy = self
-
-        if value {
-            copy.attributes["open"] = ""
-        }
-
-        return copy
     }
 }
