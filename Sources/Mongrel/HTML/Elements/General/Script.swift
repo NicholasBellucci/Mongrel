@@ -22,20 +22,6 @@ public struct Script: Attributable, EventListener {
     }
 }
 
-extension Script: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension Script {
     func async(if value: Bool = true) -> Script {
         var copy = self
@@ -85,6 +71,20 @@ public extension Script {
         var copy = self
         copy.attributes["type"] = type
         return copy
+    }
+}
+
+extension Script: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 

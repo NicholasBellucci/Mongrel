@@ -17,20 +17,6 @@ public struct OptionGroup: Attributable, EventListener {
     }
 }
 
-extension OptionGroup: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension OptionGroup {
     func disabled(if value: Bool = true) -> OptionGroup {
         var copy = self
@@ -49,3 +35,16 @@ public extension OptionGroup {
     }
 }
 
+extension OptionGroup: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
+    }
+}

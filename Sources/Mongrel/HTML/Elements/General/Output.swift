@@ -19,20 +19,6 @@ public struct Output: Attributable {
     }
 }
 
-extension Output: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension Output {
     func `for`(_ ids: String...) -> Attributable {
         var copy = self
@@ -58,5 +44,19 @@ public extension Output {
         var copy = self
         copy.attributes["name"] = name
         return copy
+    }
+}
+
+extension Output: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

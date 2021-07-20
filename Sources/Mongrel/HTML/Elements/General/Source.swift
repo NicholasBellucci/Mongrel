@@ -17,20 +17,6 @@ public struct Source: Attributable, EventListener {
     }
 }
 
-extension Source: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>"
-    }
-}
-
 public extension Source {
     func media(_ query: String) -> Source {
         var copy = self
@@ -60,5 +46,19 @@ public extension Source {
         var copy = self
         copy.attributes["type"] = type
         return copy
+    }
+}
+
+extension Source: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>"
     }
 }

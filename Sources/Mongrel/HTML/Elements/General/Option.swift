@@ -17,20 +17,6 @@ public struct Option: Attributable, EventListener {
     }
 }
 
-extension Option: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension Option {
     func disabled(if value: Bool = true) -> Option {
         var copy = self
@@ -62,5 +48,19 @@ public extension Option {
         var copy = self
         copy.attributes["value"] = value
         return copy
+    }
+}
+
+extension Option: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
