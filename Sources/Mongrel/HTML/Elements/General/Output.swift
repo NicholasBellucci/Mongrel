@@ -1,6 +1,6 @@
 /// The ``Output`` element represents the results of a calculation.
 ///
-/// For more information about the ``<meta>`` tag,
+/// For more information about the ``<output>`` tag,
 /// visit https://www.w3schools.com/tags/tag_output.asp
 public struct Output: Attributable {
     public var tag: String = "output"

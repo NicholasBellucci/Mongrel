@@ -35,7 +35,7 @@ public extension Link {
     ///
     /// - Parameters:
     ///   - code: The language code of the linked document.
-    ///   - country: The country code of the linked document.
+    ///   - country: The country code for the linked document.
     func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Link {
         var copy = self
 

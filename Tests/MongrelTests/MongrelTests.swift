@@ -18,7 +18,9 @@ struct HomePage: HTML {
 
     var document: some HTMLConvertible {
         Root(language: .en) {
-
+            Paragraph {
+                Text("test")
+            }
         }
     }
 }

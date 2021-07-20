@@ -1,10 +1,8 @@
-//
-//  Root.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``Root`` element represents the root of an HTML document
+/// and is a container for all other HTML elements.
+///
+/// For more information about the ``<html>`` tag,
+/// visit https://www.w3schools.com/tags/tag_html.asp
 public struct Root: Attributable, EventListener {
     public var tag: String = "html"
     public var attributes: [String: String] = [:]
@@ -12,6 +10,13 @@ public struct Root: Attributable, EventListener {
 
     private var innerHTML: String
 
+    /// Creates a root element with a language and optional country code.
+    ///
+    /// - Parameters:
+    ///   - language: The language of the document.
+    ///   - country: The country code for the document.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<html></html>` tags.
     public init(language: LanguageCode = .en, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let country = country {
             attributes["lang"] = "\(language.rawValue)-\(country.rawValue)"
