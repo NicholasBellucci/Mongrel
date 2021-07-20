@@ -15,11 +15,11 @@ public struct ForEach {
 
 extension ForEach: HTML {
     public var description: String {
-        stringValue
+        html
     }
 
     public var debugDescription: String {
-        stringValue
+        html
     }
 
     private var html: String {
