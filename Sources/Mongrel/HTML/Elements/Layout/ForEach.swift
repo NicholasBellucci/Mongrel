@@ -6,9 +6,9 @@
 //
 
 public struct ForEach {
-    private var objects: [Element] = []
+    private var objects: [HTML] = []
 
-    public init<T>(_ array: [T], content: @escaping (T) -> Element) {
+    public init<T>(_ array: [T], content: @escaping (T) -> HTML) {
         array.forEach { objects.append(content($0)) }
     }
 }
