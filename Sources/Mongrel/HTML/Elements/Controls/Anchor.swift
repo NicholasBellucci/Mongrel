@@ -15,10 +15,7 @@ public struct Anchor: Attributable, EventListener {
     ///   - href: The optional hyperlink pointing to arbitrary data.
     ///   - content: The HTML inside of the `<a></a>` tags.
     public init(_ href: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
-        if let href = href {
-            attributes["href"] = href
-        }
-
+        attributes["href"] = href
         innerHTML = content().stringValue
     }
 
@@ -123,7 +120,7 @@ public extension Anchor {
     /// Sets the anchor's attribute: `target`.
     ///
     /// - Parameters:
-    ///   - target: Where to open the linked document.
+    ///   - target: The target to open the linked document.
     ///
     func target(_ target: Target = .`self`) -> Anchor {
         var copy = self

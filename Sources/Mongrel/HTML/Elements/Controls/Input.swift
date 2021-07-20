@@ -136,7 +136,7 @@ public extension Input {
     /// Sets the input's attribute: `form`.
     ///
     /// - Parameters:
-    ///   - id: Id of the form in which the input belongs.
+    ///   - id: The id of the form in which the input belongs.
     ///
     func formId(_ id: String) -> Input {
         var copy = self
@@ -149,7 +149,7 @@ public extension Input {
     /// Only available for input type ``submit`` and ``image``.
     ///
     /// - Parameters:
-    ///   - url: URL of the file that will process the input control when the form is submitted.
+    ///   - url: The URL of the file that will process the input control when the form is submitted.
     ///
     func formAction(_ url: String) -> Input {
         var copy = self
@@ -204,7 +204,7 @@ public extension Input {
     /// Only available for input type ``submit`` and ``image``.
     ///
     /// - Parameters:
-    ///   - target: Target to display the response that is received after submitting.
+    ///   - target: The target to display the response that is received after submitting.
     ///
     func formTarget(_ target: Target) -> Input {
         var copy = self
@@ -215,7 +215,7 @@ public extension Input {
     /// Sets the input's attribute: `height`.
     ///
     /// - Parameters:
-    ///   - height: Height of the element, in pixels.
+    ///   - height: The height of the element, in pixels.
     ///
     func height(_ height: Double) -> Input {
         var copy = self
@@ -226,7 +226,7 @@ public extension Input {
     /// Sets the ininput'sput attribute: `list`.
     ///
     /// - Parameters:
-    ///   - id: Id of a ``datalist`` element that contains pre-defined options for the input.
+    ///   - id: The id of a ``datalist`` element that contains pre-defined options for the input.
     ///
     func listId(_ id: String) -> Input {
         var copy = self
@@ -237,7 +237,7 @@ public extension Input {
     /// Sets the input's attribute: `max`.
     ///
     /// - Parameters:
-    ///   - value: Maximum value for the input.
+    ///   - value: The maximum value for the input.
     ///
     func max(_ value: Int) -> Input {
         var copy = self
@@ -248,7 +248,7 @@ public extension Input {
     /// Sets the input's attribute: `maxlength`.
     ///
     /// - Parameters:
-    ///   - length: Maximum number of characters allowed in the input.
+    ///   - length: The maximum number of characters allowed in the input.
     ///
     func maxLength(_ length: Int) -> Input {
         var copy = self
@@ -259,7 +259,7 @@ public extension Input {
     /// Sets the input's attribute: `min`.
     ///
     /// - Parameters:
-    ///   - value: Minimum value for the input.
+    ///   - value: The minimum value for the input.
     ///
     func min(_ value: Int) -> Input {
         var copy = self
@@ -270,7 +270,7 @@ public extension Input {
     /// Sets the input's attribute: `minlength`.
     ///
     /// - Parameters:
-    ///   - length: Minumum number of characters allowed in the input.
+    ///   - length: The minumum number of characters allowed in the input.
     ///
     func minLength(_ length: Int) -> Input {
         var copy = self
@@ -281,7 +281,7 @@ public extension Input {
     /// Sets the input's attribute: `name`.
     ///
     /// - Parameters:
-    ///   - length: Minumum number of characters allowed in the input.
+    ///   - length: The minumum number of characters allowed in the input.
     ///
     func name(_ name: String) -> Input {
         var copy = self
@@ -392,7 +392,7 @@ public extension Input {
     /// Sets the input attribute: `width`.
     ///
     /// - Parameters:
-    ///   - width: Width of the element, in pixels.
+    ///   - width: The width of the element, in pixels.
     ///
     func width(_ width: Double) -> Input {
         var copy = self

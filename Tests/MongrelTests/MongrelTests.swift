@@ -17,20 +17,8 @@ struct HomePage: HTML {
     var title: String
 
     var document: some HTMLConvertible {
-        HStack {
-            VStack {
-                Text("Hello")
-                    .span()
-
-                Text("test")
-                    .span()
-            }
-
-            Paragraph("new") {
-                Text("hello")
-            }
-
-            Button("Test", action: "myFunction()")
+        Select {
+            
         }
     }
 }

@@ -39,7 +39,7 @@ public extension Meter {
     /// Sets the meter's attribute: `form`.
     ///
     /// - Parameters:
-    ///   - id: Id of the form in which the meter belongs.
+    ///   - id: The id of the form in which the meter belongs.
     ///
     func formId(_ id: String) -> Meter {
         var copy = self
