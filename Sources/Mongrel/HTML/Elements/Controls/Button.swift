@@ -154,6 +154,8 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - name: The name of the button.
+    ///
+    /// For more information, visit https://www.w3schools.com/tags/tag_button.asp
     func name(_ name: String) -> Button {
         var copy = self
         copy.attributes["name"] = name

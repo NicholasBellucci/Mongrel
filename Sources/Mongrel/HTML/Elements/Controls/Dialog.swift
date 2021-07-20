@@ -1,12 +1,14 @@
 /// The ``Dialog`` element defines a dialog box or subwindow.
 ///
 /// This element helps to create popup dialogs and modals.
+///
+/// For more information, visit https://www.w3schools.com/tags/tag_dialog.asp
 public struct Dialog: Attributable, EventListener {
     public var tag: String = "dialog"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue

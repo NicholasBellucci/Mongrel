@@ -12,7 +12,7 @@ public struct HStack: Attributable, EventListener, Stylable {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTMLConvertible) {
         styles["align-items"] = alignment.rawValue

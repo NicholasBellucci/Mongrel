@@ -11,7 +11,7 @@ public struct ColumnGroup: Attributable, EventListener {
     public var styles: [String: String] = [:]
 
     var span: Int? = nil
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(_ span: Int? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let span = span {

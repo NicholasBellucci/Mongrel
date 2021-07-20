@@ -10,7 +10,7 @@ public struct Output: Attributable {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String = ""
+    private var innerHTML: String = ""
 
     public init() { }
 
@@ -50,6 +50,10 @@ public extension Output {
         return copy
     }
 
+    /// Sets the button's attribute: `name`.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the output.
     func name(_ name: String) -> Output {
         var copy = self
         copy.attributes["name"] = name

@@ -1,6 +1,8 @@
 /// A ``Progress`` element displays the completion progress of a task
 ///
 /// This element is often used in conjunction with ``Javascript`` to display current values.
+///
+/// For more information, visit https://www.w3schools.com/tags/tag_progress.asp
 public struct Progress: Attributable, EventListener {
     public var tag: String = "progress"
     public var attributes: [String: String] = [:]

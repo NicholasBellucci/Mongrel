@@ -10,7 +10,7 @@ public struct GenericElement: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String = ""
+    private var innerHTML: String = ""
 
     init(tag: String) {
         self.tag = tag

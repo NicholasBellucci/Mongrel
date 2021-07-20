@@ -10,7 +10,7 @@ public struct List: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTMLConvertible) {
         self.tag = type.rawValue

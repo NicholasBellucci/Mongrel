@@ -42,6 +42,10 @@ public extension Metadata {
         return copy
     }
 
+    /// Sets the button's attribute: `name`.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the metadata.
     func name(_ name: MetadataName) -> Metadata {
         var copy = self
         copy.attributes["name"] = name.rawValue

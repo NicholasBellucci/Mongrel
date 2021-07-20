@@ -1,6 +1,8 @@
 /// An ``Input`` element allows a user to enter data.
 ///
 /// This element has several different types.
+///
+/// For more information, visit https://www.w3schools.com/tags/tag_input.asp
 public struct Input: Attributable, EventListener {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]
@@ -258,10 +260,10 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `name`.
+    /// Sets the button's attribute: `name`.
     ///
     /// - Parameters:
-    ///   - length: The minumum number of characters allowed in the input.
+    ///   - name: The name of the input.
     func name(_ name: String) -> Input {
         var copy = self
         copy.attributes["name"] = name

@@ -10,7 +10,7 @@ public struct Map: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(_ name: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["name"] = name

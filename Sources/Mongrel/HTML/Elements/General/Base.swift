@@ -2,6 +2,8 @@
 /// and/or target for all relative URLs in a document.
 ///
 /// This element is most often used in a form to collect user input.
+///
+/// For more information, visit https://www.w3schools.com/tags/tag_base.asp
 public struct Base: Attributable, EventListener {
     public var tag: String = "base"
     public var attributes: [String: String] = [:]

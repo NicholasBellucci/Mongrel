@@ -6,7 +6,7 @@ public struct Select: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     /// Creates a select element with an optional id and name.
     ///
@@ -84,6 +84,8 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - name: The name of the select.
+    ///
+    /// For more information, visit https://www.w3schools.com/tags/tag_select.asp
     func name(_ name: String) -> Select {
         var copy = self
         copy.attributes["name"] = name

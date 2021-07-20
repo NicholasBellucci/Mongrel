@@ -10,7 +10,7 @@ public struct iFrame: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String = ""
+    private var innerHTML: String = ""
 
     public init(title: String) {
         attributes["title"] = title
@@ -67,6 +67,10 @@ public extension iFrame {
         return copy
     }
 
+    /// Sets the button's attribute: `name`.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the iframe.
     func name(_ name: String) -> iFrame {
         var copy = self
         copy.attributes["name"] = name

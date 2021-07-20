@@ -10,7 +10,7 @@ public struct Form: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
@@ -62,6 +62,10 @@ public extension Form {
         return copy
     }
 
+    /// Sets the button's attribute: `name`.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the form.
     func name(_ name: String) -> Form {
         var copy = self
         copy.attributes["name"] = name

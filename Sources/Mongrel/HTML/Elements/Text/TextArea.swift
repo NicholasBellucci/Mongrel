@@ -10,7 +10,7 @@ public struct TextArea: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String
+    private var innerHTML: String
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
@@ -70,6 +70,10 @@ public extension TextArea {
         return copy
     }
 
+    /// Sets the button's attribute: `name`.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the textarea.
     func name(_ name: String) -> TextArea {
         var copy = self
         copy.attributes["name"] = name
