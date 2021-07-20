@@ -7,7 +7,7 @@ public struct Link: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    /// Creates a link with an href and a relationship.
+    /// Creates a link element with an href and a relationship.
     ///
     /// - Parameters:
     ///   - href: The location of the linked document.
