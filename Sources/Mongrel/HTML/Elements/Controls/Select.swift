@@ -13,7 +13,8 @@ public struct Select: Attributable, EventListener {
     /// - Parameters:
     ///   - id: The id of the select element.
     ///   - name: The name of the select element.
-    ///   - content: The HTML inside of the `<select></select>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<select></select>` tags.
     public init(id: String? = nil, name: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["id"] = id
         attributes["name"] = name
@@ -29,7 +30,6 @@ public extension Select {
     /// - Parameters:
     ///   - value: Allows user to determine if ``multiple`` should be added
     ///   based on another boolean.
-    ///
     func allowsMultipleValues(if value: Bool = true) -> Select {
         var copy = self
 
@@ -45,7 +45,6 @@ public extension Select {
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
     ///   based on another boolean.
-    ///
     func autofocus(if value: Bool = true) -> Select {
         var copy = self
 
@@ -61,7 +60,6 @@ public extension Select {
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
     ///   based on another boolean.
-    ///
     func disabled(if value: Bool = true) -> Select {
         var copy = self
 
@@ -76,7 +74,6 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the input belongs.
-    ///
     func formId(_ id: String) -> Select {
         var copy = self
         copy.attributes["form"] = id
@@ -87,7 +84,6 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - name: The name of the select.
-    ///
     func name(_ name: String) -> Select {
         var copy = self
         copy.attributes["name"] = name
@@ -99,7 +95,6 @@ public extension Select {
     /// - Parameters:
     ///   - value: Allows user to determine if ``required`` should be added
     ///   based on another boolean.
-    ///
     func required(_ value: Bool) -> Select {
         var copy = self
 
@@ -114,7 +109,6 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - size: The number of visible options in a drop-down list.
-    ///
     func size(_ size: Int) -> Select {
         var copy = self
         copy.attributes["size"] = "\(size)"

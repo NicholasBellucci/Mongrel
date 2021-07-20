@@ -26,7 +26,8 @@ public struct Meter: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - value: The current value of the meter.
-    ///   - content: The HTML inside of the `<meter></meter>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<meter></meter>` tags.
     public init(value: Double, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["value"] = "\(value)"
         innerHTML = content().stringValue
@@ -40,7 +41,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the meter belongs.
-    ///
     func formId(_ id: String) -> Meter {
         var copy = self
         copy.attributes["form"] = id
@@ -51,7 +51,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - high: The range that is considered to be a high value.
-    ///
     func high(_ high: Double) -> Meter {
         var copy = self
         copy.attributes["high"] = "\(high)"
@@ -62,7 +61,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - low: The range that is considered to be a low value.
-    ///
     func low(_ low: Double) -> Meter {
         var copy = self
         copy.attributes["low"] = "\(low)"
@@ -73,7 +71,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - max: The maximum value of the range.
-    ///
     func max(_ max: Double) -> Meter {
         var copy = self
         copy.attributes["max"] = "\(max)"
@@ -84,7 +81,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - min: The minimum value of the range.
-    ///
     func min(_ min: Double) -> Meter {
         var copy = self
         copy.attributes["min"] = "\(min)"
@@ -95,7 +91,6 @@ public extension Meter {
     ///
     /// - Parameters:
     ///   - optimum: The optimal value for the meter.
-    ///
     func optimum(_ optimum: Double) -> Meter {
         var copy = self
         copy.attributes["optimum"] = "\(optimum)"

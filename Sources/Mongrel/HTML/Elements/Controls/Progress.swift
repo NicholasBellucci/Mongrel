@@ -20,7 +20,8 @@ public struct Progress: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - max: How much work the task requires in total.
-    ///   - content: The HTML inside of the `<progress></progress>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<progress></progress>` tags.
     public init(max: Double = 1, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["max"] = "\(max)"
         innerHTML = content().stringValue
@@ -34,7 +35,6 @@ public extension Progress {
     ///
     /// - Parameters:
     ///   - value: The amount in which the task has completed.
-    ///
     func value(_ value: Double) -> Progress {
         var copy = self
         copy.attributes["value"] = "\(value)"

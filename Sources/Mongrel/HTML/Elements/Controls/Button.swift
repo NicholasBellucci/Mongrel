@@ -23,7 +23,8 @@ public struct Button: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - action: The action script represented as a string.
-    ///   - content: The HTML inside of the `<button></button>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<button></button>` tags.
     public init(action: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         attributes["onclick"] = action
@@ -33,7 +34,8 @@ public struct Button: Attributable, EventListener {
     /// Creates an empty button.
     ///
     /// - Parameters:
-    ///   - content: The HTML inside of the `<button></button>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<button></button>` tags.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         innerHTML = content().stringValue
@@ -48,7 +50,6 @@ public extension Button {
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
     ///   based on another boolean.
-    ///
     func autofocus(if value: Bool = true) -> Button {
         var copy = self
 
@@ -64,7 +65,6 @@ public extension Button {
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
     ///   based on another boolean.
-    ///
     func disabled(if value: Bool = true) -> Button {
         var copy = self
 
@@ -79,7 +79,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the button belongs.
-    ///
     func formId(_ id: String) -> Button {
         var copy = self
         copy.attributes["form"] = id
@@ -92,7 +91,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - url: The URL to send the form data when submitted.
-    ///
     func formAction(_ url: String) -> Button {
         var copy = self
         copy.attributes["formaction"] = url
@@ -105,7 +103,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - type: The encoding type for the form data.
-    ///
     func formEncodeType(_ type: FormEncodeType) -> Button {
         var copy = self
         copy.attributes["formenctype"] = type.rawValue
@@ -118,7 +115,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - method: The method in which to send the form data.
-    ///
     func formMethod(_ method: FormMethod) -> Button {
         var copy = self
         copy.attributes["formmethod"] = method.rawValue
@@ -132,7 +128,6 @@ public extension Button {
     /// - Parameters:
     ///   - value: Allows user to determine if ``formnovalidate`` should be added
     ///   based on another boolean.
-    ///
     func formNoValidate(if value: Bool = true) -> Button {
         var copy = self
 
@@ -149,7 +144,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - target: The target to display the response after submitting.
-    ///
     func formTarget(_ target: Target) -> Button {
         var copy = self
         copy.attributes["formtarget"] = target.rawValue
@@ -160,7 +154,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - name: The name of the button.
-    ///
     func name(_ name: String) -> Button {
         var copy = self
         copy.attributes["name"] = name
@@ -171,7 +164,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - type: The type of the button.
-    ///
     func type(_ type: ButtonType) -> Button {
         var copy = self
         copy.attributes["type"] = type.rawValue
@@ -182,7 +174,6 @@ public extension Button {
     ///
     /// - Parameters:
     ///   - value: The initial value of the button.
-    ///
     func value(_ value: String) -> Button {
         var copy = self
         copy.attributes["value"] = value

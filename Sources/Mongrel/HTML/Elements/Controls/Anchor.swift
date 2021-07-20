@@ -13,7 +13,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - href: The optional hyperlink pointing to arbitrary data.
-    ///   - content: The HTML inside of the `<a></a>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<a></a>` tags.
     public init(_ href: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = href
         innerHTML = content().stringValue
@@ -23,7 +24,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - email: The linked email address.
-    ///   - content: The HTML inside of the `<a></a>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<a></a>` tags.
     public init(mailTo email: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "mailto:\(email)"
         innerHTML = content().stringValue
@@ -33,7 +35,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - number: The linked phone number.
-    ///   - content: The HTML inside of the `<a></a>` tags.
+    ///   - content: The ``HTMLConvertible`` elements that will make up
+    ///   the HTML inside of the `<a></a>` tags.
     public init(call number: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "tel:+\(number)"
         innerHTML = content().stringValue
@@ -47,7 +50,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - file: The filename of the downloadable content.
-    ///
     func download(_ filename: String) -> Anchor {
         var copy = self
         copy.attributes["download"] = filename
@@ -59,7 +61,6 @@ public extension Anchor {
     /// - Parameters:
     ///   - code: The language code of the linked document.
     ///   - country: The country code of the linked document.
-    ///
     func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Anchor {
         var copy = self
 
@@ -76,7 +77,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - query: The media/device the linked document if optimized for.
-    ///
     func media(_ query: String) -> Anchor {
         var copy = self
         copy.attributes["media"] = query
@@ -88,7 +88,6 @@ public extension Anchor {
     /// - Parameters:
     ///   - list: A space-separated list of URLs to which, when the link is followed,
     ///   post requests with the body ping will be sent by the browser
-    ///
     func ping(_ list: String...) -> Anchor {
         var copy = self
         copy.attributes["ping"] = list.map { $0 }.joined(separator: " ")
@@ -99,7 +98,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - policy: The referrer information to send with the link.
-    ///
     func referrerPolicy(_ policy: ReferrerPolicy) -> Anchor {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
@@ -110,7 +108,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - relationship: The relationship between the current document and the linked document.
-    ///
     func relationship(_ relationship: Relationship.Anchor) -> Anchor {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue
@@ -121,7 +118,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - target: The target to open the linked document.
-    ///
     func target(_ target: Target = .`self`) -> Anchor {
         var copy = self
         copy.attributes["target"] = target.rawValue
@@ -132,7 +128,6 @@ public extension Anchor {
     ///
     /// - Parameters:
     ///   - type: The media type of the linked document.
-    ///
     func type(_ type: String) -> Anchor {
         var copy = self
         copy.attributes["type"] = type
