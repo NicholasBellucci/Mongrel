@@ -17,8 +17,6 @@ struct HomePage: HTML {
     var title: String
 
     var body: some HTMLConvertible {
-        Text("Test")
-            .styles(InlineStyle("test", "style"))
-
+        Text("Now")
     }
 }
