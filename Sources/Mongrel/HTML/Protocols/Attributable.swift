@@ -9,13 +9,9 @@ public extension Attributable {
         return copy
     }
 
-    func classes(_ classes: String...) -> Attributable {
+    func `class`(_ class: String) -> Attributable {
         var copy = self
-
-        copy.attributes["class"] = classes
-            .sorted()
-            .map { $0 }.joined(separator: " ")
-        
+        copy.attributes["class"] = `class`
         return copy
     }
 
@@ -74,12 +70,11 @@ public extension Attributable {
     func styles(_ styles: InlineStyle...) -> Attributable {
         var copy = self
 
-        copy.attributes["style"] = styles
+        styles
             .sorted()
-            .map {
-                "\($0.name): \($0.value)"
+            .forEach {
+                copy.styles[$0.key] = "\($0.value)"
             }
-            .joined(separator: "; ")
 
         return copy
     }

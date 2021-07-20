@@ -34,10 +34,10 @@ extension Output: HTMLConvertible {
 }
 
 public extension Output {
-    func `for`(_ classes: String...) -> Attributable {
+    func `for`(_ ids: String...) -> Attributable {
         var copy = self
 
-        copy.attributes["for"] = classes
+        copy.attributes["for"] = ids
             .sorted()
             .map { $0 }.joined(separator: " ")
 

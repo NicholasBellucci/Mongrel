@@ -35,24 +35,18 @@ extension Text: HTMLConvertible {
 
         if tags.isEmpty, !attributes.isEmpty {
             tags.append("span")
+        } else if tags.isEmpty, !styles.isEmpty {
+            tags.append("span")
         }
         
         tags
             .reversed()
             .enumerated()
             .forEach { index, tag in
-                if index == tags.count - 1, !attributes.isEmpty {
-                    if attributesCollection[tag] == nil {
-                        html = "<\(tag) \(attributesString)>\(html)</\(tag)>"
-                    } else {
-                        html = "<\(tag) \(attributesString) \(attributes(for: tag))>\(html)</\(tag)>"
-                    }
+                if index == tags.count - 1 {
+                    html = "<\(tag)\(attributesString)\(attributes(for: tag))>\(html)</\(tag)>"
                 } else {
-                    if attributesCollection[tag] == nil {
-                        html = "<\(tag)>\(html)</\(tag)>"
-                    } else {
-                        html = "<\(tag) \(attributes(for: tag))>\(html)</\(tag)>"
-                    }
+                    html = "<\(tag)\(attributes(for: tag))>\(html)</\(tag)>"
                 }
             }
 
@@ -62,7 +56,7 @@ extension Text: HTMLConvertible {
     private func attributes(for tag: String) -> String {
         guard let array = attributesCollection[tag] else { return "" }
 
-        return array
+        return " " + array
             .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
             .joined(separator: " ")
     }

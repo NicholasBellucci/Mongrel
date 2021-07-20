@@ -1,26 +1,15 @@
-public protocol HTMLConvertible: CustomStringConvertible, CustomDebugStringConvertible {
-    var stringValue: String { get }
+public protocol HTML: HTMLConvertible {
+    associatedtype ContentBody: HTMLConvertible
+
+    @HTMLBuilder var body: Self.ContentBody { get }
 }
 
-public extension HTMLConvertible {
-    var stringValue: String {
-        String(describing: self)
+extension HTML {
+    public var description: String {
+        body.stringValue
     }
-}
 
-extension Array: HTMLConvertible where Element == HTMLConvertible {
-    public var stringValue: String {
-        self
-            .enumerated()
-            .map { index, element in
-                if let text = element as? Text {
-                    return self.element(before: index) is Text ?
-                        " \(text)" :
-                        String(describing: text)
-                }
-
-                return String(describing: element)
-            }
-            .joined()
+    public var debugDescription: String {
+        body.stringValue
     }
 }
