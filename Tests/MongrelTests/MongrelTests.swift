@@ -17,10 +17,21 @@ struct HomePage: HTML {
     var title: String
 
     var document: some HTMLConvertible {
-        Group("test") {
+        HStack {
+            VStack {
+                Text("Hello")
+                    .paragraph()
+
+                Text("test")
+                    .span()
+            }
+
             Paragraph("new") {
                 Text("hello")
             }
+            .padding([.top, .left], .pixels(10))
+
+            Button("Test", action: "myFunction()")
         }
     }
 }

@@ -1,4 +1,4 @@
-public protocol Element: HTMLConvertible {
+public protocol Element: Stylable, HTMLConvertible {
     var attributes: [String: String] { get set }
     var styles: [String: String] { get set }
 }

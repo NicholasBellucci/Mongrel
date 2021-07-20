@@ -1,11 +1,4 @@
-//
-//  HorizonalRule.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
-public struct HorizonalRule: Attributable, EventListener {
+public struct HorizontalDivider: Attributable, EventListener {
     public var tag: String = "hr"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
@@ -13,7 +6,7 @@ public struct HorizonalRule: Attributable, EventListener {
     public init() { }
 }
 
-extension HorizonalRule: HTMLConvertible {
+extension HorizontalDivider: HTMLConvertible {
     public var description: String {
         html
     }

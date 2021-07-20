@@ -12,8 +12,16 @@ public struct Button: Attributable, EventListener {
 
     var innerHTML: String = ""
 
-    public init() {
+    public init<S>(_ title: S, action: String) where S : StringProtocol {
         attributes["type"] = "button"
+        attributes["onclick"] = action
+        innerHTML = String(describing: title)
+    }
+
+    public init(action: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
+        attributes["type"] = "button"
+        attributes["onclick"] = action
+        innerHTML = content().stringValue
     }
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {

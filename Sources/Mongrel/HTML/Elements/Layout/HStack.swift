@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct HStack: Attributable, EventListener {
+public struct HStack: Attributable, EventListener, Stylable {
     public var tag: String = "div"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
@@ -17,8 +17,9 @@ public struct HStack: Attributable, EventListener {
     public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTMLConvertible) {
         styles["align-items"] = alignment.rawValue
         styles["justify-content"] = Justification.center.rawValue
-        styles["display"] = DisplayType.flex.rawValue
+        styles["display"] = DisplayType.inlineFlex.rawValue
         styles["flex-direction"] = FlexDirection.row.rawValue
+        styles["margin"] = "auto"
 
         innerHTML = content().stringValue
     }
@@ -34,7 +35,7 @@ extension HStack: HTMLConvertible {
     }
 
     private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
+        "<\(tag) style=\"display: flex\"><\(tag)\(attributesString)>\(innerHTML)</\(tag)></\(tag)>"
     }
 }
 
