@@ -16,40 +16,12 @@ final class MongrelTests: XCTestCase {
 struct HomePage: HTMLView {
     var title: String
 
+    let testArray: [String] = ["", "", "", ""]
+
     var body: some HTML {
-        Body {
-            Div {
-                Text("Cinque Terre")
-                    .heading(.h1)
-                Text("Resize the browser window")
-                    .heading(.h3)
-            }
-            .styles(
-                InlineStyle(name: "background-color", value: "#f1f1f1"),
-                InlineStyle(name: "padding", value: "15px")
-            )
-
-            Div {
-                MenuView()
-
-                MainView()
-
-                RightView()
-            }
-            .styles(InlineStyle(name: "overflow", value: "auto"))
-
-            Div {
-                Text("This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.")
-            }
-            .styles(
-                InlineStyle(name: "background-color", value: "#f1f1f1"),
-                InlineStyle(name: "text-align", value: "center"),
-                InlineStyle(name: "padding", value: "10px"),
-                InlineStyle(name: "margin-top", value: "7px"),
-                InlineStyle(name: "font-size", value: "12px")
-            )
+        ForEach(testArray) { _ in
+            Text("Test")
         }
-        .styles(InlineStyle(name: "font-family", value: "Verdana"))
     }
 }
 

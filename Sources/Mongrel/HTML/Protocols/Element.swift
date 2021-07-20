@@ -5,6 +5,8 @@ public protocol Element: HTML {
 
 extension Element {
     var attributesString: String {
+        guard !styles.isEmpty || !attributes.isEmpty else { return "" }
+
         let stylesString = "style=\"\(allStyles)\""
 
         if styles.isEmpty {
