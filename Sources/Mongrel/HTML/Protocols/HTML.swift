@@ -1,14 +1,14 @@
-public protocol HTML: CustomStringConvertible, CustomDebugStringConvertible {
+public protocol HTMLConvertible: CustomStringConvertible, CustomDebugStringConvertible {
     var stringValue: String { get }
 }
 
-public extension HTML {
+public extension HTMLConvertible {
     var stringValue: String {
         String(describing: self)
     }
 }
 
-extension Array: HTML where Element == HTML {
+extension Array: HTMLConvertible where Element == HTMLConvertible {
     public var stringValue: String {
         self
             .enumerated()

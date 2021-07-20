@@ -14,7 +14,7 @@ public struct HStack: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTML) {
+    public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTMLConvertible) {
         styles["align-items"] = alignment.rawValue
         styles["justify-content"] = Justification.center.rawValue
         styles["display"] = DisplayType.flex.rawValue
@@ -24,7 +24,7 @@ public struct HStack: Attributable, EventListener {
     }
 }
 
-extension HStack: HTML {
+extension HStack: HTMLConvertible {
     public var description: String {
         html
     }

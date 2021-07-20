@@ -12,12 +12,12 @@ public struct TextArea: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
-extension TextArea: HTML {
+extension TextArea: HTMLConvertible {
     public var description: String {
         html
     }

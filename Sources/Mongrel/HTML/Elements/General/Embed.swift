@@ -18,7 +18,7 @@ public struct Embed: Attributable, EventListener {
     }
 }
 
-extension Embed: HTML {
+extension Embed: HTMLConvertible {
     public var description: String {
         html
     }

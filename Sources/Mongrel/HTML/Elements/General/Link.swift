@@ -16,7 +16,7 @@ public struct Link: Attributable, EventListener {
     }
 }
 
-extension Link: HTML {
+extension Link: HTMLConvertible {
     public var description: String {
         html
     }

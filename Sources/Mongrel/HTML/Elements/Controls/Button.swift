@@ -16,13 +16,13 @@ public struct Button: Attributable, EventListener {
         attributes["type"] = "button"
     }
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = "button"
         innerHTML = content().stringValue
     }
 }
 
-extension Button: HTML {
+extension Button: HTMLConvertible {
     public var description: String {
         html
     }

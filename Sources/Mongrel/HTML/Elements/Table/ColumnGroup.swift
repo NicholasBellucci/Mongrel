@@ -13,7 +13,7 @@ public struct ColumnGroup: Attributable, EventListener {
     var span: Int? = nil
     var innerHTML: String
 
-    public init(_ span: Int? = nil, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ span: Int? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let span = span {
             attributes["span"] = "\(span)"
         }
@@ -22,7 +22,7 @@ public struct ColumnGroup: Attributable, EventListener {
     }
 }
 
-extension ColumnGroup: HTML {
+extension ColumnGroup: HTMLConvertible {
     public var description: String {
         html
     }

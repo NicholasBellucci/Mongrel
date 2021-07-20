@@ -13,7 +13,7 @@ public struct Comment {
     }
 }
 
-extension Comment: HTML {
+extension Comment: HTMLConvertible {
     public func render() -> String {
         String(describing: self)
     }

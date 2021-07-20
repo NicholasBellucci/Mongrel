@@ -12,13 +12,13 @@ public struct Data: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(value: Any, @HTMLBuilder _ content: () -> HTML) {
+    public init(value: Any, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["value"] = "\(value)"
         innerHTML = content().stringValue
     }
 }
 
-extension Data: HTML {
+extension Data: HTMLConvertible {
     public var description: String {
         html
     }

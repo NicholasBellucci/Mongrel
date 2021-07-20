@@ -16,7 +16,7 @@ public struct Area: Attributable, EventListener {
     }
 }
 
-extension Area: HTML {
+extension Area: HTMLConvertible {
     public var description: String {
         html
     }

@@ -13,20 +13,20 @@ final class MongrelTests: XCTestCase {
     }
 }
 
-struct HomePage: HTMLView {
+struct HomePage: HTML {
     var title: String
 
     let testArray: [String] = ["", "", "", ""]
 
-    var body: some HTML {
+    var body: some HTMLConvertible {
         ForEach(testArray) { _ in
             Text("Test")
         }
     }
 }
 
-struct MenuView: HTMLView {
-    var body: some HTML {
+struct MenuView: HTML {
+    var body: some HTMLConvertible {
         Div {
             Div {
                 Text("The Walk")
@@ -52,8 +52,8 @@ struct MenuView: HTMLView {
     }
 }
 
-struct MainView: HTMLView {
-    var body: some HTML {
+struct MainView: HTML {
+    var body: some HTMLConvertible {
         Div {
             Text("The Walk")
                 .heading(.h2)
@@ -71,8 +71,8 @@ struct MainView: HTMLView {
     }
 }
 
-struct RightView: HTMLView {
-    var body: some HTML {
+struct RightView: HTML {
+    var body: some HTMLConvertible {
         Div {
             Text("What?")
                 .heading(.h1)

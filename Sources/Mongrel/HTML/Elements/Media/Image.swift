@@ -19,7 +19,7 @@ public struct Image: Attributable, EventListener {
     }
 }
 
-extension Image: HTML {
+extension Image: HTMLConvertible {
     public var description: String {
         html
     }

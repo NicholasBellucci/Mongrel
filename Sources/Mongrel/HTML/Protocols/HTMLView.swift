@@ -1,10 +1,10 @@
-public protocol HTMLView: HTML {
-    associatedtype ContentBody: HTML
+public protocol HTML: HTMLConvertible {
+    associatedtype ContentBody: HTMLConvertible
 
     @HTMLBuilder var body: Self.ContentBody { get }
 }
 
-extension HTMLView {
+extension HTML {
     public var description: String {
         body.stringValue
     }

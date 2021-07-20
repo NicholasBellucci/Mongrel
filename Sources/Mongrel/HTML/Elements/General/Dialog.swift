@@ -12,12 +12,12 @@ public struct Dialog: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
-extension Dialog: HTML {
+extension Dialog: HTMLConvertible {
     public var description: String {
         html
     }

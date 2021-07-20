@@ -13,7 +13,7 @@ public struct HorizonalRule: Attributable, EventListener {
     public init() { }
 }
 
-extension HorizonalRule: HTML {
+extension HorizonalRule: HTMLConvertible {
     public var description: String {
         html
     }

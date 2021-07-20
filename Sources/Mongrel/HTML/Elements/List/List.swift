@@ -12,13 +12,13 @@ public struct List: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTMLConvertible) {
         self.tag = type.rawValue
         innerHTML = content().stringValue
     }
 }
 
-extension List: HTML {
+extension List: HTMLConvertible {
     public var description: String {
         html
     }

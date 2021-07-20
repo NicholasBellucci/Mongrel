@@ -6,14 +6,14 @@
 //
 
 public struct ForEach {
-    private var objects: [HTML] = []
+    private var objects: [HTMLConvertible] = []
 
-    public init<T>(_ array: [T], content: @escaping (T) -> HTML) {
+    public init<T>(_ array: [T], content: @escaping (T) -> HTMLConvertible) {
         array.forEach { objects.append(content($0)) }
     }
 }
 
-extension ForEach: HTML {
+extension ForEach: HTMLConvertible {
     public var description: String {
         html
     }

@@ -17,7 +17,7 @@ public struct Time: Attributable, EventListener {
     }
 }
 
-extension Time: HTML {
+extension Time: HTMLConvertible {
     public var description: String {
         html
     }

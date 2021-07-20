@@ -13,7 +13,7 @@ public struct WordBreak: Attributable, EventListener {
     public init() { }
 }
 
-extension WordBreak: HTML {
+extension WordBreak: HTMLConvertible {
     public var description: String {
         html
     }

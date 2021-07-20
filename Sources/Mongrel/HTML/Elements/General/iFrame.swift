@@ -16,13 +16,13 @@ public struct iFrame: Attributable, EventListener {
         attributes["title"] = title
     }
 
-    public init(title: String, @HTMLBuilder _ content: () -> HTML) {
+    public init(title: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["title"] = title
         innerHTML = content().stringValue
     }
 }
 
-extension iFrame: HTML {
+extension iFrame: HTMLConvertible {
     public var description: String {
         html
     }
@@ -95,7 +95,7 @@ public extension iFrame {
         return copy
     }
 
-    func srcdoc(@HTMLBuilder _ content: () -> HTML) -> iFrame {
+    func srcdoc(@HTMLBuilder _ content: () -> HTMLConvertible) -> iFrame {
         var copy = self
         copy.attributes["srcdoc"] = String(describing: content())
         return copy

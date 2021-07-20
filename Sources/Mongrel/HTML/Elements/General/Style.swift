@@ -20,7 +20,7 @@ public struct Style: Attributable, EventListener {
     }
 }
 
-extension Style: HTML {
+extension Style: HTMLConvertible {
     public var description: String {
         html
     }

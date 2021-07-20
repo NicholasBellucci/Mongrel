@@ -12,7 +12,7 @@ public struct Root: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(language: LanguageCode, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTML) {
+    public init(language: LanguageCode, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let country = country {
             attributes["lang"] = "\(language.rawValue)-\(country.rawValue)"
         } else {
@@ -23,7 +23,7 @@ public struct Root: Attributable, EventListener {
     }
 }
 
-extension Root: HTML {
+extension Root: HTMLConvertible {
     public var description: String {
         html
     }

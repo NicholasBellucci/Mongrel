@@ -13,7 +13,7 @@ public struct Break: Attributable, EventListener {
     public init() { }
 }
 
-extension Break: HTML {
+extension Break: HTMLConvertible {
     public var description: String {
         html
     }

@@ -16,7 +16,7 @@ public struct Base: Attributable, EventListener {
     }
 }
 
-extension Base: HTML {
+extension Base: HTMLConvertible {
     public var description: String {
         html
     }

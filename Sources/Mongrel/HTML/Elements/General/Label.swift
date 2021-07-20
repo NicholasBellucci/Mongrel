@@ -12,13 +12,13 @@ public struct Label: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(for: String, @HTMLBuilder _ content: () -> HTML) {
+    public init(for: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["for"] = `for`
         innerHTML = content().stringValue
     }
 }
 
-extension Label: HTML {
+extension Label: HTMLConvertible {
     public var description: String {
         html
     }

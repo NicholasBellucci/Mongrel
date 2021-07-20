@@ -15,7 +15,7 @@ public struct Metadata: Attributable, EventListener {
     }
 }
 
-extension Metadata: HTML {
+extension Metadata: HTMLConvertible {
     public var description: String {
         html
     }

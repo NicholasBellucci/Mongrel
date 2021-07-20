@@ -20,14 +20,14 @@ public struct GenericElement: Attributable, EventListener {
         return self
     }
 
-    public func callAsFunction(@HTMLBuilder _ content: () -> HTML) -> GenericElement {
+    public func callAsFunction(@HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
         var copy = self
         copy.innerHTML = content().stringValue
         return copy
     }
 }
 
-extension GenericElement: HTML {
+extension GenericElement: HTMLConvertible {
     public var description: String {
         html
     }

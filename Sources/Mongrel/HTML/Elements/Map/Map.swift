@@ -12,13 +12,13 @@ public struct Map: Attributable, EventListener {
 
     var innerHTML: String
 
-    public init(_ name: String, @HTMLBuilder _ content: () -> HTML) {
+    public init(_ name: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["name"] = name
         innerHTML = content().stringValue
     }
 }
 
-extension Map: HTML {
+extension Map: HTMLConvertible {
     public var description: String {
         html
     }

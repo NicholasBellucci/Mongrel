@@ -22,7 +22,7 @@ public struct Script: Attributable, EventListener {
     }
 }
 
-extension Script: HTML {
+extension Script: HTMLConvertible {
     public var description: String {
         html
     }

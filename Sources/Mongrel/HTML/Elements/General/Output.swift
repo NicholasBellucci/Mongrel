@@ -14,12 +14,12 @@ public struct Output: Attributable {
 
     public init() { }
 
-    public init(@HTMLBuilder _ content: () -> HTML) {
+    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
-extension Output: HTML {
+extension Output: HTMLConvertible {
     public var description: String {
         html
     }

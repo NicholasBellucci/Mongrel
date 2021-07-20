@@ -15,7 +15,7 @@ public struct Input: Attributable, EventListener {
     }
 }
 
-extension Input: HTML {
+extension Input: HTMLConvertible {
     public var description: String {
         html
     }
