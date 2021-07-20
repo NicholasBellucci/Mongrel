@@ -1,7 +1,6 @@
-/// An element that defines a clickable button.
+/// An ``Button`` element defines a clickable button.
 ///
 /// A ``Button`` can contain text and other elements.
-///
 public struct Button: Attributable, EventListener {
     public var tag: String = "button"
     public var attributes: [String: String] = [:]
@@ -14,7 +13,6 @@ public struct Button: Attributable, EventListener {
     /// - Parameters:
     ///   - title: The title text for the button.
     ///   - action: The action script represented as a string.
-    ///
     public init<S>(_ title: S, action: String) where S : StringProtocol {
         attributes["type"] = ButtonType.button.rawValue
         attributes["onclick"] = action
@@ -25,8 +23,7 @@ public struct Button: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - action: The action script represented as a string.
-    ///   - content: The internal HTML inside of the `<button></button>` tags.
-    ///
+    ///   - content: The HTML inside of the `<button></button>` tags.
     public init(action: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         attributes["onclick"] = action
@@ -36,8 +33,7 @@ public struct Button: Attributable, EventListener {
     /// Creates an empty button.
     ///
     /// - Parameters:
-    ///   - content: The internal HTML inside of the `<button></button>` tags.
-    ///
+    ///   - content: The HTML inside of the `<button></button>` tags.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         innerHTML = content().stringValue
@@ -46,7 +42,6 @@ public struct Button: Attributable, EventListener {
 
 /// These extensions are modifiers for an ``Button`` element
 /// and will return an ``Button`` element for continued use/updates.
-///
 public extension Button {
     /// Sets the button's attribute: `autofocus`.
     ///

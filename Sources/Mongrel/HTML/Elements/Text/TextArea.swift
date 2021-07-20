@@ -76,9 +76,9 @@ public extension TextArea {
         return copy
     }
 
-    func placeholder(_ placeholder: String) -> TextArea {
+    func placeholder(_ text: String) -> TextArea {
         var copy = self
-        copy.attributes["placeholder"] = placeholder
+        copy.attributes["placeholder"] = text
         return copy
     }
 

@@ -1,8 +1,7 @@
-/// An element that defines a hyperlink, which is used to link from one
+/// An ``Anchor`` element defines a hyperlink, which is used to link from one
 /// page to another.
 ///
 /// If an `Anchor` element is created without a link, it is only a placeholder for a hyperlink.
-///
 public struct Anchor: Attributable, EventListener {
     public var tag: String = "a"
     public var attributes: [String: String] = [:]
@@ -14,8 +13,7 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - href: The optional hyperlink pointing to arbitrary data.
-    ///   - content: The internal HTML inside of the `<a></a>` tags.
-    ///
+    ///   - content: The HTML inside of the `<a></a>` tags.
     public init(_ href: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let href = href {
             attributes["href"] = href
@@ -28,8 +26,7 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - email: The linked email address.
-    ///   - content: The internal HTML inside of the `<a></a>` tags.
-    ///
+    ///   - content: The HTML inside of the `<a></a>` tags.
     public init(mailTo email: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "mailto:\(email)"
         innerHTML = content().stringValue
@@ -39,8 +36,7 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - number: The linked phone number.
-    ///   - content: The internal HTML inside of the `<a></a>` tags.
-    ///
+    ///   - content: The HTML inside of the `<a></a>` tags.
     public init(call number: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "tel:+\(number)"
         innerHTML = content().stringValue
@@ -49,7 +45,6 @@ public struct Anchor: Attributable, EventListener {
 
 /// These extensions are modifiers for an ``Anchor`` element
 /// and will return an ``Anchor`` element for continued use/updates.
-///
 public extension Anchor {
     /// Sets the anchor's attribute: `download`.
     ///

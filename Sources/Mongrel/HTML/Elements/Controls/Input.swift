@@ -1,7 +1,6 @@
-/// An element which allows a user to enter data.
+/// An ``Input`` element allows a user to enter data.
 ///
 /// An ``Input``element has several different types.
-///
 public struct Input: Attributable, EventListener {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]
@@ -13,7 +12,6 @@ public struct Input: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - type: The input's type.
-    ///
     public init(type: InputType = .text) {
         attributes["type"] = type.rawValue
     }
@@ -21,7 +19,6 @@ public struct Input: Attributable, EventListener {
 
 /// These extensions are modifiers for an ``Input`` element
 /// and will return an ``Input`` element for continued use/updates.
-///
 public extension Input {
     /// Sets the input's attribute: `accept`.
     ///
@@ -310,7 +307,7 @@ public extension Input {
     ///
     func placeholder(_ text: String) -> Input {
         var copy = self
-        copy.attributes["placeholder"] = placeholder
+        copy.attributes["placeholder"] = text
         return copy
     }
 
