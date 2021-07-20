@@ -20,7 +20,7 @@ struct HomePage: HTML {
         HStack {
             VStack {
                 Text("Hello")
-                    .paragraph()
+                    .span()
 
                 Text("test")
                     .span()
@@ -29,7 +29,6 @@ struct HomePage: HTML {
             Paragraph("new") {
                 Text("hello")
             }
-            .padding([.top, .left], .pixels(10))
 
             Button("Test", action: "myFunction()")
         }

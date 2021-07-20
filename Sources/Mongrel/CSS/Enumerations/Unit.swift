@@ -1,3 +1,5 @@
+import Foundation
+
 public enum Unit: CaseAccessible {
     case centimeters(CGFloat)
     case em(CGFloat)
