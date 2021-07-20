@@ -12,7 +12,7 @@ public struct Meter: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String = ""
+    private var innerHTML: String = ""
 
     /// Creates a basic meter with a current value.
     ///
@@ -33,8 +33,8 @@ public struct Meter: Attributable, EventListener {
     }
 }
 
-/// These extensions are modifiers for an ``Input`` element
-/// and will return an ``Input`` element for continued use/updates.
+/// These extensions are modifiers for an ``Meter`` element
+/// and will return an ``Meter`` element for continued use/updates.
 public extension Meter {
     /// Sets the meter's attribute: `form`.
     ///

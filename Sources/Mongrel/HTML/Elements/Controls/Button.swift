@@ -6,7 +6,7 @@ public struct Button: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var innerHTML: String = ""
+    private var innerHTML: String = ""
 
     /// Creates a button with a title and an ``onclick`` action.
     ///
