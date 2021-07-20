@@ -16,7 +16,11 @@ final class MongrelTests: XCTestCase {
 struct HomePage: HTML {
     var title: String
 
-    var body: some HTMLConvertible {
-        Text("Now")
+    var document: some HTMLConvertible {
+        Group("test") {
+            Paragraph("new") {
+                Text("hello")
+            }
+        }
     }
 }

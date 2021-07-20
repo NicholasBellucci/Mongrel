@@ -24,8 +24,6 @@ public let Definition = GenericElement(tag: "dfn")
 public let DescriptionDetails = GenericElement(tag: "dd")
 /// Represents the HTMLConvertible ``<dt>`` tag.
 public let DescriptionTerm = GenericElement(tag: "dt")
-/// Represents the HTMLConvertible ``<div>`` tag.
-public let Div = GenericElement(tag: "div")
 /// Represents the HTMLConvertible ``<fieldset>`` tag.
 public let FieldSet = GenericElement(tag: "fieldset")
 /// Represents the HTMLConvertible ``<figure>`` tag.
@@ -34,6 +32,8 @@ public let Figure = GenericElement(tag: "figure")
 public let FigureCaption = GenericElement(tag: "figcaption")
 /// Represents the HTMLConvertible ``<footer>`` tag.
 public let Footer = GenericElement(tag: "footer")
+/// Represents the HTMLConvertible ``<div>`` tag.
+public let Group = GenericElement(tag: "div")
 /// Represents the HTMLConvertible ``<head>`` tag.
 public let Head = GenericElement(tag: "head")
 /// Represents the HTMLConvertible ``<header>`` tag.
