@@ -117,7 +117,7 @@ public extension Anchor {
     /// the linked document.
     ///
     /// - Parameters:
-    ///   - relationship: The relationship to use as the anchor relationship.
+    ///   - relationship: The relationship to use as the anchor's relationship.
     func relationship(_ relationship: Relationship.Anchor) -> Anchor {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue
@@ -127,7 +127,7 @@ public extension Anchor {
     /// Specifies where to open the linked document.
     ///
     /// - Parameters:
-    ///   - target: The target to use as the anchor target.
+    ///   - target: The target to use as the anchor's target.
     func target(_ target: Target = .`self`) -> Anchor {
         var copy = self
         copy.attributes["target"] = target.rawValue

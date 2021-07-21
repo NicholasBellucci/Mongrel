@@ -11,7 +11,7 @@ public struct Input: Attributable, EventListener {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    /// Creates an input of a desired type.
+    /// Creates the input of a desired type.
     ///
     /// Default type is ``.text``.
     ///
@@ -25,29 +25,31 @@ public struct Input: Attributable, EventListener {
 /// These extensions are modifiers for an ``Input`` element
 /// and will return an ``Input`` element for continued use/updates.
 public extension Input {
-    /// Sets the input's attribute: ``accept``.
-    ///
-    /// Only available for input type ``file``.
+    /// Specifies a filter for what file types the user can pick from
+    /// the file input dialog box. Only available for input type ``file``.
     ///
     /// - Parameters:
-    ///   - type: The filter type for files the user can pick.
+    ///   - type: The type to be used as the accept type.
     func accept(_ type: AcceptType) -> Input {
         var copy = self
         copy.attributes["accept"] = type.rawValue
         return copy
     }
 
-    /// Sets the input's attribute: ``autocomplete``.
+    /// Adds a condition that controls whether the target
+    /// will allow autocomplete.
     ///
     /// - Parameters:
-    ///   - value: Specifies if the input should have autocomplete.
+    ///   - value: A Boolean value that determines whether the ``autofocus``
+    ///   attribute should be added.
     func allowsAutocomplete(_ value: Bool) -> Input {
         var copy = self
         copy.attributes["autocomplete"] = value ? "on" : "off"
         return copy
     }
 
-    /// Sets the input's attribute: ``multiple``.
+    /// Adds a condition that controls whether the target
+    /// will allow multiple values.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``multiple``
@@ -62,8 +64,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``alt``.
-    ///
+    /// Specifies an alternate text for images.
     /// Only available for input type ``image``.
     ///
     /// - Parameters:
@@ -74,7 +75,8 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``autofocus``.
+    /// Adds a condition that controls whether the target
+    /// will be focused automatically on page load.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
@@ -89,7 +91,8 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``checked``.
+    /// Adds a condition that controls whether the target
+    /// will be pre-selected on page load.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``checked``
@@ -104,17 +107,19 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``dirname``.
+    /// Refers to a ``List(.data)`` element that contains pre-defined options
+    /// for an ``Input`` element
     ///
     /// - Parameters:
-    ///   - value: The text direction that will be submitted.
-    func dirName(_ name: String) -> Input {
+    ///   - id: The id of the datalist.
+    func datalistId(_ id: String) -> Input {
         var copy = self
-        copy.attributes["dirname"] = name
+        copy.attributes["list"] = id
         return copy
     }
 
-    /// Sets the input's attribute: ``disabled``.
+    /// Adds a condition that controls whether the target
+    /// will be disabled.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
@@ -129,30 +134,29 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``form``.
+    /// Specifies which form the input belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the input belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Input {
         var copy = self
         copy.attributes["form"] = id
         return copy
     }
 
-    /// Sets the input's attribute: ``formaction``.
-    ///
-    /// Only available for input type ``submit`` and ``image``.
+    /// Specifies the URL of the file that will process the input
+    /// control when the form is submitted. Only available for input
+    /// type ``submit`` and ``image``.
     ///
     /// - Parameters:
-    ///   - url: The URL of the file that will process the input control when the form is submitted.
+    ///   - url: The URL to use as the file URL.
     func formAction(_ url: String) -> Input {
         var copy = self
         copy.attributes["formaction"] = url
         return copy
     }
 
-    /// Sets the input's attribute: ``formenctype``.
-    ///
+    /// Specifies how form-data should be encoded before sending it to a server.
     /// Only available for input type ``submit`` and ``image``.
     ///
     /// - Parameters:
@@ -163,19 +167,18 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``formmethod``.
-    ///
+    /// Sets the HTTP method for sending data to the action URL.
     /// Only available for input type ``submit`` and ``image``.
     ///
     /// - Parameters:
-    ///   - method: The HTTP method for sending data to the action URL
+    ///   - method: The method to use as the form method.
     func formMethod(_ method: FormMethod) -> Input {
         var copy = self
         copy.attributes["formmethod"] = method.rawValue
         return copy
     }
 
-    /// Sets the input's attribute: ``formnovalidate``.
+    /// Specifies that the form-data should not be validated on submission.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``formnovalidate``
@@ -190,12 +193,11 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``formtarget``.
-    ///
+    /// Specifies where to display the response after submitting the form.
     /// Only available for input type ``submit`` and ``image``.
     ///
     /// - Parameters:
-    ///   - target: The target to display the response that is received after submitting.
+    ///   - target: The target to use as the input form target.
     func formTarget(_ target: Target) -> Input {
         var copy = self
         copy.attributes["formtarget"] = target.rawValue
@@ -221,87 +223,78 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``list``.
+    /// Sets the maximum value for the input element.
     ///
     /// - Parameters:
-    ///   - id: The id of a ``datalist`` element that contains pre-defined options for the input.
-    func listId(_ id: String) -> Input {
-        var copy = self
-        copy.attributes["list"] = id
-        return copy
-    }
-
-    /// Sets the input's attribute: ``max``.
-    ///
-    /// - Parameters:
-    ///   - value: The maximum value for the input.
+    ///   - value: The value to be used as the input's max value.
     func max(_ value: Int) -> Input {
         var copy = self
         copy.attributes["max"] = "\(value)"
         return copy
     }
 
-    /// Sets the input's attribute: ``maxlength``.
+    /// Sets the maximum number of characters allowed in the input element.
     ///
     /// - Parameters:
-    ///   - length: The maximum number of characters allowed in the input.
+    ///   - length: The length to be used as the input's max length.
     func maxLength(_ length: Int) -> Input {
         var copy = self
         copy.attributes["maxlength"] = "\(length)"
         return copy
     }
 
-    /// Sets the input's attribute: ``min``.
+    /// Sets the minimum value for the input element.
     ///
     /// - Parameters:
-    ///   - value: The minimum value for the input.
+    ///   - value: The value to be used as the input's min value.
     func min(_ value: Int) -> Input {
         var copy = self
         copy.attributes["min"] = "\(value)"
         return copy
     }
 
-    /// Sets the input's attribute: ``minlength``.
+    /// Sets the minimum number of characters allowed in the input element.
     ///
     /// - Parameters:
-    ///   - length: The minumum number of characters allowed in the input.
+    ///   - length: The length to be used as the input's min length.
     func minLength(_ length: Int) -> Input {
         var copy = self
         copy.attributes["minlength"] = "\(length)"
         return copy
     }
 
-    /// Sets the button's attribute: ``name``.
+    /// Sets the name for the input.
     ///
     /// - Parameters:
-    ///   - name: The name of the input.
+    ///   - name: The name to use as the input name.
     func name(_ name: String) -> Input {
         var copy = self
         copy.attributes["name"] = name
         return copy
     }
 
-    /// Sets the input's attribute: ``pattern``.
+    /// Specifies a regular expression that the input element's value is checked against.
     ///
     /// - Parameters:
-    ///   - regex: A regular expression that the input's value is checked against.
+    ///   - regex: The regular expression to be used as the input's pattern.
     func pattern(_ regex: String) -> Input {
         var copy = self
         copy.attributes["pattern"] = regex
         return copy
     }
 
-    /// Sets the input's attribute: ``placeholder``.
+    /// Specifies a short hint that describes the expected value of the input element.
     ///
     /// - Parameters:
-    ///   - text: A short hint that describes the expected value of the input.
+    ///   - text: The text to be used as the input's placeholder.
     func placeholder(_ text: String) -> Input {
         var copy = self
         copy.attributes["placeholder"] = text
         return copy
     }
 
-    /// Sets the input's attribute: ``readonly``.
+    /// Adds a condition that controls whether the target
+    /// will be read-only.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``readonly``
@@ -316,7 +309,8 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``required``.
+    /// Adds a condition that controls whether the target
+    /// must be filled out before submitting.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``required``
@@ -331,7 +325,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``size``.
+    /// Sets the width, in characters, of the input element.
     ///
     /// - Parameters:
     ///   - size: The width, in characters, of the input.
@@ -341,32 +335,47 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``src``.
-    ///
-    /// Only available for input type ``src``.
+    /// Specifies the URL of the image to use as a submit button.
+    /// Only available for input type ``image``.
     ///
     /// - Parameters:
-    ///   - src: The URL of the image.
+    ///   - src: The source URL to be used as the input's source.
     func src(_ src: String) -> Input {
         var copy = self
         copy.attributes["src"] = src
         return copy
     }
 
-    /// Sets the input's attribute: ``step``.
+    /// Specifies the interval between legal numbers in an input field.
     ///
     /// - Parameters:
-    ///   - step: The interval between legal numbers in an input.
-    func step(_ step: Int) -> Input {
+    ///   - step: The amount to be used as the input's step amount.
+    func step(_ amount: Int) -> Input {
         var copy = self
         copy.attributes["step"] = "\(step)"
         return copy
     }
 
-    /// Sets the input's attribute: ``value``.
+    /// Adds a condition that controls whether the target
+    /// will submit text direction.
     ///
     /// - Parameters:
-    ///   - value: The value of the input.
+    ///   - value: A Boolean value that determines whether the ``dirname``
+    ///   attribute should be added.
+    func submitTextDirection(_ value: Bool) -> Input {
+        var copy = self
+
+        if let name = copy.attributes["name"] {
+            copy.attributes["dirname"] = "\(name).dir"
+        }
+
+        return copy
+    }
+
+    /// Sets the value of the input.
+    ///
+    /// - Parameters:
+    ///   - value: The value to be used as the input's value.
     func value(_ value: String) -> Input {
         var copy = self
         copy.attributes["value"] = value

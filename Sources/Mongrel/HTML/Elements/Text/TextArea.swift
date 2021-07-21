@@ -42,12 +42,6 @@ public extension TextArea {
         return copy
     }
 
-    func dirName(_ name: String) -> TextArea {
-        var copy = self
-        copy.attributes["dirname"] = name
-        return copy
-    }
-
     func disabled(_ value: Bool) -> TextArea {
         var copy = self
 
@@ -109,6 +103,22 @@ public extension TextArea {
     func rows(_ rows: Int) -> TextArea {
         var copy = self
         copy.attributes["rows"] = "\(rows)"
+        return copy
+    }
+
+    /// Adds a condition that controls whether the target
+    /// will submit text direction.
+    ///
+    /// - Parameters:
+    ///   - value: A Boolean value that determines whether the ``dirname``
+    ///   attribute should be added.
+    func submitTextDirection(_ value: Bool) -> TextArea {
+        var copy = self
+
+        if let name = copy.attributes["name"] {
+            copy.attributes["dirname"] = "\(name).dir"
+        }
+
         return copy
     }
 

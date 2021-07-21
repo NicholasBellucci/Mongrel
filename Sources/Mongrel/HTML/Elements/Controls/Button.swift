@@ -101,7 +101,7 @@ public extension Button {
         return copy
     }
 
-    /// Specifies the HTTP method for which to send the form-data.
+    /// Sets the HTTP method for which to send the form-data.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
@@ -132,7 +132,7 @@ public extension Button {
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - target: The target to use as the button target.
+    ///   - target: The target to use as the button's form target.
     func formTarget(_ target: Target) -> Button {
         var copy = self
         copy.attributes["formtarget"] = target.rawValue
@@ -142,7 +142,7 @@ public extension Button {
     /// Sets the name for the button.
     ///
     /// - Parameters:
-    ///   - name: The name to use as the button name.
+    ///   - name: The name to use as the button's name.
     func name(_ name: String) -> Button {
         var copy = self
         copy.attributes["name"] = name
@@ -152,7 +152,7 @@ public extension Button {
     /// Specifies the type of button.
     ///
     /// - Parameters:
-    ///   - type: The type to use as the button type.
+    ///   - type: The type to use as the button's type.
     func type(_ type: ButtonType) -> Button {
         var copy = self
         copy.attributes["type"] = type.rawValue
