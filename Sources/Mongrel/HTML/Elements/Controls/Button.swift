@@ -42,7 +42,7 @@ public extension Button {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
     ///   attribute should be added.
-    func autofocus(_ value: Bool) -> Button {
+    func autofocused(_ value: Bool) -> Button {
         var copy = self
 
         if value {

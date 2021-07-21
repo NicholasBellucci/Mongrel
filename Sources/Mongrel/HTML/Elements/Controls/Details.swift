@@ -29,7 +29,7 @@ public extension Details {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``open``
     ///   attribute should be added.
-    func open(_ value: Bool) -> Details {
+    func opened(_ value: Bool) -> Details {
         var copy = self
 
         if value {

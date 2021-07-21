@@ -55,7 +55,7 @@ public extension Anchor {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``download``
     ///   attribute should be added.
-    func download(_ value: Bool) -> Anchor {
+    func downloadable(_ value: Bool) -> Anchor {
         var copy = self
 
         if value {

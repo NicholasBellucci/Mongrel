@@ -37,6 +37,16 @@ public extension Input {
         return copy
     }
 
+    /// Sets the input's attribute: ``autocomplete``.
+    ///
+    /// - Parameters:
+    ///   - value: Specifies if the input should have autocomplete.
+    func allowsAutocomplete(_ value: Bool) -> Input {
+        var copy = self
+        copy.attributes["autocomplete"] = value ? "on" : "off"
+        return copy
+    }
+
     /// Sets the input's attribute: ``multiple``.
     ///
     /// - Parameters:
@@ -64,22 +74,12 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``autocomplete``.
-    ///
-    /// - Parameters:
-    ///   - value: Specifies if the input should have autocomplete.
-    func autocomplete(_ value: Bool) -> Input {
-        var copy = self
-        copy.attributes["autocomplete"] = value ? "on" : "off"
-        return copy
-    }
-
     /// Sets the input's attribute: ``autofocus``.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
     ///   attribute should be added.
-    func autofocus(_ value: Bool) -> Input {
+    func autofocused(_ value: Bool) -> Input {
         var copy = self
 
         if value {

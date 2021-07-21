@@ -24,7 +24,7 @@ public extension Dialog {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``open``
     ///   attribute should be added.
-    func open(_ value: Bool) -> Dialog {
+    func opened(_ value: Bool) -> Dialog {
         var copy = self
 
         if value {

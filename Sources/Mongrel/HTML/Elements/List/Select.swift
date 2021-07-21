@@ -48,7 +48,7 @@ public extension Select {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
     ///   attribute should be added.
-    func autofocus(_ value: Bool) -> Select {
+    func autofocused(_ value: Bool) -> Select {
         var copy = self
 
         if value {

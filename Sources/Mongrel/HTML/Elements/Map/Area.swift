@@ -26,10 +26,15 @@ public extension Area {
     /// Sets the area's attribute: ``download``.
     ///
     /// - Parameters:
-    ///   - file: The filename of the downloadable content.
-    func download(_ file: String) -> Area {
+    ///   - value: A Boolean value that determines whether the ``download``
+    ///   attribute should be added.
+    func downloadable(_ value: Bool) -> Area {
         var copy = self
-        copy.attributes["download"] = file
+
+        if value {
+            copy.attributes["download"] = ""
+        }
+
         return copy
     }
 

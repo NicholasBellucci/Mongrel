@@ -9,6 +9,12 @@ public extension Attributable {
         return copy
     }
 
+    func allowsSpellcheck(_ value: Bool) -> Attributable {
+        var copy = self
+        copy.attributes["spellcheck"] = "\(value)"
+        return copy
+    }
+
     func `class`(_ class: String) -> Attributable {
         var copy = self
         copy.attributes["class"] = `class`
@@ -61,12 +67,6 @@ public extension Attributable {
         return copy
     }
 
-    func spellcheck(_ value: Bool) -> Attributable {
-        var copy = self
-        copy.attributes["spellcheck"] = "\(value)"
-        return copy
-    }
-
     func styles(_ styles: InlineStyle...) -> Attributable {
         var copy = self
 
@@ -91,7 +91,7 @@ public extension Attributable {
         return copy
     }
 
-    func translate(_ value: Bool) -> Attributable {
+    func translated(_ value: Bool) -> Attributable {
         var copy = self
         copy.attributes["translate"] = value ? "yes" : "no"
         return copy

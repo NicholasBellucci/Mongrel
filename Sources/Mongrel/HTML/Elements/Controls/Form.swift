@@ -46,7 +46,7 @@ public extension Form {
     ///
     /// - Parameters:
     ///   - value: Specifies if the form should have autocomplete.
-    func autocomplete(_ value: Bool) -> Form {
+    func allowsAutocomplete(_ value: Bool) -> Form {
         var copy = self
         copy.attributes["autocomplete"] = value ? "on" : "off"
         return copy
