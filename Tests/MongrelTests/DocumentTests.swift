@@ -6,7 +6,9 @@ final class DocumentTests: XCTestCase {
         let document = Root {
             VStack(spacing: .pixels(20)) {
                 Text("test")
-                    .styles(.fontSize("35px"))
+                    .cited()
+                    .underlined()
+                    .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
                     .id("test")
 
                 Text("Hello")

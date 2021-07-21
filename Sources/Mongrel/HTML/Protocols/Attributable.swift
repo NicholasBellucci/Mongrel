@@ -73,8 +73,13 @@ public extension Attributable {
         styles
             .sorted()
             .forEach {
-                guard let value: String = $0.associatedValue() else { return }
-                copy.styles[$0.stringValue] = "\(value)"
+                switch $0 {
+                case let .custom(key, value):
+                    copy.styles[key] = "\(value)"
+                default:
+                    guard let value: String = $0.associatedValue() else { return }
+                    copy.styles[$0.stringValue] = "\(value)"
+                }
             }
 
         return copy

@@ -18,8 +18,13 @@ public enum MongrelJS {
         case let .updateInnerHTML(id, value):
             return "document.getElementById('\(id)').innerHTML = '\(value)';"
         case let .updateStyle(id, style):
-            guard let value: String = style.associatedValue() else { return nil }
-            return "document.getElementById('\(id)').style.\(style.label)='\(value)'"
+            switch style {
+            case let .custom(name, value):
+                return "document.getElementById('\(id)').style.\(name)='\(value)'"
+            default:
+                guard let value: String = style.associatedValue() else { return nil }
+                return "document.getElementById('\(id)').style.\(style.label)='\(value)'"
+            }
         }
     }
 }

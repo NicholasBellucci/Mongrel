@@ -172,4 +172,5 @@ public enum DomStyle: CaseAccessible {
     case wordWrap(String)
     case widows(String)
     case zIndex(String)
+    case custom(name: String, value: String)
 }

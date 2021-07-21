@@ -399,6 +399,7 @@ public enum CSSProperty: CaseAccessible, Comparable {
     case wrapThrough(String)
     case writingMode(String)
     case zIndex(String)
+    case custom(key: String, value: String)
 
     var stringValue: String {
         switch self {
@@ -802,6 +803,7 @@ public enum CSSProperty: CaseAccessible, Comparable {
         case .wrapThrough: return "wrap-through"
         case .writingMode: return "writing-mode"
         case .zIndex: return "z-index"
+        case let .custom(key, value): return key
         }
     }
 }
