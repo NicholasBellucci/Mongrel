@@ -43,7 +43,7 @@ public extension Form {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will allow autocomplete.
     ///
     /// - Parameters:
@@ -86,7 +86,7 @@ public extension Form {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will not validate when submitted.
     ///
     /// - Parameters:

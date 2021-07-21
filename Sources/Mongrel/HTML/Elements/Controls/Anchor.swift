@@ -49,7 +49,7 @@ public struct Anchor: Attributable, EventListener {
 /// These extensions are modifiers for an ``Anchor`` element
 /// and will return an ``Anchor`` element for continued use/updates.
 public extension Anchor {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be downloaded.
     ///
     /// - Parameters:

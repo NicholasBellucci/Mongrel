@@ -39,31 +39,34 @@ public struct iFrame: Attributable, EventListener {
 /// These extensions are modifiers for an ``iFrame`` element
 /// and will return an ``iFrame`` element for continued use/updates.
 public extension iFrame {
-    /// Sets the iframe's attribute: ``allow``.
+    /// Specifies a feature policy for the iframe.
     ///
     /// - Parameters:
-    ///   - policy: The feature policy.
+    ///   - policy: The policy to be used as the iframe's policy.
     func allow(_ policy: String) -> iFrame {
         var copy = self
         copy.attributes["allow"] = policy
         return copy
     }
 
-    /// Sets the iframe's attribute: ``allowfullscreen``.
+    /// Adds a condition that controls whether the element
+    /// allows fullscreen by calling ``requestFullscreen()``.
     ///
     /// - Parameters:
-    ///   - value: Determines if fullscreen mode can be activated.
-    ///   by calling ``requestFullscreen()``.
+    ///   - value: A Boolean value that determines whether the ``allowfullscreen``
+    ///   attribute should be added.
     func allowFullscreen(_ value: Bool) -> iFrame {
         var copy = self
         copy.attributes["allowfullscreen"] = "\(value)"
         return copy
     }
 
-    /// Sets the iframe's attribute: ``allowpaymentrequest``.
+    /// Adds a condition that controls whether the element
+    /// allows invoking the Payment Request API.
     ///
     /// - Parameters:
-    ///   - value: Determines if invoking the Payment Request API is allowed.
+    ///   - value: A Boolean value that determines whether the ``allowpaymentrequest``
+    ///   attribute should be added.
     func allowPaymentRequest(_ value: Bool) -> iFrame {
         var copy = self
         copy.attributes["allowpaymentrequest"] = "\(value)"
@@ -89,40 +92,41 @@ public extension iFrame {
         return copy
     }
 
-    /// Sets the iframe's attribute: ``loading``.
+    /// Specifies whether a browser should load the iframe immediately
+    /// or to defer loading of the iframe until some conditions are met.
     ///
     /// - Parameters:
-    ///   - type: The type of load either ``eager`` or ``lazy``.
+    ///   - type: The type to be used as the iframe's load type.
     func loadType(_ type: LoadType) -> iFrame {
         var copy = self
         copy.attributes["loading"] = type.rawValue
         return copy
     }
 
-    /// Sets the button's attribute: ``name``.
+    /// Sets the name for the iframe.
     ///
     /// - Parameters:
-    ///   - name: The name of the iframe.
+    ///   - name: The name to use as the iframe's name.
     func name(_ name: String) -> iFrame {
         var copy = self
         copy.attributes["name"] = name
         return copy
     }
 
-    /// Sets the iframe's attribute: ``referrerpolicy``.
+    /// Specifies which referrer information to send when fetching the iframe.
     ///
     /// - Parameters:
-    ///   - policy: The referrer information to send when fetching the iframe.
+    ///   - policy: The policy to use as the referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> iFrame {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the iframe's attribute: ``sandbox``.
+    /// Enables an extra set of restrictions for the content in the iframe.
     ///
     /// - Parameters:
-    ///   - types: The types of restictions for the iframe's content.
+    ///   - types: The types to be used as the iframe sandbox types.
     func sandbox(_ types: SandboxType...) -> iFrame {
         var copy = self
 

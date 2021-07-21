@@ -28,7 +28,8 @@ public struct Select: Attributable, EventListener {
 /// These extensions are modifiers for an ``Select`` element
 /// and will return an ``Select`` element for continued use/updates.
 public extension Select {
-    /// Sets the select's attribute: ``multiple``.
+    /// Adds a condition that controls whether the element
+    /// will allow multiple values.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``multiple``
@@ -43,7 +44,8 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: ``autofocus``.
+    /// Adds a condition that controls whether the element
+    /// will be focused automatically on page load.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
@@ -58,7 +60,8 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: ``disabled``.
+    /// Adds a condition that controls whether the element
+    /// will be disabled.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
@@ -73,31 +76,32 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: ``form``.
+    /// Specifies which form the drop-down list belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the input belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Select {
         var copy = self
         copy.attributes["form"] = id
         return copy
     }
 
-    /// Sets the select's attribute: ``name``.
+    /// Sets the name for the drop-down list.
     ///
     /// - Parameters:
-    ///   - name: The name of the select.
+    ///   - name: The name to use as the list's name.
     func name(_ name: String) -> Select {
         var copy = self
         copy.attributes["name"] = name
         return copy
     }
 
-    /// Sets the select's attribute: ``required``.
+    /// Adds a condition that controls whether the element
+    /// must have a selected value before submitting.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``required`` should be added
-    ///   based on another boolean.
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
     func required(_ value: Bool) -> Select {
         var copy = self
 
@@ -108,10 +112,10 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: ``size``.
+    /// Sets the number of visible options in a drop-down list.
     ///
     /// - Parameters:
-    ///   - size: The number of visible options in a drop-down list.
+    ///   - size: The size to be used as the list's size.
     func size(_ size: Int) -> Select {
         var copy = self
         copy.attributes["size"] = "\(size)"

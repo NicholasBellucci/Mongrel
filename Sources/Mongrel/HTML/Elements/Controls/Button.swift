@@ -37,7 +37,7 @@ public struct Button: Attributable, EventListener {
 /// These extensions are modifiers for an ``Button`` element
 /// and will return an ``Button`` element for continued use/updates.
 public extension Button {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be focused automatically on page load.
     ///
     /// - Parameters:
@@ -53,7 +53,7 @@ public extension Button {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be disabled.
     ///
     /// - Parameters:

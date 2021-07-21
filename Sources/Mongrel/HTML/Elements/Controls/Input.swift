@@ -36,7 +36,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will allow autocomplete.
     ///
     /// - Parameters:
@@ -48,7 +48,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will allow multiple values.
     ///
     /// - Parameters:
@@ -75,7 +75,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be focused automatically on page load.
     ///
     /// - Parameters:
@@ -91,7 +91,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be pre-selected on page load.
     ///
     /// - Parameters:
@@ -118,7 +118,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be disabled.
     ///
     /// - Parameters:
@@ -293,7 +293,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be read-only.
     ///
     /// - Parameters:
@@ -309,7 +309,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// must be filled out before submitting.
     ///
     /// - Parameters:
@@ -328,7 +328,7 @@ public extension Input {
     /// Sets the width, in characters, of the input element.
     ///
     /// - Parameters:
-    ///   - size: The width, in characters, of the input.
+    ///   - size: The size to be used as the input's size.
     func size(_ size: Int) -> Input {
         var copy = self
         copy.attributes["size"] = "\(size)"
@@ -356,7 +356,7 @@ public extension Input {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will submit text direction.
     ///
     /// - Parameters:

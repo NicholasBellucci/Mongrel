@@ -106,7 +106,7 @@ public extension TextArea {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will submit text direction.
     ///
     /// - Parameters:

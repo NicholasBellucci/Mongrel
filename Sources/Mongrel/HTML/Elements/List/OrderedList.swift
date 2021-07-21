@@ -19,7 +19,7 @@ public struct OrderedList: Attributable, EventListener {
 /// These extensions are modifiers for an ``OrderedList`` element
 /// and will return an ``OrderedList`` element for continued use/updates.
 public extension OrderedList {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be reversed.
     ///
     /// - Parameters:

@@ -33,7 +33,7 @@ public struct Script: Attributable, EventListener {
 /// These extensions are modifiers for an ``Script`` element
 /// and will return an ``Script`` element for continued use/updates.
 public extension Script {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be executed asynchronously. Only for extenal scripts.
     ///
     /// - Parameters:
@@ -59,7 +59,7 @@ public extension Script {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be executed when the page has finished loading.
     /// Only for extenal scripts.
     ///
@@ -87,7 +87,7 @@ public extension Script {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will should not execute in browsers supporting ES2015 modules.
     ///
     /// - Parameters:

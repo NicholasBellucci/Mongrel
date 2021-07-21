@@ -24,7 +24,7 @@ public struct Details: Attributable, EventListener {
 /// These extensions are modifiers for an ``Details`` element
 /// and will return an ``Details`` element for continued use/updates.
 public extension Details {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be open.
     ///
     /// - Parameters:

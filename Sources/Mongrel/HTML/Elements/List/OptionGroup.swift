@@ -24,7 +24,7 @@ public struct OptionGroup: Attributable, EventListener {
 /// These extensions are modifiers for an ``OptionGroup`` element
 /// and will return an ``OptionGroup`` element for continued use/updates.
 public extension OptionGroup {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be disabled.
     ///
     /// - Parameters:

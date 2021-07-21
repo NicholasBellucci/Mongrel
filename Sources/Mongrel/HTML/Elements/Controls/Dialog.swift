@@ -19,7 +19,7 @@ public struct Dialog: Attributable, EventListener {
 /// These extensions are modifiers for an ``Dialog`` element
 /// and will return an ``Dialog`` element for continued use/updates.
 public extension Dialog {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be open.
     ///
     /// - Parameters:

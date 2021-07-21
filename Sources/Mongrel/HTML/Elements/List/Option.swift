@@ -25,7 +25,7 @@ public struct Option: Attributable, EventListener {
 /// These extensions are modifiers for an ``Option`` element
 /// and will return an ``Option`` element for continued use/updates.
 public extension Option {
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be disabled.
     ///
     /// - Parameters:
@@ -51,7 +51,7 @@ public extension Option {
         return copy
     }
 
-    /// Adds a condition that controls whether the target
+    /// Adds a condition that controls whether the element
     /// will be selected.
     ///
     /// - Parameters:
