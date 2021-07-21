@@ -22,7 +22,7 @@ public struct Button: Attributable, EventListener {
         innerHTML = String(describing: title)
     }
 
-    /// Creates a button with an optional ``onclick`` action.
+    /// Creates a button with an ``onclick`` action and content.
     ///
     /// - Parameters:
     ///   - action: The action script represented as a string.

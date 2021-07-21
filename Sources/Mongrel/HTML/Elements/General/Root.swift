@@ -10,7 +10,7 @@ public struct Root: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a root element with a language and optional country code.
+    /// Creates a root element with a language, optional country code and inner content.
     ///
     /// - Parameters:
     ///   - language: The language of the document.

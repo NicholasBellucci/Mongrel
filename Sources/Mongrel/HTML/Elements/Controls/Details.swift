@@ -11,7 +11,7 @@ public struct Details: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a details element with given content.
+    /// Creates a details element with inner content.
     ///
     /// - Parameters:
     ///   - content: An ``HTMLBuilder`` that creates the elements

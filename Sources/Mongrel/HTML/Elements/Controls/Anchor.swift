@@ -12,7 +12,7 @@ public struct Anchor: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates an anchor with an optional href.
+    /// Creates an anchor with an optional href and inner content.
     ///
     /// - Parameters:
     ///   - href: The optional hyperlink pointing to arbitrary data.
@@ -23,7 +23,7 @@ public struct Anchor: Attributable, EventListener {
         innerHTML = content().stringValue
     }
 
-    /// Creates an anchor with a `mailto:` href.
+    /// Creates an anchor with a `mailto:` href and inner content.
     ///
     /// - Parameters:
     ///   - email: The linked email address.
@@ -34,7 +34,7 @@ public struct Anchor: Attributable, EventListener {
         innerHTML = content().stringValue
     }
 
-    /// Creates an anchor with a `tel:+` href.
+    /// Creates an anchor with a `tel:+` href and inner content.
     ///
     /// - Parameters:
     ///   - number: The linked phone number.

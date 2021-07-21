@@ -11,6 +11,11 @@ public struct Dialog: Attributable, EventListener {
 
     private var innerHTML: String
 
+    /// Creates a dialog element with inner content.
+    ///
+    /// - Parameters:
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }

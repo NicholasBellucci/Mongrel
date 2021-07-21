@@ -11,6 +11,12 @@ public struct OrderedList: Attributable, EventListener {
 
     private var innerHTML: String
 
+    /// Creates an ordered list with inner content.
+    ///
+    /// - Parameters:
+    ///   - label: The label for the option-group.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }

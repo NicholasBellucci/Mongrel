@@ -11,7 +11,7 @@ public struct DropDown: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a drop-down list element with an optional id and name.
+    /// Creates a drop-down list element with an optional id, optional name and inner content.
     ///
     /// - Parameters:
     ///   - id: The id of the drop-down list element.

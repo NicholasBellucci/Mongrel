@@ -10,7 +10,7 @@ public struct Option: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates an option with an optional value.
+    /// Creates an option with an optional value and inner content.
     ///
     /// - Parameters:
     ///   - value: The value of the option.

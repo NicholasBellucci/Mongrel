@@ -12,7 +12,7 @@ public struct Fieldset: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a fieldset element.
+    /// Creates a fieldset element with inner content.
     ///
     /// - Parameters:
     ///   - content: An ``HTMLBuilder`` that creates the elements

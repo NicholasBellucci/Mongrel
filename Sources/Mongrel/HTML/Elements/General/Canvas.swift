@@ -12,7 +12,7 @@ public struct Canvas: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a canvas element with a height and width.
+    /// Creates a canvas element with a height, a width and inner content.
     ///
     /// - Parameters:
     ///   - height: The height of the canvas.

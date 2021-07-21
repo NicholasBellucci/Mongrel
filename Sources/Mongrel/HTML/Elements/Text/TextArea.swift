@@ -12,7 +12,7 @@ public struct TextArea: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a text area element.
+    /// Creates a text area element with inner content.
     ///
     /// - Parameters:
     ///   - content: An ``HTMLBuilder`` that creates the elements

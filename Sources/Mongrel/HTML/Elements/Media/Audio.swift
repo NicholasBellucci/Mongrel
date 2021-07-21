@@ -14,7 +14,7 @@ public struct Audio: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates an audio element.
+    /// Creates an audio element with an optional source and inner content.
     ///
     /// - Parameters:
     ///   - src: The URL of the audio file.

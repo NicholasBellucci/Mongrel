@@ -19,7 +19,7 @@ public struct Progress: Attributable, EventListener {
         attributes["max"] = "\(max)"
     }
 
-    /// Creates a progress bar with a max value. Default value is 1.
+    /// Creates a progress bar with a max value and inner content. Default value is 1.
     ///
     /// - Parameters:
     ///   - max: How much work the task requires in total.

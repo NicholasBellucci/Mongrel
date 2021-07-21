@@ -22,7 +22,7 @@ public struct iFrame: Attributable, EventListener {
         attributes["src"] = src
     }
 
-    /// Creates an iFrame element with a title and source URL.
+    /// Creates an iFrame element with a title, source URL and inner content.
     ///
     /// - Parameters:
     ///   - title: The title of the iFrame element.

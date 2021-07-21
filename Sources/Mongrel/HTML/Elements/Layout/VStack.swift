@@ -8,7 +8,7 @@ public struct VStack: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a horizontal stack with alignment and spacing.
+    /// Creates a horizontal stack with alignment, spacing and inner content.
     ///
     /// - Parameters:
     ///   - alignment: The guide for aligning the subviews in the stack.

@@ -25,7 +25,7 @@ public struct Meter: Attributable, EventListener {
         attributes["value"] = "\(value)"
     }
 
-    /// Creates a meter with a current value.
+    /// Creates a meter with a current value and inner content.
     ///
     /// - Parameters:
     ///   - value: The current value of the meter.

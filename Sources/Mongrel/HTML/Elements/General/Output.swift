@@ -9,7 +9,7 @@ public struct Output: Attributable {
 
     private var innerHTML: String = ""
 
-    /// Creates an output element with a name and relationship ids.
+    /// Creates an output element with a name, relationship ids and inner content.
     ///
     /// - Parameters:
     ///   - name: The name of the output.

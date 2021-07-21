@@ -12,7 +12,7 @@ public struct ListItem: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a list item.
+    /// Creates a list item with an optional value and inner content.
     ///
     /// - Parameters:
     ///   - value: The start value of a list item. Only valid in ``OrderedList``.

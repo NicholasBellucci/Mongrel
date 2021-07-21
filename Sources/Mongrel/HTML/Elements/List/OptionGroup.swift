@@ -10,7 +10,7 @@ public struct OptionGroup: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates an option-group with an optional label.
+    /// Creates an option-group with an optional label and inner content.
     ///
     /// - Parameters:
     ///   - label: The label for the option-group.

@@ -13,7 +13,7 @@ public struct ColumnGroup: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a column group element with an optional span.
+    /// Creates a column group element with an optional span and inner content.
     ///
     /// - Parameters:
     ///   - span: The number of columns the element spans.

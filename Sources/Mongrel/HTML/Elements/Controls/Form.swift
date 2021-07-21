@@ -9,7 +9,7 @@ public struct Form: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a form element.
+    /// Creates a form element with inner content.
     ///
     /// - Parameters:
     ///   - content: An ``HTMLBuilder`` that creates the elements

@@ -13,7 +13,7 @@ public struct Data: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a data element with a given value.
+    /// Creates a data element with a given value and inner content.
     ///
     /// - Parameters:
     ///   - value: The machine-readable translation of the content.

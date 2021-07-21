@@ -14,7 +14,7 @@ public struct List: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a list element of a given type.
+    /// Creates a list element of a given type and inner content.
     ///
     /// - Parameters:
     ///   - type: The type of list to create.

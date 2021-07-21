@@ -9,7 +9,7 @@ public struct Map: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a map with a name.
+    /// Creates a map with a name and inner content.
     ///
     /// - Parameters:
     ///   - name: The name of the map.

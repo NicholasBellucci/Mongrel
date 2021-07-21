@@ -15,7 +15,7 @@ public struct Video: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates an video element.
+    /// Creates an video element with an optional source and inner content.
     ///
     /// - Parameters:
     ///   - src: The URL of the video file.

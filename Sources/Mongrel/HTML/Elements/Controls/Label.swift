@@ -13,7 +13,7 @@ public struct Label: Attributable, EventListener {
 
     private var innerHTML: String
 
-    /// Creates a fieldset element.
+    /// Creates a fieldset element with inner content.
     ///
     /// - Parameters:
     ///   - id: The id for the related element.
