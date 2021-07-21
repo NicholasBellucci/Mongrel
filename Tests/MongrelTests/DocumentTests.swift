@@ -6,10 +6,10 @@ final class DocumentTests: XCTestCase {
         let document = Root {
             VStack(spacing: .pixels(20)) {
                 Text("Not Dragged")
+                    .id("id")
+                    .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
                     .cited()
                     .underlined()
-                    .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
-                    .id("id")
                     .padding(.top, .left, .right, .bottom, length: .pixels(20))
 
                 Text("Hello")
