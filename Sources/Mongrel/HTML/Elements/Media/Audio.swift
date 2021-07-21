@@ -29,9 +29,9 @@ public extension Audio {
     /// Sets the audio's attribute: ``autoplay``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``autoplay`` should be added
-    ///   based on another boolean.
-    func allowsAutoplay(if value: Bool = true) -> Audio {
+    ///   - value: A Boolean value that determines whether the ``autoplay``
+    ///   attribute should be added.
+    func allowsAutoplay(_ value: Bool) -> Audio {
         var copy = self
 
         if value {
@@ -44,9 +44,9 @@ public extension Audio {
     /// Sets the audio's attribute: ``controls``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``controls`` should be added
-    ///   based on another boolean.
-    func allowsControls(if value: Bool = true) -> Audio {
+    ///   - value: A Boolean value that determines whether the ``controls``
+    ///   attribute should be added.
+    func hasControls(_ value: Bool) -> Audio {
         var copy = self
 
         if value {
@@ -59,9 +59,9 @@ public extension Audio {
     /// Sets the audio's attribute: ``loop``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``loop`` should be added
-    ///   based on another boolean.
-    func allowsLoop(if value: Bool = true) -> Audio {
+    ///   - value: A Boolean value that determines whether the ``loop``
+    ///   attribute should be added.
+    func loop(_ value: Bool) -> Audio {
         var copy = self
 
         if value {
@@ -74,9 +74,9 @@ public extension Audio {
     /// Sets the audio's attribute: ``muted``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``muted`` should be added
-    ///   based on another boolean.
-    func muted(if value: Bool = true) -> Audio {
+    ///   - value: A Boolean value that determines whether the ``muted``
+    ///   attribute should be added.
+    func muted(_ value: Bool) -> Audio {
         var copy = self
 
         if value {

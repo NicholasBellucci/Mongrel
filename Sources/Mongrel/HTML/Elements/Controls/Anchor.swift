@@ -49,13 +49,19 @@ public struct Anchor: Attributable, EventListener {
 /// These extensions are modifiers for an ``Anchor`` element
 /// and will return an ``Anchor`` element for continued use/updates.
 public extension Anchor {
-    /// Specifies that the target will be downloaded when a user clicks on the hyperlink.
+    /// Adds a condition that controls whether the target
+    /// will be downloaded.
     ///
     /// - Parameters:
-    ///   - file: The filename of the downloadable content.
-    func download(_ filename: String) -> Anchor {
+    ///   - value: A Boolean value that determines whether the ``download``
+    ///   attribute should be added.
+    func download(_ value: Bool) -> Anchor {
         var copy = self
-        copy.attributes["download"] = filename
+
+        if value {
+            copy.attributes["download"] = ""
+        }
+
         return copy
     }
 

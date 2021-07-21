@@ -27,9 +27,9 @@ public extension Details {
     /// Sets the detail's attribute: ``open``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``open`` should be added
-    ///   based on another boolean.
-    func open(if value: Bool = true) -> Details {
+    ///   - value: A Boolean value that determines whether the ``open``
+    ///   attribute should be added.
+    func open(_ value: Bool) -> Details {
         var copy = self
 
         if value {

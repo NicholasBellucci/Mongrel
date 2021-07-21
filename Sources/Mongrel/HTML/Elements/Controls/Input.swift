@@ -40,9 +40,9 @@ public extension Input {
     /// Sets the input's attribute: ``multiple``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``multiple`` should be added
-    ///   based on another boolean.
-    func allowsMultipleValues(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``multiple``
+    ///   attribute should be added.
+    func allowsMultipleValues(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -77,9 +77,9 @@ public extension Input {
     /// Sets the input's attribute: ``autofocus``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``autofocus`` should be added
-    ///   based on another boolean.
-    func autofocus(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``autofocus``
+    ///   attribute should be added.
+    func autofocus(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -92,9 +92,9 @@ public extension Input {
     /// Sets the input's attribute: ``checked``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``checked`` should be added
-    ///   based on another boolean.
-    func checked(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``checked``
+    ///   attribute should be added.
+    func checked(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -117,9 +117,9 @@ public extension Input {
     /// Sets the input's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -178,9 +178,9 @@ public extension Input {
     /// Sets the input's attribute: ``formnovalidate``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``formnovalidate`` should be added
-    ///   based on another boolean.
-    func formNoValidate(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``formnovalidate``
+    ///   attribute should be added.
+    func formNoValidate(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -304,9 +304,9 @@ public extension Input {
     /// Sets the input's attribute: ``readonly``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``readonly`` should be added
-    ///   based on another boolean.
-    func readonly(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``readonly``
+    ///   attribute should be added.
+    func readonly(_ value: Bool) -> Input {
         var copy = self
 
         if value {
@@ -319,9 +319,9 @@ public extension Input {
     /// Sets the input's attribute: ``required``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``required`` should be added
-    ///   based on another boolean.
-    func required(if value: Bool = true) -> Input {
+    ///   - value: A Boolean value that determines whether the ``required``
+    ///   attribute should be added.
+    func required(_ value: Bool) -> Input {
         var copy = self
 
         if value {

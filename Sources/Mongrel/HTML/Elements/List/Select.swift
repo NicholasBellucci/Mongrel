@@ -31,9 +31,9 @@ public extension Select {
     /// Sets the select's attribute: ``multiple``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``multiple`` should be added
-    ///   based on another boolean.
-    func allowsMultipleValues(if value: Bool = true) -> Select {
+    ///   - value: A Boolean value that determines whether the ``multiple``
+    ///   attribute should be added.
+    func allowsMultipleValues(_ value: Bool) -> Select {
         var copy = self
 
         if value {
@@ -46,9 +46,9 @@ public extension Select {
     /// Sets the select's attribute: ``autofocus``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``autofocus`` should be added
-    ///   based on another boolean.
-    func autofocus(if value: Bool = true) -> Select {
+    ///   - value: A Boolean value that determines whether the ``autofocus``
+    ///   attribute should be added.
+    func autofocus(_ value: Bool) -> Select {
         var copy = self
 
         if value {
@@ -61,9 +61,9 @@ public extension Select {
     /// Sets the select's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> Select {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> Select {
         var copy = self
 
         if value {

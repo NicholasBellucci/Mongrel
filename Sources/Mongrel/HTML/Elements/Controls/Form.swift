@@ -85,9 +85,9 @@ public extension Form {
     /// Sets the form's attribute: ``formnovalidate``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``formnovalidate`` should be added
-    ///   based on another boolean.
-    func noValidate(if value: Bool) -> Form {
+    ///   - value: A Boolean value that determines whether the ``novalidate``
+    ///   attribute should be added.
+    func noValidate(_ value: Bool) -> Form {
         var copy = self
 
         if value {

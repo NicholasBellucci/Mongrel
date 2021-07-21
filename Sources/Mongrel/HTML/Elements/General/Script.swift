@@ -36,9 +36,9 @@ public extension Script {
     /// Sets the script's attribute: ``async``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``async`` should be added
-    ///   based on another boolean.
-    func async(if value: Bool = true) -> Script {
+    ///   - value: A Boolean value that determines whether the ``async``
+    ///   attribute should be added.
+    func async(_ value: Bool) -> Script {
         var copy = self
 
         if value {
@@ -61,9 +61,9 @@ public extension Script {
     /// Sets the script's attribute: ``defer``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``defer`` should be added
-    ///   based on another boolean.
-    func `defer`(if value: Bool = true) -> Script {
+    ///   - value: A Boolean value that determines whether the ``defer``
+    ///   attribute should be added.
+    func `defer`(_ value: Bool) -> Script {
         var copy = self
 
         if value {

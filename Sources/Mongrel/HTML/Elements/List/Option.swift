@@ -28,9 +28,9 @@ public extension Option {
     /// Sets the option's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> Option {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> Option {
         var copy = self
 
         if value {
@@ -53,9 +53,9 @@ public extension Option {
     /// Sets the option's attribute: ``selected``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``selected`` should be added
-    ///   based on another boolean.
-    func selected(if value: Bool = true) -> Option {
+    ///   - value: A Boolean value that determines whether the ``selected``
+    ///   attribute should be added.
+    func selected(_ value: Bool) -> Option {
         var copy = self
 
         if value {

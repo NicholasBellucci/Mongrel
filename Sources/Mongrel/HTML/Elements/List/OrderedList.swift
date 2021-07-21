@@ -22,9 +22,9 @@ public extension OrderedList {
     /// Sets the list's attribute: ``reversed``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``reversed`` should be added
-    ///   based on another boolean.
-    func reversed(if value: Bool = true) -> OrderedList {
+    ///   - value: A Boolean value that determines whether the ``reversed``
+    ///   attribute should be added.
+    func reversed(_ value: Bool) -> OrderedList {
         var copy = self
 
         if value {

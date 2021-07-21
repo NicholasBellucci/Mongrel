@@ -13,21 +13,11 @@ public struct Video: Attributable, EventListener {
 }
 
 public extension Video {
-    func autoplay(if value: Bool = true) -> Video {
+    func autoplay(_ value: Bool) -> Video {
         var copy = self
 
         if value {
             copy.attributes["autoplay"] = ""
-        }
-
-        return copy
-    }
-
-    func controls(if value: Bool = true) -> Video {
-        var copy = self
-
-        if value {
-            copy.attributes["controls"] = ""
         }
 
         return copy
@@ -52,7 +42,17 @@ public extension Video {
         return copy
     }
 
-    func loop(if value: Bool = true) -> Video {
+    func hasControls(_ value: Bool) -> Video {
+        var copy = self
+
+        if value {
+            copy.attributes["controls"] = ""
+        }
+
+        return copy
+    }
+
+    func loop(_ value: Bool) -> Video {
         var copy = self
 
         if value {
@@ -62,7 +62,7 @@ public extension Video {
         return copy
     }
 
-    func muted(if value: Bool = true) -> Video {
+    func muted(_ value: Bool) -> Video {
         var copy = self
 
         if value {

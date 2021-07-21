@@ -27,9 +27,9 @@ public extension OptionGroup {
     /// Sets the option-group's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> OptionGroup {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> OptionGroup {
         var copy = self
 
         if value {

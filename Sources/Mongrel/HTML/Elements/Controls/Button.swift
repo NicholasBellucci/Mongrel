@@ -40,9 +40,9 @@ public extension Button {
     /// Sets the button's attribute: ``autofocus``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``autofocus`` should be added
-    ///   based on another boolean.
-    func autofocus(if value: Bool = true) -> Button {
+    ///   - value: A Boolean value that determines whether the ``autofocus``
+    ///   attribute should be added.
+    func autofocus(_ value: Bool) -> Button {
         var copy = self
 
         if value {
@@ -55,9 +55,9 @@ public extension Button {
     /// Sets the button's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> Button {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> Button {
         var copy = self
 
         if value {
@@ -118,9 +118,9 @@ public extension Button {
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``formnovalidate`` should be added
-    ///   based on another boolean.
-    func formNoValidate(if value: Bool = true) -> Button {
+    ///   - value: A Boolean value that determines whether the ``formnovalidate``
+    ///   attribute should be added.
+    func formNoValidate(_ value: Bool) -> Button {
         var copy = self
 
         if value {

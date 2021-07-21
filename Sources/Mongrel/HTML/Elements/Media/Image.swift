@@ -56,9 +56,9 @@ public extension Image {
     /// Sets the image's attribute: ``ismap``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``ismap`` should be added
-    ///   based on another boolean.
-    func isMap(if value: Bool) -> Image {
+    ///   - value: A Boolean value that determines whether the ``ismap``
+    ///   attribute should be added.
+    func isMap(_ value: Bool) -> Image {
         var copy = self
 
         if value {

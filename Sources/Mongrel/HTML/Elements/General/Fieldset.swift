@@ -26,9 +26,9 @@ public extension Fieldset {
     /// Sets the fieldset's attribute: ``disabled``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``disabled`` should be added
-    ///   based on another boolean.
-    func disabled(if value: Bool = true) -> Fieldset {
+    ///   - value: A Boolean value that determines whether the ``disabled``
+    ///   attribute should be added.
+    func disabled(_ value: Bool) -> Fieldset {
         var copy = self
 
         if value {

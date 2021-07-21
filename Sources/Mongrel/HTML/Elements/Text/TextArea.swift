@@ -32,7 +32,7 @@ extension TextArea: HTMLConvertible {
 }
 
 public extension TextArea {
-    func autofocus(if value: Bool = true) -> TextArea {
+    func autofocus(_ value: Bool) -> TextArea {
         var copy = self
 
         if value {
@@ -48,7 +48,7 @@ public extension TextArea {
         return copy
     }
 
-    func disabled(if value: Bool = true) -> TextArea {
+    func disabled(_ value: Bool) -> TextArea {
         var copy = self
 
         if value {
