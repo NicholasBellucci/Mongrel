@@ -1,15 +1,13 @@
-//
-//  WordBreak.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
+/// The ``WordBreak`` element adds a line-break in text.
+///
+/// For more information about the ``<wbr>`` tag,
+/// visit https://www.w3schools.com/tags/tag_wbr.asp
 public struct WordBreak: Attributable, EventListener {
     public var tag: String = "wbr"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
+    /// Creates a word break element.
     public init() { }
 }
 

@@ -1,10 +1,8 @@
-//
-//  iFrame.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``iFrame`` element is used to embed another document in the
+/// current HTML document.
+///
+/// For more information about the ``<iframe>`` tag,
+/// visit https://www.w3schools.com/tags/tag_iframe.asp
 public struct iFrame: Attributable, EventListener {
     public var tag: String = "iframe"
     public var attributes: [String: String] = [:]
@@ -12,27 +10,27 @@ public struct iFrame: Attributable, EventListener {
 
     private var innerHTML: String = ""
 
-    public init(title: String) {
+    /// Creates an iFrame element with a title and source URL.
+    ///
+    /// - Parameters:
+    ///   - title: The title of the iFrame element.
+    ///   - src: The URL of the document to embed.
+    public init(title: String, src: String) {
         attributes["title"] = title
+        attributes["src"] = src
     }
 
-    public init(title: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
+    /// Creates an iFrame element with a title and source URL.
+    ///
+    /// - Parameters:
+    ///   - title: The title of the iFrame element.
+    ///   - src: The URL of the document to embed.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
+    public init(title: String, src: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["title"] = title
+        attributes["src"] = src
         innerHTML = content().stringValue
-    }
-}
-
-extension iFrame: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 
@@ -93,12 +91,6 @@ public extension iFrame {
         return copy
     }
 
-    func src(_ src: String) -> iFrame {
-        var copy = self
-        copy.attributes["src"] = src
-        return copy
-    }
-
     func srcdoc(@HTMLBuilder _ content: () -> HTMLConvertible) -> iFrame {
         var copy = self
         copy.attributes["srcdoc"] = String(describing: content())
@@ -109,6 +101,20 @@ public extension iFrame {
         var copy = self
         copy.attributes["width"] = "\(width)"
         return copy
+    }
+}
+
+extension iFrame: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 
