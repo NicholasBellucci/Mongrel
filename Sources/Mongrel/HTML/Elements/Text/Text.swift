@@ -13,7 +13,7 @@ public struct Text: Attributable, EventListener {
     public var styles: [String: String] = [:]
 
     private var value: String
-    
+
     private var tags: [String] = []
     private var attributesCollection: [String: [String: String]] = [:]
 
@@ -26,7 +26,13 @@ public struct Text: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Text`` element
+/// and will return an ``Text`` element for continued use/updates.
 public extension Text {
+    /// Defines the text as an abbreviation/acronym.
+    ///
+    /// - Parameters:
+    ///   - title: Used to show the description for the abbreviation/acronym.
     func abbreviated(title: String) -> Text {
         var copy = self
         copy.tags.append("abbr")
@@ -34,80 +40,28 @@ public extension Text {
         return copy
     }
 
+    /// Sets the text to bold.
     func bold() -> Text {
         var copy = self
         copy.tags.append("b")
         return copy
     }
 
+    /// Defines the text as a title of creative work. Browsers will
+    /// usually render the text as italicized.
     func cited() -> Text {
         var copy = self
         copy.tags.append("cite")
         return copy
     }
 
-    func direction(_ direction: Direction) -> Text {
-        var copy = self
-        copy.tags.append("bdo")
-        copy.attributesCollection["bdo"] = ["dir": direction.rawValue]
-        return copy
-    }
-
-    func emphasized() -> Text {
-        var copy = self
-        copy.tags.append("em")
-        return copy
-    }
-
-    func heading(_ heading: Heading) -> Text {
-        var copy = self
-        copy.tags.append("\(heading.rawValue)")
-        return copy
-    }
-
-    func important() -> Text {
-        var copy = self
-        copy.tags.append("strong")
-        return copy
-    }
-
-    func inserted() -> Text {
-        var copy = self
-        copy.tags.append("ins")
-        return copy
-    }
-
-    func italic() -> Text {
-        var copy = self
-        copy.tags.append("i")
-        return copy
-    }
-
-    func marked() -> Text {
-        var copy = self
-        copy.tags.append("marked")
-        return copy
-    }
-
-    func paragraph() -> Text {
-        var copy = self
-        copy.tags.append("p")
-        return copy
-    }
-
-    func small() -> Text {
-        var copy = self
-        copy.tags.append("small")
-        return copy
-    }
-
-    func span() -> Text {
-        var copy = self
-        copy.tags.append("span")
-        return copy
-    }
-
-    func strikethrough(_ active: Bool = true) -> Text {
+    /// Defines the text as being deleted from the document. Browsers will
+    /// usually strike a line through deleted text.
+    ///
+    /// - Parameters:
+    ///   - value: A Boolean value that determines whether the ``del``
+    ///   attribute should be added.
+    func deleted(_ active: Bool = true) -> Text {
         var copy = self
 
         if active {
@@ -117,24 +71,110 @@ public extension Text {
         return copy
     }
 
+    /// Defines the direction the text draws.
+    ///
+    /// - Parameters:
+    ///   - direction: The direction to use as the text direction.
+    func direction(_ direction: Direction) -> Text {
+        var copy = self
+        copy.tags.append("bdo")
+        copy.attributesCollection["bdo"] = ["dir": direction.rawValue]
+        return copy
+    }
+
+    /// Defines the text as emphasized. This will make the text italic and
+    /// screen readers will pronounce the text with emphasis.
+    func emphasized() -> Text {
+        var copy = self
+        copy.tags.append("em")
+        return copy
+    }
+
+    /// Defines the text as a heading, h1-h6.
+    ///
+    /// - Parameters:
+    ///   - direction: The heading to use as the text heading value.
+    func heading(_ heading: Heading) -> Text {
+        var copy = self
+        copy.tags.append("\(heading.rawValue)")
+        return copy
+    }
+
+    /// Defines the text with strong importance. Browsers will
+    /// usually bolden the text.
+    func important() -> Text {
+        var copy = self
+        copy.tags.append("strong")
+        return copy
+    }
+
+    /// Defines the text as being inserted into the document. Browsers will
+    /// usually underline inserted text.
+    func inserted() -> Text {
+        var copy = self
+        copy.tags.append("ins")
+        return copy
+    }
+
+    /// Sets the text to italic.
+    func italic() -> Text {
+        var copy = self
+        copy.tags.append("i")
+        return copy
+    }
+
+    /// Sets the text to marked or highlighted.
+    func marked() -> Text {
+        var copy = self
+        copy.tags.append("mark")
+        return copy
+    }
+
+    /// Defines the text inside of a paragraph.
+    func paragraph() -> Text {
+        var copy = self
+        copy.tags.append("p")
+        return copy
+    }
+
+    /// Defines the text as small.
+    func small() -> Text {
+        var copy = self
+        copy.tags.append("small")
+        return copy
+    }
+
+    /// Defines the text inside of a span.
+    func span() -> Text {
+        var copy = self
+        copy.tags.append("span")
+        return copy
+    }
+
+    /// Defines the text as a subscript. Subscript text appears half a
+    /// character below the normal line, and is sometimes rendered in a smaller font.
     func `subscript`() -> Text {
         var copy = self
         copy.tags.append("sub")
         return copy
     }
 
+    /// Defines the text as a superscript. Subscript text appears half a
+    /// character above the normal line, and is sometimes rendered in a smaller font.
     func superscript() -> Text {
         var copy = self
         copy.tags.append("sup")
         return copy
     }
 
+    /// Adds quotation marks around the text.
     func quoted() -> Text {
         var copy = self
         copy.tags.append("q")
         return copy
     }
 
+    /// Adds a line below the text.
     func underlined() -> Text {
         var copy = self
         copy.tags.append("u")
