@@ -23,7 +23,7 @@ public extension Video {
         return copy
     }
 
-    /// Sets the video's attributes: ``width`` and ``height``.
+    /// Positions this element in a frame with a specified size.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.

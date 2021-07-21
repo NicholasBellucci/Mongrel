@@ -132,7 +132,7 @@ public extension Button {
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - target: The target to use as the target.
+    ///   - target: The target to use as the button target.
     func formTarget(_ target: Target) -> Button {
         var copy = self
         copy.attributes["formtarget"] = target.rawValue

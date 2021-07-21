@@ -27,10 +27,10 @@ public struct Output: Attributable {
 }
 
 public extension Output {
-    /// Sets the button's attribute: ``form``.
+    /// Specifies which form the output element belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the output belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Output {
         var copy = self
         copy.attributes["form"] = id

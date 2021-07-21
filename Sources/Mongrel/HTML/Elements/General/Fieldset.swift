@@ -23,7 +23,7 @@ public struct Fieldset: Attributable, EventListener {
 }
 
 public extension Fieldset {
-    /// Sets the fieldset's attribute: ``disabled``.
+    /// Specifies that a group of related form elements should be disabled.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
@@ -38,7 +38,7 @@ public extension Fieldset {
         return copy
     }
 
-    /// Sets the fieldset's attribute: ``form``.
+    /// Specifies which form the fieldset belongs.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the fieldset belongs.
@@ -48,10 +48,10 @@ public extension Fieldset {
         return copy
     }
 
-    /// Sets the button's attribute: ``name``.
+    /// Sets the name of the fieldset.
     ///
     /// - Parameters:
-    ///   - name: The name of the fieldset.
+    ///   - name: The name to use as the fieldset name.
     func name(_ name: String) -> Fieldset {
         var copy = self
         copy.attributes["name"] = name

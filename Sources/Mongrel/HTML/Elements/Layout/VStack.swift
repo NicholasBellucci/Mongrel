@@ -27,8 +27,7 @@ public struct VStack: Attributable, EventListener {
 /// These extensions are modifiers for an ``VStack`` element
 /// and will return an ``VStack`` element for continued use/updates.
 public extension VStack {
-    /// Sets the stack's ``<div>`` attributes: ``width`` and ``height``
-    /// and the style: ``justify-content``.
+    /// Positions this element in a frame with a specified size.
     ///
     /// - Parameters:
     ///   - width: The width of the frame with the unit of measurement.

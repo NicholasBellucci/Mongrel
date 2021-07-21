@@ -22,32 +22,31 @@ public struct Source: Attributable, EventListener {
 /// These extensions are modifiers for an ``Source`` element
 /// and will return an ``Source`` element for continued use/updates.
 public extension Source {
-    /// Sets the source's attribute: ``media``.
+    /// Accepts any valid media query that would normally be defined in a CSS.
     ///
     /// - Parameters:
-    ///   - query: A media query that would normally be defined in CSS.
+    ///   - query: The query to be used as the media query.
     func media(_ query: String) -> Source {
         var copy = self
         copy.attributes["media"] = query
         return copy
     }
 
-    /// Sets the source's attribute: ``sizes``.
+    /// Specifies image sizes for different page layouts.
     ///
     /// - Parameters:
-    ///   - sizes: Image sizes for different page layouts.
+    ///   - sizes: The sizes to be used as the image sizes.
     func sizes(_ sizes: String) -> Source {
         var copy = self
         copy.attributes["sizes"] = sizes
         return copy
     }
 
-    /// Sets the source's attribute: ``srcset``.
-    ///
+    /// Sets the URL of the image to use in different situations.
     /// Required when element is used in a ``Picture`` element.
     ///
     /// - Parameters:
-    ///   - srcset: The URL of the image to use in different situations.
+    ///   - srcset: The source set to be used as the source's source set.
     func srcset(_ srcset: String) -> Source {
         var copy = self
         copy.attributes["srcset"] = srcset

@@ -23,7 +23,7 @@ public struct Embed: Attributable, EventListener {
 /// These extensions are modifiers for an ``Embed`` element
 /// and will return an ``Embed`` element for continued use/updates.
 public extension Embed {
-    /// Sets the embed's attributes: ``width`` and ``height``.
+    /// Positions this element in a frame with a specified size.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.

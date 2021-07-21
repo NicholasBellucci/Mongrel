@@ -34,7 +34,7 @@ public extension Image {
         return copy
     }
 
-    /// Sets the image's attributes: ``width`` and ``height``.
+    /// Positions this element in a frame with a specified size.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.
