@@ -116,7 +116,7 @@ public extension iFrame {
     /// Specifies which referrer information to send when fetching the iframe.
     ///
     /// - Parameters:
-    ///   - policy: The policy to use as the referrer policy.
+    ///   - policy: The policy to use as the iframe's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> iFrame {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue

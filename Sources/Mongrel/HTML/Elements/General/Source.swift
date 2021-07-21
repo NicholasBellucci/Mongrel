@@ -25,7 +25,7 @@ public extension Source {
     /// Accepts any valid media query that would normally be defined in a CSS.
     ///
     /// - Parameters:
-    ///   - query: The query to be used as the media query.
+    ///   - query: The query to be used as the script's media query.
     func media(_ query: String) -> Source {
         var copy = self
         copy.attributes["media"] = query

@@ -23,11 +23,11 @@ public struct Image: Attributable, EventListener {
 }
 
 public extension Image {
-    /// Sets the image's attribute: ``crossorigin``.
+    /// Allow images from third-party sites that allow cross-origin
+    /// access to be used with canvas.
     ///
     /// - Parameters:
-    ///   - type: Allows images from third-party sites to be
-    ///   used with canvas.
+    ///   - type: The type to be used as the image's cross-origin type.
     func crossorigin(_ type: CrossOriginType) -> Image {
         var copy = self
         copy.attributes["type"] = type.rawValue
@@ -53,7 +53,8 @@ public extension Image {
         return copy
     }
 
-    /// Sets the image's attribute: ``ismap``.
+    /// Adds a condition that controls whether the element
+    /// is an image map.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``ismap``
@@ -68,63 +69,65 @@ public extension Image {
         return copy
     }
 
-    /// Sets the image's attribute: ``loading``.
+    /// Specifies whether a browser should load the image immediately
+    /// or to defer loading of the image until some conditions are met.
     ///
     /// - Parameters:
-    ///   - type: The type of load either ``eager`` or ``lazy``
+    ///   - type: The type to be used as the image's load type.
     func loadType(_ type: LoadType) -> Image {
         var copy = self
         copy.attributes["loading"] = type.rawValue
         return copy
     }
 
-    /// Sets the image's attribute: ``longdesc``.
+    /// Specifies a URL to a detailed description of an image.
     ///
     /// - Parameters:
-    ///   - url: The detailed description URL.
+    ///   - url: The detailed description URL to be used as the image's
+    ///   detailed description URL.
     func longDescriptionURL(_ url: String) -> Image {
         var copy = self
         copy.attributes["longdesc"] = url
         return copy
     }
 
-    /// Sets the image's attribute: ``referrerpolicy``.
+    /// Specifies which referrer information to send when fetching the image.
     ///
     /// - Parameters:
-    ///   - policy: The referrer to use when fetching the resource.
+    ///   - policy: The policy to use as the image's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Image {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the image's attribute: ``sizes``.
+    /// Specifies image sizes for different page layouts.
     ///
     /// - Parameters:
-    ///   - sizes: Image sizes for different page layouts.
+    ///   - sizes: The sizes to be used as the image sizes.
     func sizes(_ sizes: String) -> Image {
         var copy = self
         copy.attributes["sizes"] = sizes
         return copy
     }
 
-    /// Sets the image's attribute: ``srcset``.
+    /// Specifies a list of image files to use in different situations.
     ///
     /// - Parameters:
-    ///   - srcset: The image files to be used in different situations.
+    ///   - srcset: The source set to be used as the image's source set.
     func scrset(_ srcset: String...) -> Image {
         var copy = self
         copy.attributes["srcset"] = srcset.map { $0 }.joined(separator: " ")
         return copy
     }
 
-    /// Sets the image's attribute: ``usemap``.
+    /// Specifies an image as a client-side image map.
     ///
     /// - Parameters:
-    ///   - map: The map id.
-    func useMap(_ map: String) -> Image {
+    ///   - map: The name of the map.
+    func useMap(_ name: String) -> Image {
         var copy = self
-        copy.attributes["usemap"] = map
+        copy.attributes["usemap"] = name
         return copy
     }
 }

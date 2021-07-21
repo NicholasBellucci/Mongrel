@@ -21,21 +21,21 @@ public struct Link: Attributable, EventListener {
 /// These extensions are modifiers for an ``Link`` element
 /// and will return an ``Link`` element for continued use/updates.
 public extension Link {
-    /// Sets the link's attribute: ``crossorigin``.
+    /// Specifies how the element handles cross-origin requests.
     ///
     /// - Parameters:
-    ///   - type: Specifies handling with cross-origin requests.
+    ///   - type: The type to be used as the link's cross-origin type.
     func crossorigin(_ type: CrossOriginType) -> Link {
         var copy = self
         copy.attributes["crossorigin"] = type.rawValue
         return copy
     }
 
-    /// Sets the link's attribute: ``hreflang``.
+    /// Sets the language of the text in the linked document.
     ///
     /// - Parameters:
-    ///   - code: The language code of the linked document.
-    ///   - country: The country code for the linked document.
+    ///   - code: The code to use as the language code.
+    ///   - country: The code to use as the country code.
     func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Link {
         var copy = self
 
@@ -48,40 +48,41 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: ``integrity``.
+    /// Allows a browser to check the fetched link to ensure that the file
+    /// is never loaded if the source has been manipulated.
     ///
     /// - Parameters:
-    ///   - integrity: The file hashing value of the external file.
+    ///   - integrity: The hash to be used as the link's integrity.
     func integrity(_ integrity: String) -> Link {
         var copy = self
         copy.attributes["integrity"] = integrity
         return copy
     }
 
-    /// Sets the link's attribute: ``media``.
+    /// Specifies what device the linked document will be displayed.
     ///
     /// - Parameters:
-    ///   - query: The device on which the linked document will be displayed.
+    ///   - query: The query to use as the link's media/device query.
     func media(_ query: String) -> Link {
         var copy = self
         copy.attributes["media"] = query
         return copy
     }
 
-    /// Sets the link's attribute: ``referrerpolicy``.
+    /// Specifies which referrer to use when fetching the resource.
     ///
     /// - Parameters:
-    ///   - policy: The referrer to use when fetching the resource.
+    ///   - policy: The policy to use as the link's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Link {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the link's attribute: ``type``.
+    /// Sets the media type of the linked document.
     ///
     /// - Parameters:
-    ///   - type: The media type of the linked document.
+    ///   - type: The type to use as the link's media type.
     func type(_ type: String) -> Link {
         var copy = self
         copy.attributes["type"] = type

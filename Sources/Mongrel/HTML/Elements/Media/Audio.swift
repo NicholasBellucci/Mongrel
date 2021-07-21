@@ -26,7 +26,8 @@ public struct Audio: Attributable, EventListener {
 }
 
 public extension Audio {
-    /// Sets the audio's attribute: ``autoplay``.
+    /// Adds a condition that controls whether the element
+    /// will start playing as soon as it is ready.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autoplay``
@@ -41,7 +42,8 @@ public extension Audio {
         return copy
     }
 
-    /// Sets the audio's attribute: ``controls``.
+    /// Adds a condition that controls whether the element
+    /// should display audio controls.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``controls``
@@ -56,7 +58,8 @@ public extension Audio {
         return copy
     }
 
-    /// Sets the audio's attribute: ``loop``.
+    /// Adds a condition that controls whether the element
+    /// will start over again every time it is finished.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``loop``
@@ -71,7 +74,8 @@ public extension Audio {
         return copy
     }
 
-    /// Sets the audio's attribute: ``muted``.
+    /// Adds a condition that controls whether the element
+    /// will be muted.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``muted``
@@ -86,10 +90,11 @@ public extension Audio {
         return copy
     }
 
-    /// Sets the audio's attribute: ``preload``.
+    /// Specifies if and how the author thinks the audio should be loaded
+    /// when the page loads.
     ///
     /// - Parameters:
-    ///   - type: The type that author thinks that audio should be loaded.
+    ///   - type: The type to use as the audio's preload type.
     func preload(_ type: PreloadType) -> Audio {
         var copy = self
         copy.attributes["preload"] = type.rawValue

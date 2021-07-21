@@ -17,20 +17,6 @@ public struct TextArea: Attributable, EventListener {
     }
 }
 
-extension TextArea: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension TextArea {
     func autofocus(_ value: Bool) -> TextArea {
         var copy = self
@@ -126,5 +112,19 @@ public extension TextArea {
         var copy = self
         copy.attributes["wrap"] = wrap.rawValue
         return copy
+    }
+}
+
+extension TextArea: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

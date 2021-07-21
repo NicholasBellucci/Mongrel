@@ -52,7 +52,7 @@ public extension Script {
     /// Sets the mode of the request to an HTTP CORS Request.
     ///
     /// - Parameters:
-    ///   - type: The type to be used as the cross-origin type.
+    ///   - type: The type to be used as the script's cross-origin type.
     func crossorigin(_ type: CrossOriginType) -> Script {
         var copy = self
         copy.attributes["type"] = type.rawValue
@@ -102,7 +102,7 @@ public extension Script {
     /// Specifies which referrer information to send when fetching a script.
     ///
     /// - Parameters:
-    ///   - policy: The policy to use as the referrer policy.
+    ///   - policy: The policy to use as the script's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Script {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
@@ -112,7 +112,7 @@ public extension Script {
     /// Sets the media type of the script.
     ///
     /// - Parameters:
-    ///   - type: The type to use as the media type.
+    ///   - type: The type to use as the script's media type.
     func type(_ type: String) -> Script {
         var copy = self
         copy.attributes["type"] = type

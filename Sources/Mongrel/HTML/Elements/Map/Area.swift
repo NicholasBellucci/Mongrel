@@ -23,7 +23,8 @@ public struct Area: Attributable, EventListener {
 /// These extensions are modifiers for an ``Area`` element
 /// and will return an ``Area`` element for continued use/updates.
 public extension Area {
-    /// Sets the area's attribute: ``download``.
+    /// Adds a condition that controls whether the element
+    /// can be downloaded.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``download``
@@ -38,11 +39,11 @@ public extension Area {
         return copy
     }
 
-    /// Sets the area's attributes: ``href`` and ``alt``.
+    /// Specifies the hyperlink target and alternate text for the area.
     ///
     /// - Parameters:
-    ///   - href: The hyperlink target for the area.
-    ///   - alt: The alternate text for the area.
+    ///   - href: The href to be used as the area's hyperlink.
+    ///   - alt: The alternate text to be used as the area's alternate text.
     func href(_ href: String, alt: String) -> Area {
         var copy = self
         copy.attributes["href"] = href
@@ -50,51 +51,51 @@ public extension Area {
         return copy
     }
 
-    /// Sets the area's attribute: ``media``.
+    /// Specifies what media/device the target URL is optimized.
     ///
     /// - Parameters:
-    ///   - query: The media/device the linked document if optimized for.
+    ///   - query: The query to use as the area's media/device query.
     func media(_ query: String) -> Area {
         var copy = self
         copy.attributes["media"] = query
         return copy
     }
 
-    /// Sets the area's attribute: ``referrerpolicy``.
+    /// Specifies which referrer information to send with the link.
     ///
     /// - Parameters:
-    ///   - policy: The referrer information to send with the link.
+    ///   - policy: The policy to use as the area's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Area {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the area's attribute: ``rel``.
+    /// Specifies the relationship between the current document and
+    /// the target URL.
     ///
     /// - Parameters:
-    ///   - relationship: The relationship between the current document
-    ///   and the linked document.
+    ///   - relationship: The relationship to use as the area's relationship.
     func relationship(_ relationship: Relationship.Area) -> Area {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue
         return copy
     }
 
-    /// Sets the area's attribute: ``target``.
+    /// Specifies where to open the target URL.
     ///
     /// - Parameters:
-    ///   - target: The target to open the linked document.
+    ///   - target: The target to use as the anchor's target.
     func target(_ target: Target = .`self`) -> Area {
         var copy = self
         copy.attributes["target"] = target.rawValue
         return copy
     }
 
-    /// Sets the area's attribute: ``type``.
+    /// Sets the media type of the target URL.
     ///
     /// - Parameters:
-    ///   - type: The media type of the linked document.
+    ///   - type: The type to use as the area's media type.
     func type(_ type: String) -> Area {
         var copy = self
         copy.attributes["type"] = type

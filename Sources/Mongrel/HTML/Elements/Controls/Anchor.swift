@@ -50,7 +50,7 @@ public struct Anchor: Attributable, EventListener {
 /// and will return an ``Anchor`` element for continued use/updates.
 public extension Anchor {
     /// Adds a condition that controls whether the element
-    /// will be downloaded.
+    /// can be downloaded.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``download``
@@ -68,7 +68,7 @@ public extension Anchor {
     /// Sets the language of the linked document.
     ///
     /// - Parameters:
-    ///   - code: The lcode to use as the anguage code.
+    ///   - code: The code to use as the language code.
     ///   - country: The code to use as the country code.
     func hrefLanguage(_ code: LanguageCode, _ country: CountryCode? = nil) -> Anchor {
         var copy = self
@@ -82,10 +82,10 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets what media/device the linked document is optimized for.
+    /// Specifies what media/device the linked document is optimized.
     ///
     /// - Parameters:
-    ///   - query: The query to use as the  media/device query.
+    ///   - query: The query to use as the anchor's media/device query.
     func media(_ query: String) -> Anchor {
         var copy = self
         copy.attributes["media"] = query
@@ -106,7 +106,7 @@ public extension Anchor {
     /// Specifies which referrer information to send with the link.
     ///
     /// - Parameters:
-    ///   - policy: The policy to use as the referrer policy.
+    ///   - policy: The policy to use as the anchor's referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Anchor {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
@@ -137,7 +137,7 @@ public extension Anchor {
     /// Sets the media type of the linked document.
     ///
     /// - Parameters:
-    ///   - type: The type to use as the media type.
+    ///   - type: The type to use as the anchor's media type.
     func type(_ type: String) -> Anchor {
         var copy = self
         copy.attributes["type"] = type

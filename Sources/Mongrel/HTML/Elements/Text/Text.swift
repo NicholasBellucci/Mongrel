@@ -20,48 +20,6 @@ public struct Text: Attributable, EventListener {
     }
 }
 
-extension Text: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        var html: String = value
-        var tags: [String] = tags
-
-        if tags.isEmpty, !attributes.isEmpty {
-            tags.append("span")
-        } else if tags.isEmpty, !styles.isEmpty {
-            tags.append("span")
-        }
-        
-        tags
-            .reversed()
-            .enumerated()
-            .forEach { index, tag in
-                if index == tags.count - 1 {
-                    html = "<\(tag)\(attributesString)\(attributes(for: tag))>\(html)</\(tag)>"
-                } else {
-                    html = "<\(tag)\(attributes(for: tag))>\(html)</\(tag)>"
-                }
-            }
-
-        return html
-    }
-
-    private func attributes(for tag: String) -> String {
-        guard let array = attributesCollection[tag] else { return "" }
-
-        return " " + array
-            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
-            .joined(separator: " ")
-    }
-}
-
 public extension Text {
     func abbreviated(title: String) -> Text {
         var copy = self
@@ -175,5 +133,47 @@ public extension Text {
         var copy = self
         copy.tags.append("u")
         return copy
+    }
+}
+
+extension Text: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        var html: String = value
+        var tags: [String] = tags
+
+        if tags.isEmpty, !attributes.isEmpty {
+            tags.append("span")
+        } else if tags.isEmpty, !styles.isEmpty {
+            tags.append("span")
+        }
+        
+        tags
+            .reversed()
+            .enumerated()
+            .forEach { index, tag in
+                if index == tags.count - 1 {
+                    html = "<\(tag)\(attributesString)\(attributes(for: tag))>\(html)</\(tag)>"
+                } else {
+                    html = "<\(tag)\(attributes(for: tag))>\(html)</\(tag)>"
+                }
+            }
+
+        return html
+    }
+
+    private func attributes(for tag: String) -> String {
+        guard let array = attributesCollection[tag] else { return "" }
+
+        return " " + array
+            .map { attribute in "\(attribute.key)=\"\(attribute.value)\"" }
+            .joined(separator: " ")
     }
 }
