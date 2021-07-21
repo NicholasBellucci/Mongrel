@@ -2,7 +2,7 @@
 /// ``Select`` element or ``List(.data)`` element.
 ///
 /// For more information about the ``<option>`` tag,
-/// visit https://www.w3schools.com/tags/tag_break.asp
+/// visit https://www.w3schools.com/tags/tag_option.asp
 public struct Option: Attributable, EventListener {
     public var tag: String = "option"
     public var attributes: [String: String] = [:]
@@ -14,13 +14,16 @@ public struct Option: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - value: The value of the option.
-    ///   - content: An ``HTMLBuilder`` that creates the content of this stack.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(value: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["value"] = value
         innerHTML = content().stringValue
     }
 }
 
+/// These extensions are modifiers for an ``Option`` element
+/// and will return an ``Option`` element for continued use/updates.
 public extension Option {
     /// Sets the option's attribute: ``disabled``.
     ///

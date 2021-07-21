@@ -44,8 +44,6 @@ public let InlineCode = GenericElement(tag: "code")
 public let KeyboardIput = GenericElement(tag: "kbd")
 /// Represents the HTMLConvertible ``<legend>`` tag.
 public let Legend = GenericElement(tag: "legend")
-/// Represents the HTMLConvertible ``<li>`` tag.
-public let ListItem = GenericElement(tag: "li")
 /// Represents the HTMLConvertible ``<main>`` tag.
 public let Main = GenericElement(tag: "main")
 /// Represents the HTMLConvertible ``<nav>`` tag.

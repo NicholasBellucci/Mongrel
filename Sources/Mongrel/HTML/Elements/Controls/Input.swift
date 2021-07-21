@@ -65,8 +65,7 @@ public extension Input {
     /// Sets the input's attribute: ``autocomplete``.
     ///
     /// - Parameters:
-    ///   - value: Allows user to determine if ``autocomplete`` should be added
-    ///   based on another boolean.
+    ///   - value: Specifies if the input should have autocomplete.
     func autocomplete(_ value: Bool) -> Input {
         var copy = self
         copy.attributes["autocomplete"] = value ? "on" : "off"

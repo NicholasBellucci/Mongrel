@@ -17,20 +17,6 @@ public struct Audio: Attributable, EventListener {
     }
 }
 
-extension Audio: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
-    }
-}
-
 public extension Audio {
     func autoplay(if value: Bool = true) -> Audio {
         var copy = self
@@ -82,5 +68,19 @@ public extension Audio {
         var copy = self
         copy.attributes["src"] = src
         return copy
+    }
+}
+
+extension Audio: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }

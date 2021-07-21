@@ -34,6 +34,8 @@ public struct iFrame: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``iFrame`` element
+/// and will return an ``iFrame`` element for continued use/updates.
 public extension iFrame {
     /// Sets the iframe's attribute: ``allow``.
     ///

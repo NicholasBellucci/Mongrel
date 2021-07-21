@@ -110,7 +110,8 @@ public extension Anchor {
     /// Sets the anchor's attribute: ``rel``.
     ///
     /// - Parameters:
-    ///   - relationship: The relationship between the current document and the linked document.
+    ///   - relationship: The relationship between the current document
+    ///   and the linked document.
     func relationship(_ relationship: Relationship.Anchor) -> Anchor {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue

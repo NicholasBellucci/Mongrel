@@ -1,10 +1,8 @@
-//
-//  OptionGroup.swift
-//
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``OptionGroup`` element is used to group related
+/// options in a ``Select`` element or ``List(.data)`` element.
+///
+/// For more information about the ``<optgroup>`` tag,
+/// visit https://www.w3schools.com/tags/tag_optgroup.asp
 public struct OptionGroup: Attributable, EventListener {
     public var tag: String = "optgroup"
     public var attributes: [String: String] = [:]
@@ -12,12 +10,25 @@ public struct OptionGroup: Attributable, EventListener {
 
     private var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
+    /// Creates an option-group with an optional label.
+    ///
+    /// - Parameters:
+    ///   - label: The label for the option-group.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
+    public init(label: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
+/// These extensions are modifiers for an ``OptionGroup`` element
+/// and will return an ``OptionGroup`` element for continued use/updates.
 public extension OptionGroup {
+    /// Sets the option-group's attribute: ``disabled``.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``disabled`` should be added
+    ///   based on another boolean.
     func disabled(if value: Bool = true) -> OptionGroup {
         var copy = self
 
@@ -25,12 +36,6 @@ public extension OptionGroup {
             copy.attributes["disabled"] = ""
         }
 
-        return copy
-    }
-
-    func text(_ text: String) -> OptionGroup {
-        var copy = self
-        copy.attributes["text"] = text
         return copy
     }
 }

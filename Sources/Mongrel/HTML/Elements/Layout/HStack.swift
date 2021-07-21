@@ -25,6 +25,8 @@ public struct HStack: Attributable, EventListener, Stylable {
     }
 }
 
+/// These extensions are modifiers for an ``HStack`` element
+/// and will return an ``HStack`` element for continued use/updates.
 public extension HStack {
     /// Sets the stack's ``<div>`` attributes: ``width`` and ``height``
     /// and the style: ``justify-content``.

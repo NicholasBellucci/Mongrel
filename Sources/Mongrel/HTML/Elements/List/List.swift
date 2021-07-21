@@ -18,7 +18,8 @@ public struct List: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - type: The type of list to create.
-    ///   - content: An ``HTMLBuilder`` that creates the content of this stack.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(_ type: GenericListType, @HTMLBuilder _ content: () -> HTMLConvertible) {
         self.tag = type.rawValue
         innerHTML = content().stringValue

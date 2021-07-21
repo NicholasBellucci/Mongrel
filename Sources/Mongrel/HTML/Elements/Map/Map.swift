@@ -1,10 +1,7 @@
-//
-//  Map.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// A ``Map`` element defines the clickable areas within an image.
+///
+/// For more information about the ``<map>`` tag,
+/// visit https://www.w3schools.com/tags/tag_map.asp
 public struct Map: Attributable, EventListener {
     public var tag: String = "map"
     public var attributes: [String: String] = [:]
@@ -12,6 +9,12 @@ public struct Map: Attributable, EventListener {
 
     private var innerHTML: String
 
+    /// Creates a map with a name.
+    ///
+    /// - Parameters:
+    ///   - name: The name of the map.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(_ name: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["name"] = name
         innerHTML = content().stringValue

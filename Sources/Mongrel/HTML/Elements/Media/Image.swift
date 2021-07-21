@@ -19,20 +19,6 @@ public struct Image: Attributable, EventListener {
     }
 }
 
-extension Image: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>"
-    }
-}
-
 public extension Image {
     func crossorigin(_ type: CrossOriginType) -> Image {
         var copy = self
@@ -96,5 +82,19 @@ public extension Image {
         var copy = self
         copy.attributes["width"] = "\(width)"
         return copy
+    }
+}
+
+extension Image: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>"
     }
 }
