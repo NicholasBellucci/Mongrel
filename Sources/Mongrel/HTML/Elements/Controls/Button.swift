@@ -16,9 +16,9 @@ public struct Button: Attributable, EventListener {
     /// - Parameters:
     ///   - title: The title text for the button.
     ///   - action: The action script represented as a string.
-    public init<S>(_ title: S, action: String) where S : StringProtocol {
+    public init<S>(_ title: S, action: MongrelJS) where S : StringProtocol {
         attributes["type"] = ButtonType.button.rawValue
-        attributes["onclick"] = action
+        attributes["onclick"] = action.script
         innerHTML = String(describing: title)
     }
 
@@ -28,8 +28,9 @@ public struct Button: Attributable, EventListener {
     ///   - action: The action script represented as a string.
     ///   - content: An ``HTMLBuilder`` that creates the elements
     ///   that make up this element.
-    public init(action: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
+    public init(action: () -> MongrelJS, @HTMLBuilder content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
+        attributes["onclick"] = action().script
         innerHTML = content().stringValue
     }
 }
