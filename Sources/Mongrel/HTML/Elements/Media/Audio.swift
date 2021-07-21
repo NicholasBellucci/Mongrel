@@ -2,7 +2,7 @@
 /// in a document. This content can be sources like music and/or
 /// other audio streams.
 ///
-/// The content added to the element will be displayed in browsers
+/// The content added to this element will be displayed in browsers
 /// in which it is not supported.
 ///
 /// For more information about the ``<audio>`` tag,
@@ -21,6 +21,7 @@ public struct Audio: Attributable, EventListener {
     ///   - content: An ``HTMLBuilder`` that creates the elements
     ///   that make up this element.
     public init(src: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
+        attributes["src"] = src
         innerHTML = content().stringValue
     }
 }
