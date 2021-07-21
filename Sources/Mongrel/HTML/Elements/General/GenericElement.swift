@@ -1,10 +1,8 @@
-//
-//  GenericElement.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/17/21.
-//
-
+/// The ``GenericElement`` element is used for HTML tags that only
+/// have attributes that are considered global.
+///
+/// This element can not be used directly. Instead use an element created in
+/// the ``TagList.swift`` file.
 public struct GenericElement: Attributable, EventListener {
     public var tag: String
     public var attributes: [String: String] = [:]

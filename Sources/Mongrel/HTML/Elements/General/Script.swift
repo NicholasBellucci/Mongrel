@@ -33,7 +33,8 @@ public struct Script: Attributable, EventListener {
 /// These extensions are modifiers for an ``Script`` element
 /// and will return an ``Script`` element for continued use/updates.
 public extension Script {
-    /// Sets the script's attribute: ``async``.
+    /// Adds a condition that controls whether the target
+    /// will be executed asynchronously. Only for extenal scripts.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``async``
@@ -48,17 +49,19 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: ``crossorigin``.
+    /// Sets the mode of the request to an HTTP CORS Request.
     ///
     /// - Parameters:
-    ///   - type: The mode of request to an HTTP CORS request.
+    ///   - type: The type to be used as the cross-origin type.
     func crossorigin(_ type: CrossOriginType) -> Script {
         var copy = self
         copy.attributes["type"] = type.rawValue
         return copy
     }
 
-    /// Sets the script's attribute: ``defer``.
+    /// Adds a condition that controls whether the target
+    /// will be executed when the page has finished loading.
+    /// Only for extenal scripts.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``defer``
@@ -73,41 +76,43 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: ``integrity``.
+    /// Allows a browser to check the fetched script to ensure that the code
+    /// is never loaded if the source has been manipulated.
     ///
     /// - Parameters:
-    ///   - integrity: The file hashing value of the external file.
-    func integrity(_ integrity: String) -> Script {
+    ///   - integrity: The hash to be used as the script's integrity.
+    func integrity(_ hash: String) -> Script {
         var copy = self
-        copy.attributes["integrity"] = integrity
+        copy.attributes["integrity"] = hash
         return copy
     }
 
-    /// Sets the script's attribute: ``nomodule``.
+    /// Adds a condition that controls whether the target
+    /// will should not execute in browsers supporting ES2015 modules.
     ///
     /// - Parameters:
-    ///   - value: Specifies that the script should not be executed in browsers
-    ///   supporting ES2015 modules.
+    ///   - value: A Boolean value that determines whether the ``defer``
+    ///   attribute should be added.
     func noModule(_ value: Bool) -> Script {
         var copy = self
         copy.attributes["nomodule"] = "\(value)"
         return copy
     }
 
-    /// Sets the script's attribute: ``referrerpolicy``.
+    /// Specifies which referrer information to send when fetching a script.
     ///
     /// - Parameters:
-    ///   - policy: The referrer information to send when fetching a script.
+    ///   - policy: The policy to use as the referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Script {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the script's attribute: ``type``.
+    /// Sets the media type of the script.
     ///
     /// - Parameters:
-    ///   - type: The media type of the linked document.
+    ///   - type: The type to use as the media type.
     func type(_ type: String) -> Script {
         var copy = self
         copy.attributes["type"] = type
