@@ -25,7 +25,8 @@ public struct Option: Attributable, EventListener {
 /// These extensions are modifiers for an ``Option`` element
 /// and will return an ``Option`` element for continued use/updates.
 public extension Option {
-    /// Sets the option's attribute: ``disabled``.
+    /// Adds a condition that controls whether the target
+    /// will be disabled.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
@@ -40,17 +41,18 @@ public extension Option {
         return copy
     }
 
-    /// Sets the option's attribute: ``label``.
+    /// Sets a shorter label for the option.
     ///
     /// - Parameters:
-    ///   - label: A shorter label for an option.
+    ///   - label: The label to be used as the option's short label.
     func label(_ label: String) -> Option {
         var copy = self
         copy.attributes["label"] = label
         return copy
     }
 
-    /// Sets the option's attribute: ``selected``.
+    /// Adds a condition that controls whether the target
+    /// will be selected.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``selected``

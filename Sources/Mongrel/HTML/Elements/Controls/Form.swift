@@ -22,67 +22,72 @@ public struct Form: Attributable, EventListener {
 /// These extensions are modifiers for an ``Form`` element
 /// and will return an ``Form`` element for continued use/updates.
 public extension Form {
-    /// Sets the form's attribute: ``accept``.
+    /// Sets the character encodings that are used when submitting
+    /// the form.
     ///
     /// - Parameters:
-    ///   - charset: The character encodings to be used for form submission.
+    ///   - charset: The charset used as the form's accepted charset.
     func accept(_ charset: String) -> Form {
         var copy = self
         copy.attributes["accept-charset"] = charset
         return copy
     }
 
-    /// Sets the form's attribute: ``action``.
+    /// Specifies where to send the form-data when a form is submitted.
     ///
     /// - Parameters:
-    ///   - action: The URL of which to send the form-data on submission.
-    func action(_ action: String) -> Form {
+    ///   - url: The URL used as the destination URL.
+    func action(_ url: String) -> Form {
         var copy = self
-        copy.attributes["action"] = action
+        copy.attributes["action"] = url
         return copy
     }
 
-    /// Sets the form's attribute: ``autocomplete``.
+    /// Adds a condition that controls whether the target
+    /// will allow autocomplete.
     ///
     /// - Parameters:
-    ///   - value: Specifies if the form should have autocomplete.
+    ///   - value: A Boolean value that determines whether the ``autofocus``
+    ///   attribute should be added.
     func allowsAutocomplete(_ value: Bool) -> Form {
         var copy = self
         copy.attributes["autocomplete"] = value ? "on" : "off"
         return copy
     }
 
-    /// Sets the form's attribute: ``formenctype``.
+    /// Specifies how the form-data should be encoded when submitting.
+    /// Only valid when form ``method`` is post.
     ///
     /// - Parameters:
-    ///   - type: The type in which form-data should be encoded when submitting.
+    ///   - type: The type to be used as the encode type.
     func encodeType(_ type: FormEncodeType) -> Form {
         var copy = self
         copy.attributes["formenctype"] = type.rawValue
         return copy
     }
 
-    /// Sets the form's attribute: ``formmethod``.
+    /// Sets the HTTP method to use when sending form-data.
     ///
     /// - Parameters:
-    ///   - method: The HTTP method to use when sending form-data.
+    ///   - method: The method to be used as the form method.
     func method(_ method: FormMethod) -> Form {
         var copy = self
         copy.attributes["formmethod"] = method.rawValue
         return copy
     }
 
-    /// Sets the form's attribute: ``name``.
+    /// Sets the name of the form.
     ///
     /// - Parameters:
-    ///   - name: The name of the form.
+    ///   - name: The name to be used as the form name.
     func name(_ name: String) -> Form {
         var copy = self
         copy.attributes["name"] = name
         return copy
     }
 
-    /// Sets the form's attribute: ``formnovalidate``.
+    /// Adds a condition that controls whether the target
+    /// will not validate when submitted.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``novalidate``
@@ -97,21 +102,22 @@ public extension Form {
         return copy
     }
 
-    /// Sets the form's attribute: ``rel``.
+    /// Specifies the relationship between the current document and
+    /// the linked document.
     ///
     /// - Parameters:
-    ///   - relationship: The relationship between the current document
-    ///   and the linked document.
+    ///   - relationship: The relationship to use as the form relationship.
     func relationship(_ relationship: Relationship.Form) -> Form {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue
         return copy
     }
 
-    /// Sets the form's attribute: ``target``.
+    /// Specifies where to display the response that is received after
+    /// submitting the form.
     ///
     /// - Parameters:
-    ///   - target: The target to display the response after submitting the form-data.
+    ///   - target: The target to use as the form target.
     func target(_ target: Target = .`self`) -> Form {
         var copy = self
         copy.attributes["target"] = target.rawValue

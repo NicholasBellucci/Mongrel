@@ -19,7 +19,8 @@ public struct OrderedList: Attributable, EventListener {
 /// These extensions are modifiers for an ``OrderedList`` element
 /// and will return an ``OrderedList`` element for continued use/updates.
 public extension OrderedList {
-    /// Sets the list's attribute: ``reversed``.
+    /// Adds a condition that controls whether the target
+    /// will be reversed.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``reversed``
@@ -34,20 +35,20 @@ public extension OrderedList {
         return copy
     }
 
-    /// Sets the list's attribute: ``start``.
+    /// Sets the start value of an ordered list.
     ///
     /// - Parameters:
-    ///   - value: The start value of the list.
+    ///   - value: The value used as the list's start value.
     func start(_ value: Int) -> OrderedList {
         var copy = self
         copy.attributes["start"] = "\(value)"
         return copy
     }
 
-    /// Sets the list's attribute: ``type``.
+    /// Specifies the kind of marker to use in the list.
     ///
     /// - Parameters:
-    ///   - type: The kind of marker used in the list.
+    ///   - type: The type used as the list's order type.
     func type(_ type: OrderedListType) -> OrderedList {
         var copy = self
         copy.attributes["type"] = type.rawValue

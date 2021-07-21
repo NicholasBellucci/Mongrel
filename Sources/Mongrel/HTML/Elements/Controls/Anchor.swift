@@ -113,7 +113,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the relationship between the current document and
+    /// Specifies the relationship between the current document and
     /// the linked document.
     ///
     /// - Parameters:
