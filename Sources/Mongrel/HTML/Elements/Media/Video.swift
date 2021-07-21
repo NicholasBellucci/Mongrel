@@ -8,7 +8,7 @@ import Foundation
 ///
 /// For more information about the ``<video>`` tag,
 /// visit https://www.w3schools.com/tags/tag_video.asp
-public struct Video: Attributable, EventListener {
+public struct Video: Attributable {
     public var tag: String = "video"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

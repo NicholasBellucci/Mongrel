@@ -803,7 +803,7 @@ public enum CSSProperty: CaseAccessible, Comparable {
         case .wrapThrough: return "wrap-through"
         case .writingMode: return "writing-mode"
         case .zIndex: return "z-index"
-        case let .custom(key, value): return key
+        case let .custom(key, _): return key
         }
     }
 }

@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<map>`` tag,
 /// visit https://www.w3schools.com/tags/tag_map.asp
-public struct Map: Attributable, EventListener {
+public struct Map: Attributable {
     public var tag: String = "map"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

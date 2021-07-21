@@ -6,7 +6,7 @@
 ///
 /// For more information about the ``<label>`` tag,
 /// visit https://www.w3schools.com/tags/tag_label.asp
-public struct Label: Attributable, EventListener {
+public struct Label: Attributable {
     public var tag: String = "label"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

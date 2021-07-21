@@ -6,7 +6,7 @@
 ///
 /// For more information about the ``<colgroup>`` tag,
 /// visit https://www.w3schools.com/tags/tag_colgroup.asp
-public struct ColumnGroup: Attributable, EventListener {
+public struct ColumnGroup: Attributable {
     public var tag: String = "colgroup"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

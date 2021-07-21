@@ -5,7 +5,7 @@ import Foundation
 ///
 /// For more information about the ``<iframe>`` tag,
 /// visit https://www.w3schools.com/tags/tag_iframe.asp
-public struct iFrame: Attributable, EventListener {
+public struct iFrame: Attributable {
     public var tag: String = "iframe"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

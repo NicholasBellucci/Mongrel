@@ -7,7 +7,7 @@
 /// https://www.w3schools.com/tags/tag_datalist.asp
 /// https://www.w3schools.com/tags/tag_dl.asp
 /// https://www.w3schools.com/tags/tag_ul.asp
-public struct List: Attributable, EventListener {
+public struct List: Attributable {
     public var tag: String
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

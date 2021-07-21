@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<base>`` tag,
 /// visit https://www.w3schools.com/tags/tag_base.asp
-public struct Base: Attributable, EventListener {
+public struct Base: Attributable {
     public var tag: String = "base"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

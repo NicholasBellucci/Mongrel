@@ -6,7 +6,7 @@ import Foundation
 ///
 /// For more information about the ``<img>`` tag,
 /// visit https://www.w3schools.com/tags/tag_img.asp
-public struct Image: Attributable, EventListener {
+public struct Image: Attributable {
     public var tag: String = "img"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

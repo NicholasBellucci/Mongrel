@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<source>`` tag,
 /// visit https://www.w3schools.com/tags/tag_source.asp
-public struct Source: Attributable, EventListener {
+public struct Source: Attributable {
     public var tag: String = "source"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

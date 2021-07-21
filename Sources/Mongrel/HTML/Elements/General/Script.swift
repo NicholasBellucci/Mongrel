@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<script>`` tag,
 /// visit https://www.w3schools.com/tags/tag_script.asp
-public struct Script: Attributable, EventListener {
+public struct Script: Attributable {
     public var tag: String = "script"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

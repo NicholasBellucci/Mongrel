@@ -10,7 +10,7 @@
 ///
 /// For more information about the ``<meter>`` tag,
 /// visit https://www.w3schools.com/tags/tag_meter.asp
-public struct Meter: Attributable, EventListener {
+public struct Meter: Attributable {
     public var tag: String = "meter"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

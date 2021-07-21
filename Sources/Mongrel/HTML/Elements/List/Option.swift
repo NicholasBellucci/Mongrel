@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<option>`` tag,
 /// visit https://www.w3schools.com/tags/tag_option.asp
-public struct Option: Attributable, EventListener {
+public struct Option: Attributable {
     public var tag: String = "option"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

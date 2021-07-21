@@ -5,15 +5,16 @@ final class DocumentTests: XCTestCase {
     func testDocument() {
         let document = Root {
             VStack(spacing: .pixels(20)) {
-                Text("test")
+                Text("Not Dragged")
                     .cited()
                     .underlined()
                     .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
-                    .id("test")
+                    .id("id")
+                    .padding(.top, .left, .right, .bottom, length: .pixels(20))
 
                 Text("Hello")
                     .draggable(true)
-                    .on(.dragend, .updateStyle(elementId: "test", style: .fontSize("5px")))
+                    .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
             }
         }
 

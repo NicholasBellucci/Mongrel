@@ -6,7 +6,7 @@
 ///
 /// For more information about the ``<data>`` tag,
 /// visit https://www.w3schools.com/tags/tag_data.asp
-public struct Data: Attributable, EventListener {
+public struct Data: Attributable {
     public var tag: String = "data"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

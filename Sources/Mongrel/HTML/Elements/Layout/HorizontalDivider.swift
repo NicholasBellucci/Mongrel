@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<break>`` tag,
 /// visit https://www.w3schools.com/tags/tag_hr.asp
-public struct HorizontalDivider: Attributable, EventListener {
+public struct HorizontalDivider: Attributable {
     public var tag: String = "hr"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

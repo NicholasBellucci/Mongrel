@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<break>`` tag,
 /// visit https://www.w3schools.com/tags/tag_break.asp
-public struct Break: Attributable, EventListener {
+public struct Break: Attributable {
     public var tag: String = "br"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

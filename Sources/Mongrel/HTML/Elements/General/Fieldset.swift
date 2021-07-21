@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<fieldset>`` tag,
 /// visit https://www.w3schools.com/tags/tag_fieldset.asp
-public struct Fieldset: Attributable, EventListener {
+public struct Fieldset: Attributable {
     public var tag: String = "fieldset"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

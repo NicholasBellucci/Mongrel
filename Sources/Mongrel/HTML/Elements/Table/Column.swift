@@ -6,7 +6,7 @@
 ///
 /// For more information about the ``<col>`` tag,
 /// visit https://www.w3schools.com/tags/tag_col.asp
-public struct Column: Attributable, EventListener {
+public struct Column: Attributable {
     public var tag: String = "col"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

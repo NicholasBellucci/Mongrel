@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<time>`` tag,
 /// visit https://www.w3schools.com/tags/tag_time.asp
-public struct Time: Attributable, EventListener {
+public struct Time: Attributable {
     public var tag: String = "time"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

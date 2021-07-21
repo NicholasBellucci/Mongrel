@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<details>`` tag,
 /// visit https://www.w3schools.com/tags/tag_details.asp
-public struct Details: Attributable, EventListener {
+public struct Details: Attributable {
     public var tag: String = "details"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

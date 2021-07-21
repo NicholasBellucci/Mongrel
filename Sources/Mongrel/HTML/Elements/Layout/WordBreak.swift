@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<wbr>`` tag,
 /// visit https://www.w3schools.com/tags/tag_wbr.asp
-public struct WordBreak: Attributable, EventListener {
+public struct WordBreak: Attributable {
     public var tag: String = "wbr"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

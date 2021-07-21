@@ -1,7 +1,7 @@
 import Foundation
 
 /// An element that arranges its children in a horizontal line.
-public struct HStack: Attributable, EventListener, Stylable {
+public struct HStack: Attributable {
     public var tag: String = "div"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

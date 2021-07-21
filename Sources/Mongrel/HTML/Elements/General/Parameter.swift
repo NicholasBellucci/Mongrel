@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<param>`` tag,
 /// visit https://www.w3schools.com/tags/tag_param.asp
-public struct Parameter: Attributable, EventListener {
+public struct Parameter: Attributable {
     public var tag: String = "param"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

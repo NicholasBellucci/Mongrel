@@ -6,7 +6,7 @@
 ///
 /// For more information about the ``<track>`` tag,
 /// visit https://www.w3schools.com/tags/tag_track.asp
-public struct Track: Attributable, EventListener {
+public struct Track: Attributable {
     public var tag: String = "track"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

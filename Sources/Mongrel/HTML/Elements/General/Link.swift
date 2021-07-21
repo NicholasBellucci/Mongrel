@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<link>`` tag,
 /// visit https://www.w3schools.com/tags/tag_link.asp
-public struct Link: Attributable, EventListener {
+public struct Link: Attributable {
     public var tag: String = "link"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

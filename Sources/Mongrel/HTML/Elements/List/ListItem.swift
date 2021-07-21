@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<li>`` tag,
 /// visit https://www.w3schools.com/tags/tag_li.asp
-public struct ListItem: Attributable, EventListener {
+public struct ListItem: Attributable {
     public var tag: String = "li"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

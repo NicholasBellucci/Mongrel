@@ -7,7 +7,7 @@
 ///
 /// For more information about the ``<audio>`` tag,
 /// visit https://www.w3schools.com/tags/tag_audio.asp
-public struct Audio: Attributable, EventListener {
+public struct Audio: Attributable {
     public var tag: String = "audio"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

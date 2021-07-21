@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<select>`` tag,
 /// visit https://www.w3schools.com/tags/tag_select.asp
-public struct DropDown: Attributable, EventListener {
+public struct DropDown: Attributable {
     public var tag: String = "select"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

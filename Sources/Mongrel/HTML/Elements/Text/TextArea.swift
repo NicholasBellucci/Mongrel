@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<textarea>`` tag,
 /// visit https://www.w3schools.com/tags/tag_textarea.asp
-public struct TextArea: Attributable, EventListener {
+public struct TextArea: Attributable {
     public var tag: String = "textarea"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

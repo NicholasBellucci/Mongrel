@@ -3,7 +3,7 @@
 ///
 /// This element can not be used directly. Instead use an element created in
 /// the ``TagList.swift`` file.
-public struct GenericElement: Attributable, EventListener {
+public struct GenericElement: Attributable {
     public var tag: String
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

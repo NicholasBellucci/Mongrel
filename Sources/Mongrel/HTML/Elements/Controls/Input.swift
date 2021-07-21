@@ -6,7 +6,7 @@ import Foundation
 ///
 /// For more information about the ``<input>`` tag,
 /// visit https://www.w3schools.com/tags/tag_input.asp
-public struct Input: Attributable, EventListener {
+public struct Input: Attributable {
     public var tag: String = "input"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

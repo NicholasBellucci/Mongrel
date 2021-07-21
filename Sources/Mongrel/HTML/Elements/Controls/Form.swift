@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<form>`` tag,
 /// visit https://www.w3schools.com/tags/tag_form.asp
-public struct Form: Attributable, EventListener {
+public struct Form: Attributable {
     public var tag: String = "form"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

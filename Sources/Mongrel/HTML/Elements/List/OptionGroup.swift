@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<optgroup>`` tag,
 /// visit https://www.w3schools.com/tags/tag_optgroup.asp
-public struct OptionGroup: Attributable, EventListener {
+public struct OptionGroup: Attributable {
     public var tag: String = "optgroup"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

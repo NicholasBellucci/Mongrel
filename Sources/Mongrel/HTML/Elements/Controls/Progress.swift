@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<progress>`` tag,
 /// visit https://www.w3schools.com/tags/tag_progress.asp
-public struct Progress: Attributable, EventListener {
+public struct Progress: Attributable {
     public var tag: String = "progress"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

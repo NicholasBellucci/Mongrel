@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<meta>`` tag,
 /// visit https://www.w3schools.com/tags/tag_meta.asp
-public struct Metadata: Attributable, EventListener {
+public struct Metadata: Attributable {
     public var tag: String = "meta"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

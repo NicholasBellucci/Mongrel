@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<dialog>`` tag,
 /// visit https://www.w3schools.com/tags/tag_dialog.asp
-public struct Dialog: Attributable, EventListener {
+public struct Dialog: Attributable {
     public var tag: String = "dialog"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

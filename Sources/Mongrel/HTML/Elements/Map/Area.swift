@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<area>`` tag,
 /// visit https://www.w3schools.com/tags/tag_area.asp
-public struct Area: Attributable, EventListener {
+public struct Area: Attributable {
     public var tag: String = "area"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

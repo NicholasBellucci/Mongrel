@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<canvas>`` tag,
 /// visit https://www.w3schools.com/tags/tag_canvas.asp
-public struct Canvas: Attributable, EventListener {
+public struct Canvas: Attributable {
     public var tag: String = "canvas"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

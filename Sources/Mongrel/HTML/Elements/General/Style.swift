@@ -2,7 +2,7 @@
 ///
 /// For more information about the ``<style>`` tag,
 /// visit https://www.w3schools.com/tags/tag_style.asp
-public struct Style: Attributable, EventListener {
+public struct Style: Attributable {
     public var tag: String = "style"
     public var attributes: [String : String] = [:]
     public var styles: [String: String] = [:]

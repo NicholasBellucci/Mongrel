@@ -7,7 +7,7 @@
 ///
 /// For more information about text formatting,
 /// visit https://www.w3schools.com/html/html_formatting.asp
-public struct Text: Attributable, EventListener {
+public struct Text: Attributable {
     public var tag: String = ""
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
@@ -205,7 +205,7 @@ extension Text: HTMLConvertible {
             .reversed()
             .enumerated()
             .forEach { index, tag in
-                if index == tags.count - 1 {
+                if index == 0 {
                     html = "<\(tag)\(attributesString)\(attributes(for: tag))>\(html)</\(tag)>"
                 } else {
                     html = "<\(tag)\(attributes(for: tag))>\(html)</\(tag)>"

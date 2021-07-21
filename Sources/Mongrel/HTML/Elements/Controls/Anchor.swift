@@ -5,7 +5,7 @@
 ///
 /// For more information about the ``<anchor>`` tag,
 /// visit https://www.w3schools.com/tags/tag_a.asp
-public struct Anchor: Attributable, EventListener {
+public struct Anchor: Attributable {
     public var tag: String = "a"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

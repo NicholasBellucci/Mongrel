@@ -1,7 +1,7 @@
 import Foundation
 
 /// An element that arranges its children in a vertical line.
-public struct VStack: Attributable, EventListener {
+public struct VStack: Attributable {
     public var tag: String = "div"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

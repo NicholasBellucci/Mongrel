@@ -4,7 +4,7 @@ import Foundation
 ///
 /// For more information about the ``<embed>`` tag,
 /// visit https://www.w3schools.com/tags/tag_embed.asp
-public struct Embed: Attributable, EventListener {
+public struct Embed: Attributable {
     public var tag: String = "embed"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

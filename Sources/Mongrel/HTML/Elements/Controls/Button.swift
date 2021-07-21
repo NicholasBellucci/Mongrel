@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<button>`` tag,
 /// visit https://www.w3schools.com/tags/tag_button.asp
-public struct Button: Attributable, EventListener {
+public struct Button: Attributable {
     public var tag: String = "button"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

@@ -3,7 +3,7 @@
 ///
 /// For more information about the ``<html>`` tag,
 /// visit https://www.w3schools.com/tags/tag_html.asp
-public struct Root: Attributable, EventListener {
+public struct Root: Attributable {
     public var tag: String = "html"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]

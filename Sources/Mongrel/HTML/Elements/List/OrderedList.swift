@@ -4,7 +4,7 @@
 ///
 /// For more information about the ``<ol>`` tag,
 /// visit https://www.w3schools.com/tags/tag_ol.asp
-public struct OrderedList: Attributable, EventListener {
+public struct OrderedList: Attributable {
     public var tag: String = "ol"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
