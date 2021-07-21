@@ -1,15 +1,15 @@
 public protocol HTML: HTMLConvertible {
     associatedtype ContentBody: HTMLConvertible
 
-    @HTMLBuilder var document: Self.ContentBody { get }
+    @HTMLBuilder var body: Self.ContentBody { get }
 }
 
 extension HTML {
     public var description: String {
-        document.stringValue
+        body.stringValue
     }
 
     public var debugDescription: String {
-        document.stringValue
+        body.stringValue
     }
 }
