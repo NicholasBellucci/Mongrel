@@ -50,10 +50,10 @@ public extension TextArea {
         return copy
     }
 
-    /// Sets the button's attribute: ``name``.
+    /// Sets the name for the text area.
     ///
     /// - Parameters:
-    ///   - name: The name of the textarea.
+    ///   - name: The name to use as the button's name.
     func name(_ name: String) -> TextArea {
         var copy = self
         copy.attributes["name"] = name

@@ -1,28 +1,26 @@
-//
-//  Comment.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
+/// The ``Comment`` element is used to insert comments in the
+/// source code. Comments are not displayed in the browsers.
+///
+/// For more information about the ``<!-->`` tag,
+/// visit https://www.w3schools.com/tags/tag_comment.asp
 public struct Comment {
-    var value: String
+    var text: String
 
-    public init(_ value: String) {
-        self.value = value
+    /// Creates a comment element with text.
+    ///
+    /// - Parameters:
+    ///   - text: The text value of the comment.
+    public init(_ text: String) {
+        self.text = text
     }
 }
 
 extension Comment: HTMLConvertible {
-    public func render() -> String {
-        String(describing: self)
-    }
-
     public var description: String {
-        "<!-- \(value) -->"
+        "<!-- \(text) -->"
     }
 
     public var debugDescription: String {
-        "<!-- \(value) -->"
+        "<!-- \(text) -->"
     }
 }
