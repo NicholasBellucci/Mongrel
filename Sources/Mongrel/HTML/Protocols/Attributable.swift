@@ -1,4 +1,4 @@
-public protocol Attributable: Element {
+public protocol Attributable: EventListener {
     var tag: String { get }
 }
 

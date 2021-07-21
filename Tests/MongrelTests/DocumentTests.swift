@@ -4,17 +4,15 @@ import XCTest
 final class DocumentTests: XCTestCase {
     func testDocument() {
         let document = Root {
-            Group {
+            VStack(spacing: .pixels(20)) {
                 Text("test")
-            }
-            .id("test")
+                    .styles(InlineStyle("font-size", "35px"))
+                    .id("test")
 
-            Button {
-                .updateInnerHTML(id: "test", value: "hello")
-            } content: {
-                Text("Button")
+                Text("Hello")
+                    .draggable(true)
+                    .on(.dragend, .updateStyle(elementId: "test", style: .fontSize("5px")))
             }
-
         }
 
         print(document)
