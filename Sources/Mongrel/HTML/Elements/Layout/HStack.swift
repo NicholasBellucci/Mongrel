@@ -14,12 +14,15 @@ public struct HStack: Attributable, EventListener, Stylable {
     ///   - alignment: The guide for aligning the subviews in the stack.
     ///   - spacing: The distance between adjacent subviews.
     ///   - content: An ``HTMLBuilder`` that creates the content of this stack.
-    public init(alignment: VerticalAlignment = .center, spacing: Int = 0, @HTMLBuilder _ content: ()-> HTMLConvertible) {
+    public init(alignment: VerticalAlignment = .center, spacing: Unit? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         styles["align-items"] = alignment.rawValue
         styles["justify-content"] = Justification.center.rawValue
-        styles["display"] = DisplayType.inlineFlex.rawValue
+        styles["display"] = DisplayType.flex.rawValue
         styles["flex-direction"] = FlexDirection.row.rawValue
-        styles["margin"] = "auto"
+
+        if let spacing = spacing, let value: CGFloat = spacing.associatedValue() {
+            styles["column-gap"] = "\(value)\(spacing.label)"
+        }
 
         innerHTML = content().stringValue
     }
