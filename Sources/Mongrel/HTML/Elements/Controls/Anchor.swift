@@ -65,12 +65,12 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: ``hreflang``.
+    /// Sets the language of the linked document.
     ///
     /// - Parameters:
-    ///   - code: The language code of the linked document.
-    ///   - country: The country code for the linked document.
-    func hrefLanguage(_ code: LanguageCode, country: CountryCode? = nil) -> Anchor {
+    ///   - code: The lcode to use as the anguage code.
+    ///   - country: The code to use as the country code.
+    func hrefLanguage(_ code: LanguageCode, _ country: CountryCode? = nil) -> Anchor {
         var copy = self
 
         if let country = country {
@@ -82,62 +82,62 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: ``media``.
+    /// Sets what media/device the linked document is optimized for.
     ///
     /// - Parameters:
-    ///   - query: The media/device the linked document if optimized for.
+    ///   - query: The query to use as the  media/device query.
     func media(_ query: String) -> Anchor {
         var copy = self
         copy.attributes["media"] = query
         return copy
     }
 
-    /// Sets the anchor's attribute: ``ping``.
+    /// Specifies the URLs to which post requests with the body
+    /// ping will be sent by the browser.
     ///
     /// - Parameters:
-    ///   - list: A space-separated list of URLs to which, when the link is followed,
-    ///   post requests with the body ping will be sent by the browser
+    ///   - list: The list to use as the ping list.
     func ping(_ list: String...) -> Anchor {
         var copy = self
         copy.attributes["ping"] = list.map { $0 }.joined(separator: " ")
         return copy
     }
 
-    /// Sets the anchor's attribute: ``referrerpolicy``.
+    /// Specifies which referrer information to send with the link.
     ///
     /// - Parameters:
-    ///   - policy: The referrer information to send with the link.
+    ///   - policy: The policy to use as the referrer policy.
     func referrerPolicy(_ policy: ReferrerPolicy) -> Anchor {
         var copy = self
         copy.attributes["referrerpolicy"] = policy.rawValue
         return copy
     }
 
-    /// Sets the anchor's attribute: ``rel``.
+    /// Sets the relationship between the current document and
+    /// the linked document.
     ///
     /// - Parameters:
-    ///   - relationship: The relationship between the current document
-    ///   and the linked document.
+    ///   - relationship: The relationship to use as the relationship.
     func relationship(_ relationship: Relationship.Anchor) -> Anchor {
         var copy = self
         copy.attributes["rel"] = relationship.rawValue
         return copy
     }
 
-    /// Sets the anchor's attribute: ``target``.
+    /// Specifies where to open the linked document.
     ///
     /// - Parameters:
-    ///   - target: The target to open the linked document.
+    ///   - target: The target to use as the target.
     func target(_ target: Target = .`self`) -> Anchor {
         var copy = self
         copy.attributes["target"] = target.rawValue
         return copy
     }
 
-    /// Sets the anchor's attribute: ``type``.
+    /// Sets the media type of the linked document.
     ///
     /// - Parameters:
-    ///   - type: The media type of the linked document.
+    ///   - type: The type to use as the media type.
     func type(_ type: String) -> Anchor {
         var copy = self
         copy.attributes["type"] = type

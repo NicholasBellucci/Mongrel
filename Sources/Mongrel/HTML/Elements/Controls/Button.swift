@@ -37,7 +37,8 @@ public struct Button: Attributable, EventListener {
 /// These extensions are modifiers for an ``Button`` element
 /// and will return an ``Button`` element for continued use/updates.
 public extension Button {
-    /// Sets the button's attribute: ``autofocus``.
+    /// Adds a condition that controls whether the target
+    /// will be focused automatically on page load.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
@@ -52,7 +53,8 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: ``disabled``.
+    /// Adds a condition that controls whether the target
+    /// will be disabled.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
@@ -67,54 +69,50 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: ``form``.
+    /// Specifies which form the button belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the button belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Button {
         var copy = self
         copy.attributes["form"] = id
         return copy
     }
 
-    /// Sets the button's attribute: ``formaction``.
-    ///
+    /// Specifies where to send the form-data when a form is submitted.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - url: The URL to send the form data when submitted.
+    ///   - url: The URL to use as the destination URL.
     func formAction(_ url: String) -> Button {
         var copy = self
         copy.attributes["formaction"] = url
         return copy
     }
 
-    /// Sets the button's attribute: ``formenctype``.
-    ///
+    /// Specifies how form-data should be encoded before sending it to a server.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - type: The encoding type for the form data.
+    ///   - type: The type to use as the encoding type.
     func formEncodeType(_ type: FormEncodeType) -> Button {
         var copy = self
         copy.attributes["formenctype"] = type.rawValue
         return copy
     }
 
-    /// Sets the button's attribute: ``formmethod``.
-    ///
+    /// Specifies the HTTP method for which to send the form-data.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - method: The method in which to send the form data.
+    ///   - method: The method to use as the form method.
     func formMethod(_ method: FormMethod) -> Button {
         var copy = self
         copy.attributes["formmethod"] = method.rawValue
         return copy
     }
 
-    /// Sets the button's attribute: ``formnovalidate``.
-    ///
+    /// Specifies that the form-data should not be validated on submission.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
@@ -130,42 +128,41 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: ``formtarget``.
-    ///
+    /// Specifies where to display the response after submitting the form.
     /// Only available for button type ``submit``.
     ///
     /// - Parameters:
-    ///   - target: The target to display the response after submitting.
+    ///   - target: The target to use as the target.
     func formTarget(_ target: Target) -> Button {
         var copy = self
         copy.attributes["formtarget"] = target.rawValue
         return copy
     }
 
-    /// Sets the button's attribute: ``name``.
+    /// Sets the name for the button.
     ///
     /// - Parameters:
-    ///   - name: The name of the button.
+    ///   - name: The name to use as the button name.
     func name(_ name: String) -> Button {
         var copy = self
         copy.attributes["name"] = name
         return copy
     }
 
-    /// Sets the button's attribute: ``type``.
+    /// Specifies the type of button.
     ///
     /// - Parameters:
-    ///   - type: The type of the button.
+    ///   - type: The type to use as the button type.
     func type(_ type: ButtonType) -> Button {
         var copy = self
         copy.attributes["type"] = type.rawValue
         return copy
     }
 
-    /// Sets the button's attribute: ``value``.
+    /// Sets an initial value for the button.
     ///
     /// - Parameters:
-    ///   - value: The initial value of the button.
+    ///   - value: The value to use as the inital value.
     func value(_ value: String) -> Button {
         var copy = self
         copy.attributes["value"] = value
