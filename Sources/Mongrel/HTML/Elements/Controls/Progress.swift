@@ -34,10 +34,10 @@ public struct Progress: Attributable, EventListener {
 /// These extensions are modifiers for an ``Progress`` element
 /// and will return an ``Progress`` element for continued use/updates.
 public extension Progress {
-    /// Sets the progress's attribute: ``value``.
+    /// Specifies how much of the task has been completed.
     ///
     /// - Parameters:
-    ///   - value: The amount in which the task has completed.
+    ///   - value: The value to be used as the completion value.
     func value(_ value: Double) -> Progress {
         var copy = self
         copy.attributes["value"] = "\(value)"

@@ -28,10 +28,10 @@ public struct Label: Attributable, EventListener {
 /// These extensions are modifiers for an ``Label`` element
 /// and will return an ``Label`` element for continued use/updates.
 public extension Label {
-    /// Sets the label's attribute: ``form``.
+    /// Specifies which form the label belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the label belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Label {
         var copy = self
         copy.attributes["form"] = id
