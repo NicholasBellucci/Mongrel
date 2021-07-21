@@ -22,7 +22,7 @@ public struct Source: Attributable, EventListener {
 /// These extensions are modifiers for an ``Source`` element
 /// and will return an ``Source`` element for continued use/updates.
 public extension Source {
-    /// Sets the source's attribute: `media`.
+    /// Sets the source's attribute: ``media``.
     ///
     /// - Parameters:
     ///   - query: A media query that would normally be defined in CSS.
@@ -32,7 +32,7 @@ public extension Source {
         return copy
     }
 
-    /// Sets the source's attribute: `sizes`.
+    /// Sets the source's attribute: ``sizes``.
     ///
     /// - Parameters:
     ///   - sizes: Image sizes for different page layouts.
@@ -42,7 +42,7 @@ public extension Source {
         return copy
     }
 
-    /// Sets the source's attribute: `srcset`.
+    /// Sets the source's attribute: ``srcset``.
     ///
     /// Required when element is used in a ``Picture`` element.
     ///

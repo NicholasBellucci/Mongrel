@@ -34,7 +34,7 @@ public struct Metadata: Attributable, EventListener {
 /// These extensions are modifiers for an ``Metadata`` element
 /// and will return an ``Metadata`` element for continued use/updates.
 public extension Metadata {
-    /// Sets the link's attribute: `charset`.
+    /// Sets the link's attribute: ``charset``.
     ///
     /// - Parameters:
     ///   - charset: The character encoding for the HTML document.

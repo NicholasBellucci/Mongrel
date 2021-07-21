@@ -16,8 +16,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - href: The optional hyperlink pointing to arbitrary data.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<a></a>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(_ href: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = href
         innerHTML = content().stringValue
@@ -27,8 +27,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - email: The linked email address.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<a></a>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(mailTo email: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "mailto:\(email)"
         innerHTML = content().stringValue
@@ -38,8 +38,8 @@ public struct Anchor: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - number: The linked phone number.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<a></a>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(call number: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["href"] = "tel:+\(number)"
         innerHTML = content().stringValue
@@ -49,7 +49,7 @@ public struct Anchor: Attributable, EventListener {
 /// These extensions are modifiers for an ``Anchor`` element
 /// and will return an ``Anchor`` element for continued use/updates.
 public extension Anchor {
-    /// Sets the anchor's attribute: `download`.
+    /// Sets the anchor's attribute: ``download``.
     ///
     /// - Parameters:
     ///   - file: The filename of the downloadable content.
@@ -59,7 +59,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `hreflang`.
+    /// Sets the anchor's attribute: ``hreflang``.
     ///
     /// - Parameters:
     ///   - code: The language code of the linked document.
@@ -76,7 +76,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `media`.
+    /// Sets the anchor's attribute: ``media``.
     ///
     /// - Parameters:
     ///   - query: The media/device the linked document if optimized for.
@@ -86,7 +86,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `ping`.
+    /// Sets the anchor's attribute: ``ping``.
     ///
     /// - Parameters:
     ///   - list: A space-separated list of URLs to which, when the link is followed,
@@ -97,7 +97,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `referrerpolicy`.
+    /// Sets the anchor's attribute: ``referrerpolicy``.
     ///
     /// - Parameters:
     ///   - policy: The referrer information to send with the link.
@@ -107,7 +107,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `rel`.
+    /// Sets the anchor's attribute: ``rel``.
     ///
     /// - Parameters:
     ///   - relationship: The relationship between the current document and the linked document.
@@ -117,7 +117,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `target`.
+    /// Sets the anchor's attribute: ``target``.
     ///
     /// - Parameters:
     ///   - target: The target to open the linked document.
@@ -127,7 +127,7 @@ public extension Anchor {
         return copy
     }
 
-    /// Sets the anchor's attribute: `type`.
+    /// Sets the anchor's attribute: ``type``.
     ///
     /// - Parameters:
     ///   - type: The media type of the linked document.

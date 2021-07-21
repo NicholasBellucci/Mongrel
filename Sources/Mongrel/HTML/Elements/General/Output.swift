@@ -14,8 +14,8 @@ public struct Output: Attributable {
     /// - Parameters:
     ///   - name: The name of the output.
     ///   - ids: The element ids of the relating elements.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<output></output>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(name: String, for ids: [String], @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["name"] = name
         attributes["for"] = ids
@@ -27,7 +27,7 @@ public struct Output: Attributable {
 }
 
 public extension Output {
-    /// Sets the button's attribute: `form`.
+    /// Sets the button's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the output belongs.

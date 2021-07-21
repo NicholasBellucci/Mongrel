@@ -12,8 +12,8 @@ public struct Style: Attributable, EventListener {
     /// Creates a style element.
     ///
     /// - Parameters:
-    ///   - content: The ``InternalStyle`` elements that will make up
-    ///   the CSS inside of the `<style></style>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@StyleBuilder _ content: () -> [InternalStyle]) {
         attributes["type"] = "text/css"
         innerCSS = content()

@@ -17,8 +17,8 @@ public struct Label: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - id: The id for the related element.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<label></label>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(for id: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["for"] = id
         innerHTML = content().stringValue
@@ -28,7 +28,7 @@ public struct Label: Attributable, EventListener {
 /// These extensions are modifiers for an ``Label`` element
 /// and will return an ``Label`` element for continued use/updates.
 public extension Label {
-    /// Sets the label's attribute: `form`.
+    /// Sets the label's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the label belongs.

@@ -26,8 +26,8 @@ public struct Button: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - action: The action script represented as a string.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<button></button>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(action: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["type"] = ButtonType.button.rawValue
         innerHTML = content().stringValue
@@ -37,7 +37,7 @@ public struct Button: Attributable, EventListener {
 /// These extensions are modifiers for an ``Button`` element
 /// and will return an ``Button`` element for continued use/updates.
 public extension Button {
-    /// Sets the button's attribute: `autofocus`.
+    /// Sets the button's attribute: ``autofocus``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
@@ -52,7 +52,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `disabled`.
+    /// Sets the button's attribute: ``disabled``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
@@ -67,7 +67,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `form`.
+    /// Sets the button's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the button belongs.
@@ -77,7 +77,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `formaction`.
+    /// Sets the button's attribute: ``formaction``.
     ///
     /// Only available for button type ``submit``.
     ///
@@ -89,7 +89,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `formenctype`.
+    /// Sets the button's attribute: ``formenctype``.
     ///
     /// Only available for button type ``submit``.
     ///
@@ -101,7 +101,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `formmethod`.
+    /// Sets the button's attribute: ``formmethod``.
     ///
     /// Only available for button type ``submit``.
     ///
@@ -113,7 +113,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `formnovalidate`.
+    /// Sets the button's attribute: ``formnovalidate``.
     ///
     /// Only available for button type ``submit``.
     ///
@@ -130,7 +130,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `formtarget`.
+    /// Sets the button's attribute: ``formtarget``.
     ///
     /// Only available for button type ``submit``.
     ///
@@ -142,7 +142,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `name`.
+    /// Sets the button's attribute: ``name``.
     ///
     /// - Parameters:
     ///   - name: The name of the button.
@@ -152,7 +152,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `type`.
+    /// Sets the button's attribute: ``type``.
     ///
     /// - Parameters:
     ///   - type: The type of the button.
@@ -162,7 +162,7 @@ public extension Button {
         return copy
     }
 
-    /// Sets the button's attribute: `value`.
+    /// Sets the button's attribute: ``value``.
     ///
     /// - Parameters:
     ///   - value: The initial value of the button.

@@ -23,8 +23,8 @@ public struct Script: Attributable, EventListener {
     /// Creates a script element.
     ///
     /// - Parameters:
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<script></script>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(_ content: () -> String) {
         innerHTML = content()
     }
@@ -33,7 +33,7 @@ public struct Script: Attributable, EventListener {
 /// These extensions are modifiers for an ``Script`` element
 /// and will return an ``Script`` element for continued use/updates.
 public extension Script {
-    /// Sets the script's attribute: `async`.
+    /// Sets the script's attribute: ``async``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``async`` should be added
@@ -48,7 +48,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `crossorigin`.
+    /// Sets the script's attribute: ``crossorigin``.
     ///
     /// - Parameters:
     ///   - type: The mode of request to an HTTP CORS request.
@@ -58,7 +58,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `defer`.
+    /// Sets the script's attribute: ``defer``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``defer`` should be added
@@ -73,7 +73,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `integrity`.
+    /// Sets the script's attribute: ``integrity``.
     ///
     /// - Parameters:
     ///   - integrity: The file hashing value of the external file.
@@ -83,7 +83,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `nomodule`.
+    /// Sets the script's attribute: ``nomodule``.
     ///
     /// - Parameters:
     ///   - value: Specifies that the script should not be executed in browsers
@@ -94,7 +94,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `referrerpolicy`.
+    /// Sets the script's attribute: ``referrerpolicy``.
     ///
     /// - Parameters:
     ///   - policy: The referrer information to send when fetching a script.
@@ -104,7 +104,7 @@ public extension Script {
         return copy
     }
 
-    /// Sets the script's attribute: `type`.
+    /// Sets the script's attribute: ``type``.
     ///
     /// - Parameters:
     ///   - type: The media type of the linked document.

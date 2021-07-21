@@ -23,7 +23,7 @@ public struct Input: Attributable, EventListener {
 /// These extensions are modifiers for an ``Input`` element
 /// and will return an ``Input`` element for continued use/updates.
 public extension Input {
-    /// Sets the input's attribute: `accept`.
+    /// Sets the input's attribute: ``accept``.
     ///
     /// Only available for input type ``file``.
     ///
@@ -35,7 +35,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `multiple`.
+    /// Sets the input's attribute: ``multiple``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``multiple`` should be added
@@ -50,7 +50,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `alt`.
+    /// Sets the input's attribute: ``alt``.
     ///
     /// Only available for input type ``image``.
     ///
@@ -62,7 +62,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `autocomplete`.
+    /// Sets the input's attribute: ``autocomplete``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``autocomplete`` should be added
@@ -73,7 +73,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `autofocus`.
+    /// Sets the input's attribute: ``autofocus``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
@@ -88,7 +88,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `checked`.
+    /// Sets the input's attribute: ``checked``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``checked`` should be added
@@ -103,7 +103,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `dirname`.
+    /// Sets the input's attribute: ``dirname``.
     ///
     /// - Parameters:
     ///   - value: The text direction that will be submitted.
@@ -113,7 +113,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `disabled`.
+    /// Sets the input's attribute: ``disabled``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
@@ -128,7 +128,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `form`.
+    /// Sets the input's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the input belongs.
@@ -138,7 +138,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `formaction`.
+    /// Sets the input's attribute: ``formaction``.
     ///
     /// Only available for input type ``submit`` and ``image``.
     ///
@@ -150,7 +150,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `formenctype`.
+    /// Sets the input's attribute: ``formenctype``.
     ///
     /// Only available for input type ``submit`` and ``image``.
     ///
@@ -162,7 +162,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `formmethod`.
+    /// Sets the input's attribute: ``formmethod``.
     ///
     /// Only available for input type ``submit`` and ``image``.
     ///
@@ -174,7 +174,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `formnovalidate`.
+    /// Sets the input's attribute: ``formnovalidate``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``formnovalidate`` should be added
@@ -189,7 +189,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `formtarget`.
+    /// Sets the input's attribute: ``formtarget``.
     ///
     /// Only available for input type ``submit`` and ``image``.
     ///
@@ -201,7 +201,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `height`.
+    /// Sets the input's attribute: ``height``.
     ///
     /// - Parameters:
     ///   - height: The height of the element, in pixels.
@@ -211,7 +211,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `list`.
+    /// Sets the input's attribute: ``list``.
     ///
     /// - Parameters:
     ///   - id: The id of a ``datalist`` element that contains pre-defined options for the input.
@@ -221,7 +221,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `max`.
+    /// Sets the input's attribute: ``max``.
     ///
     /// - Parameters:
     ///   - value: The maximum value for the input.
@@ -231,7 +231,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `maxlength`.
+    /// Sets the input's attribute: ``maxlength``.
     ///
     /// - Parameters:
     ///   - length: The maximum number of characters allowed in the input.
@@ -241,7 +241,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `min`.
+    /// Sets the input's attribute: ``min``.
     ///
     /// - Parameters:
     ///   - value: The minimum value for the input.
@@ -251,7 +251,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `minlength`.
+    /// Sets the input's attribute: ``minlength``.
     ///
     /// - Parameters:
     ///   - length: The minumum number of characters allowed in the input.
@@ -261,7 +261,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the button's attribute: `name`.
+    /// Sets the button's attribute: ``name``.
     ///
     /// - Parameters:
     ///   - name: The name of the input.
@@ -271,7 +271,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `pattern`.
+    /// Sets the input's attribute: ``pattern``.
     ///
     /// - Parameters:
     ///   - regex: A regular expression that the input's value is checked against.
@@ -281,7 +281,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `placeholder`.
+    /// Sets the input's attribute: ``placeholder``.
     ///
     /// - Parameters:
     ///   - text: A short hint that describes the expected value of the input.
@@ -291,7 +291,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `readonly`.
+    /// Sets the input's attribute: ``readonly``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``readonly`` should be added
@@ -306,7 +306,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `required`.
+    /// Sets the input's attribute: ``required``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``required`` should be added
@@ -321,7 +321,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `size`.
+    /// Sets the input's attribute: ``size``.
     ///
     /// - Parameters:
     ///   - size: The width, in characters, of the input.
@@ -331,7 +331,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `src`.
+    /// Sets the input's attribute: ``src``.
     ///
     /// Only available for input type ``src``.
     ///
@@ -343,7 +343,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `step`.
+    /// Sets the input's attribute: ``step``.
     ///
     /// - Parameters:
     ///   - step: The interval between legal numbers in an input.
@@ -353,7 +353,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `value`.
+    /// Sets the input's attribute: ``value``.
     ///
     /// - Parameters:
     ///   - value: The value of the input.
@@ -363,7 +363,7 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: `width`.
+    /// Sets the input's attribute: ``width``.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.

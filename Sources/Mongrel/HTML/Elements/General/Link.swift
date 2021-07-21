@@ -21,7 +21,7 @@ public struct Link: Attributable, EventListener {
 /// These extensions are modifiers for an ``Link`` element
 /// and will return an ``Link`` element for continued use/updates.
 public extension Link {
-    /// Sets the link's attribute: `crossorigin`.
+    /// Sets the link's attribute: ``crossorigin``.
     ///
     /// - Parameters:
     ///   - type: Specifies handling with cross-origin requests.
@@ -31,7 +31,7 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: `hreflang`.
+    /// Sets the link's attribute: ``hreflang``.
     ///
     /// - Parameters:
     ///   - code: The language code of the linked document.
@@ -48,7 +48,7 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: `integrity`.
+    /// Sets the link's attribute: ``integrity``.
     ///
     /// - Parameters:
     ///   - integrity: The file hashing value of the external file.
@@ -58,7 +58,7 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: `media`.
+    /// Sets the link's attribute: ``media``.
     ///
     /// - Parameters:
     ///   - query: The device on which the linked document will be displayed.
@@ -68,7 +68,7 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: `referrerpolicy`.
+    /// Sets the link's attribute: ``referrerpolicy``.
     ///
     /// - Parameters:
     ///   - policy: The referrer to use when fetching the resource.
@@ -78,7 +78,7 @@ public extension Link {
         return copy
     }
 
-    /// Sets the link's attribute: `type`.
+    /// Sets the link's attribute: ``type``.
     ///
     /// - Parameters:
     ///   - type: The media type of the linked document.

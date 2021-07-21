@@ -15,8 +15,8 @@ public struct Root: Attributable, EventListener {
     /// - Parameters:
     ///   - language: The language of the document.
     ///   - country: The country code for the document.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<html></html>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(language: LanguageCode = .en, country: CountryCode? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         if let country = country {
             attributes["lang"] = "\(language.rawValue)-\(country.rawValue)"

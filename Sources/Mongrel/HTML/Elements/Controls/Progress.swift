@@ -23,8 +23,8 @@ public struct Progress: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - max: How much work the task requires in total.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<progress></progress>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(max: Double = 1, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["max"] = "\(max)"
         innerHTML = content().stringValue
@@ -34,7 +34,7 @@ public struct Progress: Attributable, EventListener {
 /// These extensions are modifiers for an ``Progress`` element
 /// and will return an ``Progress`` element for continued use/updates.
 public extension Progress {
-    /// Sets the progress's attribute: `value`.
+    /// Sets the progress's attribute: ``value``.
     ///
     /// - Parameters:
     ///   - value: The amount in which the task has completed.

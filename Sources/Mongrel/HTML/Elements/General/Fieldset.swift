@@ -15,15 +15,15 @@ public struct Fieldset: Attributable, EventListener {
     /// Creates a fieldset element.
     ///
     /// - Parameters:
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<fieldset></fieldset>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
 public extension Fieldset {
-    /// Sets the fieldset's attribute: `disabled`.
+    /// Sets the fieldset's attribute: ``disabled``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
@@ -38,7 +38,7 @@ public extension Fieldset {
         return copy
     }
 
-    /// Sets the fieldset's attribute: `form`.
+    /// Sets the fieldset's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the fieldset belongs.
@@ -48,7 +48,7 @@ public extension Fieldset {
         return copy
     }
 
-    /// Sets the button's attribute: `name`.
+    /// Sets the button's attribute: ``name``.
     ///
     /// - Parameters:
     ///   - name: The name of the fieldset.

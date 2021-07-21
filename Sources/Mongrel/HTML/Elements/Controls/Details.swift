@@ -14,15 +14,15 @@ public struct Details: Attributable, EventListener {
     /// Creates a details element with given content.
     ///
     /// - Parameters:
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<details></details>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
 public extension Details {
-    /// Sets the detail's attribute: `open`.
+    /// Sets the detail's attribute: ``open``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``open`` should be added

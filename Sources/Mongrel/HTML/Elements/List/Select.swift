@@ -16,8 +16,8 @@ public struct Select: Attributable, EventListener {
     /// - Parameters:
     ///   - id: The id of the select element.
     ///   - name: The name of the select element.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<select></select>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(id: String? = nil, name: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["id"] = id
         attributes["name"] = name
@@ -28,7 +28,7 @@ public struct Select: Attributable, EventListener {
 /// These extensions are modifiers for an ``Select`` element
 /// and will return an ``Select`` element for continued use/updates.
 public extension Select {
-    /// Sets the select's attribute: `multiple`.
+    /// Sets the select's attribute: ``multiple``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``multiple`` should be added
@@ -43,7 +43,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `autofocus`.
+    /// Sets the select's attribute: ``autofocus``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``autofocus`` should be added
@@ -58,7 +58,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `disabled`.
+    /// Sets the select's attribute: ``disabled``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``disabled`` should be added
@@ -73,7 +73,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `form`.
+    /// Sets the select's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the input belongs.
@@ -83,7 +83,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `name`.
+    /// Sets the select's attribute: ``name``.
     ///
     /// - Parameters:
     ///   - name: The name of the select.
@@ -93,7 +93,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `required`.
+    /// Sets the select's attribute: ``required``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``required`` should be added
@@ -108,7 +108,7 @@ public extension Select {
         return copy
     }
 
-    /// Sets the select's attribute: `size`.
+    /// Sets the select's attribute: ``size``.
     ///
     /// - Parameters:
     ///   - size: The number of visible options in a drop-down list.

@@ -70,7 +70,7 @@ public extension TextArea {
         return copy
     }
 
-    /// Sets the button's attribute: `name`.
+    /// Sets the button's attribute: ``name``.
     ///
     /// - Parameters:
     ///   - name: The name of the textarea.

@@ -17,8 +17,8 @@ public struct Canvas: Attributable, EventListener {
     /// - Parameters:
     ///   - height: The height of the canvas.
     ///   - width: The width of the canvas.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<canvas></canvas>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(height: Int = 150, width: Int = 150, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["height"] = "\(height)"
         attributes["width"] = "\(width)"

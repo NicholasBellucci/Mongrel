@@ -29,8 +29,8 @@ public struct Meter: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - value: The current value of the meter.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<meter></meter>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(value: Double, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["value"] = "\(value)"
         innerHTML = content().stringValue
@@ -40,7 +40,7 @@ public struct Meter: Attributable, EventListener {
 /// These extensions are modifiers for an ``Meter`` element
 /// and will return an ``Meter`` element for continued use/updates.
 public extension Meter {
-    /// Sets the meter's attribute: `form`.
+    /// Sets the meter's attribute: ``form``.
     ///
     /// - Parameters:
     ///   - id: The id of the form in which the meter belongs.
@@ -50,7 +50,7 @@ public extension Meter {
         return copy
     }
 
-    /// Sets the meter's attribute: `high`.
+    /// Sets the meter's attribute: ``high``.
     ///
     /// - Parameters:
     ///   - high: The range that is considered to be a high value.
@@ -60,7 +60,7 @@ public extension Meter {
         return copy
     }
 
-    /// Sets the meter's attribute: `low`.
+    /// Sets the meter's attribute: ``low``.
     ///
     /// - Parameters:
     ///   - low: The range that is considered to be a low value.
@@ -70,7 +70,7 @@ public extension Meter {
         return copy
     }
 
-    /// Sets the meter's attribute: `max`.
+    /// Sets the meter's attribute: ``max``.
     ///
     /// - Parameters:
     ///   - max: The maximum value of the range.
@@ -80,7 +80,7 @@ public extension Meter {
         return copy
     }
 
-    /// Sets the meter's attribute: `min`.
+    /// Sets the meter's attribute: ``min``.
     ///
     /// - Parameters:
     ///   - min: The minimum value of the range.
@@ -90,7 +90,7 @@ public extension Meter {
         return copy
     }
 
-    /// Sets the meter's attribute: `optimum`.
+    /// Sets the meter's attribute: ``optimum``.
     ///
     /// - Parameters:
     ///   - optimum: The optimal value for the meter.

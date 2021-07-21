@@ -17,7 +17,7 @@ public struct Dialog: Attributable, EventListener {
 }
 
 public extension Dialog {
-    /// Sets the dialog's attribute: `open`.
+    /// Sets the dialog's attribute: ``open``.
     ///
     /// - Parameters:
     ///   - value: Allows user to determine if ``open`` should be added

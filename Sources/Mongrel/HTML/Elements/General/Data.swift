@@ -17,8 +17,8 @@ public struct Data: Attributable, EventListener {
     ///
     /// - Parameters:
     ///   - value: The machine-readable translation of the content.
-    ///   - content: The ``HTMLConvertible`` elements that will make up
-    ///   the HTML inside of the `<data></data>` tags.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(value: String, @HTMLBuilder _ content: () -> HTMLConvertible) {
         attributes["value"] = value
         innerHTML = content().stringValue
