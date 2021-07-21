@@ -6,7 +6,7 @@ final class DocumentTests: XCTestCase {
         let document = Root {
             VStack(spacing: .pixels(20)) {
                 Text("test")
-                    .styles(InlineStyle("font-size", "35px"))
+                    .styles(.fontSize("35px"))
                     .id("test")
 
                 Text("Hello")

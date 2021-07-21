@@ -67,13 +67,14 @@ public extension Attributable {
         return copy
     }
 
-    func styles(_ styles: InlineStyle...) -> Attributable {
+    func styles(_ styles: CSSProperty...) -> Attributable {
         var copy = self
 
         styles
             .sorted()
             .forEach {
-                copy.styles[$0.key] = "\($0.value)"
+                guard let value: String = $0.associatedValue() else { return }
+                copy.styles[$0.stringValue] = "\(value)"
             }
 
         return copy

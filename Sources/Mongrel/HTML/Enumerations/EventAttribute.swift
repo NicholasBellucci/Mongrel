@@ -20,7 +20,7 @@ public enum EventAttribute: String {
     case dragover
     case dragstart
     case drop
-    case duratichange
+    case durationchange
     case emptied
     case ended
     case error
