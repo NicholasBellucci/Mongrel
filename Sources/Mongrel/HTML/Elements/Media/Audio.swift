@@ -26,6 +26,8 @@ public struct Audio: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Audio`` element
+/// and will return an ``Audio`` element for continued use/updates.
 public extension Audio {
     /// Adds a condition that controls whether the element
     /// will start playing as soon as it is ready.

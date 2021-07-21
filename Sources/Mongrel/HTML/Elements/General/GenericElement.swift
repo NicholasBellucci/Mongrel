@@ -14,7 +14,7 @@ public struct GenericElement: Attributable, EventListener {
         self.tag = tag
     }
 
-    public func callAsFunction(_ class: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
+    func callAsFunction(_ class: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
         var copy = self
 
         if let `class` = `class` {

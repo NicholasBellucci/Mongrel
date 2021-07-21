@@ -27,6 +27,8 @@ public struct Video: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Video`` element
+/// and will return an ``Video`` element for continued use/updates.
 public extension Video {
     /// Adds a condition that controls whether the element
     /// will start playing as soon as it is ready.

@@ -22,6 +22,8 @@ public struct Image: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Image`` element
+/// and will return an ``Image`` element for continued use/updates.
 public extension Image {
     /// Allow images from third-party sites that allow cross-origin
     /// access to be used with canvas.

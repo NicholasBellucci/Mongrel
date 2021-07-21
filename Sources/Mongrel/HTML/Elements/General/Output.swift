@@ -26,6 +26,8 @@ public struct Output: Attributable {
     }
 }
 
+/// These extensions are modifiers for an ``Output`` element
+/// and will return an ``Output`` element for continued use/updates.
 public extension Output {
     /// Specifies which form the output element belongs.
     ///

@@ -26,6 +26,8 @@ public struct Track: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Track`` element
+/// and will return an ``Track`` element for continued use/updates.
 public extension Track {
     /// Specifies the title of the text track.
     ///

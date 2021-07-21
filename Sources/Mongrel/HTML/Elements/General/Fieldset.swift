@@ -22,6 +22,8 @@ public struct Fieldset: Attributable, EventListener {
     }
 }
 
+/// These extensions are modifiers for an ``Fieldset`` element
+/// and will return an ``Fieldset`` element for continued use/updates.
 public extension Fieldset {
     /// Specifies that a group of related form elements should be disabled.
     ///
