@@ -40,63 +40,64 @@ public struct Meter: Attributable, EventListener {
 /// These extensions are modifiers for an ``Meter`` element
 /// and will return an ``Meter`` element for continued use/updates.
 public extension Meter {
-    /// Sets the meter's attribute: ``form``.
+    /// Specifies which form the meter belongs.
     ///
     /// - Parameters:
-    ///   - id: The id of the form in which the meter belongs.
+    ///   - id: The id of the form.
     func formId(_ id: String) -> Meter {
         var copy = self
         copy.attributes["form"] = id
         return copy
     }
 
-    /// Sets the meter's attribute: ``high``.
+    /// Specifies the range that is considered to be a high value.
     ///
     /// - Parameters:
-    ///   - high: The range that is considered to be a high value.
-    func high(_ high: Double) -> Meter {
+    ///   - value: The value to be used as the meter's high value.
+    func high(_ value: Double) -> Meter {
         var copy = self
-        copy.attributes["high"] = "\(high)"
+        copy.attributes["high"] = "\(value)"
         return copy
     }
 
-    /// Sets the meter's attribute: ``low``.
+    /// Specifies the range that is considered to be a low value.
     ///
     /// - Parameters:
-    ///   - low: The range that is considered to be a low value.
-    func low(_ low: Double) -> Meter {
+    ///   - value: The value to be used as the meter's low value.
+    func low(_ value: Double) -> Meter {
         var copy = self
-        copy.attributes["low"] = "\(low)"
+        copy.attributes["low"] = "\(value)"
         return copy
     }
 
-    /// Sets the meter's attribute: ``max``.
+    /// Specifies the maximum value of the range.
     ///
     /// - Parameters:
-    ///   - max: The maximum value of the range.
-    func max(_ max: Double) -> Meter {
+    ///   - value: The value to be used as the meter's max value.
+    func max(_ value: Double) -> Meter {
         var copy = self
-        copy.attributes["max"] = "\(max)"
+        copy.attributes["max"] = "\(value)"
         return copy
     }
 
-    /// Sets the meter's attribute: ``min``.
+    /// Specifies the minimum value of the range. Default value
+    /// is zero.
     ///
     /// - Parameters:
-    ///   - min: The minimum value of the range.
-    func min(_ min: Double) -> Meter {
+    ///   - value: The value to be used as the meter's min value.
+    func min(_ value: Double) -> Meter {
         var copy = self
-        copy.attributes["min"] = "\(min)"
+        copy.attributes["min"] = "\(value)"
         return copy
     }
 
-    /// Sets the meter's attribute: ``optimum``.
+    /// Specifies what value is the optimal value for the gauge.
     ///
     /// - Parameters:
-    ///   - optimum: The optimal value for the meter.
-    func optimum(_ optimum: Double) -> Meter {
+    ///   - value: The value to be used as the meter's optimum value.
+    func optimum(_ value: Double) -> Meter {
         var copy = self
-        copy.attributes["optimum"] = "\(optimum)"
+        copy.attributes["optimum"] = "\(value)"
         return copy
     }
 }

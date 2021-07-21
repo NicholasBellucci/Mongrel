@@ -352,7 +352,7 @@ public extension Input {
     ///   - step: The amount to be used as the input's step amount.
     func step(_ amount: Int) -> Input {
         var copy = self
-        copy.attributes["step"] = "\(step)"
+        copy.attributes["step"] = "\(amount)"
         return copy
     }
 
