@@ -1,21 +1,21 @@
-/// A ``Select`` element is used to create a drop-down list.
+/// A ``DropDownList`` element is used to create a drop-down list.
 ///
 /// This element is most often used in a form to collect user input.
 ///
 /// For more information about the ``<select>`` tag,
 /// visit https://www.w3schools.com/tags/tag_select.asp
-public struct Select: Attributable, EventListener {
+public struct DropDownList: Attributable, EventListener {
     public var tag: String = "select"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
     private var innerHTML: String
 
-    /// Creates a select element with an optional id and name.
+    /// Creates a drop-down list element with an optional id and name.
     ///
     /// - Parameters:
-    ///   - id: The id of the select element.
-    ///   - name: The name of the select element.
+    ///   - id: The id of the drop-down list element.
+    ///   - name: The name of the drop-down list element.
     ///   - content: An ``HTMLBuilder`` that creates the elements
     ///   that make up this element.
     public init(id: String? = nil, name: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
@@ -25,16 +25,16 @@ public struct Select: Attributable, EventListener {
     }
 }
 
-/// These extensions are modifiers for an ``Select`` element
-/// and will return an ``Select`` element for continued use/updates.
-public extension Select {
+/// These extensions are modifiers for an ``DropDownList`` element
+/// and will return an ``DropDownList`` element for continued use/updates.
+public extension DropDownList {
     /// Adds a condition that controls whether the element
     /// will allow multiple values.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``multiple``
     ///   attribute should be added.
-    func allowsMultipleValues(_ value: Bool) -> Select {
+    func allowsMultipleValues(_ value: Bool) -> DropDownList {
         var copy = self
 
         if value {
@@ -50,7 +50,7 @@ public extension Select {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
     ///   attribute should be added.
-    func autofocused(_ value: Bool) -> Select {
+    func autofocused(_ value: Bool) -> DropDownList {
         var copy = self
 
         if value {
@@ -66,7 +66,7 @@ public extension Select {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
     ///   attribute should be added.
-    func disabled(_ value: Bool) -> Select {
+    func disabled(_ value: Bool) -> DropDownList {
         var copy = self
 
         if value {
@@ -80,7 +80,7 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - id: The id of the form.
-    func formId(_ id: String) -> Select {
+    func formId(_ id: String) -> DropDownList {
         var copy = self
         copy.attributes["form"] = id
         return copy
@@ -90,7 +90,7 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - name: The name to use as the list's name.
-    func name(_ name: String) -> Select {
+    func name(_ name: String) -> DropDownList {
         var copy = self
         copy.attributes["name"] = name
         return copy
@@ -102,7 +102,7 @@ public extension Select {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
     ///   attribute should be added.
-    func required(_ value: Bool) -> Select {
+    func required(_ value: Bool) -> DropDownList {
         var copy = self
 
         if value {
@@ -116,14 +116,14 @@ public extension Select {
     ///
     /// - Parameters:
     ///   - size: The size to be used as the list's size.
-    func size(_ size: Int) -> Select {
+    func size(_ size: Int) -> DropDownList {
         var copy = self
         copy.attributes["size"] = "\(size)"
         return copy
     }
 }
 
-extension Select: HTMLConvertible {
+extension DropDownList: HTMLConvertible {
     public var description: String {
         html
     }
