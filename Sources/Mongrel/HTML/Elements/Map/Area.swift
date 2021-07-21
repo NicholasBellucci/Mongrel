@@ -1,4 +1,4 @@
-/// An ``Anchor`` element defines an area inside an image map.
+/// An ``Area`` element defines an area inside an image map.
 ///
 /// This element should always be nested in ``Map``.
 ///
@@ -85,7 +85,7 @@ public extension Area {
     /// Specifies where to open the target URL.
     ///
     /// - Parameters:
-    ///   - target: The target to use as the anchor's target.
+    ///   - target: The target to use as the area's target.
     func target(_ target: Target = .`self`) -> Area {
         var copy = self
         copy.attributes["target"] = target.rawValue

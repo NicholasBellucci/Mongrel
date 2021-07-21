@@ -1,10 +1,3 @@
-//
-//  TrackKind.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
 public enum TrackKind {
     case captions, chapters, descriptions, metadata
 

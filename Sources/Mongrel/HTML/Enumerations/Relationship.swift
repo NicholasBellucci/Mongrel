@@ -1,10 +1,3 @@
-//
-//  Relationship.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
 public enum Relationship {
     public enum Anchor: String {
         case alternate, author, bookmark, external, help

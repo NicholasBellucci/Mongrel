@@ -1,10 +1,10 @@
-/// A ``DropDownList`` element is used to create a drop-down list.
+/// A ``DropDown`` element is used to create a drop-down list.
 ///
 /// This element is most often used in a form to collect user input.
 ///
 /// For more information about the ``<select>`` tag,
 /// visit https://www.w3schools.com/tags/tag_select.asp
-public struct DropDownList: Attributable, EventListener {
+public struct DropDown: Attributable, EventListener {
     public var tag: String = "select"
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
@@ -27,14 +27,14 @@ public struct DropDownList: Attributable, EventListener {
 
 /// These extensions are modifiers for an ``DropDownList`` element
 /// and will return an ``DropDownList`` element for continued use/updates.
-public extension DropDownList {
+public extension DropDown {
     /// Adds a condition that controls whether the element
     /// will allow multiple values.
     ///
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``multiple``
     ///   attribute should be added.
-    func allowsMultipleValues(_ value: Bool) -> DropDownList {
+    func allowsMultipleValues(_ value: Bool) -> DropDown {
         var copy = self
 
         if value {
@@ -50,7 +50,7 @@ public extension DropDownList {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``autofocus``
     ///   attribute should be added.
-    func autofocused(_ value: Bool) -> DropDownList {
+    func autofocused(_ value: Bool) -> DropDown {
         var copy = self
 
         if value {
@@ -66,7 +66,7 @@ public extension DropDownList {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
     ///   attribute should be added.
-    func disabled(_ value: Bool) -> DropDownList {
+    func disabled(_ value: Bool) -> DropDown {
         var copy = self
 
         if value {
@@ -80,7 +80,7 @@ public extension DropDownList {
     ///
     /// - Parameters:
     ///   - id: The id of the form.
-    func formId(_ id: String) -> DropDownList {
+    func formId(_ id: String) -> DropDown {
         var copy = self
         copy.attributes["form"] = id
         return copy
@@ -90,7 +90,7 @@ public extension DropDownList {
     ///
     /// - Parameters:
     ///   - name: The name to use as the list's name.
-    func name(_ name: String) -> DropDownList {
+    func name(_ name: String) -> DropDown {
         var copy = self
         copy.attributes["name"] = name
         return copy
@@ -102,7 +102,7 @@ public extension DropDownList {
     /// - Parameters:
     ///   - value: A Boolean value that determines whether the ``disabled``
     ///   attribute should be added.
-    func required(_ value: Bool) -> DropDownList {
+    func required(_ value: Bool) -> DropDown {
         var copy = self
 
         if value {
@@ -116,14 +116,14 @@ public extension DropDownList {
     ///
     /// - Parameters:
     ///   - size: The size to be used as the list's size.
-    func size(_ size: Int) -> DropDownList {
+    func size(_ size: Int) -> DropDown {
         var copy = self
         copy.attributes["size"] = "\(size)"
         return copy
     }
 }
 
-extension DropDownList: HTMLConvertible {
+extension DropDown: HTMLConvertible {
     public var description: String {
         html
     }

@@ -1,10 +1,3 @@
-//
-//  Form.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
 public enum FormEncodeType: String {
     case formData = "multipart/form-data"
     case plain = "text/plain"

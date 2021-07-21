@@ -1,10 +1,3 @@
-//
-//  String+Utils.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/17/21.
-//
-
 extension String {
     var escaped: String {
         guard unicodeScalars.contains(where: \.needsEscaping) else {

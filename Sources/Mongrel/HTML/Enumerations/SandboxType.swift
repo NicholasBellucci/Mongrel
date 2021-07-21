@@ -1,10 +1,3 @@
-//
-//  SandboxType.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
 public enum SandboxType: String {
     case allowForms = "allow-forms"
     case allowModals = "allow-modals"

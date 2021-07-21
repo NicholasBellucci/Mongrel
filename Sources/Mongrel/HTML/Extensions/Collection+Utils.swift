@@ -1,10 +1,3 @@
-//
-//  Collection+Utils.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/17/21.
-//
-
 extension Array {
     subscript(safe index: Index) -> Element? {
         indices.contains(index) ? self[index] : nil

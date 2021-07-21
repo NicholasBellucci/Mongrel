@@ -1,12 +1,10 @@
 public protocol CaseAccessible { }
 
 public extension CaseAccessible {
-    /// Returns the label of the enum case
     var label: String {
         return Mirror(reflecting: self).children.first?.label ?? String(describing: self)
     }
 
-    /// Extract an associated value of the enum case if it is of the expected type
     func associatedValue<AssociatedValue>() -> AssociatedValue? {
         return decompose(expecting: AssociatedValue.self)?.value
     }
