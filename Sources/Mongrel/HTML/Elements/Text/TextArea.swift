@@ -1,10 +1,10 @@
-//
-//  TextArea.swift
-//
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``TextArea`` element defines a multi-line text input control.
+///
+/// This element can hold an unlimited number of characters, and the
+/// text renders in a fixed-width font.
+///
+/// For more information about the ``<textarea>`` tag,
+/// visit https://www.w3schools.com/tags/tag_textarea.asp
 public struct TextArea: Attributable, EventListener {
     public var tag: String = "textarea"
     public var attributes: [String: String] = [:]
@@ -12,6 +12,11 @@ public struct TextArea: Attributable, EventListener {
 
     private var innerHTML: String
 
+    /// Creates a text area element.
+    ///
+    /// - Parameters:
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }

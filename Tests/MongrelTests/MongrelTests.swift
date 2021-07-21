@@ -18,7 +18,7 @@ struct HomePage: HTML {
 
     var document: some HTMLConvertible {
         Button {
-
+            
         }
     }
 }

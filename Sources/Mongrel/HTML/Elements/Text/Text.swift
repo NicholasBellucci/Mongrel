@@ -1,20 +1,26 @@
-//
-//  Text.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/18/21.
-//
-
+/// The ``Text`` element displays read-only text.
+///
+/// Many different modifiers have been provided in order
+/// to quickly and easily format the text.
+///
+/// Text without modifiers will render as raw text.
+///
+/// For more information about text formatting,
+/// visit https://www.w3schools.com/html/html_formatting.asp
 public struct Text: Attributable, EventListener {
     public var tag: String = ""
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
-    var tags: [String] = []
-    var attributesCollection: [String: [String: String]] = [:]
+    private var value: String
+    
+    private var tags: [String] = []
+    private var attributesCollection: [String: [String: String]] = [:]
 
-    var value: String
-
+    /// Creates a text element that displays a string.
+    ///
+    /// - Parameters:
+    ///   - value: The string to display.
     public init(_ value: String) {
         self.value = value.escaped
     }
