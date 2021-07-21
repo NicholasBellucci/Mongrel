@@ -49,7 +49,7 @@ public struct Anchor: Attributable, EventListener {
 /// These extensions are modifiers for an ``Anchor`` element
 /// and will return an ``Anchor`` element for continued use/updates.
 public extension Anchor {
-    /// Sets the anchor's attribute: ``download``.
+    /// Specifies that the target will be downloaded when a user clicks on the hyperlink.
     ///
     /// - Parameters:
     ///   - file: The filename of the downloadable content.

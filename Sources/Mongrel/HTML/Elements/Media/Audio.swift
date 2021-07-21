@@ -1,10 +1,12 @@
-//
-//  Audio.swift
-//  
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
-
+/// The ``Audio`` element is used to embed sound content in
+/// in a document. This content can be sources like music and/or
+/// other audio streams.
+///
+/// The content added to the element will be displayed in browsers
+/// in which it is not supported.
+///
+/// For more information about the ``<audio>`` tag,
+/// visit https://www.w3schools.com/tags/tag_audio.asp
 public struct Audio: Attributable, EventListener {
     public var tag: String = "audio"
     public var attributes: [String: String] = [:]
@@ -12,13 +14,24 @@ public struct Audio: Attributable, EventListener {
 
     private var innerHTML: String
 
-    public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
+    /// Creates an audio element.
+    ///
+    /// - Parameters:
+    ///   - src: The URL of the audio file.
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
+    public init(src: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
     }
 }
 
 public extension Audio {
-    func autoplay(if value: Bool = true) -> Audio {
+    /// Sets the audio's attribute: ``autoplay``.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``autoplay`` should be added
+    ///   based on another boolean.
+    func allowsAutoplay(if value: Bool = true) -> Audio {
         var copy = self
 
         if value {
@@ -28,7 +41,12 @@ public extension Audio {
         return copy
     }
 
-    func controls(if value: Bool = true) -> Audio {
+    /// Sets the audio's attribute: ``controls``.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``controls`` should be added
+    ///   based on another boolean.
+    func allowsControls(if value: Bool = true) -> Audio {
         var copy = self
 
         if value {
@@ -38,7 +56,12 @@ public extension Audio {
         return copy
     }
 
-    func loop(if value: Bool = true) -> Audio {
+    /// Sets the audio's attribute: ``loop``.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``loop`` should be added
+    ///   based on another boolean.
+    func allowsLoop(if value: Bool = true) -> Audio {
         var copy = self
 
         if value {
@@ -48,6 +71,11 @@ public extension Audio {
         return copy
     }
 
+    /// Sets the audio's attribute: ``muted``.
+    ///
+    /// - Parameters:
+    ///   - value: Allows user to determine if ``muted`` should be added
+    ///   based on another boolean.
     func muted(if value: Bool = true) -> Audio {
         var copy = self
 
@@ -58,15 +86,13 @@ public extension Audio {
         return copy
     }
 
+    /// Sets the audio's attribute: ``preload``.
+    ///
+    /// - Parameters:
+    ///   - type: The type that author thinks that audio should be loaded.
     func preload(_ type: PreloadType) -> Audio {
         var copy = self
         copy.attributes["preload"] = type.rawValue
-        return copy
-    }
-
-    func src(_ src: String) -> Audio {
-        var copy = self
-        copy.attributes["src"] = src
         return copy
     }
 }

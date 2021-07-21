@@ -17,10 +17,6 @@ struct HomePage: HTML {
     var title: String
 
     var document: some HTMLConvertible {
-        Root(language: .en) {
-            Paragraph {
-                Text("test")
-            }
-        }
+        
     }
 }

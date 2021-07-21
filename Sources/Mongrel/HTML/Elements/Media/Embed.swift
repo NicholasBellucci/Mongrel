@@ -1,4 +1,9 @@
+import Foundation
+
 /// The ``Embed`` element defines a container for an external source.
+///
+/// For more information about the ``<embed>`` tag,
+/// visit https://www.w3schools.com/tags/tag_embed.asp
 public struct Embed: Attributable, EventListener {
     public var tag: String = "embed"
     public var attributes: [String: String] = [:]
@@ -18,23 +23,22 @@ public struct Embed: Attributable, EventListener {
 /// These extensions are modifiers for an ``Embed`` element
 /// and will return an ``Embed`` element for continued use/updates.
 public extension Embed {
-    /// Sets the embed's attribute: ``height``.
-    ///
-    /// - Parameters:
-    ///   - height: The height of the element, in pixels.
-    func height(_ height: Double) -> Embed {
-        var copy = self
-        copy.attributes["height"] = "\(height)"
-        return copy
-    }
-    
-    /// Sets the embed's attribute: ``width``.
+    /// Sets the embed's attributes: ``width`` and ``height``.
     ///
     /// - Parameters:
     ///   - width: The width of the element, in pixels.
-    func width(_ width: Double) -> Embed {
+    ///   - height: The height of the element, in pixels.
+    func frame(width: CGFloat? = nil, height: CGFloat? = nil) -> Embed {
         var copy = self
-        copy.attributes["width"] = "\(width)"
+
+        if let width = width {
+            copy.attributes["width"] = "\(width)"
+        }
+
+        if let height = height {
+            copy.attributes["height"] = "\(height)"
+        }
+
         return copy
     }
 }

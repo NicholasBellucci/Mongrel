@@ -20,20 +20,6 @@ public struct Track: Attributable, EventListener {
     }
 }
 
-extension Track: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>"
-    }
-}
-
 public extension Track {
     func label(_ label: String) -> Track {
         var copy = self
@@ -61,5 +47,19 @@ public extension Track {
         }
 
         return copy
+    }
+}
+
+extension Track: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>"
     }
 }

@@ -1,3 +1,5 @@
+import Foundation
+
 /// An ``Input`` element allows a user to enter data.
 ///
 /// This element has several different types.
@@ -200,13 +202,22 @@ public extension Input {
         return copy
     }
 
-    /// Sets the input's attribute: ``height``.
+    /// Sets the input's attributes: ``width`` and ``height``.
     ///
     /// - Parameters:
+    ///   - width: The width of the element, in pixels.
     ///   - height: The height of the element, in pixels.
-    func height(_ height: Double) -> Input {
+    func frame(width: CGFloat? = nil, height: CGFloat? = nil) -> Input {
         var copy = self
-        copy.attributes["height"] = "\(height)"
+
+        if let width = width {
+            copy.attributes["width"] = "\(width)"
+        }
+
+        if let height = height {
+            copy.attributes["height"] = "\(height)"
+        }
+
         return copy
     }
 
@@ -359,16 +370,6 @@ public extension Input {
     func value(_ value: String) -> Input {
         var copy = self
         copy.attributes["value"] = value
-        return copy
-    }
-
-    /// Sets the input's attribute: ``width``.
-    ///
-    /// - Parameters:
-    ///   - width: The width of the element, in pixels.
-    func width(_ width: Double) -> Input {
-        var copy = self
-        copy.attributes["width"] = "\(width)"
         return copy
     }
 }

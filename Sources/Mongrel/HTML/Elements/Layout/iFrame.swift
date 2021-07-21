@@ -1,3 +1,5 @@
+import Foundation
+
 /// The ``iFrame`` element is used to embed another document in the
 /// current HTML document.
 ///
@@ -68,13 +70,22 @@ public extension iFrame {
         return copy
     }
 
-    /// Sets the iframe's attribute: ``height``.
+    /// Sets the iframe's attributes: ``width`` and ``height``.
     ///
     /// - Parameters:
+    ///   - width: The width of the element, in pixels.
     ///   - height: The height of the element, in pixels.
-    func height(_ height: Double) -> iFrame {
+    func frame(width: CGFloat? = nil, height: CGFloat? = nil) -> iFrame {
         var copy = self
-        copy.attributes["height"] = "\(height)"
+
+        if let width = width {
+            copy.attributes["width"] = "\(width)"
+        }
+
+        if let height = height {
+            copy.attributes["height"] = "\(height)"
+        }
+
         return copy
     }
 
@@ -119,16 +130,6 @@ public extension iFrame {
             .map { $0.rawValue }
             .joined(separator: " ")
 
-        return copy
-    }
-
-    /// Sets the iframe's attribute: ``width``.
-    ///
-    /// - Parameters:
-    ///   - width: The width of the element, in pixels.
-    func width(_ width: Double) -> iFrame {
-        var copy = self
-        copy.attributes["width"] = "\(width)"
         return copy
     }
 }

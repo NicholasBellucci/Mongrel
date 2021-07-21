@@ -1,9 +1,4 @@
-//
-//  Video.swift
-//
-//
-//  Created by Nicholas Bellucci on 7/19/21.
-//
+import Foundation
 
 public struct Video: Attributable, EventListener {
     public var tag: String = "video"
@@ -14,20 +9,6 @@ public struct Video: Attributable, EventListener {
 
     public init(@HTMLBuilder _ content: () -> HTMLConvertible) {
         innerHTML = content().stringValue
-    }
-}
-
-extension Video: HTMLConvertible {
-    public var description: String {
-        html
-    }
-
-    public var debugDescription: String {
-        html
-    }
-
-    private var html: String {
-        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
 
@@ -52,9 +33,22 @@ public extension Video {
         return copy
     }
 
-    func height(_ height: Double) -> Video {
+    /// Sets the video's attributes: ``width`` and ``height``.
+    ///
+    /// - Parameters:
+    ///   - width: The width of the element, in pixels.
+    ///   - height: The height of the element, in pixels.
+    func frame(width: CGFloat? = nil, height: CGFloat? = nil) -> Video {
         var copy = self
-        copy.attributes["height"] = "\(height)"
+
+        if let width = width {
+            copy.attributes["width"] = "\(width)"
+        }
+
+        if let height = height {
+            copy.attributes["height"] = "\(height)"
+        }
+
         return copy
     }
 
@@ -95,10 +89,18 @@ public extension Video {
         copy.attributes["src"] = src
         return copy
     }
+}
 
-    func width(_ width: Double) -> Video {
-        var copy = self
-        copy.attributes["width"] = "\(width)"
-        return copy
+extension Video: HTMLConvertible {
+    public var description: String {
+        html
+    }
+
+    public var debugDescription: String {
+        html
+    }
+
+    private var html: String {
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
