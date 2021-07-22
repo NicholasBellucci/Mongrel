@@ -140,8 +140,7 @@ public extension Image {
     /// - Parameters:
     ///   - key: The key to be used as the element's access key.
     func accessKey(_ key: String) -> Image {
-        var copy = self
-        copy.attributes["accesskey"] = key
+        guard let copy: Self = self.accessKey(key) else { return self }
         return copy
     }
 
@@ -152,8 +151,7 @@ public extension Image {
     ///   - value: A Boolean value that determines whether the ``spellcheck``
     ///   attribute should be added.
     func allowsSpellcheck(_ value: Bool) -> Image {
-        var copy = self
-        copy.attributes["spellcheck"] = "\(value)"
+        guard let copy: Self = self.allowsSpellcheck(value) else { return self }
         return copy
     }
 
@@ -237,8 +235,7 @@ public extension Image {
     ///   - edges: The edges in which to add margin.
     ///   - length: The amount and units of margin.
     func margin(_ edges: MarginSet, length: Unit? = nil) -> Image {
-        var copy = self
-        Margin.set(for: &copy, edges, length: length)
+        guard let copy: Self = self.setMargins(edges, length: length) else { return self }
         return copy
     }
 
@@ -248,8 +245,7 @@ public extension Image {
     ///   - edges: The edges in which to add padding.
     ///   - length: The amount and units of padding.
     func padding(_ edges: PaddingSet, length: Unit? = nil) -> Image {
-        var copy = self
-        Padding.set(for: &copy, edges, length: length)
+        guard let copy: Self = self.setPadding(edges, length: length) else { return self }
         return copy
     }
 
@@ -258,8 +254,7 @@ public extension Image {
     /// - Parameters:
     ///   - styles: The styles to be used as the element's styles.
     func styles(_ styles: CSSProperty...) -> Image {
-        var copy = self
-        CSSProperty.set(for: &copy, styles: styles)
+        guard let copy: Self = self.setStyles(styles: styles) else { return self }
         return copy
     }
 

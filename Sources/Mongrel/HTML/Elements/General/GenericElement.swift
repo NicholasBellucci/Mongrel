@@ -34,8 +34,7 @@ public extension GenericElement {
     /// - Parameters:
     ///   - key: The key to be used as the element's access key.
     func accessKey(_ key: String) -> GenericElement {
-        var copy = self
-        copy.attributes["accesskey"] = key
+        guard let copy: Self = self.accessKey(key) else { return self }
         return copy
     }
 
@@ -46,8 +45,7 @@ public extension GenericElement {
     ///   - value: A Boolean value that determines whether the ``spellcheck``
     ///   attribute should be added.
     func allowsSpellcheck(_ value: Bool) -> GenericElement {
-        var copy = self
-        copy.attributes["spellcheck"] = "\(value)"
+        guard let copy: Self = self.allowsSpellcheck(value) else { return self }
         return copy
     }
 
@@ -131,8 +129,7 @@ public extension GenericElement {
     ///   - edges: The edges in which to add margin.
     ///   - length: The amount and units of margin.
     func margin(_ edges: MarginSet, length: Unit? = nil) -> GenericElement {
-        var copy = self
-        Margin.set(for: &copy, edges, length: length)
+        guard let copy: Self = self.setMargins(edges, length: length) else { return self }
         return copy
     }
 
@@ -142,8 +139,7 @@ public extension GenericElement {
     ///   - edges: The edges in which to add padding.
     ///   - length: The amount and units of padding.
     func padding(_ edges: PaddingSet, length: Unit? = nil) -> GenericElement {
-        var copy = self
-        Padding.set(for: &copy, edges, length: length)
+        guard let copy: Self = self.setPadding(edges, length: length) else { return self }
         return copy
     }
 
@@ -152,8 +148,7 @@ public extension GenericElement {
     /// - Parameters:
     ///   - styles: The styles to be used as the element's styles.
     func styles(_ styles: CSSProperty...) -> GenericElement {
-        var copy = self
-        CSSProperty.set(for: &copy, styles: styles)
+        guard let copy: Self = self.setStyles(styles: styles) else { return self }
         return copy
     }
 

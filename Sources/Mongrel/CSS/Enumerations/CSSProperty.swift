@@ -810,18 +810,4 @@ public enum CSSProperty: CaseAccessible, Comparable {
     var value: String? {
         return self.associatedValue()
     }
-
-    static func set<T: Element>(for element: inout T, styles: [CSSProperty]) {
-        styles
-            .sorted()
-            .forEach {
-                switch $0 {
-                case let .custom(key, value):
-                    element.styles[key] = "\(value)"
-                default:
-                    guard let value: String = $0.associatedValue() else { return }
-                    element.styles[$0.label] = "\(value)"
-                }
-            }
-    }
 }
