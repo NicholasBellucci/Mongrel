@@ -1,7 +1,7 @@
 public protocol HTML: HTMLConvertible {
-    associatedtype ContentBody: HTMLConvertible
+    associatedtype Convertible: HTMLConvertible
 
-    @HTMLBuilder var body: Self.ContentBody { get }
+    @HTMLBuilder var body: Self.Convertible { get }
 }
 
 extension HTML {
