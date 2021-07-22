@@ -1,6 +1,7 @@
 public enum MongrelJS {
     case custom(String)
     case toggleAttribute(elementId: String, attribute: ToggleAttribute)
+    case toggleClass(elementId: String, class: String)
     case updateAttribute(elementId: String, attribute: Attribute)
     case updateInnerHTML(elementId: String, value: String)
     case updateStyle(elementId: String, style: DomStyle)
@@ -12,6 +13,8 @@ public enum MongrelJS {
             return value
         case let .toggleAttribute(id, attribute):
             return "document.getElementById('\(id)').toggleAttribute('\(attribute.rawValue)')"
+        case let .toggleClass(id, `class`):
+            return "document.getElementById('\(id)').toggleClass('\(`class`)')"
         case let .updateAttribute(id, attribute):
             guard let value: String = attribute.associatedValue() else { return nil }
             return "document.getElementById('\(id)').\(attribute.label)='\(value)'"
