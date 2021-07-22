@@ -17,10 +17,9 @@ final class DocumentTests: XCTestCase {
                     .draggable(true)
                     .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
 
-                Anchor {
-
+                Group(id: "id") {
+                    
                 }
-                .hidden(false)
             }
         }
 
