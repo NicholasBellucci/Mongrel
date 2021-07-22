@@ -14,7 +14,7 @@ public enum MongrelJS {
         case let .toggleAttribute(id, attribute):
             return "document.getElementById('\(id)').toggleAttribute('\(attribute.rawValue)')"
         case let .toggleClass(id, `class`):
-            return "document.getElementById('\(id)').toggleClass('\(`class`)')"
+            return "document.getElementById('\(id)').classList.toggle('\(`class`)')"
         case let .updateAttribute(id, attribute):
             guard let value: String = attribute.associatedValue() else { return nil }
             return "document.getElementById('\(id)').\(attribute.label)='\(value)'"
