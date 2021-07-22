@@ -5,14 +5,6 @@ public enum Padding: String, EdgeOption {
     case leading = "padding-left"
     case bottom = "padding-bottom"
     case trailing = "padding-right"
-
-    static func set<T: Element>(for element: inout T, _ edges: PaddingSet, length: Unit? = nil) {
-        edges.forEach {
-            if let length = length, let value = length.value {
-                element.styles[$0.rawValue] = "\(value)\(length.label)"
-            }
-        }
-    }
 }
 
 extension Set where Element == Padding {
