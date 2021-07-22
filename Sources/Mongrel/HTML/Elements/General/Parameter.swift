@@ -61,6 +61,16 @@ public extension Parameter {
         return copy
     }
 
+    /// Sets an attribute value for a given key.
+    ///
+    /// - Parameters:
+    ///   - key: The key to use as the attribute key.
+    ///   - value: The value to use as the attribute value.
+    func customAttribute(key: String, value: String) -> Parameter {
+        guard let copy: Self = self.customAttribute(key: key, value: value) else { return self }
+        return copy
+    }
+
     /// Specifies whether an element is draggable.
     ///
     /// - Parameters:

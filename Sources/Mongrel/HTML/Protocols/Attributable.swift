@@ -50,6 +50,17 @@ extension Attributable {
         return copy as? T
     }
 
+    /// Sets an attribute value for a given key.
+    ///
+    /// - Parameters:
+    ///   - key: The key to use as the attribute key.
+    ///   - value: The value to use as the attribute value.
+    func customAttribute<T: Attributable>(key: String, value: String) -> T? {
+        var copy = self
+        copy.attributes[key] = value
+        return copy as? T
+    }
+
     /// Specifies whether an element is draggable.
     ///
     /// - Parameters:
