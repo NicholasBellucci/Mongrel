@@ -20,7 +20,7 @@ final class DocumentTests: XCTestCase {
                 Anchor {
 
                 }
-                .margin(.all, length: .pixels(20))
+                .hidden(false)
             }
         }
 

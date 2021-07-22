@@ -5,8 +5,8 @@ public protocol Attributable: Styleable {
 }
 
 /// These extensions are modifiers for an ``Attributable`` element
-/// and will return a ``T`` element for continued use/updates.
-public extension Attributable {
+/// and will return a optional ``T`` element for continued use/updates.
+extension Attributable {
     /// Specifies a shortcut key to activate/focus an element.
     ///
     /// - Parameters:
