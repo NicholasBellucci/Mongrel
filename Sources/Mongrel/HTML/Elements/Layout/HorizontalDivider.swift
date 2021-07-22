@@ -116,7 +116,7 @@ public extension HorizontalDivider {
     /// - Parameters:
     ///   - edges: The edges in which to add margin.
     ///   - length: The amount and units of margin.
-    func margin(_ edges: Edge.Margin..., length: Unit? = nil) -> Element {
+    func margin(_ edges: Edge.Margin..., length: Unit? = nil) -> HorizontalDivider {
         var copy = self
 
         edges.forEach {
@@ -133,7 +133,7 @@ public extension HorizontalDivider {
     /// - Parameters:
     ///   - edges: The edges in which to add padding.
     ///   - length: The amount and units of padding.
-    func padding(_ edges: Edge.Padding..., length: Unit? = nil) -> Element {
+    func padding(_ edges: Edge.Padding..., length: Unit? = nil) -> HorizontalDivider {
         var copy = self
 
         edges.forEach {
