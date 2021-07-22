@@ -7,7 +7,7 @@ public enum Margin: String, EdgeOption {
     case trailing = "margin-right"
 }
 
-extension Set where Element == Margin {
+public extension Set where Element == Margin {
     static var horizontal: Set<Margin> {
         return [.leading, .trailing]
     }

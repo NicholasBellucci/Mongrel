@@ -7,7 +7,7 @@ public enum Padding: String, EdgeOption {
     case trailing = "padding-right"
 }
 
-extension Set where Element == Padding {
+public extension Set where Element == Padding {
     static var horizontal: Set<Padding> {
         return [.leading, .trailing]
     }
