@@ -4,6 +4,8 @@ public protocol Attributable: Styleable {
     var tag: String { get }
 }
 
+/// These extensions are modifiers for an ``Attributable`` element
+/// and will return a ``T`` element for continued use/updates.
 public extension Attributable {
     /// Specifies a shortcut key to activate/focus an element.
     ///

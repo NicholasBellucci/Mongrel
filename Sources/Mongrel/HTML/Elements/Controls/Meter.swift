@@ -130,8 +130,7 @@ public extension Meter {
     /// - Parameters:
     ///   - key: The name to be used as the element's class name.
     func `class`(_ name: String) -> Meter {
-        var copy = self
-        copy.attributes["class"] = name
+        guard let copy: Self = self.class(name) else { return self }
         return copy
     }
 
@@ -141,8 +140,7 @@ public extension Meter {
     ///   - value: A Boolean value that determines whether the ``contenteditable``
     ///   attribute should be added.
     func contentEditable(_ value: Bool) -> Meter {
-        var copy = self
-        copy.attributes["contenteditable"] = "\(value)"
+        guard let copy: Self = self.contentEditable(value) else { return self }
         return copy
     }
 
@@ -152,8 +150,7 @@ public extension Meter {
     ///   - value: A Boolean value that determines whether the ``contenteditable``
     ///   attribute should be added.
     func draggable(_ value: Bool) -> Meter {
-        var copy = self
-        copy.attributes["draggable"] = "\(value)"
+        guard let copy: Self = self.draggable(value) else { return self }
         return copy
     }
 
@@ -163,12 +160,7 @@ public extension Meter {
     ///   - value: A Boolean value that determines whether the ``contenteditable``
     ///   attribute should be added.
     func hidden(_ value: Bool) -> Meter {
-        var copy = self
-
-        if value {
-            copy.attributes["hidden"] = ""
-        }
-
+        guard let copy: Self = self.hidden(value) else { return self }
         return copy
     }
 
@@ -177,8 +169,7 @@ public extension Meter {
     /// - Parameters:
     ///   - id: The id to be used as the element's id.
     func id(_ id: String) -> Meter {
-        var copy = self
-        copy.attributes["id"] = id
+        guard let copy: Self = self.id(id) else { return self }
         return copy
     }
 
@@ -188,14 +179,7 @@ public extension Meter {
     ///   - code: The code to use as the language code.
     ///   - country: The code to use as the country code.
     func language(_ code: LanguageCode, country: CountryCode? = nil) -> Meter {
-        var copy = self
-
-        if let country = country {
-            copy.attributes["lang"] = "\(code.rawValue)-\(country.rawValue)"
-        } else {
-            copy.attributes["lang"] = "\(code.rawValue)"
-        }
-
+        guard let copy: Self = self.language(code, country: country) else { return self }
         return copy
     }
 
@@ -233,8 +217,7 @@ public extension Meter {
     /// - Parameters:
     ///   - styles: The index to be used as the element's tab index.
     func tabIndex(_ index: Int) -> Meter {
-        var copy = self
-        copy.attributes["tabindex"] = "\(index)"
+        guard let copy: Self = self.tabIndex(index) else { return self }
         return copy
     }
 
@@ -243,8 +226,7 @@ public extension Meter {
     /// - Parameters:
     ///   - styles: The title to be used as the element's title.
     func title(_ title: String) -> Meter {
-        var copy = self
-        copy.attributes["title"] = title
+        guard let copy: Self = self.title(title) else { return self }
         return copy
     }
 
@@ -254,8 +236,7 @@ public extension Meter {
     ///   - value: A Boolean value that determines whether the ``translate``
     ///   attribute should be added.
     func translated(_ value: Bool) -> Meter {
-        var copy = self
-        copy.attributes["translate"] = value ? "yes" : "no"
+        guard let copy: Self = self.translated(value) else { return self }
         return copy
     }
 }
