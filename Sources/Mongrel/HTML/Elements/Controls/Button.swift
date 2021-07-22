@@ -35,6 +35,16 @@ public struct Button: Attributable {
         attributes["onclick"] = action().stringValue
         innerHTML = content().stringValue
     }
+
+    /// Creates a button with inner content.
+    ///
+    /// - Parameters:
+    ///   - content: An ``HTMLBuilder`` that creates the elements
+    ///   that make up this element.
+    public init(@HTMLBuilder content: () -> HTMLConvertible) {
+        attributes["type"] = ButtonType.button.rawValue
+        innerHTML = content().stringValue
+    }
 }
 
 /// These extensions are modifiers for an ``Button`` element
