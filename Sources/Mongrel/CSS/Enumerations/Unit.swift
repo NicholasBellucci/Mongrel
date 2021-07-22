@@ -24,4 +24,8 @@ public enum Unit: CaseAccessible {
         case .points: return "pt"
         }
     }
+
+    var value: CGFloat? {
+        return self.associatedValue()
+    }
 }

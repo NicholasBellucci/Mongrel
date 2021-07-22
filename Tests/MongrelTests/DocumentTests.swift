@@ -16,6 +16,11 @@ final class DocumentTests: XCTestCase {
                 Text("Hello")
                     .draggable(true)
                     .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
+
+                Anchor {
+
+                }
+                .margin(.all, length: .pixels(20))
             }
         }
 

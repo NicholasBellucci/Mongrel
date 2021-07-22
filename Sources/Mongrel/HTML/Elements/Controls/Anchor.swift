@@ -251,13 +251,7 @@ public extension Anchor {
     ///   - length: The amount and units of margin.
     func margin(_ edges: MarginSet, length: Unit? = nil) -> Anchor {
         var copy = self
-
-        edges.forEach {
-            if let length = length, let value: CGFloat = length.associatedValue() {
-                copy.styles[$0.rawValue] = "\(value)\(length.label)"
-            }
-        }
-
+        Margin.set(for: &copy, edges, length: length)
         return copy
     }
 
@@ -268,13 +262,7 @@ public extension Anchor {
     ///   - length: The amount and units of padding.
     func padding(_ edges: PaddingSet, length: Unit? = nil) -> Anchor {
         var copy = self
-
-        edges.forEach {
-            if let length = length, let value: CGFloat = length.associatedValue() {
-                copy.styles[$0.rawValue] = "\(value)\(length.label)"
-            }
-        }
-
+        Padding.set(for: &copy, edges, length: length)
         return copy
     }
 
@@ -284,19 +272,7 @@ public extension Anchor {
     ///   - styles: The styles to be used as the element's styles.
     func styles(_ styles: CSSProperty...) -> Anchor {
         var copy = self
-
-        styles
-            .sorted()
-            .forEach {
-                switch $0 {
-                case let .custom(key, value):
-                    copy.styles[key] = "\(value)"
-                default:
-                    guard let value: String = $0.associatedValue() else { return }
-                    copy.styles[$0.stringValue] = "\(value)"
-                }
-            }
-
+        CSSProperty.set(for: &copy, styles: styles)
         return copy
     }
 
