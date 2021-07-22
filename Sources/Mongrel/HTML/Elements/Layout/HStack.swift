@@ -156,7 +156,7 @@ public extension HStack {
     /// - Parameters:
     ///   - edges: The edges in which to add margin.
     ///   - length: The amount and units of margin.
-    func margin(_ edges: Edge.Margin..., length: Unit? = nil) -> HStack {
+    func margin(_ edges: MarginSet, length: Unit? = nil) -> HStack {
         var copy = self
 
         edges.forEach {
@@ -173,7 +173,7 @@ public extension HStack {
     /// - Parameters:
     ///   - edges: The edges in which to add padding.
     ///   - length: The amount and units of padding.
-    func padding(_ edges: Edge.Padding..., length: Unit? = nil) -> HStack {
+    func padding(_ edges: PaddingSet, length: Unit? = nil) -> HStack {
         var copy = self
 
         edges.forEach {

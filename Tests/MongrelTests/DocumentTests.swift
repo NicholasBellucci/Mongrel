@@ -8,9 +8,10 @@ final class DocumentTests: XCTestCase {
                 Text("Not Dragged")
                     .id("id")
                     .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
+                    .padding(.all, length: .pixels(20))
+                    .margin([.top, .leading], length: .pixels(40))
                     .cited()
                     .underlined()
-                    .padding(.top, .left, .right, .bottom, length: .pixels(20))
 
                 Text("Hello")
                     .draggable(true)
