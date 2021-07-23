@@ -42,8 +42,9 @@ public extension Text {
         return copy
     }
 
-    /// Sets the text to bold.
-    func bold() -> Text {
+    /// Used to draw attention to the element's contents, which are not otherwise
+    /// granted special importance.
+    func bringAttentionTo() -> Text {
         var copy = self
         copy.tags.append("b")
         return copy
@@ -118,8 +119,8 @@ public extension Text {
         return copy
     }
 
-    /// Sets the text to italic.
-    func italic() -> Text {
+    /// Defines the text in an alternate voice or mood.
+    func idiomatic() -> Text {
         var copy = self
         copy.tags.append("i")
         return copy
@@ -176,8 +177,8 @@ public extension Text {
         return copy
     }
 
-    /// Adds a line below the text.
-    func underlined() -> Text {
+    /// Defines the text has a non-textual annotation.
+    func unarticulated() -> Text {
         var copy = self
         copy.tags.append("u")
         return copy
@@ -354,7 +355,7 @@ extension Text: HTMLConvertible {
             .reversed()
             .enumerated()
             .forEach { index, tag in
-                if index == 0 {
+                if index == tags.count - 1 {
                     html = "<\(tag)\(attributesString)\(attributes(for: tag))>\(html)</\(tag)>"
                 } else {
                     html = "<\(tag)\(attributes(for: tag))>\(html)</\(tag)>"
