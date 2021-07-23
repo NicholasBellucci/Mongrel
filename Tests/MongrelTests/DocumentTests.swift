@@ -15,7 +15,7 @@ final class DocumentTests: XCTestCase {
 
                 Text("Hello")
                     .draggable(true)
-                    .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
+                    .on(.dragEnd, .updateInnerHTML(elementId: "id", value: "Dragged"))
 
                 Group(id: "id") {
                     
