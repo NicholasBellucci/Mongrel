@@ -11,13 +11,13 @@ final class DocumentTests: XCTestCase {
                     .padding(.all, length: .pixels(20))
                     .margin([.top, .leading], length: .pixels(40))
                     .cited()
-                    .underlined()
+                    .unarticulated()
 
                 Text("Hello")
                     .draggable(true)
                     .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
 
-                Div(id: "id") {
+                Group(id: "id") {
                     
                 }
             }
