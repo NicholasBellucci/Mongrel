@@ -39,7 +39,7 @@ public let FigureCaption = GenericElement(tag: "figcaption")
 /// Represents the HTMLConvertible ``<footer>`` tag.
 public let Footer = GenericElement(tag: "footer")
 /// Represents the HTMLConvertible ``<div>`` tag.
-public let Div = GenericElement(tag: "div")
+public let Group = GenericElement(tag: "div")
 /// Represents the HTMLConvertible ``<head>`` tag.
 public let Head = GenericElement(tag: "head")
 /// Represents the HTMLConvertible ``<header>`` tag.
