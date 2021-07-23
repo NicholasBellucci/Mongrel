@@ -1,6 +1,8 @@
 public enum HTTPEquiv: String {
+    case refresh
+    
     case contentSecurityPolicy = "content-security-policy"
     case contentType = "content-type"
     case defaultStyle = "default-style"
-    case refresh
+    case xUACompatible = "x-ua-compatible"
 }

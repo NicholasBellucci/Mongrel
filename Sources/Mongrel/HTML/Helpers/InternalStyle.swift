@@ -1,8 +1,8 @@
 public struct InternalStyle {
     var selector: String
-    var styles: [InlineStyle]
+    var styles: [CSSProperty]
 
-    public init(selector: String, styles: [InlineStyle]) {
+    public init(selector: String, styles: CSSProperty...) {
         self.selector = selector
         self.styles = styles
     }

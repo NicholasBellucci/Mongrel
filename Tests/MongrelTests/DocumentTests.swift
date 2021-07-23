@@ -17,7 +17,7 @@ final class DocumentTests: XCTestCase {
                     .draggable(true)
                     .on(.dragend, .updateInnerHTML(elementId: "id", value: "Dragged"))
 
-                Group(id: "id") {
+                Div(id: "id") {
                     
                 }
             }
