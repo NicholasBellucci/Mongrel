@@ -1,72 +1,43 @@
 public enum EventAttribute: String {
-    case abort
-    case afterprint
-    case beforeprint
-    case beforeunload
-    case blur
-    case canplay
-    case canplaythrough
-    case change
-    case click
-    case ctextmenu
-    case copy
-    case cuechange
-    case cut
-    case dblclick
-    case drag
-    case dragend
-    case dragenter
-    case dragleave
-    case dragover
-    case dragstart
-    case drop
-    case durationchange
-    case emptied
-    case ended
-    case error
-    case focus
-    case hashchange
-    case input
-    case invalid
-    case keydown
-    case keypress
-    case keyup
-    case load
-    case loadeddata
-    case loadedmetadata
-    case loadstart
-    case mousedown
-    case mousemove
-    case mouseout
-    case mouseover
-    case mouseup
-    case mousewheel
-    case offline
-    case line
-    case pagehide
-    case pageshow
-    case paste
-    case pause
-    case play
-    case playing
-    case popstate
-    case progress
-    case ratechange
-    case reset
-    case resize
-    case scroll
-    case search
-    case seeked
-    case seeking
-    case select
-    case stalled
-    case storage
-    case submit
-    case suspend
-    case timeupdate
-    case toggle
-    case unload
-    case volumechange
-    case waiting
-    case wheel
+    case abort, blur, change, click, copy, cut
+    case drag, drop, emptied, ended, error, focus
+    case input, invalid, load, offline, line
+    case paste, pause, play, playing, progress
+    case reset,  resize, scroll, search, seeked
+    case seeking, select, stalled, storage, submit
+    case suspend, toggle, unload, waiting, wheel
+
+    case afterPrint = "afterprint"
+    case beforePrint = "beforeprint"
+    case beforeUnload = "beforeunload"
+    case canPlay = "canplay"
+    case canPlayThrough = "canplaythrough"
+    case contextMenu = "ctextmenu"
+    case cueChange = "cuechange"
+    case doubleClick = "dblclick"
+    case dragEnd = "dragend"
+    case dragEnter = "dragenter"
+    case dragLeave = "dragleave"
+    case dragOver = "dragover"
+    case dragStart = "dragstart"
+    case durationChange = "durationchange"
+    case hashChange = "hashchange"
+    case keyDown = "keydown"
+    case keyPress = "keypress"
+    case keyUp = "keyup"
+    case loadedData = "loadeddata"
+    case loadedMetadata = "loadedmetadata"
+    case loadStart = "loadstart"
+    case mouseDown = "mousedown"
+    case mouseMove = "mousemove"
+    case mouseOut = "mouseout"
+    case mouseOver = "mouseover"
+    case mouseUp = "mouseup"
+    case mouseWheel = "mousewheel"
+    case pageHide = "pagehide"
+    case pageShow = "pageshow"
+    case popState = "popstate"
+    case rateChange = "ratechange"
+    case timeUpdate = "timeupdate"
+    case volumeChange = "volumechange"
 }
