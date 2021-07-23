@@ -14,6 +14,10 @@ public struct GenericElement: Attributable {
         self.tag = tag
     }
 
+    public func callAsFunction() -> GenericElement {
+        return self
+    }
+
     public func callAsFunction(@HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
         var copy = self
         copy.innerHTML = content().stringValue
