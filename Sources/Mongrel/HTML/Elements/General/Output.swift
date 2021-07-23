@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Output`` element represents the results of a calculation.
 ///
 /// For more information about the ``<output>`` tag,

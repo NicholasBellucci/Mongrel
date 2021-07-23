@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Fieldset`` element is used to group related elements
 /// in a form.
 ///

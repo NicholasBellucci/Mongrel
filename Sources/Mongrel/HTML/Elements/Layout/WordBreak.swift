@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``WordBreak`` element adds a line-break in text.
 ///
 /// For more information about the ``<wbr>`` tag,

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Source`` element is used to define CSS styles for a document.
 ///
 /// For more information about the ``<style>`` tag,

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``ListItem`` element defines a list item.
 ///
 /// This element is used inside the ``OrderedList`` element

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Data`` element is used to add a machine-readable
 /// translation of a given content.
 ///

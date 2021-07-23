@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Canvas`` element is used to draw graphics, on the fly, via scripting.
 ///
 /// Any text inside this element will be displayed in browsers with

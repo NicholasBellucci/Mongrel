@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Details``specifies additional details that can be open and closed.
 ///
 /// This element allows any sort of content.

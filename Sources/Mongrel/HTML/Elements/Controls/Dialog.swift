@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Dialog`` element defines a dialog box or subwindow.
 ///
 /// This element helps to create popup dialogs and modals.

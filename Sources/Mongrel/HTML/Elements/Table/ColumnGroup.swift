@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``ColumnGroup`` element specifies a group of one or more
 /// columns in a table for formatting.
 ///

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``TextArea`` element defines a multi-line text input control.
 ///
 /// This element can hold an unlimited number of characters, and the

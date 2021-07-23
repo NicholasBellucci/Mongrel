@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Text`` element displays read-only text.
 ///
 /// Many different modifiers have been provided in order

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Source`` element is used to specify multiple media
 /// resources for media elements such as ``Video``, ``Audio``, and ``Picture``.
 ///

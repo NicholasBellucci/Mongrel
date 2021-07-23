@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Break`` element inserts a line break.
 ///
 /// For more information about the ``<break>`` tag,

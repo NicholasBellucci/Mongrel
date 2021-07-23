@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Parameter`` element is used to define parameters for
 /// an ``Object`` element.
 ///

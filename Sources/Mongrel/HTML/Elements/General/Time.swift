@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Time`` element defines a specific time or datetime.
 ///
 /// For more information about the ``<time>`` tag,

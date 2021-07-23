@@ -1,5 +1,3 @@
-import Foundation
-
 /// An ``Anchor`` element defines a hyperlink, which is used to link from one
 /// page to another.
 ///

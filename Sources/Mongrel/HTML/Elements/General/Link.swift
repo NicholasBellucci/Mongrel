@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Link`` element links external resources.
 ///
 /// For more information about the ``<link>`` tag,

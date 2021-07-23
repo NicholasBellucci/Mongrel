@@ -1,5 +1,3 @@
-import Foundation
-
 /// An ``Area`` element defines an area inside an image map.
 ///
 /// This element should always be nested in ``Map``.

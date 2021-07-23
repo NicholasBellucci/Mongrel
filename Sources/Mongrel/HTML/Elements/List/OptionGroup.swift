@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``OptionGroup`` element is used to group related
 /// options in a ``Select`` element or ``List(.data)`` element.
 ///

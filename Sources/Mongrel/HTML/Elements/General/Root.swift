@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Root`` element represents the root of an HTML document
 /// and is a container for all other HTML elements.
 ///

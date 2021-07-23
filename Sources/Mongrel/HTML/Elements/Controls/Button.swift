@@ -1,5 +1,3 @@
-import Foundation
-
 /// An ``Button`` element defines a clickable button.
 ///
 /// This element can contain text and other elements.

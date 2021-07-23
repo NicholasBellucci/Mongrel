@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``List`` element is used create a list of a desitred type.
 ///
 /// Types include ``datalist``, ``dl``, and ``ul``.

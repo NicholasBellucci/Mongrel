@@ -4,23 +4,7 @@ import XCTest
 final class DocumentTests: XCTestCase {
     func testDocument() {
         let document = Root {
-            VStack(spacing: .pixels(20)) {
-                Text("Not Dragged")
-                    .id("id")
-                    .styles(.fontSize("35px"), .fontWeight("300"), .fontFamily("Arial"))
-                    .padding(.all, length: .pixels(20))
-                    .margin([.top, .leading], length: .pixels(40))
-                    .cited()
-                    .unarticulated()
-
-                Text("Hello")
-                    .draggable(true)
-                    .on(.dragEnd, .updateInnerHTML(elementId: "id", value: "Dragged"))
-
-                Group(id: "id") {
-                    
-                }
-            }
+            Parameter(name: "test", value: "value")
         }
 
         print(document)

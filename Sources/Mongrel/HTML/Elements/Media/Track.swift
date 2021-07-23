@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Track`` element specifies text tracks for ``Audio``
 /// or ``Video`` elements.
 ///

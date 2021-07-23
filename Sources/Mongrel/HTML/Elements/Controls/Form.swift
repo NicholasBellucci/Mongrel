@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Form`` element creates a form for user input.
 ///
 /// For more information about the ``<form>`` tag,

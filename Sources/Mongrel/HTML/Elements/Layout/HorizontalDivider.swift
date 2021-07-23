@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``HorizontalDivider`` element creates a horizontal rule
 /// that is used to separate content.
 ///

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Column`` element specifies column properties for
 /// each column within a ``ColumnGroup`` element.
 ///

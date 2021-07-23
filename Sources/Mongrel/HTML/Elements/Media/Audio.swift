@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Audio`` element is used to embed sound content in
 /// in a document. This content can be sources like music and/or
 /// other audio streams.

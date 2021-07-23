@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Label`` element defines a label for several elements.
 ///
 /// This element becomes clickable along with the related element.

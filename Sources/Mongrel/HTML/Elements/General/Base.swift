@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Base`` element is used to specify the base URL
 /// and/or target for all relative URLs in a document.
 ///

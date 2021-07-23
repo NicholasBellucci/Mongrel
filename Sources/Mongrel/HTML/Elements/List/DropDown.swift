@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``DropDown`` element is used to create a drop-down list.
 ///
 /// This element is most often used in a form to collect user input.

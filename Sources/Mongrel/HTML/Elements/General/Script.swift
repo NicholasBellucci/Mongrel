@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Script`` element is used to embed a client-side script.
 ///
 /// This element can contain a script or point to an external script file.

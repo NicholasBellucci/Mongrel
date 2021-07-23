@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``GenericElement`` element is used for HTML tags that only
 /// have attributes that are considered global.
 ///
@@ -16,10 +14,8 @@ public struct GenericElement: Attributable {
         self.tag = tag
     }
 
-    public func callAsFunction(id: String? = nil, class: String? = nil, @HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
+    public func callAsFunction(@HTMLBuilder _ content: () -> HTMLConvertible) -> GenericElement {
         var copy = self
-        copy.attributes["id"] = id
-        copy.attributes["class"] = `class`
         copy.innerHTML = content().stringValue
         return copy
     }

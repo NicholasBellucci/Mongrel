@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``OrderedList`` element is used create a list of a desitred type.
 ///
 /// This list can be numerical or alphabetical.

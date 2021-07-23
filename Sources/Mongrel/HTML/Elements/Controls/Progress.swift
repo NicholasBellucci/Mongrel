@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Progress`` element displays the completion progress of a task
 ///
 /// This element is often used in conjunction with ``Javascript`` to display current values.

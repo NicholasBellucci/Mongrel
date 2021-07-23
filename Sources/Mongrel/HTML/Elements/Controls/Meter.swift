@@ -1,5 +1,3 @@
-import Foundation
-
 /// An ``Meter`` element defines a scalar measurement
 /// within a known range, or a fractional value.
 ///

@@ -1,5 +1,3 @@
-import Foundation
-
 /// A ``Map`` element defines the clickable areas within an image.
 ///
 /// For more information about the ``<map>`` tag,

@@ -1,5 +1,3 @@
-import Foundation
-
 /// The ``Option`` element defines an option in a
 /// ``Select`` element or ``List(.data)`` element.
 ///
