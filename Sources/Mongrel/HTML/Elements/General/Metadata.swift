@@ -12,6 +12,9 @@ public struct Metadata: Attributable {
     public var attributes: [String: String] = [:]
     public var styles: [String: String] = [:]
 
+    /// Creates an empty metadata element.
+    public init() { }
+
     /// Creates a metadata element with a name and content.
     ///
     /// - Parameters:
