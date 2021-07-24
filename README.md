@@ -8,7 +8,7 @@ Xcode 12.x or a Swift 5.3x toolchain with Swift Package Manager.
 ## Installation
 
 ### Swift Package Manager
-In order to add Mongrel to your project, simply add `.package(url: "https://github.com/NicholasBellucci/Mongrel.git", from: "0.1.0")` to your `Package.swift` file's `dependencies` and `.product(name: "Mongrel", package: "mongrel")` to the target `dependencies`. 
+In order to add Mongrel to your project, simply add `.package(url: "https://github.com/NicholasBellucci/mongrel.git", from: "0.1.0")` to your `Package.swift` file's `dependencies` and `.product(name: "Mongrel", package: "mongrel")` to the target `dependencies`. 
 
 ## Usage
 
