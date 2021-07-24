@@ -1,6 +1,6 @@
 # Mongrel
 
-Mongrel is a Swift and HTML hybrid with a bit of support for CSS and Javascript. Using a declaritive style of programming, Mongrel makes writing HTML feel natural and easy. Mongrel also uses a SwiftUI like body structure to allow structs to be completely dedicated as an HTML page or element.
+Mongrel is a Swift and HTML hybrid with a bit of support for CSS and Javascript. Using a declaritive style of programming, Mongrel makes writing HTML feel natural and easy. Mongrel also uses a SwiftUI like body structure allowing structs to be completely dedicated as an HTML page or element.
 
 ## Requirements
 Xcode 12.x or a Swift 5.3x toolchain with Swift Package Manager.
@@ -49,6 +49,12 @@ struct IndexPage: HTML {
         }
     }
 }
+
+/// The HTML protocol conforms to HTMLConvertible which conforms to
+/// CustomStringConvertible and CustomDebugStringConvertible. This
+/// means that to get the resulting HTML simply use String(describing: IndexPage()).
+
+print(IndexPage())
 ```
 ## License
 
