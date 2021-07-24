@@ -15,7 +15,12 @@ In order to add Mongrel to your project, simply add `.package(url: "https://gith
 Mongrel documentation is currently in the works but the project as a whole is complete, excluding future updates. To provide a very robust idea of how to use Mongrel, here is an example:
 
 ```swift
+import Mongrel
+
 struct IndexPage: HTML {
+    var title: String = "Welcome to Mongrel!"
+    var subtitle: String = "A Swift and HTML hybrid supporting:"
+
     var body: some HTMLConvertible {
         Root(language: .en) {
             Head {
@@ -24,10 +29,10 @@ struct IndexPage: HTML {
 
             Body {
                 Group {
-                    Text("Welcome to Mongrel!")
+                    Text(title)
                         .heading(.h1)
 
-                    Text("A Swift and HTML hybrid supporting:")
+                    Text(subtitle)
 
                     List(.unordered) {
                         Text("CSS")
