@@ -10,6 +10,8 @@ public enum Unit: CaseAccessible {
     case picas(CGFloat)
     case pixels(CGFloat)
     case points(CGFloat)
+    case viewHeight(CGFloat)
+    case viewWidth(CGFloat)
 
     var label: String {
         switch self {
@@ -22,6 +24,8 @@ public enum Unit: CaseAccessible {
         case .picas: return "pc"
         case .pixels: return "px"
         case .points: return "pt"
+        case .viewHeight: return "vh"
+        case .viewWidth: return "vw"
         }
     }
 
