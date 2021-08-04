@@ -20,7 +20,7 @@ extension InternalStyle: CustomStringConvertible, CustomDebugStringConvertible {
     private var representation: String {
         let stylesString = styles
             .sorted()
-            .map { String(describing: $0) }
+            .map { "\($0.label): \($0.value ?? "")" }
             .joined(separator: "; ")
 
         return "\(selector) { \(stylesString); }"
