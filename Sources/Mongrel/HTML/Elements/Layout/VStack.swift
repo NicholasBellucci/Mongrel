@@ -211,6 +211,6 @@ extension VStack: HTMLConvertible {
     }
 
     private var html: String {
-        "<\(tag) style=\"display: flex\"><\(tag)\(attributesString)>\(innerHTML)</\(tag)></\(tag)>"
+        "<\(tag)\(attributesString)>\(innerHTML)</\(tag)>"
     }
 }
